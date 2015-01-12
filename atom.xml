@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.ainhaato.moe/"/>
-  <updated>2015-01-12T14:05:25.072Z</updated>
+  <updated>2015-01-12T14:18:54.703Z</updated>
   <id>http://blog.ainhaato.moe/</id>
   
   <author>
@@ -13,6 +13,19 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[CentOS��װtransmissionʵ�ַ�����BT����]]></title>
+    <link href="http://blog.ainhaato.moe/2015/install-transmission-on-centos/"/>
+    <id>http://blog.ainhaato.moe/2015/install-transmission-on-centos/</id>
+    <published>2015-01-12T14:14:25.000Z</published>
+    <updated>2015-01-12T14:14:57.000Z</updated>
+    <content type="html"><![CDATA[]]></content>
+    <summary type="html">
+    <![CDATA[]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Hello World]]></title>
