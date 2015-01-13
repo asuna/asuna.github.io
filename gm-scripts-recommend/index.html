@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>firefox - GM脚本推荐 | 幻想驿站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本文将推荐一些平时常用到的GM脚本，关于百度贴吧的脚本下次再整理
+firefox用户请先安装greasemonkey扩展，chrome用户请先安装Tampermonkey扩展">
+<meta property="og:type" content="article">
+<meta property="og:title" content="firefox - GM脚本推荐">
+<meta property="og:url" content="http://blog.ainhaato.moe/gm-scripts-recommend/">
+<meta property="og:site_name" content="幻想驿站">
+<meta property="og:description" content="本文将推荐一些平时常用到的GM脚本，关于百度贴吧的脚本下次再整理
+firefox用户请先安装greasemonkey扩展，chrome用户请先安装Tampermonkey扩展">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="firefox - GM脚本推荐">
+<meta name="twitter:description" content="本文将推荐一些平时常用到的GM脚本，关于百度贴吧的脚本下次再整理
+firefox用户请先安装greasemonkey扩展，chrome用户请先安装Tampermonkey扩展">
+<meta name="twitter:creator" content="@shmozi">
+
+  
+    <link rel="alternative" href="/atom.xml" title="幻想驿站" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link href='http://www.youziku.com/webfont/CSS/4114d670d55fae9bb2290e34a94ea24b' rel='stylesheet' type='text/css'/>
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <link rel="stylesheet" href="/mediaelement/mediaelementplayer.css" type="text/css">
+
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">幻想驿站</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/links">Friends</a>
+        
+          <a class="main-nav-link" href="/guestbook">GuestBook</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://blog.ainhaato.moe"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-gm-scripts-recommend" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/gm-scripts-recommend/" class="article-date">
+  <time datetime="2013-06-23T13:35:57.000Z" itemprop="datePublished">6月 23 2013</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      firefox - GM脚本推荐
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>本文将推荐一些平时常用到的GM脚本，关于百度贴吧的脚本下次再整理</strong></p>
+<p>firefox用户请先安装greasemonkey扩展，chrome用户请先安装Tampermonkey扩展<a id="more"></a></p>
+<p>1.繁简转换</p>
+<figure class="highlight [javascript]"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line">==UserScript==</div><div class="line"><span class="comment">// @name        繁简转换</span></div><div class="line"><span class="comment">// @namespace   http://userscripts.org/scripts/show/0</span></div><div class="line"><span class="comment">// @description 网页上的繁体中文字转为简体。Traditional Chinese chars to Simplified Chinese.</span></div><div class="line"><span class="comment">// @include     *</span></div><div class="line"><span class="comment">// @updateURL   https://userscripts.org/scripts/source/0.meta.js</span></div><div class="line"><span class="comment">// @downloadURL https://userscripts.org/scripts/source/0.user.js</span></div><div class="line"><span class="comment">// @version     1.0</span></div><div class="line"><span class="comment">// @author      tomchen1989 &lt;tomchen1989[AT]yahoo.com.cn&gt;</span></div><div class="line"><span class="comment">// @license     MIT/Expat License</span></div><div class="line"><span class="comment">// ==/UserScript==</span></div><div class="line"></div><div class="line">(<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>{</div><div class="line"></div><div class="line"><span class="keyword">var</span> docLang = <span class="built_in">document</span>.documentElement.lang.toLowerCase(),</div><div class="line">	docCharset = ( <span class="built_in">document</span>.characterSet || <span class="built_in">document</span>.charset ).toLowerCase();</div><div class="line"></div><div class="line"><span class="keyword">if</span> (docLang === <span class="string">"zh-cn"</span> || docLang === <span class="string">"zh-hans"</span> || docLang === <span class="string">"zh-sg"</span> || docLang === <span class="string">"zh-my"</span></div><div class="line">	|| docCharset.substring(<span class="number">0</span>, <span class="number">2</span>) === <span class="string">"gb"</span>) {<span class="comment">//avoid converting pages that are already in Simplified Chinese for sure</span></div><div class="line">	<span class="keyword">return</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">//the lists are based on kSimplifiedVariant by Hongkong user "京典"</span></div><div class="line"></div><div class="line"><span class="comment">//Traditional Chinese chars</span></div><div class="line"><span class="keyword">var</span> chtList  = <span class="string">"“”‘’丢乱亚伫来仑侣俣伣侠伥俩仓个们伦伟侧侦伪伧伞备偬传伛债伤倾偻仅佥侨侥偾仪侬亿侩俭傧俦侪偿储俪㑩傩傥俨兑兖内两册幂净冻凛凯别删刭则刹刚剥剐剀创剧刘刽刿剑剂劲动务勋劳势勚劢励劝匀匦匮区协却厍厌厉厣参丛咤吴呐吕呙员呗吣问哑启唡㖞唤丧乔单哟呛啬唝吗呜唢哔叹喽呕啧尝唛哗唠啸叽哓呒啴嘘㖊哒哝哕嗳哙喷咛吓哜噜啮呖咙亸喾严嘤啭嗫嚣冁呓嘱囱囵国围园圆图团埯垭执坚垩埚尧报场块茔垲埘坞埙尘堑垫坠堕坟垦压垒圹垆垄坜坝壮壶壸寿够梦夹奂奥奁夺奋姹妆姗娱娄妇娅娲妫媪妈妪妩娴婳娆婵娇嫱嫒嬷嫔婴婶娈孙学孪宫寝实审写宽宠宝将专寻对导尴届屉屡层屦属冈岘岛峡崃岗峥岚嵝崭岖嵚崂峤峣峄崄岙嵘屿岿峦巅巯帅师帐带帧帏帼帻帜币帮帱库厕厢厩厦厨厮庙庑废广廪庐厅弑弪张强弹弥弯彦径从徕彻恒耻悦怅闷恶恼恽恻爱惬悫怆恺忾态愠惨惭恸惯怄怂虑悭庆忧惫凭愦惮愤悯怃宪忆恳应怿懔怼懑恹惩懒悬惧慑恋戆戋戗戬战戏户抛捝挟扪扫抡挜挣拣扬换挥损摇捣揾抢掴掼搂挚抠抟掺捞挦撑挠㧑挢掸拨抚揿挞挝捡拥掳择击挡担挤拟摈拧搁掷扩撷摆擞撸摅撵拢拦撄搀撺携摄攒挛摊搅揽败叙敌数敛毙斓斩断时晋昼晕晖旸畅暂晔昙晓暧旷昽书会胧东锨栅栀条枭棁弃枨枣栋栈梾桠杨枫桢业杩荣桤枪椠椁桨桩乐枞楼标枢样树桦桡桥椭横檩柽档桧槚检樯梼槟柠槛橹榈栉椟橼栎橱槠栌枥橥榇蘖栊榉樱栏权椤栾榄棂钦欧欤欢岁归殁残殒殇殚殓殡㱩歼杀壳毁殴毵牦毡氇氢氩氲决没况汹浃泾凉泪渌沦渊涞浅涣减涡测浑凑浈汤沩沟温沧灭涤荥沪滞渗浒浐滚满渔沤汉涟渍涨溆渐浆颍泼潜润浔溃滗涠涩浇涝涧渑泽滪泶浍浊浓湿济涛滥潍滨溅泺滤滢渎㲿泻浏濒泸沥潇潆潴泷濑潋澜沣滠滩灏漤湾滦灾为乌烃无炼炜烟茕焕烦炀煴荧炝热颎炽烨灯烧烫焖营灿烛烩烬焘烁炉烂争爷尔墙牍牵荦犊牺状狭狈狰犹狲狱狮奖独狯猃狝狞猎犷兽獭献猕猡现珐珲玮玚琐瑶莹玛玱琏玑瑷珰环玺琼珑璎瓒瓯产亩毕畴叠痉疴疯疡痪瘗疮疟疭瘘疗痨痫瘅疠瘪疖癞癣瘿瘾痈瘫癫皑疱皲皱盗盏监盘卢眦众睁睐䁖瞒瞆睑眬瞩矫硁硖砗砚硕砀码硙砖碜碛矶硗础碍矿砺砾矾砻禄祸祯祎祃禅礼祢祷秃籼税秆禀称稣积颖秾穑秽稳稆窝穷窑窎窭窥窜窍窦窃竞笔笋笕䇲笺筝节箧筼笃筛筚箦篓箪简篑箫筜签篮筹箓箨籁笼笾簖箩粤糁粪粮粝籴粜纠纪纣约红纡纥纨纫纹纳纽纾纯纰纼纱纮纸级纷纭纴纺䌷细绂绁绅纻绍绀绋绐绌终组䌹绊绗结绝绦绞络绚给绒绖统丝绛绢绑绡绠绨绤绥经综缍绿绸绻绶维绹绾纲缀䌽纶绺绮绽绰绫绵绲缁紧绯绪缃缄缂线缉缎缔缗缘缌编缓缅纬缑缈练缏缇萦缙缢缒绉缣缊缞缚缜缟缛县缝缡缩纵缧䌸缦絷缕缥总绩绷缫缪缯织缮缭绕绣缋绳绘缳缲缴䍁绎继缤缱缬纩续缠缨纤缵缆钵罂罚骂罢罗罴羁芈羟义习翘耧闻联聪声耸聩聂职聍聋肃胁脉胫脱胀肾脶脑肿脚肠腽肤胶腻胆脍脓脸脐膑胪脔臜临兴举旧舱舣舰舻艰艳刍苎兹荆茎荚苋华苌莱莴叶荭着苇荤莳莅苍荪盖莲苁莼荜蒌蒋葱茑荫荨蒇荞莸荛蒉芜萧蓣蕰荟蓟芗蔷荙莶萨䓕荠蓝荩艺薮苈蔼蔺蕲芦苏蕴藓蔹茏兰蓠萝处虚虏号亏虬蛱蜕蚬蚀猬虾蜗蛳蚂萤䗖蝼螀蛰蝈蝉蛲蛏蚁蝇虿蛴蝾蛎蟏蛊蛮术卫衮袅补装裈袆裤裢褛亵袯袄裣裆褴袜䙓衬袭见规觅视觇觋觎亲觊觏觐觑觉览觌观觞觯订讣计讯讧讨讦讱训讪讫讬记讹讶讼䜣诀讷访设许诉诃诊诂诋讵诈诒诏评诐诇诎诅词咏诩询诣试诗诧诟诡诠诘话该详诜诙诖诔诛诓认诳诶诞诱诮语诚诫诬误诰诵诲说谁课谇诽谊訚调谄谆谈诿请诤诹诼谅论谂谀谍谞谝诨谔谛谐谏谕谘讳谙谌讽诸谚谖诺谋谒谓誊诌谎谜谧谑谡谤谦谥讲谢谣谟谪谬讴谨谩䜧证谲讥谮识谯谭谱谵译议谴护诪誉谫读变雠谗让谰谶谠谳岂竖猪豮猫䝙贝贞负财贡贫货贩贪贯责贮贳赀贰贵贬买贷贶费贴贻贸贺贲赂赁贿赅资贾贼赈赊宾赇赒赉赐赏赔赓贤卖贱赋赕质账赌䞐赖赗赚赙购赛赜贽赘赟赠赞赡赢赆赃赑赎赝赣赪赵趋趱迹践跄跸蹒踪跷跶趸踌跻跃踯跞踬蹰跹蹑蹿躜躏躯车轧轨军轪轩轫轭软轸轴轵轺轲轶轼较辂辁辀载轾辄辅轻辆辎辉辋辍辊辇辈轮辌辑辏输辐辗舆辒毂辖辕辘转辙轿辚轰辔轹轳办辞辫辩农迳这连进运过达违遥逊递远迟迁选遗辽迈还迩边逻逦郏邮郓乡邹邬郧邓郑邻郸邺郐邝酂郦酝医酱酦酿衅酾酽释钆钇钌钊钉钋针钓钐钏钒钗钍钕钯钫钘钭钠钝钤钣钑钞钮钧钙钬钛钪铌铈钶铃钴钹铍钰钸铀钿钾钜铊铉铇铋铂钳铆铅钺钩钲钼钽铏铰铒铬铪银铳铜铚铣铨铢铭铫铦衔铑铷铱铟铵铥铕铯铐锐销锑锉铝锒锌钡铤铗锋铻锊锓锄锔锇铓铺铖锆锂铽锯钢锞录锖锩铔锥锕锟锱铮锛锬锭锜钱锦锚锠锡锢错锰铼钔锴锅镀锷铡钖锻锽锸锲锹锾键锶锗镁镑镕锁镉镈镃钨蓥镏铠铩锼镐镇镒镋镍镓镞镟链镆镙镠镝铿锵镗镘镛铲镜镖镂錾铧镤镪锈铙铴镣铹镦镡镫镨镄镌镰镯镭铁镮铎铛镱铸镬镔鉴锧镴铄镳镧钥镵镶镊锣钻銮凿镢长门闩闪闫闬闭开闶闳闰闲间闵闸阂阁阀闺闽阃阆闾阅阊阉阎阏阍阈阌阒闱阔阕阑阇阗阘闿阖阙闯关阚阓阐阛闼坂陉陕阵阴陈陆阳陧队阶陨际随险隐陇隶隽虽双雏杂鸡难电霡雾霁雳霭灵靓静靥鼗巩绱缰鞑鞯韦韧韨韩韪韬韫韵响页顶顷项顺顸顼颂颀颃预顽颁顿颇领颌颉颐颏头颊颋颔颈颓频颗题额颚颜颙颛颡颠类颟颢顾颤显颦颅颞颧风飐飑飒飓飔飏飖飕飗飘飙飞饤饦饨饪饫饬饭饮饴饲饱饰饺饼饷养饵饽馁饿馂饾馄饯馅馆糇饧馎饩馏馊馌馍馒馐馑馈馔饶飨餍馋马驭冯驮驰驯驲驳驻驽驹驵驾骀驸驶驼驷骈骇骃骆骎骏骋骍骓骒骑骐骛骗骙䯄骞骘骝腾驺骚骟骡蓦骜骖骠骢驱骅骕骁骣骄验驿骤驴骧骥骦骊骉髅髌髋鬓闹阋阄魉魇鱼鱽鲀鲁鲂鱿鲄鲐鲍鲋鲊鲒鲕鲖鲔鲛鲑鲜鲪鲧鲠鲩鲤鲨鲻鲯鲭鲞鲷鲱鲵鲲鲳鲸鲮鲰鳀鲫鲽鳇鳅鳆鳃鳒鲥鳏鳎鳐鳍鲢鳌鳓鲦鲣鳗鳛鳔鳕鳖鳟鳝鳜鳞鲟鲎鲙鳣鳢鲿鲚鳄鲈鲡鸟凫鸠鸤凤鸣鸢鸩鸨鸦鸰鸵鸳鸲鸮鸱鸪鸯鸭鸸鸹䴕鸿鸽䴔鸺鸼鹃鹆鹁鹈鹅鹄鹉鹌鹏鹎鹊鹓䴖鸫鹑鹒鹙鹕鹗鹖鹜䴗鸧莺鹟鹤鹠鹡鹘鹣鹚鹢鹞䴘鹝鹧鹥鸥鸷鹨鸶鹪鹔鹩鹫鹇鹬鹰鹭鸴䴙㶉鹯鹲鸬鹦鹳鹂鸾鹾盐丽麦麸黄黉点黪黡黩黾鼋鼍鼹齐斋赍齑齿龀龁龂龅龇龃龆龄龈龊龉龋腭龌龙庞龚龛龟汇坛历冲获当尽脏药荡锤须饥卤发药㟆㨫䌾䞍䯅鲃䲝鳚俫刬㓥㔉咝垱垅屃岽悮㧟枧榅滟㶽㶶犸㺍痖疬眍砜硷纟绔绬䍀耢胨荮荬螨裥觍讻贠轷轱钎钚钷铞铘锃锍锫锝锪锳锘锿镅镎镚锎锏镲镥镩鞒颒颕颥飚饣饹馃馇馓馕骔鲅鲆鲉鲏鲇鲴鲺鳊鲗鳑鳋鳘鲹鳙鲼鸻鹀鹐鹍鹋鹛鹱鹴厐䌺垴讠钅䌶戯梿㱮瘆䅉䌼觃饳饸饻馉鱾鲌鲘鲓鲝鲬鳈鳂鲾鳁鳉鳡鳠䴓杰佣仆价优儿划胜吨涂坏奸宁尸岭几厂后征怜怀忏舍挂扑据扰于晒杆栖极构朴机柜气洁淀泞洒炖异痒确御种洼范筑帘篱网茧圣听腊与庄万荐苹虮虫蜡蚕制触注夸丰赶踊挽适丑离云愿刮肴惊肮体松斗郁咸么党采并系干复只里渖画锺钟䩄馀鲶碱"</span>;</div><div class="line"></div><div class="line"><span class="comment">//Simplified Chinese chars</span></div><div class="line"><span class="keyword">var</span> chsList = <span class="string">"“”‘’丢乱亚伫来仑侣俣伣侠伥俩仓个们伦伟侧侦伪伧伞备偬传伛债伤倾偻仅佥侨侥偾仪侬亿侩俭傧俦侪偿储俪㑩傩傥俨兑兖内两册幂净冻凛凯别删刭则刹刚剥剐剀创剧刘刽刿剑剂劲动务勋劳势勚劢励劝匀匦匮区协却厍厌厉厣参丛咤吴呐吕呙员呗吣问哑启唡㖞唤丧乔单哟呛啬唝吗呜唢哔叹喽呕啧尝唛哗唠啸叽哓呒啴嘘㖊哒哝哕嗳哙喷咛吓哜噜啮呖咙亸喾严嘤啭嗫嚣冁呓嘱囱囵国围园圆图团埯垭执坚垩埚尧报场块茔垲埘坞埙尘堑垫坠堕坟垦压垒圹垆垄坜坝壮壶壸寿够梦夹奂奥奁夺奋姹妆姗娱娄妇娅娲妫媪妈妪妩娴婳娆婵娇嫱嫒嬷嫔婴婶娈孙学孪宫寝实审写宽宠宝将专寻对导尴届屉屡层屦属冈岘岛峡崃岗峥岚嵝崭岖嵚崂峤峣峄崄岙嵘屿岿峦巅巯帅师帐带帧帏帼帻帜币帮帱库厕厢厩厦厨厮庙庑废广廪庐厅弑弪张强弹弥弯彦径从徕彻恒耻悦怅闷恶恼恽恻爱惬悫怆恺忾态愠惨惭恸惯怄怂虑悭庆忧惫凭愦惮愤悯怃宪忆恳应怿懔怼懑恹惩懒悬惧慑恋戆戋戗戬战戏户抛捝挟扪扫抡挜挣拣扬换挥损摇捣揾抢掴掼搂挚抠抟掺捞挦撑挠㧑挢掸拨抚揿挞挝捡拥掳择击挡担挤拟摈拧搁掷扩撷摆擞撸摅撵拢拦撄搀撺携摄攒挛摊搅揽败叙敌数敛毙斓斩断时晋昼晕晖旸畅暂晔昙晓暧旷昽书会胧东锨栅栀条枭棁弃枨枣栋栈梾桠杨枫桢业杩荣桤枪椠椁桨桩乐枞楼标枢样树桦桡桥椭横檩柽档桧槚检樯梼槟柠槛橹榈栉椟橼栎橱槠栌枥橥榇蘖栊榉樱栏权椤栾榄棂钦欧欤欢岁归殁残殒殇殚殓殡㱩歼杀壳毁殴毵牦毡氇氢氩氲决没况汹浃泾凉泪渌沦渊涞浅涣减涡测浑凑浈汤沩沟温沧灭涤荥沪滞渗浒浐滚满渔沤汉涟渍涨溆渐浆颍泼潜润浔溃滗涠涩浇涝涧渑泽滪泶浍浊浓湿济涛滥潍滨溅泺滤滢渎㲿泻浏濒泸沥潇潆潴泷濑潋澜沣滠滩灏漤湾滦灾为乌烃无炼炜烟茕焕烦炀煴荧炝热颎炽烨灯烧烫焖营灿烛烩烬焘烁炉烂争爷尔墙牍牵荦犊牺状狭狈狰犹狲狱狮奖独狯猃狝狞猎犷兽獭献猕猡现珐珲玮玚琐瑶莹玛玱琏玑瑷珰环玺琼珑璎瓒瓯产亩毕畴叠痉疴疯疡痪瘗疮疟疭瘘疗痨痫瘅疠瘪疖癞癣瘿瘾痈瘫癫皑疱皲皱盗盏监盘卢眦众睁睐䁖瞒瞆睑眬瞩矫硁硖砗砚硕砀码硙砖碜碛矶硗础碍矿砺砾矾砻禄祸祯祎祃禅礼祢祷秃籼税秆禀称稣积颖秾穑秽稳稆窝穷窑窎窭窥窜窍窦窃竞笔笋笕䇲笺筝节箧筼笃筛筚箦篓箪简篑箫筜签篮筹箓箨籁笼笾簖箩粤糁粪粮粝籴粜纠纪纣约红纡纥纨纫纹纳纽纾纯纰纼纱纮纸级纷纭纴纺䌷细绂绁绅纻绍绀绋绐绌终组䌹绊绗结绝绦绞络绚给绒绖统丝绛绢绑绡绠绨绤绥经综缍绿绸绻绶维绹绾纲缀䌽纶绺绮绽绰绫绵绲缁紧绯绪缃缄缂线缉缎缔缗缘缌编缓缅纬缑缈练缏缇萦缙缢缒绉缣缊缞缚缜缟缛县缝缡缩纵缧䌸缦絷缕缥总绩绷缫缪缯织缮缭绕绣缋绳绘缳缲缴䍁绎继缤缱缬纩续缠缨纤缵缆钵罂罚骂罢罗罴羁芈羟义习翘耧闻联聪声耸聩聂职聍聋肃胁脉胫脱胀肾脶脑肿脚肠腽肤胶腻胆脍脓脸脐膑胪脔臜临兴举旧舱舣舰舻艰艳刍苎兹荆茎荚苋华苌莱莴叶荭着苇荤莳莅苍荪盖莲苁莼荜蒌蒋葱茑荫荨蒇荞莸荛蒉芜萧蓣蕰荟蓟芗蔷荙莶萨䓕荠蓝荩艺薮苈蔼蔺蕲芦苏蕴藓蔹茏兰蓠萝处虚虏号亏虬蛱蜕蚬蚀猬虾蜗蛳蚂萤䗖蝼螀蛰蝈蝉蛲蛏蚁蝇虿蛴蝾蛎蟏蛊蛮术卫衮袅补装裈袆裤裢褛亵袯袄裣裆褴袜䙓衬袭见规觅视觇觋觎亲觊觏觐觑觉览觌观觞觯订讣计讯讧讨讦讱训讪讫讬记讹讶讼䜣诀讷访设许诉诃诊诂诋讵诈诒诏评诐诇诎诅词咏诩询诣试诗诧诟诡诠诘话该详诜诙诖诔诛诓认诳诶诞诱诮语诚诫诬误诰诵诲说谁课谇诽谊訚调谄谆谈诿请诤诹诼谅论谂谀谍谞谝诨谔谛谐谏谕谘讳谙谌讽诸谚谖诺谋谒谓誊诌谎谜谧谑谡谤谦谥讲谢谣谟谪谬讴谨谩䜧证谲讥谮识谯谭谱谵译议谴护诪誉谫读变雠谗让谰谶谠谳岂竖猪豮猫䝙贝贞负财贡贫货贩贪贯责贮贳赀贰贵贬买贷贶费贴贻贸贺贲赂赁贿赅资贾贼赈赊宾赇赒赉赐赏赔赓贤卖贱赋赕质账赌䞐赖赗赚赙购赛赜贽赘赟赠赞赡赢赆赃赑赎赝赣赪赵趋趱迹践跄跸蹒踪跷跶趸踌跻跃踯跞踬蹰跹蹑蹿躜躏躯车轧轨军轪轩轫轭软轸轴轵轺轲轶轼较辂辁辀载轾辄辅轻辆辎辉辋辍辊辇辈轮辌辑辏输辐辗舆辒毂辖辕辘转辙轿辚轰辔轹轳办辞辫辩农迳这连进运过达违遥逊递远迟迁选遗辽迈还迩边逻逦郏邮郓乡邹邬郧邓郑邻郸邺郐邝酂郦酝医酱酦酿衅酾酽释钆钇钌钊钉钋针钓钐钏钒钗钍钕钯钫钘钭钠钝钤钣钑钞钮钧钙钬钛钪铌铈钶铃钴钹铍钰钸铀钿钾钜铊铉铇铋铂钳铆铅钺钩钲钼钽铏铰铒铬铪银铳铜铚铣铨铢铭铫铦衔铑铷铱铟铵铥铕铯铐锐销锑锉铝锒锌钡铤铗锋铻锊锓锄锔锇铓铺铖锆锂铽锯钢锞录锖锩铔锥锕锟锱铮锛锬锭锜钱锦锚锠锡锢错锰铼钔锴锅镀锷铡钖锻锽锸锲锹锾键锶锗镁镑镕锁镉镈镃钨蓥镏铠铩锼镐镇镒镋镍镓镞镟链镆镙镠镝铿锵镗镘镛铲镜镖镂錾铧镤镪锈铙铴镣铹镦镡镫镨镄镌镰镯镭铁镮铎铛镱铸镬镔鉴锧镴铄镳镧钥镵镶镊锣钻銮凿镢长门闩闪闫闬闭开闶闳闰闲间闵闸阂阁阀闺闽阃阆闾阅阊阉阎阏阍阈阌阒闱阔阕阑阇阗阘闿阖阙闯关阚阓阐阛闼坂陉陕阵阴陈陆阳陧队阶陨际随险隐陇隶隽虽双雏杂鸡难电霡雾霁雳霭灵靓静靥鼗巩绱缰鞑鞯韦韧韨韩韪韬韫韵响页顶顷项顺顸顼颂颀颃预顽颁顿颇领颌颉颐颏头颊颋颔颈颓频颗题额颚颜颙颛颡颠类颟颢顾颤显颦颅颞颧风飐飑飒飓飔飏飖飕飗飘飙飞饤饦饨饪饫饬饭饮饴饲饱饰饺饼饷养饵饽馁饿馂饾馄饯馅馆糇饧馎饩馏馊馌馍馒馐馑馈馔饶飨餍馋马驭冯驮驰驯驲驳驻驽驹驵驾骀驸驶驼驷骈骇骃骆骎骏骋骍骓骒骑骐骛骗骙䯄骞骘骝腾驺骚骟骡蓦骜骖骠骢驱骅骕骁骣骄验驿骤驴骧骥骦骊骉髅髌髋鬓闹阋阄魉魇鱼鱽鲀鲁鲂鱿鲄鲐鲍鲋鲊鲒鲕鲖鲔鲛鲑鲜鲪鲧鲠鲩鲤鲨鲻鲯鲭鲞鲷鲱鲵鲲鲳鲸鲮鲰鳀鲫鲽鳇鳅鳆鳃鳒鲥鳏鳎鳐鳍鲢鳌鳓鲦鲣鳗鳛鳔鳕鳖鳟鳝鳜鳞鲟鲎鲙鳣鳢鲿鲚鳄鲈鲡鸟凫鸠鸤凤鸣鸢鸩鸨鸦鸰鸵鸳鸲鸮鸱鸪鸯鸭鸸鸹䴕鸿鸽䴔鸺鸼鹃鹆鹁鹈鹅鹄鹉鹌鹏鹎鹊鹓䴖鸫鹑鹒鹙鹕鹗鹖鹜䴗鸧莺鹟鹤鹠鹡鹘鹣鹚鹢鹞䴘鹝鹧鹥鸥鸷鹨鸶鹪鹔鹩鹫鹇鹬鹰鹭鸴䴙㶉鹯鹲鸬鹦鹳鹂鸾鹾盐丽麦麸黄黉点黪黡黩黾鼋鼍鼹齐斋赍齑齿龀龁龂龅龇龃龆龄龈龊龉龋腭龌龙庞龚龛龟汇坛历冲获当尽脏药荡锤须饥卤发药㟆㨫䌾䞍䯅鲃䲝鳚俫刬㓥㔉咝垱垅屃岽悮㧟枧榅滟㶽㶶犸㺍痖疬眍砜硷纟绔绬䍀耢胨荮荬螨裥觍讻贠轷轱钎钚钷铞铘锃锍锫锝锪锳锘锿镅镎镚锎锏镲镥镩鞒颒颕颥飚饣饹馃馇馓馕骔鲅鲆鲉鲏鲇鲴鲺鳊鲗鳑鳋鳘鲹鳙鲼鸻鹀鹐鹍鹋鹛鹱鹴厐䌺垴讠钅䌶戯梿㱮瘆䅉䌼觃饳饸饻馉鱾鲌鲘鲓鲝鲬鳈鳂鲾鳁鳉鳡鳠䴓杰佣仆价优儿划胜吨涂坏奸宁尸岭几厂后征怜怀忏舍挂扑据扰于晒杆栖极构朴机柜气洁淀泞洒炖异痒确御种洼范筑帘篱网茧圣听腊与庄万荐苹虮虫蜡蚕制触注夸丰赶踊挽适丑离云愿刮肴惊肮体松斗郁咸么党采并系干复只里渖画锺钟䩄馀鲶碱"</span>;</div><div class="line"></div><div class="line"><span class="comment">//inspired by augor and phoenix from proxomitron.cn, and "繁简转换" script by yecao</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleTextNode</span><span class="params">(prtNode)</span> </span>{</div><div class="line">	<span class="keyword">var</span> nodes = prtNode.childNodes,</div><div class="line">		i = <span class="number">0</span>,</div><div class="line">		l = nodes.length;</div><div class="line">	<span class="keyword">for</span> (; i &lt; l; i++) {</div><div class="line">		<span class="keyword">if</span> (nodes[i].nodeType === <span class="number">3</span>) {</div><div class="line">			nodes[i].data = conv(nodes[i].data);</div><div class="line">		} <span class="keyword">else</span> <span class="keyword">if</span> (nodes[i].childNodes) {</div><div class="line">			handleTextNode(nodes[i]);</div><div class="line">		}</div><div class="line">	}</div><div class="line">}</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">conv</span><span class="params">(str)</span> </span>{</div><div class="line">	<span class="keyword">var</span> ret = <span class="string">""</span>,</div><div class="line">		find,</div><div class="line">		i = <span class="number">0</span>,</div><div class="line">		l = str.length;</div><div class="line">	<span class="keyword">for</span> (; i &lt; l; i++) {</div><div class="line">		<span class="keyword">var</span> cha = str.charAt(i);</div><div class="line">		<span class="keyword">if</span> (<span class="regexp">/[\u4E00-\u9FFF“”‘’“”‘’\u3400-\u4DBF]/</span>.test(cha) === <span class="literal">false</span>) {</div><div class="line">			find = -<span class="number">1</span>;</div><div class="line">		} <span class="keyword">else</span> {</div><div class="line">			find = chtList.indexOf(cha);</div><div class="line">		}</div><div class="line">		<span class="keyword">if</span> (find != -<span class="number">1</span>) {</div><div class="line">			ret += chsList.charAt(find);</div><div class="line">		} <span class="keyword">else</span> {</div><div class="line">			ret += cha;</div><div class="line">		}</div><div class="line">	}</div><div class="line">	<span class="keyword">return</span> ret;</div><div class="line">}</div><div class="line"></div><div class="line">handleTextNode(<span class="built_in">document</span>.documentElement);</div><div class="line"></div><div class="line">})();</div></pre></td></tr></table></figure>
+
+<p>2.简繁转换<br><a title="简繁转换" href="https://userscripts.org/scripts/show/38023" target="_blank">https://userscripts.org/scripts/show/38023</a></p>
+<p>3.文本框备份<br><a title="Textarea Backup with expiry" href="https://userscripts.org/scripts/show/42879" target="_blank">https://userscripts.org/scripts/show/42879</a></p>
+<p>4.各大视频站点去广告&amp;bilibili播放器替换<br><a title="OpenGG.Clean.Player(Bae" href="https://userscripts.org/scripts/show/162286" target="_blank">https://userscripts.org/scripts/show/162286</a></p>
+<p>5.迅雷、快车、旋风等专用链破解<br><a title="专用链破解 Special Links Converter" href="https://userscripts.org/scripts/show/66985" target="_blank">https://userscripts.org/scripts/show/66985</a></p>
+<p>6.DBank点击文件名直接下载(免登陆)<br><a title="DBank Linker" href="https://userscripts.org/scripts/show/116879" target="_blank">https://userscripts.org/scripts/show/116879</a></p>
+<p>7.picViewer(一看就知是看图脚本)<br><a title="picViewer" href="https://userscripts.org/scripts/show/105741" target="_blank">https://userscripts.org/scripts/show/105741</a></p>
+<p>8.CheckBoxMate(批量勾选)<br><a title="CheckBoxMate for Greasemonkey" href="https://userscripts.org/scripts/show/73700" target="_blank">https://userscripts.org/scripts/show/73700</a></p>
+<p>9.返回顶部、底部&amp;刷新<br><a title="GoToTop[modified]" href="https://userscripts.org/scripts/show/123622" target="_blank">https://userscripts.org/scripts/show/123622</a></p>
+<p>10.批量导出百度网盘下载地址(配合aria2效果很好)<br><a title="BaiduPanDownloadHelper" href="https://userscripts.org/scripts/show/162138" target="_blank">https://userscripts.org/scripts/show/162138</a></p>
+<p>11.眼不见心不烦(新浪微博优化脚本)<br><a title="眼不见心不烦（新浪微博）" href="https://userscripts.org/scripts/show/114087" target="_blank">https://userscripts.org/scripts/show/114087</a></p>
+<p>12.youtube下载&amp;优化利器<br><a title="YouTube Center" href="https://userscripts.org/scripts/show/114002" target="_blank">https://userscripts.org/scripts/show/114002</a></p>
+<p>13.QQ旋风一键rpc(配合aria2)</p>
+<figure class="highlight [javascript]"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ==UserScript==</span></div><div class="line"><span class="comment">// @name        web QQ旋风/xuanfeng</span></div><div class="line"><span class="comment">// @namespace   web QQ旋风/xuanfeng</span></div><div class="line"><span class="comment">// @description 旋风离线链接导出</span></div><div class="line"><span class="comment">// @include     http://lixian.qq.com/main.html*</span></div><div class="line"><span class="comment">// @version     0.9.0</span></div><div class="line"><span class="comment">// @Author: maplebeats</span></div><div class="line"><span class="comment">// @mail: maplebeats@gmail.com</span></div><div class="line"><span class="comment">// ==/UserScript==</span></div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line">* BUG:文件重名无法正常下载.....</div><div class="line">* TIPS:$是tencent自己的一个function,不是jQuery</div><div class="line">* TODO:aria2-rpc状态检查等</div><div class="line">*/</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">contentEval</span><span class="params">(source)</span> </span>{</div><div class="line">    <span class="comment">// Check for function input.</span></div><div class="line">    <span class="keyword">if</span> (<span class="string">'function'</span> == <span class="keyword">typeof</span> source) {</div><div class="line">        <span class="comment">// Execute this function with no arguments, by adding parentheses.</span></div><div class="line">        <span class="comment">// One set around the function, required for valid syntax, and a</span></div><div class="line">        <span class="comment">// second empty set calls the surrounded function.</span></div><div class="line">        source = <span class="string">'('</span> + source + <span class="string">')();'</span></div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="comment">// Create a script node holding this  source code.</span></div><div class="line">    <span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">    script.setAttribute(<span class="string">"type"</span>, <span class="string">"application/javascript"</span>);</div><div class="line">    script.textContent = source;</div><div class="line"></div><div class="line">    <span class="comment">// Insert the script node into the page, so it will run, and immediately</span></div><div class="line">    <span class="comment">// remove it to clean up.</span></div><div class="line">    <span class="built_in">document</span>.body.appendChild(script);</div><div class="line">    <span class="built_in">document</span>.body.removeChild(script);</div><div class="line">}</div><div class="line"></div><div class="line">contentEval(<span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">    <span class="keyword">var</span> context = <span class="string">'&lt;progress id="re-pro" value=0 style="width:280px;"&gt;&lt;/progress&gt;'</span>+</div><div class="line">        <span class="string">'&lt;font color="red"&gt;&lt;/font&gt;'</span>+</div><div class="line">        <span class="string">'&lt;div id="messager" style="border:1px solid;margin-top:5px;padding:5px;width:280px;"&gt;Welcome&lt;/div&gt;'</span>;</div><div class="line">    jQuery(<span class="string">"#share_opt"</span>).html(context).css(<span class="string">'float'</span>,<span class="string">'left'</span>).css(<span class="string">'width'</span>,<span class="string">'250px'</span>).css(<span class="string">'margin'</span>,<span class="string">'20px'</span>);</div><div class="line">    jQuery(<span class="string">'.main'</span>).css(<span class="string">'width'</span>,<span class="string">'80%'</span>);</div><div class="line">    jQuery(<span class="string">'#cont_wrap'</span>).css(<span class="string">'width'</span>,<span class="string">'100%'</span>);</div><div class="line">    jQuery(<span class="string">"#down_box"</span>).remove();</div><div class="line">    jQuery(<span class="string">".mod_copyright"</span>).remove();</div><div class="line">    jQuery(<span class="string">".top"</span>).remove();</div><div class="line">    jQuery(<span class="string">".search_box"</span>).remove();</div><div class="line"></div><div class="line">    jQuery(<span class="string">"#task_dl_local em"</span>).html(<span class="string">"Aria2导出"</span>);</div><div class="line">    jQuery(<span class="string">"#task_share_multi em"</span>).html(<span class="string">'一键RPC'</span>);</div><div class="line">});</div><div class="line">contentEval(<span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">    EF = {};</div><div class="line">    <span class="keyword">var</span> mode = <span class="number">1</span>;</div><div class="line">    <span class="keyword">var</span> t_count = <span class="number">0</span>;</div><div class="line">    <span class="keyword">var</span> task_info = [];</div><div class="line">    <span class="keyword">var</span> add_task_info = <span class="function"><span class="keyword">function</span><span class="params">(j)</span></span>{</div><div class="line">        <span class="keyword">if</span>(j){</div><div class="line">            task_info.push(j);</div><div class="line">        }</div><div class="line">        <span class="keyword">var</span> count = task_info.length;</div><div class="line"></div><div class="line">        jQuery(<span class="string">'#re-pro'</span>).attr(<span class="string">'max'</span>,t_count).attr(<span class="string">'value'</span>,count);</div><div class="line">        <span class="keyword">if</span>(count == t_count){</div><div class="line">            <span class="keyword">if</span>(mode === <span class="number">1</span>){</div><div class="line">                EF.init_pop();</div><div class="line">            }<span class="keyword">else</span> <span class="keyword">if</span>(mode === <span class="number">2</span>){</div><div class="line">                EF.rpc();</div><div class="line">            }</div><div class="line">            jQuery(<span class="string">'#share_opt font'</span>).html(<span class="string">'Success!'</span>);</div><div class="line">            t_count = <span class="number">0</span>;</div><div class="line">        }<span class="keyword">else</span>{</div><div class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        }</div><div class="line">    };</div><div class="line">    EF.get_url = <span class="function"><span class="keyword">function</span> <span class="params">(code)</span> </span>{</div><div class="line">        jQuery.ajax({</div><div class="line">            type: <span class="string">"post"</span>,</div><div class="line">            url: <span class="string">"/handler/lixian/get_http_url.php"</span>,</div><div class="line">            data: code,</div><div class="line">            cache: <span class="literal">false</span>,</div><div class="line">            timeout: <span class="number">10000</span>,</div><div class="line">            dataType: <span class="string">"json"</span>,</div><div class="line">            async: <span class="literal">true</span>, <span class="comment">//TvT</span></div><div class="line">            success: <span class="function"><span class="keyword">function</span> <span class="params">(data)</span> </span>{</div><div class="line">                <span class="keyword">if</span> (data &amp;&amp; data.ret == <span class="number">0</span>) {</div><div class="line">                    <span class="keyword">var</span> url = data[<span class="string">"data"</span>];</div><div class="line">                    <span class="keyword">var</span> temp_json = { <span class="string">"name"</span>: code.filename, <span class="string">"url"</span>: url.com_url, <span class="string">"cookie"</span>: url.com_cookie };</div><div class="line">                    add_task_info(temp_json);</div><div class="line">                }</div><div class="line">                <span class="keyword">else</span> {</div><div class="line">                    XF.widget.msgbox.show(<span class="string">"请求url失败"</span>, <span class="number">2</span>, <span class="number">2000</span>);</div><div class="line">                    t_count--;</div><div class="line">                    add_task_info();</div><div class="line">                }</div><div class="line">            },</div><div class="line">            error: <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">                XF.widget.msgbox.show(<span class="string">"请求url失败"</span>, <span class="number">2</span>, <span class="number">2000</span>);</div><div class="line">                t_count--;</div><div class="line">                add_task_info();</div><div class="line">            }</div><div class="line">        });</div><div class="line">    }</div><div class="line">    EF.rpc = <span class="function"><span class="keyword">function</span> <span class="params">(data)</span> </span>{</div><div class="line">        <span class="keyword">var</span> data = task_info;</div><div class="line">        <span class="keyword">var</span> url = jQuery(<span class="string">"#rpc-url"</span>).val();</div><div class="line">        <span class="keyword">if</span>(url == <span class="literal">undefined</span>){</div><div class="line">            url = localStorage.rpc;</div><div class="line">        }<span class="keyword">else</span>{</div><div class="line">            localStorage.rpc = url;</div><div class="line">        }</div><div class="line">        <span class="keyword">var</span> count = data.length;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;count;i++) {</div><div class="line">            <span class="keyword">var</span> tmp = data[i];</div><div class="line">            <span class="keyword">var</span> uri = { <span class="string">'jsonrpc'</span>: <span class="string">'2.0'</span>, <span class="string">'id'</span>: (<span class="keyword">new</span> <span class="built_in">Date</span>()).getTime().toString(), <span class="string">'method'</span>: <span class="string">'aria2.addUri'</span>, <span class="string">'params'</span>: [[tmp.url, ], { <span class="string">'out'</span>: tmp.name, <span class="string">'header'</span>: <span class="string">'Cookie: FTN5K='</span> + tmp.cookie}] }; <span class="comment">/*,'split':'10','continue':'true','max-conection-per-server':'5','parameterized-uri':'true'}]};*/</span></div><div class="line">            <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">            xhr.open(<span class="string">"POST"</span>, url + <span class="string">"?tm="</span> + (<span class="keyword">new</span> <span class="built_in">Date</span>()).getTime().toString(), <span class="literal">true</span>);</div><div class="line">            xhr.setRequestHeader(<span class="string">"Content-Type"</span>, <span class="string">"application/x-www-form-urlencoded; charset=UTF-8"</span>);</div><div class="line">            xhr.send(<span class="built_in">JSON</span>.stringify(uri));</div><div class="line">        }</div><div class="line">        XF.widget.msgbox.hide();</div><div class="line">        XF.widget.msgbox.show(<span class="string">"任务已经添加至aria2-rpc,请自行查看"</span>, <span class="number">0</span>, <span class="number">1000</span>, <span class="literal">false</span>)</div><div class="line">    }</div><div class="line">    EF.get_rpc = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{</div><div class="line">        <span class="keyword">if</span>(localStorage.rpc)</div><div class="line">            <span class="keyword">return</span> localStorage.rpc;</div><div class="line">        <span class="keyword">else</span></div><div class="line">            <span class="keyword">return</span> <span class="string">'http://localhost:6800/jsonrpc'</span>;</div><div class="line">    }</div><div class="line">    EF.init_pop = <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">        <span class="keyword">var</span> html = <span class="string">'&lt;div class="choose_start" style="height:150px;width:100%;"&gt;'</span>+</div><div class="line">        <span class="string">'&lt;div style="margin-bottom: 20px;"&gt;'</span>+</div><div class="line">        <span class="string">'&lt;select id="choose" style="background:rgba(255,255,255,0.5);"&gt;&lt;option value=1&gt;aria2文件&lt;/option&gt;&lt;option value=2&gt;aria2命令&lt;/option&gt;&lt;option value=3&gt;wget命令&lt;/option&gt;&lt;option value=4&gt;aria2 json-rpc&lt;/option&gt;&lt;/select&gt;'</span>+</div><div class="line">        <span class="string">'&lt;/div&gt;'</span>+</div><div class="line">        <span class="string">'&lt;div id="show-export"&gt;'</span>+</div><div class="line">            <span class="string">'&lt;a id="save-as" class="icon_file" target="_blank" title="右键另存为" download="aria2.down"&gt;点击或右键另存为&lt;/a&gt;'</span>+</div><div class="line">            <span class="string">'&lt;p&gt;运行&lt;code&gt;aria2c -c -s10 -x10 -i aria2.down&lt;/code&gt;进行下载&lt;/p&gt;'</span>+</div><div class="line">        <span class="string">'&lt;/div&gt;'</span>+</div><div class="line">        <span class="string">'&lt;pre id="show-cmd" stlye="overflow-x: scroll;padding: 4px;border: 1px solid #CCC;"&gt;'</span>+</div><div class="line">        <span class="string">'&lt;/pre&gt;'</span>+</div><div class="line">        <span class="string">'&lt;div id="show-rpc"&gt;'</span>+</div><div class="line">        <span class="string">'&lt;p&gt;确保后台已运行aria2 &lt;code&gt;aria2c -c -s10 -x10 --enable-rpc&lt;/code&gt;&lt;/p&gt;'</span>+</div><div class="line">        <span class="string">'&lt;div&gt;&lt;input id="rpc-url" type="text" style="width:200px;background:rgba(0,0,0,0);" value="'</span>+EF.get_rpc()+<span class="string">'"&gt;&lt;/input&gt;&lt;/div&gt;&lt;div id="rpc" class="com_opt_btn"&gt;&lt;span&gt;&lt;em&gt;RPC&lt;/em&gt;&lt;/span&gt;&lt;/div&gt;'</span>+</div><div class="line">        <span class="string">'&lt;/div&gt;'</span>+</div><div class="line">        <span class="string">'&lt;/div&gt;'</span>;</div><div class="line">        jQuery(<span class="string">'#messager'</span>).html(html);</div><div class="line">        <span class="comment">/*</span></div><div class="line">        jQuery("#choose_files_table").html(html);</div><div class="line">        window.choose_download_files = new xfDialog("choose_download_files");</div><div class="line">        XF.widget.msgbox.hide();</div><div class="line">        choose_download_files.show();</div><div class="line">        jQuery(".com_win_head_wrap em").html("导出");</div><div class="line">        jQuery(".opt").hide();</div><div class="line">        */</div><div class="line"></div><div class="line">        jQuery(<span class="string">"#rpc"</span>).bind(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">            EF.rpc();</div><div class="line">        });</div><div class="line">        jQuery(<span class="string">"#choose"</span>).bind(<span class="string">"change"</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">            <span class="keyword">var</span> data = EF.create_data(jQuery(<span class="keyword">this</span>).val());</div><div class="line"></div><div class="line">            jQuery(<span class="string">'#show-export, #show-cmd, #show-rpc'</span>).hide();</div><div class="line">            <span class="keyword">switch</span> (<span class="built_in">parseInt</span>(<span class="keyword">this</span>.value)) {</div><div class="line">                <span class="keyword">case</span> <span class="number">1</span> : <span class="comment">//export file</span></div><div class="line">                    <span class="keyword">var</span> href = <span class="string">"data:text/plain;charset=utf-8,"</span> + <span class="built_in">encodeURIComponent</span>(data);</div><div class="line">                    jQuery(<span class="string">"#save-as"</span>).attr(<span class="string">"href"</span>, href);</div><div class="line">                    jQuery(<span class="string">'#show-export'</span>).show();</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> <span class="number">2</span> : <span class="comment">//show command code</span></div><div class="line">                <span class="keyword">case</span> <span class="number">3</span> :</div><div class="line">                    jQuery(<span class="string">'#show-cmd'</span>).show()</div><div class="line">                        .text(data);</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> <span class="number">4</span> : <span class="comment">//json rpc</span></div><div class="line">                    jQuery(<span class="string">'#show-rpc'</span>).show()</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">            }</div><div class="line">        }).change();<span class="comment">//init</span></div><div class="line">        <span class="comment">/*</span></div><div class="line">        jQuery("#choose_download_files .close_win").bind("click", function () {</div><div class="line">            jQuery(".com_win_head_wrap em").html("下载任务");</div><div class="line">            jQuery(".opt").show();</div><div class="line">        });</div><div class="line">        */</div><div class="line">    }</div><div class="line"></div><div class="line">    EF.create_data = <span class="function"><span class="keyword">function</span> <span class="params">(value)</span> </span>{</div><div class="line">        <span class="keyword">var</span> url = task_info;</div><div class="line">        <span class="keyword">var</span> html = <span class="string">''</span>;</div><div class="line">        <span class="keyword">var</span> count = url.length;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;count;i++) {</div><div class="line">            <span class="keyword">var</span> data = url[i];</div><div class="line">            <span class="keyword">var</span> cookie = data.cookie;</div><div class="line">            <span class="keyword">var</span> http = data.url;</div><div class="line">            <span class="keyword">var</span> name = data.name;</div><div class="line">            <span class="keyword">switch</span> (value) {</div><div class="line">                <span class="keyword">case</span> <span class="string">'1'</span>:</div><div class="line">                    html += http + <span class="string">"\n  header=Cookie: FTN5K="</span> + cookie + <span class="string">"\n"</span>+</div><div class="line">                    <span class="string">"  out="</span> + name + <span class="string">"\n"</span> +</div><div class="line">                    <span class="string">"  continue=true\n"</span>;</div><div class="line">                    <span class="comment">//html += "  parameterized-uri=true\n";</span></div><div class="line">                    <span class="comment">//html += "  max-conection-per-server=5\n";</span></div><div class="line">                    <span class="comment">//html += "  split=10\n"; //谁能告诉我为什么这个设置了完全无效？？？？</span></div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> <span class="string">'2'</span>:</div><div class="line">                    html += <span class="string">"aria2c -c -s10 -x10 -o '"</span> + name + <span class="string">"' --header 'Cookie: FTN5K="</span> + cookie + <span class="string">"' "</span> + http + <span class="string">"\n"</span>;</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> <span class="string">'3'</span>:</div><div class="line">                    html += <span class="string">"wget -c -O '"</span> + name + <span class="string">"' --header Cookie:FTN5K="</span> + cookie + <span class="string">" "</span> + http + <span class="string">"\n"</span>;</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                defalut:</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">            }</div><div class="line">        }</div><div class="line">        <span class="keyword">return</span> html</div><div class="line">    }</div><div class="line">    EF.get_choice = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{</div><div class="line">        <span class="keyword">var</span> dl_tasks = [];</div><div class="line">        <span class="keyword">var</span> tmp_taskid_str = <span class="string">''</span>;</div><div class="line">        <span class="keyword">var</span> tasks_count = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> task_id <span class="keyword">in</span> g_task_op.last_task_info) {</div><div class="line">            <span class="keyword">var</span> tmp_obj = g_task_op.last_task_info[task_id];</div><div class="line"></div><div class="line">            <span class="keyword">if</span> (check_failed_task(task_id)) <span class="keyword">continue</span>;</div><div class="line">            <span class="keyword">var</span> checkbox_elem = $(<span class="string">'task_sel_'</span> + task_id);</div><div class="line">            <span class="keyword">if</span> (checkbox_elem &amp;&amp; !checkbox_elem.checked) <span class="keyword">continue</span>;</div><div class="line">            <span class="keyword">if</span> (tmp_obj == <span class="literal">null</span> || tmp_obj.file_size != tmp_obj.comp_size) <span class="keyword">continue</span>;</div><div class="line">            <span class="keyword">if</span> (tmp_obj.dl_status != TASK_STATUS[<span class="string">'ST_UL_OK'</span>]) <span class="keyword">continue</span>;</div><div class="line"></div><div class="line">            <span class="keyword">var</span> json_temp = { <span class="string">"filename"</span>: tmp_obj.file_name, <span class="string">"hash"</span>: tmp_obj.code, <span class="string">"browser"</span>: <span class="string">"other"</span> };</div><div class="line">            dl_tasks.push(json_temp);</div><div class="line">            tmp_taskid_str = task_id;</div><div class="line">            tasks_count++;</div><div class="line">        }</div><div class="line">        <span class="keyword">if</span>(tasks_count == <span class="number">0</span>){</div><div class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        }<span class="keyword">else</span>{</div><div class="line">            <span class="keyword">return</span> dl_tasks;</div><div class="line">        }</div><div class="line">    }</div><div class="line">    EF.hander_tasks = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{</div><div class="line">        jQuery(<span class="string">'#share_opt font'</span>).html(<span class="string">'......'</span>);</div><div class="line">        task_info = [];</div><div class="line">        <span class="keyword">var</span> data = EF.get_choice();</div><div class="line">        <span class="built_in">console</span>.log(data);</div><div class="line">        t_count = data.length;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;t_count;i++) {</div><div class="line">            EF.get_url(data[i]);</div><div class="line">        }</div><div class="line">    }</div><div class="line">    EventHandler.task_batch2local = <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> </span>{</div><div class="line">        <span class="keyword">var</span> disabled = jQuery(e).hasClass(<span class="string">"disabled_btn"</span>);</div><div class="line">        <span class="keyword">if</span> (disabled) {</div><div class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        }</div><div class="line">        XF.widget.msgbox.show(<span class="string">"后台开始请求下载连接..."</span>, <span class="number">0</span>, <span class="number">1000</span>, <span class="literal">false</span>);</div><div class="line">        EF.hander_tasks();</div><div class="line">        mode = <span class="number">1</span>;</div><div class="line">    }</div><div class="line">    EventHandler.task_share = <span class="function"><span class="keyword">function</span><span class="params">(e)</span></span>{</div><div class="line">        <span class="keyword">var</span> disabled = jQuery(e).hasClass(<span class="string">"disabled_btn"</span>);</div><div class="line">        <span class="keyword">if</span> (disabled) {</div><div class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        }</div><div class="line">        jQuery(<span class="string">'#messager'</span>).html(<span class="string">'RPC...'</span>);</div><div class="line">        XF.widget.msgbox.show(<span class="string">'后台添加任务中'</span>, <span class="number">0</span>, <span class="number">1000</span>, <span class="literal">false</span>);</div><div class="line">        EF.hander_tasks();</div><div class="line">        mode = <span class="number">2</span>;</div><div class="line">    }</div><div class="line">});</div></pre></td></tr></table></figure>
+
+<p>14.osu无限制下载<br><a title="OSU AnotherDownload" href="https://userscripts.org/scripts/show/100778" target="_blank">https://userscripts.org/scripts/show/100778</a></p>
+<p>15.小说清爽阅读，支持各大小说网站<br><a title="My Novel Reader" href="https://userscripts.org/scripts/show/165951" target="_blank">https://userscripts.org/scripts/show/165951</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.ainhaato.moe/gm-scripts-recommend/" data-id="aonkx8o4mn16vl6q" class="article-share-link">Share</a>
+      
+        <a href="http://blog.ainhaato.moe/gm-scripts-recommend/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GM脚本/">GM脚本</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/firefox/">firefox</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/greasemonkey/">greasemonkey</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/tieba-scripts-recommend/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          firefox - 百度贴吧相关的GM脚本推荐
+        
+      </div>
+    </a>
+  
+  
+    <a href="/aria2-download-in-centos/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CentOS使用aria2实现迅雷离线批量下载</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/acg/">动漫相关</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/share/">资源分享</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近发表</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/proxychains-socks5-shell/">利用proxychains在终端使用socks5代理</a>
+          </li>
+        
+          <li>
+            <a href="/moemoe/">换了个域名，我也要萌萌哒~</a>
+          </li>
+        
+          <li>
+            <a href="/Aoharaido-OP/">青春之旅OP - 世界は恋に落ちている【附nice翻唱】</a>
+          </li>
+        
+          <li>
+            <a href="/iScript/">python实用脚本集 - iScript</a>
+          </li>
+        
+          <li>
+            <a href="/noir/">补番进行时 - Noir</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/2014/" style="font-size: 10.00px;">2014</a><a href="/tags/2014春/" style="font-size: 10.00px;">2014春</a><a href="/tags/Anime/" style="font-size: 10.00px;">Anime</a><a href="/tags/BDMV/" style="font-size: 10.00px;">BDMV</a><a href="/tags/BEncode/" style="font-size: 10.00px;">BEncode</a><a href="/tags/Blu-ray/" style="font-size: 10.00px;">Blu-ray</a><a href="/tags/GM脚本/" style="font-size: 10.00px;">GM脚本</a><a href="/tags/GPT/" style="font-size: 10.00px;">GPT</a><a href="/tags/MEGA/" style="font-size: 10.00px;">MEGA</a><a href="/tags/Noir/" style="font-size: 10.00px;">Noir</a><a href="/tags/Picpar/" style="font-size: 10.00px;">Picpar</a><a href="/tags/Rapidleech/" style="font-size: 10.00px;">Rapidleech</a><a href="/tags/WIN7/" style="font-size: 10.00px;">WIN7</a><a href="/tags/activate/" style="font-size: 10.00px;">activate</a><a href="/tags/aria2/" style="font-size: 10.00px;">aria2</a><a href="/tags/bash/" style="font-size: 10.00px;">bash</a><a href="/tags/centos/" style="font-size: 20.00px;">centos</a><a href="/tags/css/" style="font-size: 10.00px;">css</a><a href="/tags/download/" style="font-size: 18.33px;">download</a><a href="/tags/dropbox/" style="font-size: 10.00px;">dropbox</a><a href="/tags/firefox/" style="font-size: 10.00px;">firefox</a><a href="/tags/greasemonkey/" style="font-size: 11.67px;">greasemonkey</a><a href="/tags/http/" style="font-size: 10.00px;">http</a><a href="/tags/libev/" style="font-size: 10.00px;">libev</a><a href="/tags/libtorrent/" style="font-size: 10.00px;">libtorrent</a><a href="/tags/linux/" style="font-size: 16.67px;">linux</a><a href="/tags/moe/" style="font-size: 10.00px;">moe</a><a href="/tags/nodejs/" style="font-size: 10.00px;">nodejs</a><a href="/tags/opening/" style="font-size: 10.00px;">opening</a><a href="/tags/p2p/" style="font-size: 18.33px;">p2p</a><a href="/tags/proxifier/" style="font-size: 10.00px;">proxifier</a><a href="/tags/proxy/" style="font-size: 15.00px;">proxy</a><a href="/tags/proxychains/" style="font-size: 10.00px;">proxychains</a><a href="/tags/python/" style="font-size: 11.67px;">python</a><a href="/tags/rtorrent/" style="font-size: 10.00px;">rtorrent</a><a href="/tags/rutorrent/" style="font-size: 10.00px;">rutorrent</a><a href="/tags/script/" style="font-size: 10.00px;">script</a><a href="/tags/scripts/" style="font-size: 10.00px;">scripts</a><a href="/tags/shadowsocks/" style="font-size: 13.33px;">shadowsocks</a><a href="/tags/shell/" style="font-size: 10.00px;">shell</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">January 2014</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://lintk.me/" target="_blank">TrickLin</a>
+          </li>
+        
+          <li>
+            <a href="http://tennsinn.com/" target="_blank">陨落天心</a>
+          </li>
+        
+          <li>
+            <a href="http://ippotsuko.com/" target="_blank">一方通行</a>
+          </li>
+        
+          <li>
+            <a href="http://blog.ushiromiyabatora.com/" target="_blank">猫箱内の六轩岛</a>
+          </li>
+        
+          <li>
+            <a href="http://blog.hentai.re/" target="_blank">WiseHou&#39;s Blog</a>
+          </li>
+        
+          <li>
+            <a href="http://bropaul.com/" target="_blank">BroPaul</a>
+          </li>
+        
+          <li>
+            <a href="http://moonlib.com/" target="_blank">Moonlib</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Ainhaato<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/hexojs/hexo-theme-landscape" target="_blank">Landscape</a>
+      .
+      Hosted on <a href="https://github.com/" target="_blank">GitHub</a> & <a href="https://gitcafe.com/" target="_blank">GitCafe</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/links" class="mobile-nav-link">Friends</a>
+  
+    <a href="/guestbook" class="mobile-nav-link">GuestBook</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'Ainhaato';
+  
+  var disqus_url = 'http://blog.ainhaato.moe/gm-scripts-recommend/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//libs.useso.com/js/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="/mediaelement/mediaelement-and-player.min.js"></script>
+<script>
+$('video,audio').mediaelementplayer({
+// if the <video width> is not specified, this is the default
+// 缺省视频宽度，如果没有指定则默认使用此处的值
+defaultVideoWidth: 480,
+// if the <video height> is not specified, this is the default
+// 缺省视频高度，如果没有指定则默认使用此处的值
+defaultVideoHeight: 270,
+// if set, overrides <video width>
+// 字面上理解应该是设置了这个值，
+// 就会覆盖 <video> 里设置的宽度而采用此处的值，
+// 但是 Hexo 里貌似无效，都会自动缩放到最适合比例
+videoWidth: -1,
+// if set, overrides <video height>
+// 同上
+videoHeight: -1,
+// width of audio player
+// 音频播放器宽度
+audioWidth: 400,
+// height of audio player
+// 音频播放器高度
+audioHeight: 30,
+// initial volume when the player starts
+// 初始化音量大小，0.8 就表示 80%
+startVolume: 0.8,
+// useful for <audio> player loops
+// 开启循环，通常在 <audio> 下较常用
+loop: false,
+// enables Flash and Silverlight to resize to content size
+// 允许 Flash 或者 SilverLight 重新调整播放器大小
+enableAutosize: true,
+// the order of controls you want on the control bar (and other plugins below)
+// 控制菜单选项
+features: ['playpause','progress','current','duration','tracks','volume','fullscreen'],
+// Hide controls when playing and mouse is not over the video
+// 是否总是显示控制菜单
+alwaysShowControls: false,
+// force iPad's native controls
+// 强制 iPad 使用内建控制器
+iPadUseNativeControls: false,
+// force iPhone's native controls
+// 强制 iPhone 使用内建控制器
+iPhoneUseNativeControls: false,
+// force Android's native controls
+// 强制 Android 使用内建控制器
+AndroidUseNativeControls: false,
+// forces the hour marker (##:00:00)
+// 强制显示小时数
+alwaysShowHours: false,
+// show framecount in timecode (##:00:00:00)
+// 显示帧数
+showTimecodeFrameCount: false,
+// used when showTimecodeFrameCount is set to true
+// 每秒帧数，仅当 showTimecodeFrameCount 为 True 时有效
+framesPerSecond: 25,
+// turns keyboard support on and off for this instance
+// 为当前窗口实例提供键盘支持
+enableKeyboard: true,
+// when this player starts, it will pause other players
+// 当前播放器开始播放后暂停所有其他的播放器
+pauseOtherPlayers: true,
+// array of keyboard commands
+// 按键动作？应该是绑定按键之类的
+keyActions: []
+});
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+<div id="totop" style="position:fixed;bottom:150px;right:50px;cursor: pointer;z-index:99999;">
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+  </div>
+</body>
+</html>

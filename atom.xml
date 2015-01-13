@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.ainhaato.moe/"/>
-  <updated>2015-01-12T14:30:16.925Z</updated>
+  <updated>2015-01-13T09:43:46.113Z</updated>
   <id>http://blog.ainhaato.moe/</id>
   
   <author>
@@ -15,42 +15,284 @@
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <link href="http://blog.ainhaato.moe/2015/hello-world/"/>
-    <id>http://blog.ainhaato.moe/2015/hello-world/</id>
-    <published>2015-01-12T11:21:59.000Z</published>
-    <updated>2015-01-12T11:42:51.000Z</updated>
-    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br> <audio src="http://p1.music.126.net/w76K29BOfiRzHjvcmsrvMw==/6625657069276811.mp3" type="audio/mp3"></audio></p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+    <title><![CDATA[利用proxychains在终端使用socks5代理]]></title>
+    <link href="http://blog.ainhaato.moe/proxychains-socks5-shell/"/>
+    <id>http://blog.ainhaato.moe/proxychains-socks5-shell/</id>
+    <published>2014-11-22T07:46:52.000Z</published>
+    <updated>2015-01-13T05:55:32.000Z</updated>
+    <content type="html"><![CDATA[<p>最近用各种脚本下载东西的时候发现有的站点需要当地IP才能下，比如…..nico, youtube等；所以就找了下能在终端用socks5代理的工具，最后找到了proxychains，配合shadowsocks，从此再无压力=w=</p>
+<a id="more"></a>
 
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
 
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<hr>
+<h3 id="proxychains安装">proxychains安装</h3>
+<pre><code>git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/rofl0r/proxychains-ng.git
+<span class="keyword">cd</span> proxychains-ng
+./configure
+<span class="keyword">make</span> &amp;&amp; <span class="keyword">make</span> install
+<span class="keyword">cp</span> ./src/proxychains.<span class="keyword">conf</span> /etc/proxychians.<span class="keyword">conf</span>
+<span class="keyword">cd</span> .. &amp;&amp; rm -rf proxychains-ng
+</code></pre><h3 id="编辑proxychains配置">编辑proxychains配置</h3>
+<pre><code><span class="keyword">vim</span> /etc/proxychains.<span class="keyword">conf</span>
+</code></pre><p>将<strong><em>socks4  127.0.0.1 9095</em></strong>改为</p>
+<pre><code><span class="title">socks5</span>  <span class="number">127.0.0.1</span> <span class="number">1080</span>  //<span class="number">1080</span>改为你自己的端口
+</code></pre><h3 id="使用方法">使用方法</h3>
+<p>在需要代理的命令前加上<strong><em>proxychains4</em></strong>，如：</p>
+<pre><code>proxychains4 wget http:<span class="comment">//xxx.com/xxx.zip</span>
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>最近用各种脚本下载东西的时候发现有的站点需要当地IP才能下，比如…..nico, youtube等；所以就找了下能在终端用socks5代理的工具，最后找到了proxychains，配合shadowsocks，从此再无压力=w=</p>
+]]>
+    
+    </summary>
+    
+      <category term="proxychains" scheme="http://blog.ainhaato.moe/tags/proxychains/"/>
+    
+      <category term="linux" scheme="http://blog.ainhaato.moe/tags/linux/"/>
+    
+      <category term="shell" scheme="http://blog.ainhaato.moe/tags/shell/"/>
+    
+      <category term="proxy" scheme="http://blog.ainhaato.moe/tags/proxy/"/>
+    
+      <category term="socks5" scheme="http://blog.ainhaato.moe/tags/socks5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[换了个域名，我也要萌萌哒~]]></title>
+    <link href="http://blog.ainhaato.moe/moemoe/"/>
+    <id>http://blog.ainhaato.moe/moemoe/</id>
+    <published>2014-09-09T15:05:51.000Z</published>
+    <updated>2015-01-13T05:56:17.000Z</updated>
+    <content type="html"><![CDATA[<p>刚换了个新的域名：<strong>ainhaato.moe</strong><br>顿时感觉整个人都萌萌哒了<br>至于为什么是这个域名…其实只是我一时想不到，就采用了同学的建议(他喜欢的角色的名字)，其实我对这个角色也不讨厌，所以就注册了这个域名<br><a id="more"></a></p>
+<h3 id="角色介绍">角色介绍</h3>
+<p>日文名:アインハルト・ストラトス<br>罗马音:Ainhaato Suturattosu<br>英文名:Einhart Stratos<br>中文名:艾茵哈特·斯崔特斯<br>角色出处:《魔法少女奈叶ViVid》</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
+    <![CDATA[<p>刚换了个新的域名：<strong>ainhaato.moe</strong><br>顿时感觉整个人都萌萌哒了<br>至于为什么是这个域名…其实只是我一时想不到，就采用了同学的建议(他喜欢的角色的名字)，其实我对这个角色也不讨厌，所以就注册了这个域名<br>]]>
+    
     </summary>
+    
+      <category term="域名" scheme="http://blog.ainhaato.moe/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+      <category term="moe" scheme="http://blog.ainhaato.moe/tags/moe/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[青春之旅OP - 世界は恋に落ちている【附nice翻唱】]]></title>
+    <link href="http://blog.ainhaato.moe/Aoharaido-OP/"/>
+    <id>http://blog.ainhaato.moe/Aoharaido-OP/</id>
+    <published>2014-08-29T15:30:39.000Z</published>
+    <updated>2015-01-13T09:11:51.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="http://ww2.sinaimg.cn/large/6abdaa9djw1ejtvtb48l3j20rs0s1doj.jpg" title="期间限定cover" target="_blank" rel="external"><img src="http://ww2.sinaimg.cn/large/6abdaa9djw1ejtvtb48l3j20rs0s1doj.jpg" alt="期间限定cover"></a></p>
+<p>七月新番里比较喜欢的几首之一，接下来坐等AZ的op，ed发售(2014/09/10)</p>
+<h3 id="试听">试听</h3>
+<embed src="http://music.163.com/style/swf/widget.swf?sid=28891491&type=2&auto=0&width=320&height=66" width="340" height="86" allownetworking="all">
+
+<h3 id="专辑曲目列表">专辑曲目列表</h3>
+<ol>
+<li>世界は恋に落ちている</li>
+<li>color</li>
+<li>世界は恋に落ちている -instrumental-</li>
+<li>color -instrumental-</li>
+</ol>
+<a id="more"></a>
+
+
+<h3 id="そらる翻唱">そらる翻唱</h3>
+<p><iframe src="http://danmaku.kuroy.me/videoinfo.php?id=13" style="height:442px;width:780px;" allowfullscreen></iframe><br>html5播放器出了点问题。。。弹幕播放器暂替orz</p>
+<h3 id="下载(320K+FLAC)">下载(320K+FLAC)</h3>
+<p><a href="http://pan.baidu.com/s/1gdoZcgb" target="_blank" rel="external"><img src="http://ww1.sinaimg.cn/large/6abdaa9djw1ejtx1udt3vj202m00rwe9.jpg" alt="Download"></a></p>
+<p>由于梦幻旋律论坛里的都是禁转。。。只好去jpopsuki下载了</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="http://ww2.sinaimg.cn/large/6abdaa9djw1ejtvtb48l3j20rs0s1doj.jpg" title="期间限定cover" target="_blank" rel="external"><img src="http://ww2.sinaimg.cn/large/6abdaa9djw1ejtvtb48l3j20rs0s1doj.jpg" alt="期间限定cover"></a></p>
+<p>七月新番里比较喜欢的几首之一，接下来坐等AZ的op，ed发售(2014/09/10)</p>
+<h3 id="试听">试听</h3>
+<embed src="http://music.163.com/style/swf/widget.swf?sid=28891491&type=2&auto=0&width=320&height=66" width="340" height="86" allownetworking="all">
+
+<h3 id="专辑曲目列表">专辑曲目列表</h3>
+<ol>
+<li>世界は恋に落ちている</li>
+<li>color</li>
+<li>世界は恋に落ちている -instrumental-</li>
+<li>color -instrumental-</li>
+</ol>
+]]>
+    
+    </summary>
+    
+      <category term="青春之旅" scheme="http://blog.ainhaato.moe/tags/%E9%9D%92%E6%98%A5%E4%B9%8B%E6%97%85/"/>
+    
+      <category term="opening" scheme="http://blog.ainhaato.moe/tags/opening/"/>
+    
+      <category term="世界は恋に落ちている" scheme="http://blog.ainhaato.moe/tags/%E4%B8%96%E7%95%8C%E3%81%AF%E6%81%8B%E3%81%AB%E8%90%BD%E3%81%A1%E3%81%A6%E3%81%84%E3%82%8B/"/>
+    
+      <category term="动漫相关" scheme="http://blog.ainhaato.moe/categories/acg/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[python实用脚本集 - iScript]]></title>
+    <link href="http://blog.ainhaato.moe/iScript/"/>
+    <id>http://blog.ainhaato.moe/iScript/</id>
+    <published>2014-08-22T07:18:41.000Z</published>
+    <updated>2015-01-13T05:58:26.000Z</updated>
+    <content type="html"><![CDATA[<p><strong><a href="https://github.com/PeterDing/iScript" target="_blank" rel="external">iScript</a></strong>是Github上<a href="https://github.com/PeterDing" target="_blank" rel="external">PeterDing</a>大神写的一个脚本集，由多数的<a href="https://www.python.org/" target="_blank" rel="external">python</a>脚本和少数GM脚本组成。</p>
+<p>含有以下几个脚本：</p>
+<ul>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/xiami.py" target="_blank" rel="external">xiami.py</a> - 下载或播放高品质虾米音乐(xiami.com)</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/pan.baidu.com.py" target="_blank" rel="external">pan.baidu.com.py</a> - 百度网盘的下载、离线下载、上传、播放、转存、文件操作</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/bt.py" target="_blank" rel="external">bt.py</a> - magnet torrent 互转、及 过滤敏.感.词</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/115.py" target="_blank" rel="external">115.py</a> - 115网盘的下载和播放</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/yunpan.360.cn.py" target="_blank" rel="external">yunpan.360.cn.py</a> - 360网盘的下载</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/music.baidu.com.py" target="_blank" rel="external">music.baidu.com.py</a> - 下载或播放高品质百度音乐(music.baidu.com)</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/music.163.com.py" target="_blank" rel="external">music.163.com.py</a> - 下载或播放高品质网易音乐(music.163.com)</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/flvxz_cl.py" target="_blank" rel="external">flvxz_cl.py</a> - flvxz.com 视频解析 client - 支持下载、播放</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/tumblr.py" target="_blank" rel="external">tumblr.py</a> - 下载某个tumblr.com的所有图片</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/unzip.py" target="_blank" rel="external">unzip.py</a> - 解决linux下unzip乱码的问题</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/ed2k_search.py" target="_blank" rel="external">ed2k_search.py</a> - 基于 donkey4u.com 的emule搜索</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/91porn.py" target="_blank" rel="external">91porn.py</a> - 下载或播放91porn　　　<strong>高能预警：未满18周岁请自行退避</strong></li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/ThunderLixianExporter.user.js" target="_blank" rel="external">ThunderLixianExporter.user.js</a> - A fork of <a href="https://github.com/binux/ThunderLixianExporter" target="_blank" rel="external">https://github.com/binux/ThunderLixianExporter</a> - 增加了mpv和mplayer的导出。</li>
+</ul>
+<p>个人最常用的是其中的<a href="https://github.com/PeterDing/iScript/raw/master/pan.baidu.com.py" target="_blank" rel="external">pan.baidu.com.py</a>，因此本文就简单介绍下它，其它脚本的用法请去<a href="https://github.com/PeterDing/iScript" target="_blank" rel="external">项目主页</a>查看<br><a id="more"></a><br>在使用该脚本之前你需要安装python和依赖，不过一般Linux都会自带的（虽然也许自带的版本会比较低，就像centos<br>这里我就默认你已经有了easy_install和pip吧( <del>使劲偷懒ing…</del></p>
+<h4 id="安装依赖">安装依赖</h4>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install requests requests_toolbelt</div></pre></td></tr></table></figure>
+
+<h2 id="使用方法">使用方法</h2>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">chmod a+x pan.baidu.com.py</div><div class="line">./pan.baidu.com.py    <span class="comment">#会显示帮助</span></div><div class="line"><span class="comment">#或者掠过上面的步骤，使用python pan.baidu.com.py</span></div></pre></td></tr></table></figure>
+
+<p>下文将pan.baidu.com.py简称为bd.py(文件名太长….</p>
+<p><strong>账号管理</strong><br>登录帐号有4种用法….</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">./bd.py g</div><div class="line">./bd.py login</div><div class="line">./bd.py login username</div><div class="line">./bd.py login username password</div></pre></td></tr></table></figure>
+
+<p>多帐号登录一直用<em>bp login</em>即可</p>
+<p>切换帐号：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./bd.py uc</div></pre></td></tr></table></figure>
+
+<p>删除帐号：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./bd.py ud</div></pre></td></tr></table></figure>
+
+<p><strong>下载方式</strong><br>bd.py默认调用wget进行下载，但是也可以通过 -a 10来调用aria2，其中10为分段数</p>
+<p><strong>下载自己网盘中的单个或多个文件</strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">./bd.py d http://pan.baidu.com/disk/home<span class="comment">#dir/path=/path/to/filename1 http://pan.baidu.com/disk/home#dir/path=/path/to/filename2 ..</span></div><div class="line">  or</div><div class="line">./bd.py d /path/to/filename1 /path/to/filename2 ..</div></pre></td></tr></table></figure>
+
+<p><strong>递归下载自己网盘中的单个或多个文件夹</strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">./bd.py d -R http://pan.baidu.com/disk/home<span class="comment">#dir/path=/path/to/directory1 http://pan.baidu.com/disk/home#dir/path=/path/to/directory2 ..</span></div><div class="line">  or</div><div class="line">./bd.py d -R /path/to/directory1 /path/to/directory2 ..</div></pre></td></tr></table></figure>
+
+<p><strong>递归下载后缀为 .mp3 的文件</strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./bd.py d -R /path/to/directory1 /path/to/directory2 .. -T .mp3</div></pre></td></tr></table></figure>
+
+<p><strong>非递归下载</strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./bd.py d /path/to/directory1 /path/to/directory2 ..</div></pre></td></tr></table></figure>
+
+<p><strong>下载单个公开分享的文件</strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">./bd.py d <span class="string">'url'</span></div><div class="line">例如： ./bd.py d <span class="string">'http://pan.baidu.com/s/1pJ0NtIN'</span></div></pre></td></tr></table></figure>
+
+<p><strong>下载单个私密分享的文件</strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">./bd.py d <span class="string">'url'</span> <span class="operator">-s</span> password</div><div class="line">例如： ./bd.py d <span class="string">'http://pan.baidu.com/s/1c0Eh1bM'</span> <span class="operator">-s</span> h81a</div></pre></td></tr></table></figure>
+
+<p><strong>转存文件</strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">./bd.py s <span class="string">'url'</span> remote_path</div><div class="line">./bd.py s <span class="string">'url'</span> remote_path <span class="operator">-s</span> password</div></pre></td></tr></table></figure>
+
+<h2 id="实际使用截图">实际使用截图</h2>
+<p><a href="http://www.speedtest.net/result/3705651370.png" title="SpeedTest测速截图" target="_blank" rel="external"><img src="http://www.speedtest.net/result/3705651370.png" alt="SpeedTest测速截图"></a><br><a href="http://ww1.sinaimg.cn/large/6abdaa9djw1ejlfbfwyvnj20fo02qt9h.jpg" title="单个私密分享文件下载" target="_blank" rel="external"><img src="http://ww1.sinaimg.cn/large/6abdaa9djw1ejlfbfwyvnj20fo02qt9h.jpg" alt="单个私密分享文件下载"></a><br><a href="http://ww1.sinaimg.cn/large/6abdaa9djw1ejlff1fj5sj20fo01wq3h.jpg" title="单个私密文件转存" target="_blank" rel="external"><img src="http://ww1.sinaimg.cn/large/6abdaa9djw1ejlff1fj5sj20fo01wq3h.jpg" alt="单个私密文件转存"></a><br><a href="http://ww1.sinaimg.cn/large/6abdaa9djw1ejlfh6i2smj20fm02xmxs.jpg" title="下载自己网盘里文件" target="_blank" rel="external"><img src="http://ww1.sinaimg.cn/large/6abdaa9djw1ejlfh6i2smj20fm02xmxs.jpg" alt="下载自己网盘里文件"></a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><strong><a href="https://github.com/PeterDing/iScript" target="_blank" rel="external">iScript</a></strong>是Github上<a href="https://github.com/PeterDing" target="_blank" rel="external">PeterDing</a>大神写的一个脚本集，由多数的<a href="https://www.python.org/" target="_blank" rel="external">python</a>脚本和少数GM脚本组成。</p>
+<p>含有以下几个脚本：</p>
+<ul>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/xiami.py" target="_blank" rel="external">xiami.py</a> - 下载或播放高品质虾米音乐(xiami.com)</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/pan.baidu.com.py" target="_blank" rel="external">pan.baidu.com.py</a> - 百度网盘的下载、离线下载、上传、播放、转存、文件操作</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/bt.py" target="_blank" rel="external">bt.py</a> - magnet torrent 互转、及 过滤敏.感.词</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/115.py" target="_blank" rel="external">115.py</a> - 115网盘的下载和播放</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/yunpan.360.cn.py" target="_blank" rel="external">yunpan.360.cn.py</a> - 360网盘的下载</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/music.baidu.com.py" target="_blank" rel="external">music.baidu.com.py</a> - 下载或播放高品质百度音乐(music.baidu.com)</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/music.163.com.py" target="_blank" rel="external">music.163.com.py</a> - 下载或播放高品质网易音乐(music.163.com)</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/flvxz_cl.py" target="_blank" rel="external">flvxz_cl.py</a> - flvxz.com 视频解析 client - 支持下载、播放</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/tumblr.py" target="_blank" rel="external">tumblr.py</a> - 下载某个tumblr.com的所有图片</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/unzip.py" target="_blank" rel="external">unzip.py</a> - 解决linux下unzip乱码的问题</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/ed2k_search.py" target="_blank" rel="external">ed2k_search.py</a> - 基于 donkey4u.com 的emule搜索</li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/91porn.py" target="_blank" rel="external">91porn.py</a> - 下载或播放91porn　　　<strong>高能预警：未满18周岁请自行退避</strong></li>
+<li><a href="https://github.com/PeterDing/iScript/raw/master/ThunderLixianExporter.user.js" target="_blank" rel="external">ThunderLixianExporter.user.js</a> - A fork of <a href="https://github.com/binux/ThunderLixianExporter" target="_blank" rel="external">https://github.com/binux/ThunderLixianExporter</a> - 增加了mpv和mplayer的导出。</li>
+</ul>
+<p>个人最常用的是其中的<a href="https://github.com/PeterDing/iScript/raw/master/pan.baidu.com.py" target="_blank" rel="external">pan.baidu.com.py</a>，因此本文就简单介绍下它，其它脚本的用法请去<a href="https://github.com/PeterDing/iScript" target="_blank" rel="external">项目主页</a>查看<br>]]>
+    
+    </summary>
+    
+      <category term="script" scheme="http://blog.ainhaato.moe/tags/script/"/>
+    
+      <category term="python" scheme="http://blog.ainhaato.moe/tags/python/"/>
+    
+      <category term="百度" scheme="http://blog.ainhaato.moe/tags/%E7%99%BE%E5%BA%A6/"/>
+    
+      <category term="download" scheme="http://blog.ainhaato.moe/tags/download/"/>
+    
+      <category term="upload" scheme="http://blog.ainhaato.moe/tags/upload/"/>
+    
+      <category term="下载" scheme="http://blog.ainhaato.moe/tags/%E4%B8%8B%E8%BD%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[补番进行时 - Noir]]></title>
+    <link href="http://blog.ainhaato.moe/noir/"/>
+    <id>http://blog.ainhaato.moe/noir/</id>
+    <published>2014-08-14T11:09:44.000Z</published>
+    <updated>2015-01-13T06:59:25.000Z</updated>
+    <content type="html"><![CDATA[<p>Noir —— 《黑街二人组》，本番讲述的是失去了过去的主人公夕雾香气与欧洲的黑社会舞台“杀手”米雷优一起合作杀手工作，组成了NOIR。为了找寻各自的记忆与真相，她们偷偷靠近迷一样的组织“索尔达”的影子。</p>
+<p>动听的音乐是本番一大特色，两张OST值得收藏，在《NOIR》中，梶浦由记和当年See-Saw的老搭档石川千亚纪携手合作了两首歌曲。；另一个特色就是节奏太慢…不过正适合现在的我</p>
+<a id="more"></a>
+
+<p>这几天刚动过手术，在床上不能乱动，每天无所事事(其实是日常…)，正好在B站看到这部没看过的老番，就去下了BD补番；听到op的瞬间就已经决定我会把它补完0.0；看了几话，后面<br>的BGM都不错，剧情神马的。。。其实我还没看多少，不做评价</p>
+<p>可能你会问既然没看多少为何就开始写博文了，(作大死的)答案就在本文最后=w=</p>
+<p>顺便给出下载链接(BD1080p_MP4_Hi10_2xAAC)：<br><a href="http://115.com/lb/5lbc39my35vx" target="_blank" rel="external">http://115.com/lb/5lbc39my35vx</a><br><a href="https://mega.co.nz/#F!1VEBla7a!ZjxU3CbdgGhMaNdC_0OAeg" target="_blank" rel="external">https://mega.co.nz/#F!1VEBla7a!ZjxU3CbdgGhMaNdC_0OAeg</a>
+　</p>
+<div><jw><a href="http://blog-attachment.qiniudn.com/video/Noir-NCOP.mp4;http://blog-attachment.qiniudn.com/video/Noir-NCOPHD.mp4" target="_blank" rel="external">http://blog-attachment.qiniudn.com/video/Noir-NCOP.mp4;http://blog-attachment.qiniudn.com/video/Noir-NCOPHD.mp4</a>,<br><a href="http://blog-attachment.qiniudn.com/video/Noir-NCED.mp4;http://blog-attachment.qiniudn.com/video/Noir-NCEDHD.mp4" target="_blank" rel="external">http://blog-attachment.qiniudn.com/video/Noir-NCED.mp4;http://blog-attachment.qiniudn.com/video/Noir-NCEDHD.mp4</a><br>|tracks=<a href="http://blog-attachment.qiniudn.com/video/NCOP.srt;http://blog-attachment.qiniudn.com/video/NCOPzh.srt" target="_blank" rel="external">http://blog-attachment.qiniudn.com/video/NCOP.srt;http://blog-attachment.qiniudn.com/video/NCOPzh.srt</a>,<br><a href="http://blog-attachment.qiniudn.com/video/Noir-NCED.srt" target="_blank" rel="external">http://blog-attachment.qiniudn.com/video/Noir-NCED.srt</a><br>|image=<a href="http://ww1.sinaimg.cn/large/6abdaa9djw1ejccz5p6xqj21hc0u0418.jpg" target="_blank" rel="external">http://ww1.sinaimg.cn/large/6abdaa9djw1ejccz5p6xqj21hc0u0418.jpg</a>,<br><a href="http://ww3.sinaimg.cn/large/6abdaa9djw1ejchf4fen8j20zk0k00u3.jpg" target="_blank" rel="external">http://ww3.sinaimg.cn/large/6abdaa9djw1ejchf4fen8j20zk0k00u3.jpg</a><br>|width=848<br>|height=634<br>|title=黑街二人组NCOP,<br>黑街二人组NCED<br>|description=播放器测试,<br>播放器测试2<br>|listbar=bottom<br>|listsize=154</jw></div>
+
+<h3 id="弹幕版0-0">弹幕版0.0</h3>
+<iframe src="http://danmaku.kuroy.me/videoinfo.php?id=12" style="height:480px;width:848px;" allowfullscreen></iframe>
+
+<h3 id="OP">OP</h3>
+<embed src="http://music.163.com/style/swf/widget.swf?sid=553087&type=2&auto=0&width=320&height=66" width="340" height="86" allownetworking="all">
+
+<h3 id="ED">ED</h3>
+<embed src="http://music.163.com/style/swf/widget.swf?sid=28242608&type=2&auto=0&width=320&height=66" width="340" height="86" allownetworking="all">
+
+<h3 id="OST1">OST1</h3>
+<embed src="http://www.xiami.com/widget/1313416_1768943004,1768943005,1768943006,1768943007,1768943008,1768943009,1768943010,1768943011,1768943012,1768943013,1768943014,1768943015,1768943016,1768943017,1768943018,1768943019,1768943020,_235_346_FF8719_494949_0/multiPlayer.swf" type="application/x-shockwave-flash" width="235" height="346" wmode="opaque">
+
+<h3 id="OST2">OST2</h3>
+<embed src="http://www.xiami.com/widget/1313416_1768943021,1768943022,1768943023,1768943024,1768943025,1768943026,1768943027,1768943028,1768943029,1768943030,1768943031,1768943032,1768943033,1768943034,1768943035,1768943036,1768943037,1768943038,1768943039,_235_346_FF8719_494949_0/multiPlayer.swf" type="application/x-shockwave-flash" width="235" height="346" wmode="opaque">
+
+<blockquote>
+<p>PS：其实…这篇文章主要就是测试下播放器而已……</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Noir —— 《黑街二人组》，本番讲述的是失去了过去的主人公夕雾香气与欧洲的黑社会舞台“杀手”米雷优一起合作杀手工作，组成了NOIR。为了找寻各自的记忆与真相，她们偷偷靠近迷一样的组织“索尔达”的影子。</p>
+<p>动听的音乐是本番一大特色，两张OST值得收藏，在《NOIR》中，梶浦由记和当年See-Saw的老搭档石川千亚纪携手合作了两首歌曲。；另一个特色就是节奏太慢…不过正适合现在的我</p>
+]]>
+    
+    </summary>
+    
+      <category term="Noir" scheme="http://blog.ainhaato.moe/tags/Noir/"/>
+    
+      <category term="黑街二人组" scheme="http://blog.ainhaato.moe/tags/%E9%BB%91%E8%A1%97%E4%BA%8C%E4%BA%BA%E7%BB%84/"/>
+    
+      <category term="动画" scheme="http://blog.ainhaato.moe/tags/%E5%8A%A8%E7%94%BB/"/>
+    
+      <category term="感想" scheme="http://blog.ainhaato.moe/tags/%E6%84%9F%E6%83%B3/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[centos6.x用xbt_tracker建立自己的tracker服务器]]></title>
-    <link href="http://blog.ainhaato.moe/2014/centos-xbt-tracker/"/>
-    <id>http://blog.ainhaato.moe/2014/centos-xbt-tracker/</id>
-    <published>2014-09-12T11:38:57.000Z</published>
-    <updated>2014-09-12T10:39:47.000Z</updated>
+    <link href="http://blog.ainhaato.moe/centos-xbt-tracker/"/>
+    <id>http://blog.ainhaato.moe/centos-xbt-tracker/</id>
+    <published>2014-07-31T05:34:57.000Z</published>
+    <updated>2015-01-13T05:21:26.000Z</updated>
     <content type="html"><![CDATA[<p>昨天在由于极影抽风，只好把资源发在动漫花园，但是极影的tracker以及备用tracker都无法使用，最后又到nyaa发了个种，才让种子活过来；为了避免”历史总是惊人的相似”的情况….就自己建了个tracker</p>
 <blockquote>
 <p><a href="http://tracker.kuroy.me:5944/announce" target="_blank" rel="external">http://tracker.kuroy.me:5944/announce</a></p>
@@ -138,35 +380,308 @@ mysql -<span class="keyword">u</span>数据用户名 -<span class="keyword">p</s
     
       <category term="tracker" scheme="http://blog.ainhaato.moe/tags/tracker/"/>
     
-      <category term="bt" scheme="http://blog.ainhaato.moe/tags/bt/"/>
+      <category term="p2p" scheme="http://blog.ainhaato.moe/tags/p2p/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Centos6.x升级Python至2.7]]></title>
+    <link href="http://blog.ainhaato.moe/centos-update-python27/"/>
+    <id>http://blog.ainhaato.moe/centos-update-python27/</id>
+    <published>2014-07-22T03:10:40.000Z</published>
+    <updated>2015-01-13T06:01:35.000Z</updated>
+    <content type="html"><![CDATA[<p>默认安装的Python2.6已经无法满足大多数脚本的需求….因此需要升级到2.7(3暂时不打算用)，但是升级后yum, pip和easy_install无法正常使用，虽然后来搞定了，但还是记录下来(其实是好久没更新博客….来一篇凑个数233)</p>
+<a id="more"></a>
+
+
+<h3 id="一、下载Python2-7&amp;编译安装">一、下载Python2.7&amp;编译安装</h3>
+<pre><code>wget http<span class="variable">s:</span>//www.<span class="keyword">python</span>.org/ftp/<span class="keyword">python</span>/<span class="number">2.7</span>.<span class="number">8</span>/Python-<span class="number">2.7</span>.<span class="number">8</span>.tgz
+tar zxvf Python-*.tgz
+<span class="keyword">cd</span> Python-*
+./configure --prefix=/usr/local/python2.<span class="number">7</span>
+<span class="keyword">make</span> &amp;&amp; <span class="keyword">make</span> install
+
+/usr/local/python2.<span class="number">7</span>/bin/python2.<span class="number">7</span> -V
+</code></pre><p>如果显示Python版本为2.7，说明安装成功</p>
+<h3 id="二、更改系统默认的Python">二、更改系统默认的Python</h3>
+<pre><code>ln -fs <span class="regexp">/usr/</span>local<span class="regexp">/python2.7/</span>bin<span class="regexp">/python2.7 /</span>usr<span class="regexp">/bin/</span>python
+</code></pre><p>然后运行下面命令再次查看Python版本</p>
+<pre><code><span class="keyword">python</span> -V
+</code></pre><p>显示版本为2.7说明一切正常，但是此时运行yum就会出错，需要修改/usr/bin/yum</p>
+<pre><code><span class="keyword">vim</span> /usr/bin/yum
+</code></pre><p>将第一行改为</p>
+<blockquote>
+<h1 id="!/usr/bin/python2-6">!/usr/bin/python2.6</h1>
+</blockquote>
+<p>再次运行yum，问题解决</p>
+<h3 id="三、升级pip，easy_install">三、升级pip，easy_install</h3>
+<pre><code>wget http<span class="variable">s:</span>//pypi.<span class="keyword">python</span>.org/packages/<span class="keyword">source</span>/<span class="keyword">s</span>/setuptools/setuptools-<span class="number">5.4</span>.<span class="number">1</span>.tar.gz
+tar zxvf setuptools-*.tar.gz
+<span class="keyword">cd</span> setuptools-*
+<span class="keyword">python</span> setup.<span class="keyword">py</span> build
+<span class="keyword">python</span> setup.<span class="keyword">py</span> install
+<span class="keyword">vim</span> /etc/<span class="keyword">profile</span>
+</code></pre><p>添加以下内容到/etc/profile</p>
+<blockquote>
+<p>PY_HOME=/usr/local/python2.7<br>export PATH=$PY_HOME/bin:$PATH</p>
+</blockquote>
+<pre><code><span class="built_in">source</span> /etc/profile  <span class="comment"># 当前终端生效，reboot后完全生效</span>
+easy_install pip
+</code></pre><p>安装完毕</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>默认安装的Python2.6已经无法满足大多数脚本的需求….因此需要升级到2.7(3暂时不打算用)，但是升级后yum, pip和easy_install无法正常使用，虽然后来搞定了，但还是记录下来(其实是好久没更新博客….来一篇凑个数233)</p>
+]]>
+    
+    </summary>
+    
+      <category term="centos" scheme="http://blog.ainhaato.moe/tags/centos/"/>
+    
+      <category term="python" scheme="http://blog.ainhaato.moe/tags/python/"/>
+    
+      <category term="upgrade" scheme="http://blog.ainhaato.moe/tags/upgrade/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[dropbox-uploader 一个操作dropbox的bash脚本]]></title>
+    <link href="http://blog.ainhaato.moe/dropbox-uploader/"/>
+    <id>http://blog.ainhaato.moe/dropbox-uploader/</id>
+    <published>2014-04-16T15:33:00.000Z</published>
+    <updated>2015-01-13T06:02:51.000Z</updated>
+    <content type="html"><![CDATA[<ul>
+<li>Dropbox首先是一个网络存储服务（类似百度网盘），一个网络备份工具，也是一个文件同步工具。Dropbox提供网络存储空间，新注册的用户拥有2G免费空间（或者2.5G免费空间）。你可以安装Dropbox客户端，然后通过客户端同步上传文件到Dropbox的云空间上。</li>
+<li>Dropbox Uploader 是一个bash script，可以用它在dropbox上上传，下载，删除文件</li>
+<li>Dropbox Uploader 项目主页：<a href="https://github.com/andreafabrizi/Dropbox-Uploader" target="_blank" rel="external">https://github.com/andreafabrizi/Dropbox-Uploader</a></li>
+</ul>
+<a id="more"></a>
+
+<h3 id="下载Dropbox_Uploader">下载Dropbox Uploader</h3>
+<pre><code>yum install -<span class="keyword">y</span> git
+git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/andreafabrizi/Dropbox-Uploader/
+</code></pre><p>或者</p>
+<pre><code>curl <span class="string">"https://raw.github.com/andreafabrizi/Dropbox-Uploader/master/dropbox_uploader.sh"</span> -<span class="keyword">o</span> dropbox_uploader.<span class="keyword">sh</span>
+</code></pre><h3 id="给予执行权限">给予执行权限</h3>
+<pre><code>chmod +<span class="keyword">x</span> dropbox_uploader.<span class="keyword">sh</span>
+</code></pre><h3 id="使用方法">使用方法</h3>
+<p><strong>1.上传文件</strong></p>
+<blockquote>
+<p>./dropbox_uploader.sh upload 本地路径 远程路径</p>
+</blockquote>
+<p><strong>2.下载文件</strong></p>
+<blockquote>
+<p>./dropbox_uploader.sh download 远程路径 本地路径</p>
+</blockquote>
+<p><strong>3.移动(或重命名)文件</strong></p>
+<blockquote>
+<p>./dropbox_uploader.sh move 远程路径 远程路径</p>
+</blockquote>
+<p><strong>4.复制文件</strong></p>
+<blockquote>
+<p>./dropbox_uploader.sh copy 远程路径 远程路径</p>
+</blockquote>
+<p><strong>5.新建目录</strong></p>
+<blockquote>
+<p>./dropbox_uploader.sh mkdir 远程路径</p>
+</blockquote>
+<p><strong>具体用法参见<a href="https://github.com/andreafabrizi/Dropbox-Uploader" target="_blank" rel="external">项目主页</a></strong></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<ul>
+<li>Dropbox首先是一个网络存储服务（类似百度网盘），一个网络备份工具，也是一个文件同步工具。Dropbox提供网络存储空间，新注册的用户拥有2G免费空间（或者2.5G免费空间）。你可以安装Dropbox客户端，然后通过客户端同步上传文件到Dropbox的云空间上。</li>
+<li>Dropbox Uploader 是一个bash script，可以用它在dropbox上上传，下载，删除文件</li>
+<li>Dropbox Uploader 项目主页：<a href="https://github.com/andreafabrizi/Dropbox-Uploader" target="_blank" rel="external">https://github.com/andreafabrizi/Dropbox-Uploader</a></li>
+</ul>
+]]>
+    
+    </summary>
+    
+      <category term="dropbox" scheme="http://blog.ainhaato.moe/tags/dropbox/"/>
+    
+      <category term="网盘" scheme="http://blog.ainhaato.moe/tags/%E7%BD%91%E7%9B%98/"/>
+    
+      <category term="upload" scheme="http://blog.ainhaato.moe/tags/upload/"/>
+    
+      <category term="bash" scheme="http://blog.ainhaato.moe/tags/bash/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[megacmd - 一个mega.co.nz的命令行工具]]></title>
+    <link href="http://blog.ainhaato.moe/megacmd/"/>
+    <id>http://blog.ainhaato.moe/megacmd/</id>
+    <published>2014-04-16T13:21:07.000Z</published>
+    <updated>2015-01-13T06:03:33.000Z</updated>
+    <content type="html"><![CDATA[<ul>
+<li>mega.co.nz是一个提供50G免费存储空间的国外网盘，前身为megaupload</li>
+<li>megacmd是一个可以用命令行操作mega网盘的工具，可以进行上传，下载，建立文件夹，删除等操作，基本网页上能做的它都能做到</li>
+<li>megacmd项目主页：<a href="https://github.com/t3rm1n4l/megacmd" target="_blank" rel="external">https://github.com/t3rm1n4l/megacmd</a></li>
+<li>本文章只介绍megacmd在Linux下的安装及使用。。。。Windows和mac os请自行参考项目主页</li>
+</ul>
+<a id="more"></a>
+
+<p><a href="http://ww4.sinaimg.cn/large/e967e38cjw1efofw78nwkj20g90bstbz.jpg" title="演示图片" target="_blank" rel="external"><img src="http://ww4.sinaimg.cn/large/e967e38cjw1efofw78nwkj20g90bstbz.jpg" alt=""></a></p>
+<h3 id="下载并安装">下载并安装</h3>
+<pre><code>yum install -<span class="keyword">y</span> <span class="keyword">go</span> git
+git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/t3rm1n4l/megacmd.git
+<span class="keyword">cd</span> megacmd
+GOPATH=/tmp/ <span class="keyword">make</span>
+<span class="keyword">cp</span> megacmd /usr/local/bin
+</code></pre><h3 id="建立配置文件">建立配置文件</h3>
+<pre><code> <span class="keyword">vim</span> ~/.megacmd.json
+</code></pre><blockquote>
+<p>{<br>    “User” : “MEGA_USERNAME”,<br>    “Password” : “MEGA_PASSWORD”,<br>    “DownloadWorkers” : 4,<br>    “UploadWorkers” : 4,<br>    “SkipSameSize” : true,<br>    “Verbose” : 1<br>}</p>
+</blockquote>
+<h3 id="使用方式">使用方式</h3>
+<p><strong>1.列出文件</strong></p>
+<blockquote>
+<p>megacmd list mega:/Test/<br>mega:/Test/11.png                                  24110      2013-12-31T16:47:49+05:30<br>mega:/Test/Firefox_wallpaper.png                   81920      2013-12-31T16:49:27+05:30</p>
+</blockquote>
+<p><strong>2.下载文件</strong></p>
+<blockquote>
+<p>megacmd get mega:/Test/11.png ./<br>Successfully downloaded file mega:/Test/11.png to ./ in 0</p>
+</blockquote>
+<p><strong>3.上传文件</strong></p>
+<blockquote>
+<p>megacmd put ./practice/helloworld mega:/Test/<br>Copying ./practice/helloworld -&gt; mega:/Test/ # 100.00 % of 8.6KB at 2.5K/s 3s<br>Successfully uploaded file ./practice/helloworld to mega:/Test/ in 3s</p>
+</blockquote>
+<p><strong>4.删除文件</strong></p>
+<blockquote>
+<p>megacmd delete mega:/Test/helloworld<br>Successfully deleted  mega:/Test/helloworld</p>
+</blockquote>
+<p><strong>5.建立新文件夹</strong></p>
+<blockquote>
+<p>megacmd  mkdir mega:/Test/subdir<br>Successfully created directory at mega:/Test/subdir</p>
+</blockquote>
+<p><strong>更多使用方法请看<a href="https://github.com/t3rm1n4l/megacmd" target="_blank" rel="external">项目主页</a></strong></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<ul>
+<li>mega.co.nz是一个提供50G免费存储空间的国外网盘，前身为megaupload</li>
+<li>megacmd是一个可以用命令行操作mega网盘的工具，可以进行上传，下载，建立文件夹，删除等操作，基本网页上能做的它都能做到</li>
+<li>megacmd项目主页：<a href="https://github.com/t3rm1n4l/megacmd" target="_blank" rel="external">https://github.com/t3rm1n4l/megacmd</a></li>
+<li>本文章只介绍megacmd在Linux下的安装及使用。。。。Windows和mac os请自行参考项目主页</li>
+</ul>
+]]>
+    
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[libev/nodejs版shadowsocks安装(Centos)]]></title>
+    <link href="http://blog.ainhaato.moe/two-method-ss-centos/"/>
+    <id>http://blog.ainhaato.moe/two-method-ss-centos/</id>
+    <published>2014-04-13T12:01:45.000Z</published>
+    <updated>2015-01-13T06:05:25.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="简介">简介</h2>
+<p>shadowsocks是一个轻量级的隧道代理，用于突破功夫net的，让使用者自由的畅游因特网。<br>第一个版本由clowwindy用Python编写、后续有很多其他的移植版本。如nodejs，libev，shadowsocks-go等….</p>
+<a id="more"></a>
+
+
+<h2 id="一、libev版">一、libev版</h2>
+<p><strong>1.安装必要组件</strong></p>
+<pre><code>yum <span class="operator"><span class="keyword">install</span> git build-essential autoconf libtool openssl-devel gcc -y</span>
+</code></pre><p><strong>2.下载shadowsocks-libev源码包并编译</strong></p>
+<pre><code>git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/madeye/shadowsocks-libev.git
+<span class="keyword">cd</span> shadowsocks-libev
+./configure
+<span class="keyword">make</span> &amp;&amp; <span class="keyword">make</span> install
+</code></pre><p><strong>3.运行shadowsocks</strong></p>
+<pre><code>nohup /usr/local/bin/<span class="literal">ss</span>-server -s <span class="literal">IP</span>地址 -p 服务器端口 -k 密码 -m 加密方式 &amp;
+</code></pre><p>例如：</p>
+<blockquote>
+<p>nohup /usr/local/bin/ss-server -s 220.181.112.143 -p 8388 -k sstest -m aes-256-cfb &amp;</p>
+</blockquote>
+<p><strong>4.加入开机启动</strong></p>
+<pre><code><span class="input"><span class="prompt">echo "nohup /usr/local/bin/ss-server -s IP地址 -p 服务器端口 -k 密码 -m 加密方式 &amp;" &gt;&gt;</span> /etc/rc.local</span>
+</code></pre><p><strong>5.结束任务方法</strong></p>
+<pre><code>killall <span class="literal">ss</span>-server
+</code></pre><hr>
+<h2 id="二、nodejs版">二、nodejs版</h2>
+<p><strong>1.下载nodejs源码并编译安装</strong></p>
+<pre><code>wget http:<span class="comment">//nodejs.org/dist/v0.8.22/node-v0.8.22.tar.gz</span>
+tar xf node-v0<span class="number">.8.22</span>.tar.gz
+cd node-v0<span class="number">.8.22</span>/
+./configure
+<span class="built_in">make</span> &amp;&amp; <span class="built_in">make</span> install
+</code></pre><p><strong>2.从github把shadowsocks-nodejs clone下来</strong></p>
+<pre><code>git clone gi<span class="variable">t:</span>//github.<span class="keyword">com</span>/clowwindy/shadowsocks-nodejs.git
+<span class="keyword">cd</span> shadowsocks-nodejs
+</code></pre><p><strong>3.修改config.json文件</strong></p>
+<pre><code><span class="keyword">cd</span> shadowsocks-nodejs
+<span class="keyword">vim</span> config.json
+</code></pre><blockquote>
+<p>{<br>“server”: “0.0.0.0”,<br>“server_port”: 8388,        //服务器端口，最好修改成自己的，防止扫描<br>“local_port”: 1080,<br>“password”: “barfoo!”,      // 默认密码，自行更换<br>“timeout”: 600,<br>“method”: null              // 支持”bf-cfb”, “aes-256-cfb”, “des-cfb”, “rc4”等加密方式。默认是不加密<br>}</p>
+</blockquote>
+<p><strong>4.运行shadowsocks</strong></p>
+<pre><code><span class="input"><span class="prompt">cd lib/shadowsocks
+nohup node server.js &gt;</span> log &amp;</span>
+</code></pre><h2 id="三、python版">三、python版</h2>
+<p>教程请看火狐吧吧友写的：<a href="http://tieba.baidu.com/p/2824694884" target="_blank" rel="external">http://tieba.baidu.com/p/2824694884</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="简介">简介</h2>
+<p>shadowsocks是一个轻量级的隧道代理，用于突破功夫net的，让使用者自由的畅游因特网。<br>第一个版本由clowwindy用Python编写、后续有很多其他的移植版本。如nodejs，libev，shadowsocks-go等….</p>
+]]>
+    
+    </summary>
+    
+      <category term="libev" scheme="http://blog.ainhaato.moe/tags/libev/"/>
+    
+      <category term="nodejs" scheme="http://blog.ainhaato.moe/tags/nodejs/"/>
+    
+      <category term="shadowsocks" scheme="http://blog.ainhaato.moe/tags/shadowsocks/"/>
+    
+      <category term="proxy" scheme="http://blog.ainhaato.moe/tags/proxy/"/>
+    
+      <category term="centos" scheme="http://blog.ainhaato.moe/tags/centos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[换个主机换个主题]]></title>
+    <link href="http://blog.ainhaato.moe/storage-change/"/>
+    <id>http://blog.ainhaato.moe/storage-change/</id>
+    <published>2014-04-09T17:22:32.000Z</published>
+    <updated>2015-01-13T06:07:22.000Z</updated>
+    <content type="html"><![CDATA[<p>感觉之前用的vps最近越来越慢，于是就换了个主机：hostker<br>自带CDN，在线文件管理，编辑代码等方便实用的功能，并且客服服务态度很好，可搞基(大雾<br>速度比起之前用的主机和vps好得多<br>目前为止很满意，估计短时间内不会再换了_(:3 」∠ )_</p>
+<h2><a id="more"></a></h2>
+<h3 id="hostker宣传视频">hostker宣传视频</h3>
+  <video id="hostker" class="video-js vjs-default-skin" controls preload="none" width="848" height="480" poster="http://blog-attachment.qiniudn.com/video/hostker/mad.png" data-setup="{}"><br>    <source src="http://blog-attachment.qiniudn.com/video/hostker/mad.mp4" type="video/mp4"><br>    <source src="http://blog-attachment.qiniudn.com/video/hostker/mad.webm" type="video/webm"><br>    <source src="http://blog-attachment.qiniudn.com/video/hostker/mad.ogv" type="video/ogg"><br>  </video>]]></content>
+    <summary type="html">
+    <![CDATA[<p>感觉之前用的vps最近越来越慢，于是就换了个主机：hostker<br>自带CDN，在线文件管理，编辑代码等方便实用的功能，并且客服服务态度很好，可搞基(大雾<br>速度比起之前用的主机和vps好得多<br>目前为止很满意，估计短时间内不会再换了_(:3 」∠ )_</p>
+<h2>]]>
+    
+    </summary>
     
   </entry>
   
   <entry>
     <title><![CDATA[Centos 6.X 下编译安装deluge]]></title>
-    <link href="http://blog.ainhaato.moe/2014/deluge-for-centos/"/>
-    <id>http://blog.ainhaato.moe/2014/deluge-for-centos/</id>
-    <published>2014-09-12T11:36:00.000Z</published>
-    <updated>2014-09-12T10:37:17.000Z</updated>
+    <link href="http://blog.ainhaato.moe/deluge-for-centos/"/>
+    <id>http://blog.ainhaato.moe/deluge-for-centos/</id>
+    <published>2014-04-05T14:06:00.000Z</published>
+    <updated>2015-01-13T05:22:15.000Z</updated>
     <content type="html"><![CDATA[<h3 id="简介">简介</h3>
 <p>Deluge 是一个通过PyGTK建立图形界面的BitTorrent客户端，后端使用libtorrent。Deluge可以在多个平台上使用，如Linux，*BSD，Mac OS和其他类UNIX操作系统。该项目的目标是要在GTK框架上建立一个原生和全功能的BitTorrent客户端。<br>Deluge由ubuntuforum的两位成员建立，Zach Tibbitts 和 Alan Zakai。在过去，它曾是Google Code的项目。<br>在过去的开发，Deluge曾经被命名为gTorrent，意思是 GNOME 下的BitTorrent客户端。当第一个版本在2006年9月25日释出的时候，被重新命名为Deluge，以避免别人误会gTorrent只能用于GNOME。<br>利用0.4.x代码重写的0.5穏定版在2007年3月18日释出。重写代码的目的是要令代码更加优良。而0.5.1.1版支持数据加密，peer exchange，Si prefixes和upnp。</p>
 <a id="more"></a>
 
 
 <h3 id="安装过程">安装过程</h3>
-<p>1.安装更新源.  </p>
+<p>1.安装更新源.</p>
 <pre><code>rpm -ivh http:<span class="comment">//pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.2-2.el6.rf.i686.rpm</span>
 rpm -ivh http:<span class="comment">//dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm</span>
 wget -c -O <span class="regexp">/etc/</span>yum.repos.d<span class="regexp">/linuxtech.repo http:/</span><span class="regexp">/pkgrepo.linuxtech.net/</span>el6<span class="regexp">/release/</span>linuxtech.repo
-</code></pre><p>2.安装依赖库  </p>
+</code></pre><p>2.安装依赖库</p>
 <pre><code>yum install GeoIP PyXML SOAPpy boost-filesystem boost-<span class="keyword">python</span> boost-<span class="built_in">system</span> boost-thread pyOpenSSL <span class="keyword">python</span>-chardet <span class="keyword">python</span>-fpconst <span class="keyword">python</span>-setuptools <span class="keyword">python</span>-simplejson <span class="keyword">python</span>-twisted-core <span class="keyword">python</span>-twisted-web <span class="keyword">python</span>-zope-filesystem <span class="keyword">python</span>-zope-interface pyxdg rb_libtorrent rb_libtorrent-<span class="keyword">python</span> <span class="keyword">python</span>-beaker <span class="keyword">python</span>-mako <span class="keyword">python</span>-markupsafe <span class="keyword">python</span>-twisted <span class="keyword">python</span>-twisted-web
 </code></pre><p>3.编译安装deluge</p>
 <pre><code>wget http://download.deluge-torrent.org/<span class="built_in">source</span>/deluge-<span class="number">1.3</span>.<span class="number">6</span>.tar.gz
 tar zxvf deluge-<span class="number">1.3</span>.<span class="number">6</span>.tar.gz
 <span class="built_in">cd</span> deluge-<span class="number">1.3</span>.<span class="number">6</span>
-<span class="comment">#开始编译  </span>
-python setup.py build  
-python setup.py install  
+<span class="comment">#开始编译</span>
+python setup.py build
+python setup.py install
 <span class="comment">#建立账户</span>
 /usr/sbin/groupadd deluge
 useradd deluge -g deluge <span class="operator">-s</span> /bin/<span class="literal">false</span>
@@ -187,22 +702,151 @@ useradd deluge -g deluge <span class="operator">-s</span> /bin/<span class="lite
     
     </summary>
     
-      <category term="deluge" scheme="http://blog.ainhaato.moe/tags/deluge/"/>
-    
       <category term="centos" scheme="http://blog.ainhaato.moe/tags/centos/"/>
     
-      <category term="pt" scheme="http://blog.ainhaato.moe/tags/pt/"/>
+      <category term="download" scheme="http://blog.ainhaato.moe/tags/download/"/>
     
       <category term="linux" scheme="http://blog.ainhaato.moe/tags/linux/"/>
+    
+      <category term="p2p" scheme="http://blog.ainhaato.moe/tags/p2p/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[停止出售代理服务]]></title>
+    <link href="http://blog.ainhaato.moe/ss-proxy-closed/"/>
+    <id>http://blog.ainhaato.moe/ss-proxy-closed/</id>
+    <published>2014-03-19T16:30:58.000Z</published>
+    <updated>2015-01-13T06:08:28.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="现状&amp;原因">现状&amp;原因</h3>
+<p>自从几天前开始出售shadowsocks代理到现在，已经有几位联系我购买，目前为止不赚也不亏…..这也是我最初的目标：不亏即可</p>
+<p>至于停止出售的原因。。。有点奇葩0.0 | 那就是：累感不爱<br>不知道为啥最近感觉累感不爱，没有动力去解答客户的问题，思前想后还是决定停止出售代理服务</p>
+<h4 id="不过已经购买代理服务的客户不受影响，在到期之前我都会继续提供代理"><font color="red">不过已经购买代理服务的客户不受影响，在到期之前我都会继续提供代理</font></h4>
+<p>以及。。。约好要购买的客户，想购买时请联系我；对这些客户依旧提供代理服务<br>以上～</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="现状&amp;原因">现状&amp;原因</h3>
+<p>自从几天前开始出售shadowsocks代理到现在，已经有几位联系我购买，目前为止不赚也不亏…..这也是我最初的目标：不亏即可</p>
+<p>至于停止出售的原因。。。有点奇葩0.0 | 那就是：累感不爱<b]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[出售新加坡，美国shadowsocks代理]]></title>
+    <link href="http://blog.ainhaato.moe/ss-sales/"/>
+    <id>http://blog.ainhaato.moe/ss-sales/</id>
+    <published>2014-03-13T09:31:57.000Z</published>
+    <updated>2015-01-13T06:09:40.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="出售新加坡和美国的shadowsocks，日本线路待资金充足后添加………-(如果有人能资助的话应该很快就能开日本线路了吧orz…">出售新加坡和美国的shadowsocks，日本线路待资金充足后添加……….(如果有人能资助的话应该很快就能开日本线路了吧orz…</h4>
+<h3 id="Update">Update</h3>
+<p>2014.03.15 —— 美国线路添加vpn支持</p>
+<a id="more"></a>
+
+
+<h3 id="使用效果">使用效果</h3>
+<p><a href="http://ww4.sinaimg.cn/large/6abdaa9dgw1eee8vnmeq2j211y0kiqag.jpg" title="YouTube" target="_blank" rel="external"><img src="http://ww4.sinaimg.cn/large/6abdaa9dgw1eee8vnmeq2j211y0kiqag.jpg" alt="YouTube"></a><br><a href="http://ww1.sinaimg.cn/large/6abdaa9dgw1eee8z3ftvlj211y0khjz9.jpg" title="Twitter" target="_blank" rel="external"><img src="http://ww1.sinaimg.cn/large/6abdaa9dgw1eee8z3ftvlj211y0khjz9.jpg" alt="Twitter"></a><br><a href="http://ww3.sinaimg.cn/large/6abdaa9dgw1eee90ec5boj211y0kjq7q.jpg" title="Facebook" target="_blank" rel="external"><img src="http://ww3.sinaimg.cn/large/6abdaa9dgw1eee90ec5boj211y0kjq7q.jpg" alt="Facebook"></a></p>
+<h3 id="Speedtest">Speedtest</h3>
+<p><a href="http://www.speedtest.net/result/3413408258.png" title="新加坡" target="_blank" rel="external"><img src="http://www.speedtest.net/result/3413408258.png" alt="新加坡"></a></p>
+<h3 id="使用条款">使用条款</h3>
+<p>1.禁止P2P下载<br>2.禁止将代理用于违法事项<br>3.等我想到再说…</p>
+<h3 id="购买方式&amp;&amp;套餐">购买方式&amp;&amp;套餐</h3>
+<p>目前仅支持(半)年付<br>半年价：45 RMB<br>年付：85RMB<br>支付宝：yuji74127@vip.qq.com<br>paypal：mikoto.yu51@gmail.com<br>联系邮箱：mikoto.yu51@gmail.com<br>QQ：605019926</p>
+<h4 id="付款后发送订单号到mikoto-yu51@gmail-com，我会把账号信息回复给发信邮箱">付款后发送订单号到mikoto.yu51@gmail.com，我会把账号信息回复给发信邮箱</h4>
+<h4 id="如有疑问，请用QQ_or_邮箱联系">如有疑问，请用QQ or 邮箱联系</h4>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h4 id="出售新加坡和美国的shadowsocks，日本线路待资金充足后添加………-(如果有人能资助的话应该很快就能开日本线路了吧orz…">出售新加坡和美国的shadowsocks，日本线路待资金充足后添加……….(如果有人能资助的话应该很快就能开日本线路了吧orz…</h4>
+<h3 id="Update">Update</h3>
+<p>2014.03.15 —— 美国线路添加vpn支持</p>
+]]>
+    
+    </summary>
+    
+      <category term="shadowsocks" scheme="http://blog.ainhaato.moe/tags/shadowsocks/"/>
+    
+      <category term="proxy" scheme="http://blog.ainhaato.moe/tags/proxy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[分享一枚shadowsocks代理]]></title>
+    <link href="http://blog.ainhaato.moe/public-shadowsocks/"/>
+    <id>http://blog.ainhaato.moe/public-shadowsocks/</id>
+    <published>2014-03-09T18:56:01.000Z</published>
+    <updated>2015-01-13T06:10:25.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>server:ss.kuroy.me<br>port:8388<br>passwd:Base64(“a2lyYWtpcmE=”)<br>encryption method：aes-256-cfb</p>
+</blockquote>
+<p>美国，为了保证速度(本来速度就一般…)，对密码进行了加密，请自行解密</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote>
+<p>server:ss.kuroy.me<br>port:8388<br>passwd:Base64(“a2lyYWtpcmE=”)<br>encryption method：aes-256-cfb</p>
+</blockquote>
+<p>美国，为了]]>
+    </summary>
+    
+      <category term="shadowsocks" scheme="http://blog.ainhaato.moe/tags/shadowsocks/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[2014春季预定追番计划]]></title>
+    <link href="http://blog.ainhaato.moe/2014sp/"/>
+    <id>http://blog.ainhaato.moe/2014sp/</id>
+    <published>2014-02-02T16:38:49.000Z</published>
+    <updated>2015-01-13T06:11:25.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="http://ww1.sinaimg.cn/large/e57da4e9jw1ed5hbfq012j20uo274b29.jpg" target="_blank" rel="external">新番列表</a></p>
+<h2 id="预定计划">预定计划</h2>
+<p>1.妖尾<br>之前由于漫画进度的问题停更了,既然恢复了那就继续追下去吧0w0<br>2.GJ部@<br>轻松的日常番是必须~<br>3.约会大作战<br>继续看妹妹<br>4.No game, No life<br>记得同学说看了小说感觉不错<br>5.噬魂师NOT！<br>刚又看一遍噬魂师，还是觉得女主CV很好啊，不知为何很多人觉得不好= =<br>6.破刃之剑<br>像空之境界一样剧场版剧情TV化？<br>7.极黑的布伦希尔特<br>漫画nice<br>8.Love Live! 第二季<br>既然前作看完了，那就继续追吧<br>9.星刻的龙骑士<br>小说刚看到第二卷<br>10.恶魔之谜<br>听说是百合？！大爱！！<br>11.棺姬嘉依卡<br>骨头社～<br>12.虫师<br>不解释…</p>
+<a id="more"></a>
+
+
+<h2 id="看封面追系列">看封面追系列</h2>
+<p>1.漆黑的子弹<br>2.希德尼娅的骑士<br>3.魔法科高校の劣等生</p>
+<h2 id="剧场版">剧场版</h2>
+<p>1.玉子爱情故事<br>玉子市场竟然出剧场版?!<br>2.Code Geass 亡国的阿基德 第三章<br>3.天降之物Final 永远的我的鸟笼</p>
+<h2 id="其它">其它</h2>
+<p>1.JOJO<br>之前就没看….但是也是佳作来着</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="http://ww1.sinaimg.cn/large/e57da4e9jw1ed5hbfq012j20uo274b29.jpg" target="_blank" rel="external">新番列表</a></p>
+<h2 id="预定计划">预定计划</h2>
+<p>1.妖尾<br>之前由于漫画进度的问题停更了,既然恢复了那就继续追下去吧0w0<br>2.GJ部@<br>轻松的日常番是必须~<br>3.约会大作战<br>继续看妹妹<br>4.No game, No life<br>记得同学说看了小说感觉不错<br>5.噬魂师NOT！<br>刚又看一遍噬魂师，还是觉得女主CV很好啊，不知为何很多人觉得不好= =<br>6.破刃之剑<br>像空之境界一样剧场版剧情TV化？<br>7.极黑的布伦希尔特<br>漫画nice<br>8.Love Live! 第二季<br>既然前作看完了，那就继续追吧<br>9.星刻的龙骑士<br>小说刚看到第二卷<br>10.恶魔之谜<br>听说是百合？！大爱！！<br>11.棺姬嘉依卡<br>骨头社～<br>12.虫师<br>不解释…</p>
+]]>
+    
+    </summary>
+    
+      <category term="新番" scheme="http://blog.ainhaato.moe/tags/%E6%96%B0%E7%95%AA/"/>
+    
+      <category term="2014春" scheme="http://blog.ainhaato.moe/tags/2014%E6%98%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[2014 - 新年快乐！]]></title>
+    <link href="http://blog.ainhaato.moe/happy-new-year-2014/"/>
+    <id>http://blog.ainhaato.moe/happy-new-year-2014/</id>
+    <published>2014-01-29T16:00:00.000Z</published>
+    <updated>2015-01-13T06:12:03.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="http://ww3.sinaimg.cn/large/e57da4e9jw1eczkuqdzblj20rs0t5tjo.jpg" title="恭贺新年" target="_blank" rel="external"><img src="http://ww3.sinaimg.cn/large/e57da4e9jw1eczkuqdzblj20rs0t5tjo.jpg" alt="恭贺新年"></a><br><a id="more"></a></p>
+<p>新的一年又来了，忘却所有不开心的事，在家和家人共度新年。<br>祝没能回家的人……..自己玩的愉快；或者…和基(姬)友玩♂♀的愉快。<br>祝所有人新年快乐，心想事成！<br><a href="http://ww2.sinaimg.cn/large/dce4a41ejw1eczl4y1p37j20vw0mt11f.jpg" title="新年快乐" target="_blank" rel="external"><img src="http://ww2.sinaimg.cn/large/dce4a41ejw1eczl4y1p37j20vw0mt11f.jpg" alt="新年快乐"></a></p>
+<p><a href="http://ww3.sinaimg.cn/large/dce48faejw1eczl82w3boj21kw156e1e.jpg" title="新春快乐" target="_blank" rel="external"><img src="http://ww3.sinaimg.cn/large/dce48faejw1eczl82w3boj21kw156e1e.jpg" alt="新春快乐"></a><br>PS：其实对我来说新年似乎并不值得开心呢orz……..</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="http://ww3.sinaimg.cn/large/e57da4e9jw1eczkuqdzblj20rs0t5tjo.jpg" title="恭贺新年" target="_blank" rel="external"><img src="http://ww3.sinaimg.cn/large/e57da4e9jw1eczkuqdzblj20rs0t5tjo.jpg" alt="恭贺新年"></a><br>]]>
+    
+    </summary>
     
   </entry>
   
   <entry>
     <title><![CDATA[centos安装rtorrent/rutorrent]]></title>
-    <link href="http://blog.ainhaato.moe/2014/rtorrent-rutorrent-on-centos/"/>
-    <id>http://blog.ainhaato.moe/2014/rtorrent-rutorrent-on-centos/</id>
-    <published>2014-09-12T11:31:57.000Z</published>
-    <updated>2014-09-12T10:33:20.000Z</updated>
+    <link href="http://blog.ainhaato.moe/rtorrent-rutorrent-on-centos/"/>
+    <id>http://blog.ainhaato.moe/rtorrent-rutorrent-on-centos/</id>
+    <published>2014-01-19T10:12:57.000Z</published>
+    <updated>2015-01-13T05:52:56.000Z</updated>
     <content type="html"><![CDATA[<h1 id="rtorrent介绍">rtorrent介绍</h1>
 <p>rtorrent是利用libtorrent库创建的Ncurses客户端程序。使用C++语言编写   的rtorrent除了能够提供基于GUI界面的客户端所具备的功能之外，其速度和效率更为用户所推崇。</p>
 <h1 id="rutorrent介绍">rutorrent介绍</h1>
@@ -215,8 +859,8 @@ useradd deluge -g deluge <span class="operator">-s</span> /bin/<span class="lite
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">yum</span> <span class="literal">-</span><span class="comment">y</span> <span class="comment">install</span> <span class="comment">gcc</span><span class="literal">-</span><span class="comment">c</span><span class="literal">+</span><span class="literal">+</span> <span class="comment">libtool</span> <span class="comment">libsigc</span><span class="literal">+</span><span class="literal">+</span><span class="comment">20</span> <span class="comment">libsigc</span><span class="literal">+</span><span class="literal">+</span><span class="comment">20</span><span class="literal">-</span><span class="comment">devel</span></div><div class="line"><span class="comment">wget</span> <span class="comment">http://libtorrent</span><span class="string">.</span><span class="comment">rakshasa</span><span class="string">.</span><span class="comment">no/downloads/libtorrent</span><span class="literal">-</span><span class="comment">0</span><span class="string">.</span><span class="comment">13</span><span class="string">.</span><span class="comment">3</span><span class="string">.</span><span class="comment">tar</span><span class="string">.</span><span class="comment">gz</span></div><div class="line"><span class="comment">tar</span> <span class="comment">zxvf</span> <span class="comment">libtorrent</span><span class="literal">-</span><span class="comment">0</span><span class="string">.</span><span class="comment">13</span><span class="string">.</span><span class="comment">3</span><span class="string">.</span><span class="comment">tar</span><span class="string">.</span><span class="comment">gz</span></div><div class="line"><span class="string">.</span><span class="comment">/configure</span></div><div class="line"><span class="comment">make</span> <span class="comment">&&</span> <span class="comment">make</span> <span class="comment">install</span></div></pre></td></tr></table></figure>
 
 <h3 id="二、安装rtorrent">二、安装rtorrent</h3>
-<p>在安装rtorrent之前需要先安装xmlrpc(如果想用webgui的话…  </p>
-<pre><code>yum -y <span class="operator"><span class="keyword">install</span> xmlrpc-c-devel  
+<p>在安装rtorrent之前需要先安装xmlrpc(如果想用webgui的话…</p>
+<pre><code>yum -y <span class="operator"><span class="keyword">install</span> xmlrpc-c-devel
 echo <span class="string">"/usr/local/lib/"</span> &gt;&gt; /etc/ld.so.conf
 wget http://libtorrent.rakshasa.<span class="keyword">no</span>/downloads/rtorrent-<span class="number">0.9</span><span class="number">.3</span>.tar.gz
 tar zxvf rtorrent-<span class="number">0.9</span><span class="number">.3</span>.tar.gz
@@ -236,9 +880,9 @@ schedule = chmod,<span class="number">0</span>,<span class="number">0</span>,<sp
 <span class="constant">EOF</span>
 </code></pre><h4 id="Nginx_xmlrpc_配置">Nginx xmlrpc 配置</h4>
 <p>修改nginx.conf，在server字段添加下列内容</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="title">location</span> /RPC2 {</div><div class="line"><span class="title">include</span> scgi_params; </div><div class="line"><span class="comment">#scgi_pass 127.0.0.1:5000; </span></div><div class="line"><span class="title">scgi_pass</span> <span class="url">unix:/tmp/rpc.socket</span>; </div><div class="line">}</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="title">location</span> /RPC2 {</div><div class="line"><span class="title">include</span> scgi_params;</div><div class="line"><span class="comment">#scgi_pass 127.0.0.1:5000;</span></div><div class="line"><span class="title">scgi_pass</span> <span class="url">unix:/tmp/rpc.socket</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
 
-<p>不知道nginx.conf在哪的话可以用以下命令查找  </p>
+<p>不知道nginx.conf在哪的话可以用以下命令查找</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">whereis</span> nginx</div></pre></td></tr></table></figure>
 
 <h2 id="rutorrent安装过程">rutorrent安装过程</h2>
@@ -258,8 +902,8 @@ sed -i <span class="string">"s/\"stat\"\t=&gt; ''/\"stat\"\t=&gt; '\/usr\/bin\/s
 <pre><code> htpasswd -b -c <span class="regexp">/home/</span>wwwroot<span class="regexp">/rutorrent/</span>.htpasswds username passwd
 </code></pre><p>如果htpasswd: <strong>command not found</strong>,执行下面命令安装httpd-tool</p>
 <pre><code>yum <span class="operator"><span class="keyword">install</span> -y httpd-tools</span>
-</code></pre><p>修改nginx.conf，在server字段添加下面内容  </p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="title">location</span> /rutorrent { </div><div class="line"><span class="title">auth_basic</span> <span class="string">"ruTorrent login"</span>; </div><div class="line"><span class="title">auth_basic_user_file</span> /home/wwwroot/rutorrent/.htpasswds; </div><div class="line">}</div></pre></td></tr></table></figure>
+</code></pre><p>修改nginx.conf，在server字段添加下面内容</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="title">location</span> /rutorrent {</div><div class="line"><span class="title">auth_basic</span> <span class="string">"ruTorrent login"</span>;</div><div class="line"><span class="title">auth_basic_user_file</span> /home/wwwroot/rutorrent/.htpasswds;</div><div class="line">}</div></pre></td></tr></table></figure>
 
 <h2 id="rutorrent插件安装(可忽略)">rutorrent插件安装(可忽略)</h2>
 <pre><code>wget http:<span class="comment">//dl.bintray.com/novik65/generic/plugins-3.6.tar.gz</span>
@@ -288,310 +932,93 @@ mv plugins <span class="regexp">/home/</span>wwwroot<span class="regexp">/rutorr
     
       <category term="libtorrent" scheme="http://blog.ainhaato.moe/tags/libtorrent/"/>
     
-  </entry>
-  
-  <entry>
-    <title><![CDATA[firefox - GM脚本推荐]]></title>
-    <link href="http://blog.ainhaato.moe/2014/gm-scripts-recommend/"/>
-    <id>http://blog.ainhaato.moe/2014/gm-scripts-recommend/</id>
-    <published>2014-09-12T11:20:57.000Z</published>
-    <updated>2014-09-12T10:28:50.000Z</updated>
-    <content type="html"><![CDATA[<p><strong>本文将推荐一些平时常用到的GM脚本，关于百度贴吧的脚本下次再整理</strong></p>
-<p>firefox用户请先安装greasemonkey扩展，chrome用户请先安装Tampermonkey扩展<a id="more"></a></p>
-<p>1.繁简转换</p>
-<figure class="highlight [javascript]"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line">==UserScript==</div><div class="line"><span class="comment">// @name        繁简转换</span></div><div class="line"><span class="comment">// @namespace   http://userscripts.org/scripts/show/0</span></div><div class="line"><span class="comment">// @description 网页上的繁体中文字转为简体。Traditional Chinese chars to Simplified Chinese.</span></div><div class="line"><span class="comment">// @include     *</span></div><div class="line"><span class="comment">// @updateURL   https://userscripts.org/scripts/source/0.meta.js</span></div><div class="line"><span class="comment">// @downloadURL https://userscripts.org/scripts/source/0.user.js</span></div><div class="line"><span class="comment">// @version     1.0</span></div><div class="line"><span class="comment">// @author      tomchen1989 &lt;tomchen1989[AT]yahoo.com.cn&gt;</span></div><div class="line"><span class="comment">// @license     MIT/Expat License</span></div><div class="line"><span class="comment">// ==/UserScript==</span></div><div class="line"></div><div class="line">(<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>{</div><div class="line"></div><div class="line"><span class="keyword">var</span> docLang = <span class="built_in">document</span>.documentElement.lang.toLowerCase(),</div><div class="line">	docCharset = ( <span class="built_in">document</span>.characterSet || <span class="built_in">document</span>.charset ).toLowerCase();</div><div class="line"></div><div class="line"><span class="keyword">if</span> (docLang === <span class="string">"zh-cn"</span> || docLang === <span class="string">"zh-hans"</span> || docLang === <span class="string">"zh-sg"</span> || docLang === <span class="string">"zh-my"</span></div><div class="line">	|| docCharset.substring(<span class="number">0</span>, <span class="number">2</span>) === <span class="string">"gb"</span>) {<span class="comment">//avoid converting pages that are already in Simplified Chinese for sure</span></div><div class="line">	<span class="keyword">return</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">//the lists are based on kSimplifiedVariant by Hongkong user "京典"</span></div><div class="line"></div><div class="line"><span class="comment">//Traditional Chinese chars</span></div><div class="line"><span class="keyword">var</span> chtList  = <span class="string">"“”‘’丢乱亚伫来仑侣俣伣侠伥俩仓个们伦伟侧侦伪伧伞备偬传伛债伤倾偻仅佥侨侥偾仪侬亿侩俭傧俦侪偿储俪㑩傩傥俨兑兖内两册幂净冻凛凯别删刭则刹刚剥剐剀创剧刘刽刿剑剂劲动务勋劳势勚劢励劝匀匦匮区协却厍厌厉厣参丛咤吴呐吕呙员呗吣问哑启唡㖞唤丧乔单哟呛啬唝吗呜唢哔叹喽呕啧尝唛哗唠啸叽哓呒啴嘘㖊哒哝哕嗳哙喷咛吓哜噜啮呖咙亸喾严嘤啭嗫嚣冁呓嘱囱囵国围园圆图团埯垭执坚垩埚尧报场块茔垲埘坞埙尘堑垫坠堕坟垦压垒圹垆垄坜坝壮壶壸寿够梦夹奂奥奁夺奋姹妆姗娱娄妇娅娲妫媪妈妪妩娴婳娆婵娇嫱嫒嬷嫔婴婶娈孙学孪宫寝实审写宽宠宝将专寻对导尴届屉屡层屦属冈岘岛峡崃岗峥岚嵝崭岖嵚崂峤峣峄崄岙嵘屿岿峦巅巯帅师帐带帧帏帼帻帜币帮帱库厕厢厩厦厨厮庙庑废广廪庐厅弑弪张强弹弥弯彦径从徕彻恒耻悦怅闷恶恼恽恻爱惬悫怆恺忾态愠惨惭恸惯怄怂虑悭庆忧惫凭愦惮愤悯怃宪忆恳应怿懔怼懑恹惩懒悬惧慑恋戆戋戗戬战戏户抛捝挟扪扫抡挜挣拣扬换挥损摇捣揾抢掴掼搂挚抠抟掺捞挦撑挠㧑挢掸拨抚揿挞挝捡拥掳择击挡担挤拟摈拧搁掷扩撷摆擞撸摅撵拢拦撄搀撺携摄攒挛摊搅揽败叙敌数敛毙斓斩断时晋昼晕晖旸畅暂晔昙晓暧旷昽书会胧东锨栅栀条枭棁弃枨枣栋栈梾桠杨枫桢业杩荣桤枪椠椁桨桩乐枞楼标枢样树桦桡桥椭横檩柽档桧槚检樯梼槟柠槛橹榈栉椟橼栎橱槠栌枥橥榇蘖栊榉樱栏权椤栾榄棂钦欧欤欢岁归殁残殒殇殚殓殡㱩歼杀壳毁殴毵牦毡氇氢氩氲决没况汹浃泾凉泪渌沦渊涞浅涣减涡测浑凑浈汤沩沟温沧灭涤荥沪滞渗浒浐滚满渔沤汉涟渍涨溆渐浆颍泼潜润浔溃滗涠涩浇涝涧渑泽滪泶浍浊浓湿济涛滥潍滨溅泺滤滢渎㲿泻浏濒泸沥潇潆潴泷濑潋澜沣滠滩灏漤湾滦灾为乌烃无炼炜烟茕焕烦炀煴荧炝热颎炽烨灯烧烫焖营灿烛烩烬焘烁炉烂争爷尔墙牍牵荦犊牺状狭狈狰犹狲狱狮奖独狯猃狝狞猎犷兽獭献猕猡现珐珲玮玚琐瑶莹玛玱琏玑瑷珰环玺琼珑璎瓒瓯产亩毕畴叠痉疴疯疡痪瘗疮疟疭瘘疗痨痫瘅疠瘪疖癞癣瘿瘾痈瘫癫皑疱皲皱盗盏监盘卢眦众睁睐䁖瞒瞆睑眬瞩矫硁硖砗砚硕砀码硙砖碜碛矶硗础碍矿砺砾矾砻禄祸祯祎祃禅礼祢祷秃籼税秆禀称稣积颖秾穑秽稳稆窝穷窑窎窭窥窜窍窦窃竞笔笋笕䇲笺筝节箧筼笃筛筚箦篓箪简篑箫筜签篮筹箓箨籁笼笾簖箩粤糁粪粮粝籴粜纠纪纣约红纡纥纨纫纹纳纽纾纯纰纼纱纮纸级纷纭纴纺䌷细绂绁绅纻绍绀绋绐绌终组䌹绊绗结绝绦绞络绚给绒绖统丝绛绢绑绡绠绨绤绥经综缍绿绸绻绶维绹绾纲缀䌽纶绺绮绽绰绫绵绲缁紧绯绪缃缄缂线缉缎缔缗缘缌编缓缅纬缑缈练缏缇萦缙缢缒绉缣缊缞缚缜缟缛县缝缡缩纵缧䌸缦絷缕缥总绩绷缫缪缯织缮缭绕绣缋绳绘缳缲缴䍁绎继缤缱缬纩续缠缨纤缵缆钵罂罚骂罢罗罴羁芈羟义习翘耧闻联聪声耸聩聂职聍聋肃胁脉胫脱胀肾脶脑肿脚肠腽肤胶腻胆脍脓脸脐膑胪脔臜临兴举旧舱舣舰舻艰艳刍苎兹荆茎荚苋华苌莱莴叶荭着苇荤莳莅苍荪盖莲苁莼荜蒌蒋葱茑荫荨蒇荞莸荛蒉芜萧蓣蕰荟蓟芗蔷荙莶萨䓕荠蓝荩艺薮苈蔼蔺蕲芦苏蕴藓蔹茏兰蓠萝处虚虏号亏虬蛱蜕蚬蚀猬虾蜗蛳蚂萤䗖蝼螀蛰蝈蝉蛲蛏蚁蝇虿蛴蝾蛎蟏蛊蛮术卫衮袅补装裈袆裤裢褛亵袯袄裣裆褴袜䙓衬袭见规觅视觇觋觎亲觊觏觐觑觉览觌观觞觯订讣计讯讧讨讦讱训讪讫讬记讹讶讼䜣诀讷访设许诉诃诊诂诋讵诈诒诏评诐诇诎诅词咏诩询诣试诗诧诟诡诠诘话该详诜诙诖诔诛诓认诳诶诞诱诮语诚诫诬误诰诵诲说谁课谇诽谊訚调谄谆谈诿请诤诹诼谅论谂谀谍谞谝诨谔谛谐谏谕谘讳谙谌讽诸谚谖诺谋谒谓誊诌谎谜谧谑谡谤谦谥讲谢谣谟谪谬讴谨谩䜧证谲讥谮识谯谭谱谵译议谴护诪誉谫读变雠谗让谰谶谠谳岂竖猪豮猫䝙贝贞负财贡贫货贩贪贯责贮贳赀贰贵贬买贷贶费贴贻贸贺贲赂赁贿赅资贾贼赈赊宾赇赒赉赐赏赔赓贤卖贱赋赕质账赌䞐赖赗赚赙购赛赜贽赘赟赠赞赡赢赆赃赑赎赝赣赪赵趋趱迹践跄跸蹒踪跷跶趸踌跻跃踯跞踬蹰跹蹑蹿躜躏躯车轧轨军轪轩轫轭软轸轴轵轺轲轶轼较辂辁辀载轾辄辅轻辆辎辉辋辍辊辇辈轮辌辑辏输辐辗舆辒毂辖辕辘转辙轿辚轰辔轹轳办辞辫辩农迳这连进运过达违遥逊递远迟迁选遗辽迈还迩边逻逦郏邮郓乡邹邬郧邓郑邻郸邺郐邝酂郦酝医酱酦酿衅酾酽释钆钇钌钊钉钋针钓钐钏钒钗钍钕钯钫钘钭钠钝钤钣钑钞钮钧钙钬钛钪铌铈钶铃钴钹铍钰钸铀钿钾钜铊铉铇铋铂钳铆铅钺钩钲钼钽铏铰铒铬铪银铳铜铚铣铨铢铭铫铦衔铑铷铱铟铵铥铕铯铐锐销锑锉铝锒锌钡铤铗锋铻锊锓锄锔锇铓铺铖锆锂铽锯钢锞录锖锩铔锥锕锟锱铮锛锬锭锜钱锦锚锠锡锢错锰铼钔锴锅镀锷铡钖锻锽锸锲锹锾键锶锗镁镑镕锁镉镈镃钨蓥镏铠铩锼镐镇镒镋镍镓镞镟链镆镙镠镝铿锵镗镘镛铲镜镖镂錾铧镤镪锈铙铴镣铹镦镡镫镨镄镌镰镯镭铁镮铎铛镱铸镬镔鉴锧镴铄镳镧钥镵镶镊锣钻銮凿镢长门闩闪闫闬闭开闶闳闰闲间闵闸阂阁阀闺闽阃阆闾阅阊阉阎阏阍阈阌阒闱阔阕阑阇阗阘闿阖阙闯关阚阓阐阛闼坂陉陕阵阴陈陆阳陧队阶陨际随险隐陇隶隽虽双雏杂鸡难电霡雾霁雳霭灵靓静靥鼗巩绱缰鞑鞯韦韧韨韩韪韬韫韵响页顶顷项顺顸顼颂颀颃预顽颁顿颇领颌颉颐颏头颊颋颔颈颓频颗题额颚颜颙颛颡颠类颟颢顾颤显颦颅颞颧风飐飑飒飓飔飏飖飕飗飘飙飞饤饦饨饪饫饬饭饮饴饲饱饰饺饼饷养饵饽馁饿馂饾馄饯馅馆糇饧馎饩馏馊馌馍馒馐馑馈馔饶飨餍馋马驭冯驮驰驯驲驳驻驽驹驵驾骀驸驶驼驷骈骇骃骆骎骏骋骍骓骒骑骐骛骗骙䯄骞骘骝腾驺骚骟骡蓦骜骖骠骢驱骅骕骁骣骄验驿骤驴骧骥骦骊骉髅髌髋鬓闹阋阄魉魇鱼鱽鲀鲁鲂鱿鲄鲐鲍鲋鲊鲒鲕鲖鲔鲛鲑鲜鲪鲧鲠鲩鲤鲨鲻鲯鲭鲞鲷鲱鲵鲲鲳鲸鲮鲰鳀鲫鲽鳇鳅鳆鳃鳒鲥鳏鳎鳐鳍鲢鳌鳓鲦鲣鳗鳛鳔鳕鳖鳟鳝鳜鳞鲟鲎鲙鳣鳢鲿鲚鳄鲈鲡鸟凫鸠鸤凤鸣鸢鸩鸨鸦鸰鸵鸳鸲鸮鸱鸪鸯鸭鸸鸹䴕鸿鸽䴔鸺鸼鹃鹆鹁鹈鹅鹄鹉鹌鹏鹎鹊鹓䴖鸫鹑鹒鹙鹕鹗鹖鹜䴗鸧莺鹟鹤鹠鹡鹘鹣鹚鹢鹞䴘鹝鹧鹥鸥鸷鹨鸶鹪鹔鹩鹫鹇鹬鹰鹭鸴䴙㶉鹯鹲鸬鹦鹳鹂鸾鹾盐丽麦麸黄黉点黪黡黩黾鼋鼍鼹齐斋赍齑齿龀龁龂龅龇龃龆龄龈龊龉龋腭龌龙庞龚龛龟汇坛历冲获当尽脏药荡锤须饥卤发药㟆㨫䌾䞍䯅鲃䲝鳚俫刬㓥㔉咝垱垅屃岽悮㧟枧榅滟㶽㶶犸㺍痖疬眍砜硷纟绔绬䍀耢胨荮荬螨裥觍讻贠轷轱钎钚钷铞铘锃锍锫锝锪锳锘锿镅镎镚锎锏镲镥镩鞒颒颕颥飚饣饹馃馇馓馕骔鲅鲆鲉鲏鲇鲴鲺鳊鲗鳑鳋鳘鲹鳙鲼鸻鹀鹐鹍鹋鹛鹱鹴厐䌺垴讠钅䌶戯梿㱮瘆䅉䌼觃饳饸饻馉鱾鲌鲘鲓鲝鲬鳈鳂鲾鳁鳉鳡鳠䴓杰佣仆价优儿划胜吨涂坏奸宁尸岭几厂后征怜怀忏舍挂扑据扰于晒杆栖极构朴机柜气洁淀泞洒炖异痒确御种洼范筑帘篱网茧圣听腊与庄万荐苹虮虫蜡蚕制触注夸丰赶踊挽适丑离云愿刮肴惊肮体松斗郁咸么党采并系干复只里渖画锺钟䩄馀鲶碱"</span>;</div><div class="line"></div><div class="line"><span class="comment">//Simplified Chinese chars</span></div><div class="line"><span class="keyword">var</span> chsList = <span class="string">"“”‘’丢乱亚伫来仑侣俣伣侠伥俩仓个们伦伟侧侦伪伧伞备偬传伛债伤倾偻仅佥侨侥偾仪侬亿侩俭傧俦侪偿储俪㑩傩傥俨兑兖内两册幂净冻凛凯别删刭则刹刚剥剐剀创剧刘刽刿剑剂劲动务勋劳势勚劢励劝匀匦匮区协却厍厌厉厣参丛咤吴呐吕呙员呗吣问哑启唡㖞唤丧乔单哟呛啬唝吗呜唢哔叹喽呕啧尝唛哗唠啸叽哓呒啴嘘㖊哒哝哕嗳哙喷咛吓哜噜啮呖咙亸喾严嘤啭嗫嚣冁呓嘱囱囵国围园圆图团埯垭执坚垩埚尧报场块茔垲埘坞埙尘堑垫坠堕坟垦压垒圹垆垄坜坝壮壶壸寿够梦夹奂奥奁夺奋姹妆姗娱娄妇娅娲妫媪妈妪妩娴婳娆婵娇嫱嫒嬷嫔婴婶娈孙学孪宫寝实审写宽宠宝将专寻对导尴届屉屡层屦属冈岘岛峡崃岗峥岚嵝崭岖嵚崂峤峣峄崄岙嵘屿岿峦巅巯帅师帐带帧帏帼帻帜币帮帱库厕厢厩厦厨厮庙庑废广廪庐厅弑弪张强弹弥弯彦径从徕彻恒耻悦怅闷恶恼恽恻爱惬悫怆恺忾态愠惨惭恸惯怄怂虑悭庆忧惫凭愦惮愤悯怃宪忆恳应怿懔怼懑恹惩懒悬惧慑恋戆戋戗戬战戏户抛捝挟扪扫抡挜挣拣扬换挥损摇捣揾抢掴掼搂挚抠抟掺捞挦撑挠㧑挢掸拨抚揿挞挝捡拥掳择击挡担挤拟摈拧搁掷扩撷摆擞撸摅撵拢拦撄搀撺携摄攒挛摊搅揽败叙敌数敛毙斓斩断时晋昼晕晖旸畅暂晔昙晓暧旷昽书会胧东锨栅栀条枭棁弃枨枣栋栈梾桠杨枫桢业杩荣桤枪椠椁桨桩乐枞楼标枢样树桦桡桥椭横檩柽档桧槚检樯梼槟柠槛橹榈栉椟橼栎橱槠栌枥橥榇蘖栊榉樱栏权椤栾榄棂钦欧欤欢岁归殁残殒殇殚殓殡㱩歼杀壳毁殴毵牦毡氇氢氩氲决没况汹浃泾凉泪渌沦渊涞浅涣减涡测浑凑浈汤沩沟温沧灭涤荥沪滞渗浒浐滚满渔沤汉涟渍涨溆渐浆颍泼潜润浔溃滗涠涩浇涝涧渑泽滪泶浍浊浓湿济涛滥潍滨溅泺滤滢渎㲿泻浏濒泸沥潇潆潴泷濑潋澜沣滠滩灏漤湾滦灾为乌烃无炼炜烟茕焕烦炀煴荧炝热颎炽烨灯烧烫焖营灿烛烩烬焘烁炉烂争爷尔墙牍牵荦犊牺状狭狈狰犹狲狱狮奖独狯猃狝狞猎犷兽獭献猕猡现珐珲玮玚琐瑶莹玛玱琏玑瑷珰环玺琼珑璎瓒瓯产亩毕畴叠痉疴疯疡痪瘗疮疟疭瘘疗痨痫瘅疠瘪疖癞癣瘿瘾痈瘫癫皑疱皲皱盗盏监盘卢眦众睁睐䁖瞒瞆睑眬瞩矫硁硖砗砚硕砀码硙砖碜碛矶硗础碍矿砺砾矾砻禄祸祯祎祃禅礼祢祷秃籼税秆禀称稣积颖秾穑秽稳稆窝穷窑窎窭窥窜窍窦窃竞笔笋笕䇲笺筝节箧筼笃筛筚箦篓箪简篑箫筜签篮筹箓箨籁笼笾簖箩粤糁粪粮粝籴粜纠纪纣约红纡纥纨纫纹纳纽纾纯纰纼纱纮纸级纷纭纴纺䌷细绂绁绅纻绍绀绋绐绌终组䌹绊绗结绝绦绞络绚给绒绖统丝绛绢绑绡绠绨绤绥经综缍绿绸绻绶维绹绾纲缀䌽纶绺绮绽绰绫绵绲缁紧绯绪缃缄缂线缉缎缔缗缘缌编缓缅纬缑缈练缏缇萦缙缢缒绉缣缊缞缚缜缟缛县缝缡缩纵缧䌸缦絷缕缥总绩绷缫缪缯织缮缭绕绣缋绳绘缳缲缴䍁绎继缤缱缬纩续缠缨纤缵缆钵罂罚骂罢罗罴羁芈羟义习翘耧闻联聪声耸聩聂职聍聋肃胁脉胫脱胀肾脶脑肿脚肠腽肤胶腻胆脍脓脸脐膑胪脔臜临兴举旧舱舣舰舻艰艳刍苎兹荆茎荚苋华苌莱莴叶荭着苇荤莳莅苍荪盖莲苁莼荜蒌蒋葱茑荫荨蒇荞莸荛蒉芜萧蓣蕰荟蓟芗蔷荙莶萨䓕荠蓝荩艺薮苈蔼蔺蕲芦苏蕴藓蔹茏兰蓠萝处虚虏号亏虬蛱蜕蚬蚀猬虾蜗蛳蚂萤䗖蝼螀蛰蝈蝉蛲蛏蚁蝇虿蛴蝾蛎蟏蛊蛮术卫衮袅补装裈袆裤裢褛亵袯袄裣裆褴袜䙓衬袭见规觅视觇觋觎亲觊觏觐觑觉览觌观觞觯订讣计讯讧讨讦讱训讪讫讬记讹讶讼䜣诀讷访设许诉诃诊诂诋讵诈诒诏评诐诇诎诅词咏诩询诣试诗诧诟诡诠诘话该详诜诙诖诔诛诓认诳诶诞诱诮语诚诫诬误诰诵诲说谁课谇诽谊訚调谄谆谈诿请诤诹诼谅论谂谀谍谞谝诨谔谛谐谏谕谘讳谙谌讽诸谚谖诺谋谒谓誊诌谎谜谧谑谡谤谦谥讲谢谣谟谪谬讴谨谩䜧证谲讥谮识谯谭谱谵译议谴护诪誉谫读变雠谗让谰谶谠谳岂竖猪豮猫䝙贝贞负财贡贫货贩贪贯责贮贳赀贰贵贬买贷贶费贴贻贸贺贲赂赁贿赅资贾贼赈赊宾赇赒赉赐赏赔赓贤卖贱赋赕质账赌䞐赖赗赚赙购赛赜贽赘赟赠赞赡赢赆赃赑赎赝赣赪赵趋趱迹践跄跸蹒踪跷跶趸踌跻跃踯跞踬蹰跹蹑蹿躜躏躯车轧轨军轪轩轫轭软轸轴轵轺轲轶轼较辂辁辀载轾辄辅轻辆辎辉辋辍辊辇辈轮辌辑辏输辐辗舆辒毂辖辕辘转辙轿辚轰辔轹轳办辞辫辩农迳这连进运过达违遥逊递远迟迁选遗辽迈还迩边逻逦郏邮郓乡邹邬郧邓郑邻郸邺郐邝酂郦酝医酱酦酿衅酾酽释钆钇钌钊钉钋针钓钐钏钒钗钍钕钯钫钘钭钠钝钤钣钑钞钮钧钙钬钛钪铌铈钶铃钴钹铍钰钸铀钿钾钜铊铉铇铋铂钳铆铅钺钩钲钼钽铏铰铒铬铪银铳铜铚铣铨铢铭铫铦衔铑铷铱铟铵铥铕铯铐锐销锑锉铝锒锌钡铤铗锋铻锊锓锄锔锇铓铺铖锆锂铽锯钢锞录锖锩铔锥锕锟锱铮锛锬锭锜钱锦锚锠锡锢错锰铼钔锴锅镀锷铡钖锻锽锸锲锹锾键锶锗镁镑镕锁镉镈镃钨蓥镏铠铩锼镐镇镒镋镍镓镞镟链镆镙镠镝铿锵镗镘镛铲镜镖镂錾铧镤镪锈铙铴镣铹镦镡镫镨镄镌镰镯镭铁镮铎铛镱铸镬镔鉴锧镴铄镳镧钥镵镶镊锣钻銮凿镢长门闩闪闫闬闭开闶闳闰闲间闵闸阂阁阀闺闽阃阆闾阅阊阉阎阏阍阈阌阒闱阔阕阑阇阗阘闿阖阙闯关阚阓阐阛闼坂陉陕阵阴陈陆阳陧队阶陨际随险隐陇隶隽虽双雏杂鸡难电霡雾霁雳霭灵靓静靥鼗巩绱缰鞑鞯韦韧韨韩韪韬韫韵响页顶顷项顺顸顼颂颀颃预顽颁顿颇领颌颉颐颏头颊颋颔颈颓频颗题额颚颜颙颛颡颠类颟颢顾颤显颦颅颞颧风飐飑飒飓飔飏飖飕飗飘飙飞饤饦饨饪饫饬饭饮饴饲饱饰饺饼饷养饵饽馁饿馂饾馄饯馅馆糇饧馎饩馏馊馌馍馒馐馑馈馔饶飨餍馋马驭冯驮驰驯驲驳驻驽驹驵驾骀驸驶驼驷骈骇骃骆骎骏骋骍骓骒骑骐骛骗骙䯄骞骘骝腾驺骚骟骡蓦骜骖骠骢驱骅骕骁骣骄验驿骤驴骧骥骦骊骉髅髌髋鬓闹阋阄魉魇鱼鱽鲀鲁鲂鱿鲄鲐鲍鲋鲊鲒鲕鲖鲔鲛鲑鲜鲪鲧鲠鲩鲤鲨鲻鲯鲭鲞鲷鲱鲵鲲鲳鲸鲮鲰鳀鲫鲽鳇鳅鳆鳃鳒鲥鳏鳎鳐鳍鲢鳌鳓鲦鲣鳗鳛鳔鳕鳖鳟鳝鳜鳞鲟鲎鲙鳣鳢鲿鲚鳄鲈鲡鸟凫鸠鸤凤鸣鸢鸩鸨鸦鸰鸵鸳鸲鸮鸱鸪鸯鸭鸸鸹䴕鸿鸽䴔鸺鸼鹃鹆鹁鹈鹅鹄鹉鹌鹏鹎鹊鹓䴖鸫鹑鹒鹙鹕鹗鹖鹜䴗鸧莺鹟鹤鹠鹡鹘鹣鹚鹢鹞䴘鹝鹧鹥鸥鸷鹨鸶鹪鹔鹩鹫鹇鹬鹰鹭鸴䴙㶉鹯鹲鸬鹦鹳鹂鸾鹾盐丽麦麸黄黉点黪黡黩黾鼋鼍鼹齐斋赍齑齿龀龁龂龅龇龃龆龄龈龊龉龋腭龌龙庞龚龛龟汇坛历冲获当尽脏药荡锤须饥卤发药㟆㨫䌾䞍䯅鲃䲝鳚俫刬㓥㔉咝垱垅屃岽悮㧟枧榅滟㶽㶶犸㺍痖疬眍砜硷纟绔绬䍀耢胨荮荬螨裥觍讻贠轷轱钎钚钷铞铘锃锍锫锝锪锳锘锿镅镎镚锎锏镲镥镩鞒颒颕颥飚饣饹馃馇馓馕骔鲅鲆鲉鲏鲇鲴鲺鳊鲗鳑鳋鳘鲹鳙鲼鸻鹀鹐鹍鹋鹛鹱鹴厐䌺垴讠钅䌶戯梿㱮瘆䅉䌼觃饳饸饻馉鱾鲌鲘鲓鲝鲬鳈鳂鲾鳁鳉鳡鳠䴓杰佣仆价优儿划胜吨涂坏奸宁尸岭几厂后征怜怀忏舍挂扑据扰于晒杆栖极构朴机柜气洁淀泞洒炖异痒确御种洼范筑帘篱网茧圣听腊与庄万荐苹虮虫蜡蚕制触注夸丰赶踊挽适丑离云愿刮肴惊肮体松斗郁咸么党采并系干复只里渖画锺钟䩄馀鲶碱"</span>;</div><div class="line"></div><div class="line"><span class="comment">//inspired by augor and phoenix from proxomitron.cn, and "繁简转换" script by yecao</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleTextNode</span><span class="params">(prtNode)</span> </span>{</div><div class="line">	<span class="keyword">var</span> nodes = prtNode.childNodes,</div><div class="line">		i = <span class="number">0</span>,</div><div class="line">		l = nodes.length;</div><div class="line">	<span class="keyword">for</span> (; i &lt; l; i++) {</div><div class="line">		<span class="keyword">if</span> (nodes[i].nodeType === <span class="number">3</span>) {</div><div class="line">			nodes[i].data = conv(nodes[i].data);</div><div class="line">		} <span class="keyword">else</span> <span class="keyword">if</span> (nodes[i].childNodes) {</div><div class="line">			handleTextNode(nodes[i]);</div><div class="line">		}</div><div class="line">	}</div><div class="line">}</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">conv</span><span class="params">(str)</span> </span>{</div><div class="line">	<span class="keyword">var</span> ret = <span class="string">""</span>,</div><div class="line">		find,</div><div class="line">		i = <span class="number">0</span>,</div><div class="line">		l = str.length;</div><div class="line">	<span class="keyword">for</span> (; i &lt; l; i++) {</div><div class="line">		<span class="keyword">var</span> cha = str.charAt(i);</div><div class="line">		<span class="keyword">if</span> (<span class="regexp">/[\u4E00-\u9FFF“”‘’“”‘’\u3400-\u4DBF]/</span>.test(cha) === <span class="literal">false</span>) {</div><div class="line">			find = -<span class="number">1</span>;</div><div class="line">		} <span class="keyword">else</span> {</div><div class="line">			find = chtList.indexOf(cha);</div><div class="line">		}</div><div class="line">		<span class="keyword">if</span> (find != -<span class="number">1</span>) {</div><div class="line">			ret += chsList.charAt(find);</div><div class="line">		} <span class="keyword">else</span> {</div><div class="line">			ret += cha;</div><div class="line">		}</div><div class="line">	}</div><div class="line">	<span class="keyword">return</span> ret;</div><div class="line">}</div><div class="line"></div><div class="line">handleTextNode(<span class="built_in">document</span>.documentElement);</div><div class="line"></div><div class="line">})();</div></pre></td></tr></table></figure>
-
-
-
-<p>2.简繁转换<br><a title="简繁转换" href="https://userscripts.org/scripts/show/38023" target="_blank">https://userscripts.org/scripts/show/38023</a></p>
-<p>3.文本框备份<br><a title="Textarea Backup with expiry" href="https://userscripts.org/scripts/show/42879" target="_blank">https://userscripts.org/scripts/show/42879</a></p>
-<p>4.各大视频站点去广告&amp;bilibili播放器替换<br><a title="OpenGG.Clean.Player(Bae" href="https://userscripts.org/scripts/show/162286" target="_blank">https://userscripts.org/scripts/show/162286</a></p>
-<p>5.迅雷、快车、旋风等专用链破解<br><a title="专用链破解 Special Links Converter" href="https://userscripts.org/scripts/show/66985" target="_blank">https://userscripts.org/scripts/show/66985</a></p>
-<p>6.DBank点击文件名直接下载(免登陆)<br><a title="DBank Linker" href="https://userscripts.org/scripts/show/116879" target="_blank">https://userscripts.org/scripts/show/116879</a></p>
-<p>7.picViewer(一看就知是看图脚本)<br><a title="picViewer" href="https://userscripts.org/scripts/show/105741" target="_blank">https://userscripts.org/scripts/show/105741</a></p>
-<p>8.CheckBoxMate(批量勾选)<br><a title="CheckBoxMate for Greasemonkey" href="https://userscripts.org/scripts/show/73700" target="_blank">https://userscripts.org/scripts/show/73700</a></p>
-<p>9.返回顶部、底部&amp;刷新<br><a title="GoToTop[modified]" href="https://userscripts.org/scripts/show/123622" target="_blank">https://userscripts.org/scripts/show/123622</a></p>
-<p>10.批量导出百度网盘下载地址(配合aria2效果很好)<br><a title="BaiduPanDownloadHelper" href="https://userscripts.org/scripts/show/162138" target="_blank">https://userscripts.org/scripts/show/162138</a></p>
-<p>11.眼不见心不烦(新浪微博优化脚本)<br><a title="眼不见心不烦（新浪微博）" href="https://userscripts.org/scripts/show/114087" target="_blank">https://userscripts.org/scripts/show/114087</a></p>
-<p>12.youtube下载&amp;优化利器<br><a title="YouTube Center" href="https://userscripts.org/scripts/show/114002" target="_blank">https://userscripts.org/scripts/show/114002</a></p>
-<p>13.QQ旋风一键rpc(配合aria2)</p>
-<figure class="highlight [javascript]"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ==UserScript==</span></div><div class="line"><span class="comment">// @name        web QQ旋风/xuanfeng</span></div><div class="line"><span class="comment">// @namespace   web QQ旋风/xuanfeng</span></div><div class="line"><span class="comment">// @description 旋风离线链接导出</span></div><div class="line"><span class="comment">// @include     http://lixian.qq.com/main.html*</span></div><div class="line"><span class="comment">// @version     0.9.0</span></div><div class="line"><span class="comment">// @Author: maplebeats</span></div><div class="line"><span class="comment">// @mail: maplebeats@gmail.com</span></div><div class="line"><span class="comment">// ==/UserScript==</span></div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line">* BUG:文件重名无法正常下载.....</div><div class="line">* TIPS:$是tencent自己的一个function,不是jQuery</div><div class="line">* TODO:aria2-rpc状态检查等</div><div class="line">*/</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">contentEval</span><span class="params">(source)</span> </span>{</div><div class="line">    <span class="comment">// Check for function input.</span></div><div class="line">    <span class="keyword">if</span> (<span class="string">'function'</span> == <span class="keyword">typeof</span> source) {</div><div class="line">        <span class="comment">// Execute this function with no arguments, by adding parentheses.</span></div><div class="line">        <span class="comment">// One set around the function, required for valid syntax, and a</span></div><div class="line">        <span class="comment">// second empty set calls the surrounded function.</span></div><div class="line">        source = <span class="string">'('</span> + source + <span class="string">')();'</span></div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="comment">// Create a script node holding this  source code.</span></div><div class="line">    <span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">    script.setAttribute(<span class="string">"type"</span>, <span class="string">"application/javascript"</span>);</div><div class="line">    script.textContent = source;</div><div class="line"></div><div class="line">    <span class="comment">// Insert the script node into the page, so it will run, and immediately</span></div><div class="line">    <span class="comment">// remove it to clean up.</span></div><div class="line">    <span class="built_in">document</span>.body.appendChild(script);</div><div class="line">    <span class="built_in">document</span>.body.removeChild(script);</div><div class="line">}</div><div class="line"></div><div class="line">contentEval(<span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">    <span class="keyword">var</span> context = <span class="string">'&lt;progress id="re-pro" value=0 style="width:280px;"&gt;&lt;/progress&gt;'</span>+</div><div class="line">        <span class="string">'&lt;font color="red"&gt;&lt;/font&gt;'</span>+</div><div class="line">        <span class="string">'&lt;div id="messager" style="border:1px solid;margin-top:5px;padding:5px;width:280px;"&gt;Welcome&lt;/div&gt;'</span>;</div><div class="line">    jQuery(<span class="string">"#share_opt"</span>).html(context).css(<span class="string">'float'</span>,<span class="string">'left'</span>).css(<span class="string">'width'</span>,<span class="string">'250px'</span>).css(<span class="string">'margin'</span>,<span class="string">'20px'</span>);</div><div class="line">    jQuery(<span class="string">'.main'</span>).css(<span class="string">'width'</span>,<span class="string">'80%'</span>);</div><div class="line">    jQuery(<span class="string">'#cont_wrap'</span>).css(<span class="string">'width'</span>,<span class="string">'100%'</span>);</div><div class="line">    jQuery(<span class="string">"#down_box"</span>).remove();</div><div class="line">    jQuery(<span class="string">".mod_copyright"</span>).remove();</div><div class="line">    jQuery(<span class="string">".top"</span>).remove();</div><div class="line">    jQuery(<span class="string">".search_box"</span>).remove();</div><div class="line"></div><div class="line">    jQuery(<span class="string">"#task_dl_local em"</span>).html(<span class="string">"Aria2导出"</span>);</div><div class="line">    jQuery(<span class="string">"#task_share_multi em"</span>).html(<span class="string">'一键RPC'</span>);</div><div class="line">});</div><div class="line">contentEval(<span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">    EF = {};</div><div class="line">    <span class="keyword">var</span> mode = <span class="number">1</span>;</div><div class="line">    <span class="keyword">var</span> t_count = <span class="number">0</span>;</div><div class="line">    <span class="keyword">var</span> task_info = [];</div><div class="line">    <span class="keyword">var</span> add_task_info = <span class="function"><span class="keyword">function</span><span class="params">(j)</span></span>{</div><div class="line">        <span class="keyword">if</span>(j){</div><div class="line">            task_info.push(j);</div><div class="line">        }</div><div class="line">        <span class="keyword">var</span> count = task_info.length;</div><div class="line"></div><div class="line">        jQuery(<span class="string">'#re-pro'</span>).attr(<span class="string">'max'</span>,t_count).attr(<span class="string">'value'</span>,count);</div><div class="line">        <span class="keyword">if</span>(count == t_count){</div><div class="line">            <span class="keyword">if</span>(mode === <span class="number">1</span>){</div><div class="line">                EF.init_pop();</div><div class="line">            }<span class="keyword">else</span> <span class="keyword">if</span>(mode === <span class="number">2</span>){</div><div class="line">                EF.rpc();</div><div class="line">            }</div><div class="line">            jQuery(<span class="string">'#share_opt font'</span>).html(<span class="string">'Success!'</span>);</div><div class="line">            t_count = <span class="number">0</span>; </div><div class="line">        }<span class="keyword">else</span>{</div><div class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        }</div><div class="line">    };</div><div class="line">    EF.get_url = <span class="function"><span class="keyword">function</span> <span class="params">(code)</span> </span>{</div><div class="line">        jQuery.ajax({</div><div class="line">            type: <span class="string">"post"</span>,</div><div class="line">            url: <span class="string">"/handler/lixian/get_http_url.php"</span>,</div><div class="line">            data: code,</div><div class="line">            cache: <span class="literal">false</span>,</div><div class="line">            timeout: <span class="number">10000</span>,</div><div class="line">            dataType: <span class="string">"json"</span>,</div><div class="line">            async: <span class="literal">true</span>, <span class="comment">//TvT</span></div><div class="line">            success: <span class="function"><span class="keyword">function</span> <span class="params">(data)</span> </span>{</div><div class="line">                <span class="keyword">if</span> (data &amp;&amp; data.ret == <span class="number">0</span>) {</div><div class="line">                    <span class="keyword">var</span> url = data[<span class="string">"data"</span>];</div><div class="line">                    <span class="keyword">var</span> temp_json = { <span class="string">"name"</span>: code.filename, <span class="string">"url"</span>: url.com_url, <span class="string">"cookie"</span>: url.com_cookie };</div><div class="line">                    add_task_info(temp_json);</div><div class="line">                }</div><div class="line">                <span class="keyword">else</span> {</div><div class="line">                    XF.widget.msgbox.show(<span class="string">"请求url失败"</span>, <span class="number">2</span>, <span class="number">2000</span>);</div><div class="line">                    t_count--;</div><div class="line">                    add_task_info();</div><div class="line">                }</div><div class="line">            },</div><div class="line">            error: <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">                XF.widget.msgbox.show(<span class="string">"请求url失败"</span>, <span class="number">2</span>, <span class="number">2000</span>);</div><div class="line">                t_count--;</div><div class="line">                add_task_info();</div><div class="line">            }</div><div class="line">        });</div><div class="line">    }</div><div class="line">    EF.rpc = <span class="function"><span class="keyword">function</span> <span class="params">(data)</span> </span>{</div><div class="line">        <span class="keyword">var</span> data = task_info;</div><div class="line">        <span class="keyword">var</span> url = jQuery(<span class="string">"#rpc-url"</span>).val();</div><div class="line">        <span class="keyword">if</span>(url == <span class="literal">undefined</span>){</div><div class="line">            url = localStorage.rpc;</div><div class="line">        }<span class="keyword">else</span>{</div><div class="line">            localStorage.rpc = url;</div><div class="line">        }</div><div class="line">        <span class="keyword">var</span> count = data.length;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;count;i++) {</div><div class="line">            <span class="keyword">var</span> tmp = data[i];</div><div class="line">            <span class="keyword">var</span> uri = { <span class="string">'jsonrpc'</span>: <span class="string">'2.0'</span>, <span class="string">'id'</span>: (<span class="keyword">new</span> <span class="built_in">Date</span>()).getTime().toString(), <span class="string">'method'</span>: <span class="string">'aria2.addUri'</span>, <span class="string">'params'</span>: [[tmp.url, ], { <span class="string">'out'</span>: tmp.name, <span class="string">'header'</span>: <span class="string">'Cookie: FTN5K='</span> + tmp.cookie}] }; <span class="comment">/*,'split':'10','continue':'true','max-conection-per-server':'5','parameterized-uri':'true'}]};*/</span></div><div class="line">            <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">            xhr.open(<span class="string">"POST"</span>, url + <span class="string">"?tm="</span> + (<span class="keyword">new</span> <span class="built_in">Date</span>()).getTime().toString(), <span class="literal">true</span>);</div><div class="line">            xhr.setRequestHeader(<span class="string">"Content-Type"</span>, <span class="string">"application/x-www-form-urlencoded; charset=UTF-8"</span>);</div><div class="line">            xhr.send(<span class="built_in">JSON</span>.stringify(uri));</div><div class="line">        }</div><div class="line">        XF.widget.msgbox.hide();</div><div class="line">        XF.widget.msgbox.show(<span class="string">"任务已经添加至aria2-rpc,请自行查看"</span>, <span class="number">0</span>, <span class="number">1000</span>, <span class="literal">false</span>)</div><div class="line">    }</div><div class="line">    EF.get_rpc = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{</div><div class="line">        <span class="keyword">if</span>(localStorage.rpc)</div><div class="line">            <span class="keyword">return</span> localStorage.rpc;</div><div class="line">        <span class="keyword">else</span></div><div class="line">            <span class="keyword">return</span> <span class="string">'http://localhost:6800/jsonrpc'</span>;</div><div class="line">    }</div><div class="line">    EF.init_pop = <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">        <span class="keyword">var</span> html = <span class="string">'&lt;div class="choose_start" style="height:150px;width:100%;"&gt;'</span>+</div><div class="line">        <span class="string">'&lt;div style="margin-bottom: 20px;"&gt;'</span>+</div><div class="line">        <span class="string">'&lt;select id="choose" style="background:rgba(255,255,255,0.5);"&gt;&lt;option value=1&gt;aria2文件&lt;/option&gt;&lt;option value=2&gt;aria2命令&lt;/option&gt;&lt;option value=3&gt;wget命令&lt;/option&gt;&lt;option value=4&gt;aria2 json-rpc&lt;/option&gt;&lt;/select&gt;'</span>+</div><div class="line">        <span class="string">'&lt;/div&gt;'</span>+</div><div class="line">        <span class="string">'&lt;div id="show-export"&gt;'</span>+</div><div class="line">            <span class="string">'&lt;a id="save-as" class="icon_file" target="_blank" title="右键另存为" download="aria2.down"&gt;点击或右键另存为&lt;/a&gt;'</span>+</div><div class="line">            <span class="string">'&lt;p&gt;运行&lt;code&gt;aria2c -c -s10 -x10 -i aria2.down&lt;/code&gt;进行下载&lt;/p&gt;'</span>+</div><div class="line">        <span class="string">'&lt;/div&gt;'</span>+</div><div class="line">        <span class="string">'&lt;pre id="show-cmd" stlye="overflow-x: scroll;padding: 4px;border: 1px solid #CCC;"&gt;'</span>+</div><div class="line">        <span class="string">'&lt;/pre&gt;'</span>+</div><div class="line">        <span class="string">'&lt;div id="show-rpc"&gt;'</span>+</div><div class="line">        <span class="string">'&lt;p&gt;确保后台已运行aria2 &lt;code&gt;aria2c -c -s10 -x10 --enable-rpc&lt;/code&gt;&lt;/p&gt;'</span>+</div><div class="line">        <span class="string">'&lt;div&gt;&lt;input id="rpc-url" type="text" style="width:200px;background:rgba(0,0,0,0);" value="'</span>+EF.get_rpc()+<span class="string">'"&gt;&lt;/input&gt;&lt;/div&gt;&lt;div id="rpc" class="com_opt_btn"&gt;&lt;span&gt;&lt;em&gt;RPC&lt;/em&gt;&lt;/span&gt;&lt;/div&gt;'</span>+</div><div class="line">        <span class="string">'&lt;/div&gt;'</span>+</div><div class="line">        <span class="string">'&lt;/div&gt;'</span>;</div><div class="line">        jQuery(<span class="string">'#messager'</span>).html(html);</div><div class="line">        <span class="comment">/*</span></div><div class="line">        jQuery("#choose_files_table").html(html);</div><div class="line">        window.choose_download_files = new xfDialog("choose_download_files");</div><div class="line">        XF.widget.msgbox.hide();</div><div class="line">        choose_download_files.show();</div><div class="line">        jQuery(".com_win_head_wrap em").html("导出");</div><div class="line">        jQuery(".opt").hide();</div><div class="line">        */</div><div class="line"></div><div class="line">        jQuery(<span class="string">"#rpc"</span>).bind(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">            EF.rpc();</div><div class="line">        });</div><div class="line">        jQuery(<span class="string">"#choose"</span>).bind(<span class="string">"change"</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{</div><div class="line">            <span class="keyword">var</span> data = EF.create_data(jQuery(<span class="keyword">this</span>).val());</div><div class="line"></div><div class="line">            jQuery(<span class="string">'#show-export, #show-cmd, #show-rpc'</span>).hide();</div><div class="line">            <span class="keyword">switch</span> (<span class="built_in">parseInt</span>(<span class="keyword">this</span>.value)) {</div><div class="line">                <span class="keyword">case</span> <span class="number">1</span> : <span class="comment">//export file</span></div><div class="line">                    <span class="keyword">var</span> href = <span class="string">"data:text/plain;charset=utf-8,"</span> + <span class="built_in">encodeURIComponent</span>(data);</div><div class="line">                    jQuery(<span class="string">"#save-as"</span>).attr(<span class="string">"href"</span>, href);</div><div class="line">                    jQuery(<span class="string">'#show-export'</span>).show();</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> <span class="number">2</span> : <span class="comment">//show command code</span></div><div class="line">                <span class="keyword">case</span> <span class="number">3</span> :</div><div class="line">                    jQuery(<span class="string">'#show-cmd'</span>).show()</div><div class="line">                        .text(data);</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> <span class="number">4</span> : <span class="comment">//json rpc</span></div><div class="line">                    jQuery(<span class="string">'#show-rpc'</span>).show()</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">            }</div><div class="line">        }).change();<span class="comment">//init</span></div><div class="line">        <span class="comment">/*</span></div><div class="line">        jQuery("#choose_download_files .close_win").bind("click", function () {</div><div class="line">            jQuery(".com_win_head_wrap em").html("下载任务");</div><div class="line">            jQuery(".opt").show();</div><div class="line">        });</div><div class="line">        */</div><div class="line">    }</div><div class="line"></div><div class="line">    EF.create_data = <span class="function"><span class="keyword">function</span> <span class="params">(value)</span> </span>{</div><div class="line">        <span class="keyword">var</span> url = task_info;</div><div class="line">        <span class="keyword">var</span> html = <span class="string">''</span>;</div><div class="line">        <span class="keyword">var</span> count = url.length;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;count;i++) {</div><div class="line">            <span class="keyword">var</span> data = url[i];</div><div class="line">            <span class="keyword">var</span> cookie = data.cookie;</div><div class="line">            <span class="keyword">var</span> http = data.url;</div><div class="line">            <span class="keyword">var</span> name = data.name;</div><div class="line">            <span class="keyword">switch</span> (value) {</div><div class="line">                <span class="keyword">case</span> <span class="string">'1'</span>:</div><div class="line">                    html += http + <span class="string">"\n  header=Cookie: FTN5K="</span> + cookie + <span class="string">"\n"</span>+</div><div class="line">                    <span class="string">"  out="</span> + name + <span class="string">"\n"</span> +</div><div class="line">                    <span class="string">"  continue=true\n"</span>;</div><div class="line">                    <span class="comment">//html += "  parameterized-uri=true\n";</span></div><div class="line">                    <span class="comment">//html += "  max-conection-per-server=5\n";</span></div><div class="line">                    <span class="comment">//html += "  split=10\n"; //谁能告诉我为什么这个设置了完全无效？？？？</span></div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> <span class="string">'2'</span>:</div><div class="line">                    html += <span class="string">"aria2c -c -s10 -x10 -o '"</span> + name + <span class="string">"' --header 'Cookie: FTN5K="</span> + cookie + <span class="string">"' "</span> + http + <span class="string">"\n"</span>;</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> <span class="string">'3'</span>:</div><div class="line">                    html += <span class="string">"wget -c -O '"</span> + name + <span class="string">"' --header Cookie:FTN5K="</span> + cookie + <span class="string">" "</span> + http + <span class="string">"\n"</span>;</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                defalut:</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">            }</div><div class="line">        }</div><div class="line">        <span class="keyword">return</span> html</div><div class="line">    }</div><div class="line">    EF.get_choice = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{</div><div class="line">        <span class="keyword">var</span> dl_tasks = [];</div><div class="line">        <span class="keyword">var</span> tmp_taskid_str = <span class="string">''</span>;</div><div class="line">        <span class="keyword">var</span> tasks_count = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> task_id <span class="keyword">in</span> g_task_op.last_task_info) {</div><div class="line">            <span class="keyword">var</span> tmp_obj = g_task_op.last_task_info[task_id];</div><div class="line"></div><div class="line">            <span class="keyword">if</span> (check_failed_task(task_id)) <span class="keyword">continue</span>;</div><div class="line">            <span class="keyword">var</span> checkbox_elem = $(<span class="string">'task_sel_'</span> + task_id);</div><div class="line">            <span class="keyword">if</span> (checkbox_elem &amp;&amp; !checkbox_elem.checked) <span class="keyword">continue</span>;</div><div class="line">            <span class="keyword">if</span> (tmp_obj == <span class="literal">null</span> || tmp_obj.file_size != tmp_obj.comp_size) <span class="keyword">continue</span>;</div><div class="line">            <span class="keyword">if</span> (tmp_obj.dl_status != TASK_STATUS[<span class="string">'ST_UL_OK'</span>]) <span class="keyword">continue</span>;</div><div class="line"></div><div class="line">            <span class="keyword">var</span> json_temp = { <span class="string">"filename"</span>: tmp_obj.file_name, <span class="string">"hash"</span>: tmp_obj.code, <span class="string">"browser"</span>: <span class="string">"other"</span> };</div><div class="line">            dl_tasks.push(json_temp);</div><div class="line">            tmp_taskid_str = task_id;</div><div class="line">            tasks_count++;</div><div class="line">        }</div><div class="line">        <span class="keyword">if</span>(tasks_count == <span class="number">0</span>){</div><div class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        }<span class="keyword">else</span>{</div><div class="line">            <span class="keyword">return</span> dl_tasks;</div><div class="line">        }</div><div class="line">    }</div><div class="line">    EF.hander_tasks = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{</div><div class="line">        jQuery(<span class="string">'#share_opt font'</span>).html(<span class="string">'......'</span>);</div><div class="line">        task_info = [];</div><div class="line">        <span class="keyword">var</span> data = EF.get_choice();</div><div class="line">        <span class="built_in">console</span>.log(data);</div><div class="line">        t_count = data.length;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;t_count;i++) {</div><div class="line">            EF.get_url(data[i]);</div><div class="line">        }</div><div class="line">    }</div><div class="line">    EventHandler.task_batch2local = <span class="function"><span class="keyword">function</span> <span class="params">(e)</span> </span>{</div><div class="line">        <span class="keyword">var</span> disabled = jQuery(e).hasClass(<span class="string">"disabled_btn"</span>);</div><div class="line">        <span class="keyword">if</span> (disabled) {</div><div class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        }</div><div class="line">        XF.widget.msgbox.show(<span class="string">"后台开始请求下载连接..."</span>, <span class="number">0</span>, <span class="number">1000</span>, <span class="literal">false</span>);</div><div class="line">        EF.hander_tasks();</div><div class="line">        mode = <span class="number">1</span>;</div><div class="line">    }</div><div class="line">    EventHandler.task_share = <span class="function"><span class="keyword">function</span><span class="params">(e)</span></span>{</div><div class="line">        <span class="keyword">var</span> disabled = jQuery(e).hasClass(<span class="string">"disabled_btn"</span>);</div><div class="line">        <span class="keyword">if</span> (disabled) {</div><div class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        }</div><div class="line">        jQuery(<span class="string">'#messager'</span>).html(<span class="string">'RPC...'</span>);</div><div class="line">        XF.widget.msgbox.show(<span class="string">'后台添加任务中'</span>, <span class="number">0</span>, <span class="number">1000</span>, <span class="literal">false</span>);</div><div class="line">        EF.hander_tasks();</div><div class="line">        mode = <span class="number">2</span>;</div><div class="line">    }</div><div class="line">});</div></pre></td></tr></table></figure>
-
-
-
-<p>14.osu无限制下载<br><a title="OSU AnotherDownload" href="https://userscripts.org/scripts/show/100778" target="_blank">https://userscripts.org/scripts/show/100778</a></p>
-<p>15.小说清爽阅读，支持各大小说网站<br><a title="My Novel Reader" href="https://userscripts.org/scripts/show/165951" target="_blank">https://userscripts.org/scripts/show/165951</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><strong>本文将推荐一些平时常用到的GM脚本，关于百度贴吧的脚本下次再整理</strong></p>
-<p>firefox用户请先安装greasemonkey扩展，chrome用户请先安装Tampermonkey扩展]]>
-    
-    </summary>
-    
-      <category term="firefox" scheme="http://blog.ainhaato.moe/tags/firefox/"/>
-    
-      <category term="GM脚本" scheme="http://blog.ainhaato.moe/tags/GM%E8%84%9A%E6%9C%AC/"/>
-    
-      <category term="greasemonkey" scheme="http://blog.ainhaato.moe/tags/greasemonkey/"/>
-    
-      <category term="繁简转换" scheme="http://blog.ainhaato.moe/tags/%E7%B9%81%E7%AE%80%E8%BD%AC%E6%8D%A2/"/>
-    
-      <category term="小说" scheme="http://blog.ainhaato.moe/tags/%E5%B0%8F%E8%AF%B4/"/>
-    
-      <category term="去广告" scheme="http://blog.ainhaato.moe/tags/%E5%8E%BB%E5%B9%BF%E5%91%8A/"/>
+      <category term="p2p" scheme="http://blog.ainhaato.moe/tags/p2p/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[CentOS使用aria2实现迅雷离线批量下载]]></title>
-    <link href="http://blog.ainhaato.moe/2013/aria2-download-in-centos/"/>
-    <id>http://blog.ainhaato.moe/2013/aria2-download-in-centos/</id>
-    <published>2013-06-22T15:07:16.000Z</published>
-    <updated>2015-01-12T14:29:49.000Z</updated>
-    <content type="html"><![CDATA[<p><img src="http://ww2.sinaimg.cn/large/ce0d98b2jw1e5s2pzo7hdj204z05i3yk.jpg" alt=""></p>
-<p>linux下虽然没有迅雷可用，但是有aria2这个下载利器；而且aria2还支持bt下载，如果改ua甚至可以用于pt</p>
-<p>  <strong>1.安装aria2,2种方法，2种版本。。。。</strong><br>   旧版（忘了啥版本了。。貌似1.3几？）直接使用以下命令安装：</p>
-<pre><code>yum <span class="operator"><span class="keyword">install</span> aria2</span>
-</code></pre><a id="more"></a>
-
-<p><strong>2.新版。。。目前最新版：1.17.1，使用以下命令安装|最新版下载地址(aria2项目主页)：</strong><a href="http://sourceforge.net/projects/aria2/" target="_blank" rel="external">http://sourceforge.net/projects/aria2/</a></p>
-<pre><code>cd /tmp                  //可跳过
-wget http:<span class="regexp">//downloads</span>.sourceforge.net/project/aria2/stable/aria2-<span class="number">1.17</span>.<span class="number">1</span>/aria2-<span class="number">1.17</span>.<span class="number">1</span>.tar.gz?r=http<span class="variable">%3A</span><span class="variable">%2F</span><span class="variable">%2Fsourceforge</span>.net<span class="variable">%2Fprojects</span><span class="variable">%2Faria2</span><span class="variable">%2Ffiles</span><span class="variable">%2Fstable</span><span class="variable">%2Faria2</span>-<span class="number">1.17</span>.<span class="number">1</span><span class="variable">%2F</span>&amp;ts=<span class="number">1371047609</span>&amp;use_mirror=iweb                //下载<span class="number">1.17</span>.<span class="number">1</span>版aria2
-tar zxvf aria2-<span class="number">1.17</span>.<span class="number">1</span>.tar.gz                       //解压源码包
-cd aria2-<span class="number">1.17</span>.<span class="number">1</span>                          //进入解压后目录
-./configure --prefix=<span class="regexp">/usr                     /</span>*编译
-make &amp;&amp; make install                            安装*<span class="regexp">/</span>
-</code></pre><p><strong>3.安装完后可以使用以下命令查询用法</strong></p>
-<pre><code><span class="title">aria2c</span> -h
-</code></pre><p><strong>4.进入你想要的下载目录，如/home/downloads ,并输入以下代码，配置完后下载的文件就会出现在这里</strong></p>
-<pre><code>screen -t aria2-web-remote          <span class="comment">//用于后台运行下面的参数</span>
-touch aria2.session             <span class="comment">//创建session用于保存未下载完的进度</span>
-aria2c --enable-<span class="function"><span class="keyword">rpc</span> --<span class="keyword">rpc</span>-listen-all --<span class="keyword">rpc</span>-allow-origin-all --file-allocation=none -x3 -s3 -j3 -c --save-session=aria2.session -i aria2.session         //aria2的<span class="keyword">rpc</span>参数按CTRL+A+D暂时脱离screen，此时关闭终端也可以，参数仍在运行</span>
-</code></pre><p>也可使用conf文件启动</p>
-<pre><code>touch aria2.session       //同样也要创建session文件
-aria2c --<span class="keyword">conf</span>-path=/home/Downloads/aria2.<span class="keyword">conf</span>    //path=<span class="keyword">conf</span>所在路径
-</code></pre><p>如果要设置开机自启，就在/etc/rc.local中添加</p>
-<pre><code><span class="keyword">vim</span> /etc/rc.local   //用<span class="keyword">vim</span>编辑
-aria2c --<span class="keyword">conf</span>-path=/home/Downloads/aria2.<span class="keyword">conf</span> -D //在最后添加aria2启动参数，-D表示后台运行
-</code></pre><p><strong>conf参数详解(<a href="http://pastebin.mozilla.org/5974015" title="备份" target="_blank" rel="external">备份</a>)</strong></p>
-<pre><code><span class="preprocessor">#This is a configuration of aria2</span>
-　
-<span class="preprocessor">#允许rpc</span>
-enable-rpc=<span class="literal">true</span>
-<span class="preprocessor">#允许所有来源, web界面跨域权限需要</span>
-rpc-allow-origin-all=<span class="literal">true</span>
-<span class="preprocessor">#允许非外部访问</span>
-rpc-listen-all=<span class="literal">true</span>
-<span class="preprocessor">#RPC端口, 仅当默认端口被占用时修改</span>
-<span class="preprocessor">#rpc-listen-port=6800</span>
-　
-<span class="preprocessor">#用户名</span>
-<span class="preprocessor">#rpc-user=username</span>
-<span class="preprocessor">#密码</span>
-<span class="preprocessor">#rpc-passwd=passwd</span>
-　
-<span class="preprocessor">#最大同时下载数(任务数), 路由建议值: 3</span>
-max-concurrent-downloads=<span class="number">3</span>
-<span class="preprocessor">#断点续传</span>
-continue=<span class="literal">true</span>
-<span class="preprocessor">#同服务器连接数</span>
-max-connection-per-server=<span class="number">3</span>
-<span class="preprocessor">#最小文件分片大小, 下载线程数上限取决于能分出多少片, 对于小文件重要</span>
-min-split-size=<span class="number">20</span>M
-<span class="preprocessor">#单文件最大线程数, 路由建议值: 5</span>
-split=<span class="number">5</span>
-<span class="preprocessor">#下载速度限制</span>
-max-overall-download-limit=<span class="number">0</span>
-<span class="preprocessor">#单文件速度限制</span>
-max-download-limit=<span class="number">0</span>
-<span class="preprocessor">#上传速度限制</span>
-max-overall-upload-limit=<span class="number">0</span>
-<span class="preprocessor">#单文件速度限制</span>
-max-upload-limit=<span class="number">0</span>
-<span class="preprocessor">#断开速度过慢的连接</span>
-<span class="preprocessor">#lowest-speed-limit=0</span>
-<span class="preprocessor">#运行覆盖已存在文件</span>
-allow-overwrite=<span class="literal">true</span>
-<span class="preprocessor">#验证用，需要1.16.1之后的release版本</span>
-<span class="preprocessor">#referer=*</span>
-　
-input-file=/home/wwwroot/<span class="keyword">default</span>/dl/aria2.session
-save-session=/home/wwwroot/<span class="keyword">default</span>/dl/aria2.session
-<span class="preprocessor">#定时保存会话，需要1.16.1之后的release版</span>
-<span class="preprocessor">#save-session-interval=60</span>
- 　
-<span class="preprocessor">#文件保存路径, 默认为当前启动位置</span>
-dir=/home/wwwroot/<span class="keyword">default</span>/dl
-<span class="preprocessor">#文件缓存, 使用内置的文件缓存, 如果你不相信Linux内核文件缓存和磁盘内置缓存时使用, 需要1.16及以上版本</span>
-<span class="preprocessor">#disk-cache=0</span>
-<span class="preprocessor">#另一种Linux文件缓存方式, 使用前确保您使用的内核支持此选项, 需要1.15及以上版本(?)</span>
-<span class="preprocessor">#enable-mmap=true</span>
-<span class="preprocessor">#文件预分配, 能有效降低文件碎片, 提高磁盘性能. 缺点是预分配时间较长</span>
-<span class="preprocessor">#所需时间 none &lt; falloc ? trunc &lt;&lt; prealloc, falloc和trunc需要文件系统和内核支持</span>
-file-allocation=none
-　
-<span class="preprocessor">#启用本地节点查找</span>
-bt-enable-lpd=<span class="literal">true</span>
-<span class="preprocessor">#添加额外的tracker</span>
-<span class="preprocessor">#bt-tracker=&lt;URI&gt;,…</span>
-<span class="preprocessor">#单种子最大连接数</span>
-<span class="preprocessor">#bt-max-peers=55</span>
-<span class="preprocessor">#强制加密, 防迅雷必备</span>
-<span class="preprocessor">#bt-require-crypto=true</span>
-<span class="preprocessor">#当下载的文件是一个种子(以.torrent结尾)时, 自动下载BT</span>
-follow-torrent=<span class="literal">true</span>
-<span class="preprocessor">#BT监听端口, 当端口屏蔽时使用</span>
-<span class="preprocessor">#listen-port=6881-6999</span>
-　
-<span class="preprocessor">#不确定是否需要，为保险起见，need more test</span>
-enable-dht=<span class="literal">true</span>
-bt-enable-lpd=<span class="literal">true</span>
-enable-peer-exchange=<span class="literal">true</span>
-<span class="preprocessor">#修改特征</span>
-user-agent=uTorrent/<span class="number">2210</span>(<span class="number">25130</span>)
-peer-id-prefix=-UT2210-
-<span class="preprocessor">#修改做种设置, 允许做种</span>
-seed-ratio=<span class="number">0</span>
-<span class="preprocessor">#保存会话</span>
-force-save=<span class="literal">true</span>
-bt-hash-check-seed=<span class="literal">true</span>
-bt-seed-unverified=<span class="literal">true</span>
-bt-save-metadata=<span class="literal">true</span>
-<span class="preprocessor">#定时保存会话，需要1.16.1之后的某个release版本（比如1.16.2）</span>
-<span class="preprocessor">#save-session-interval=60</span>
-</code></pre><p>至此aria2安装&amp;配置完毕，命令行用法不作介绍，下面是使用web端进行迅雷离线的批量下载</p>
-<hr>
-<p>web端不止一种。。。为了省事这里只介绍适合chrome使用的YAAW （全称Yet Another Aria2 Web Frontend）</p>
-<p><strong>1.在chrome应用商店中安装下面2个扩展、应用</strong><br>迅雷离线助手：<a href="https://chrome.google.com/webstore/detail/thunderlixianassistant/eehlmkfpnagoieibahhcghphdbjcdmen" target="_blank" rel="external">https://chrome.google.com/webstore/detail/thunderlixianassistant/eehlmkfpnagoieibahhcghphdbjcdmen</a><br>YAAW：<a href="https://chrome.google.com/webstore/detail/yaaw-for-chrome/hbjpfaalboebibgfmedmjijhbjapcnki" target="_blank" rel="external">https://chrome.google.com/webstore/detail/yaaw-for-chrome/hbjpfaalboebibgfmedmjijhbjapcnki</a></p>
-<p><strong>2.登录&amp;进入迅雷离线并设置Aria2 JSON-RPC Path(红色部分改为你的IP或者域名)</strong><br><a href="http://t1.qpic.cn/mblogpic/ffa2b748238ddc45c8d8/2000.jpg" title="登入迅雷离线进行设置" target="_blank" rel="external"><img src="http://t1.qpic.cn/mblogpic/ffa2b748238ddc45c8d8/2000.jpg" alt="登入迅雷离线进行设置"></a></p>
-<p>  <a href="http://t1.qpic.cn/mblogpic/646c4a3a565177c8d1a4/2000.jpg" title="迅雷离线设置JSON-RPC" target="_blank" rel="external"><img src="http://t1.qpic.cn/mblogpic/646c4a3a565177c8d1a4/2000.jpg" alt="迅雷离线设置JSON-RPC"></a></p>
-<p><strong>3.设置YAAW中的Aria2 JSON-RPC Path(红色部分改为你的IP或者域名)</strong></p>
-<p><a href="http://t1.qpic.cn/mblogpic/2dc0ca38ea3a0e653dba/2000.jpg" title="进入YAAW设置" target="_blank" rel="external"><img src="http://t1.qpic.cn/mblogpic/2dc0ca38ea3a0e653dba/2000.jpg" alt="进入YAAW设置"></a></p>
-<p><a href="http://t1.qpic.cn/mblogpic/58d30bef908a17b8c770/2000.jpg" title="YAAW设置JSON-RPC" target="_blank" rel="external"><img src="http://t1.qpic.cn/mblogpic/58d30bef908a17b8c770/2000.jpg" alt="YAAW设置JSON-RPC"></a></p>
-<p><strong>4.设置完毕，即可使用。。。</strong><br>  <a href="http://t1.qpic.cn/mblogpic/4d87f79d6bfc18646524/2000.jpg" title="导出至YAAW" target="_blank" rel="external"><img src="http://t1.qpic.cn/mblogpic/4d87f79d6bfc18646524/2000.jpg" alt="导出至YAAW"></a><br>选择要下载的任务，并使用YAAW；aria2就会开始下载，并且YAAW中可以看到进度，也可进行简单操作</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><img src="http://ww2.sinaimg.cn/large/ce0d98b2jw1e5s2pzo7hdj204z05i3yk.jpg" alt=""></p>
-<p>linux下虽然没有迅雷可用，但是有aria2这个下载利器；而且aria2还支持bt下载，如果改ua甚至可以用于pt</p>
-<p>  <strong>1.安装aria2,2种方法，2种版本。。。。</strong><br>   旧版（忘了啥版本了。。貌似1.3几？）直接使用以下命令安装：</p>
-<pre><code>yum <span class="operator"><span class="keyword">install</span> aria2</span>
-</code></pre>]]>
-    
-    </summary>
-    
-      <category term="aria2" scheme="http://blog.ainhaato.moe/tags/aria2/"/>
-    
-      <category term="centos" scheme="http://blog.ainhaato.moe/tags/centos/"/>
-    
-      <category term="download" scheme="http://blog.ainhaato.moe/tags/download/"/>
-    
-      <category term="linux" scheme="http://blog.ainhaato.moe/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[CentOS安装transmission实现服务器BT下载]]></title>
-    <link href="http://blog.ainhaato.moe/2013/install-transmission-on-centos/"/>
-    <id>http://blog.ainhaato.moe/2013/install-transmission-on-centos/</id>
-    <published>2013-06-22T07:48:25.000Z</published>
-    <updated>2015-01-12T14:27:04.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="前言：">前言：</h3>
-<p>不推荐使用一键安装脚本进行安装，通常这类脚本容易出现问题，譬如脚本中的链接失效，就会造成安装失败&lt;(=✖╭╮✖=)&gt;<br>而且脚本安装的transmission多数都是旧版，很旧的那种= =   旧版的transmission没有transmission-create功能，无法在终端创建torrent，web端更不能<br>因此推荐有一定linux基础的同志们~自己进行安装</p>
+    <title><![CDATA[图床推荐 - Picpar]]></title>
+    <link href="http://blog.ainhaato.moe/picpar/"/>
+    <id>http://blog.ainhaato.moe/picpar/</id>
+    <published>2014-01-17T15:10:52.000Z</published>
+    <updated>2015-01-13T05:52:31.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="http://blog.kuroy.me/usr/uploads/2014/01/3405467735.png" title="Picpar首页" target="_blank" rel="external"><img src="http://blog.kuroy.me/usr/uploads/2014/01/3405467735.png" alt="Picpar首页"></a></p>
+<h2 id="介绍">介绍</h2>
+<p>Picpar是一个免费的图片上传分享网站，虽说是个国外站点，但在国内的速度也是非常不错；在上传图片之后可以获得图片的页面链接<a href="http://picpar.com/BI5" title="like this" target="_blank" rel="external">like this</a>,直链，以及bbcode代码，并且图片可以加密码；Picpar支持常用的图片格式，单文件限制不明，但是5M试过没有问题，更大的图请自测。(迷之声：似乎上传某些糟糕的图也没关系….)</p>
 <a id="more"></a>
 
 
-<p><strong>1.登录终端(废话= =)<br>2.安装transmission web控制段的基层程序，输入以下命令：</strong></p>
-<pre><code>yum -<span class="keyword">y</span> install gcc gcc-<span class="keyword">c</span>++ m4 <span class="keyword">make</span> automake libtool gettext openssl-devel pkgconfig <span class="keyword">perl</span>-libwww-<span class="keyword">perl</span> <span class="keyword">perl</span>-XML-Parser curl curl-devel vsftpd libevent-devel libevent libidn-devel zlib-devel
-</code></pre><p>安装所用时间取决于服务器的配置。。。。</p>
-<p> <strong>3.安装intltool，此处安装的是0.40.6版本，若要使用新版，请从文末给出的链接寻找下载地址</strong></p>
-<pre><code>cd /tmp
-wget <span class="keyword">http</span>://<span class="keyword">ftp</span>.gnome.org/pub/gnome/sources/intltool/<span class="number">0.40</span>/intltool-<span class="number">0.40</span><span class="number">.6</span>.tar.gz
-tar zxvf intltool-*.tar.gz
-cd intltool-*
-./configure <span class="comment">--prefix=/usr</span>
-make
-make install
-</code></pre><p><strong>4.安装libevent，并配置pkg-config，此处使用目前最新stable版</strong></p>
-<pre><code>wget http<span class="variable">s:</span>//github.<span class="keyword">com</span>/downloads/libevent/libevent/libevent-<span class="number">2.0</span>.<span class="number">21</span>-stable.tar.gz
-tar -zxvf libevent-<span class="number">2.0</span>.<span class="number">21</span>-stable.tar.gz
-<span class="keyword">cd</span> libevent-<span class="number">2.0</span>.<span class="number">21</span>-stable
-./configure --prefix=/usr
-<span class="keyword">make</span>
-<span class="keyword">make</span> install
+<h2 id="使用方法">使用方法</h2>
+<p>方法很简单….选择图片文件后点击<strong>Upload</strong>；如果要加密该图片，就先在,<strong>Password Protect</strong>填写密码，然后再点<strong>Upload</strong>。</p>
 
-<span class="keyword">vim</span> /etc/<span class="keyword">profile</span>     //使用<span class="keyword">vim</span>编辑该文件
-export PKG_CONFIG_PATH=<span class="string">"/usr/local/lib/pkgconfig"</span>     //在该文件最后加入这行代码
-</code></pre><p><strong>5.正题来了~安装transmission客户端</strong></p>
-<pre><code>wget <span class="keyword">http</span>://download-origin.transmissionbt.com/<span class="built_in">files</span>/transmission-<span class="number">2.77</span>.tar.bz2
-tar -xvf transmission-<span class="number">2.77</span>.tar.bz2
-cd transmission-<span class="number">2.77</span>/
-./configure <span class="comment">--prefix=/usr</span>
-make &amp;&amp; make install    <span class="comment"> //linux下使用&amp;&amp;可以运行多个命令</span>
-</code></pre><p><strong>补充内容：<br>如在安装过程中遇到以下问题，需要在./configure 的时候加上CFLAGS=-liconv</strong></p>
-<blockquote>
-<p>make<a href="http://ww1.sinaimg.cn/large/ce179fd8jw1e7oqcfkfb8j212u0ijn2a.jpg" target="_blank" rel="external">1</a>: Entering directory <code>/export/home/olaf/tools/transmission-2.77/libtransmission&#39;
-CCLD   bitfield-test
-Undefined                       first referenced
-symbol                             in file
-libiconv_close                      ./libtransmission.a(utils.o)
-libiconv_open                       ./libtransmission.a(utils.o)
-libiconv                            ./libtransmission.a(utils.o)
-ld: fatal: symbol referencing errors. No output written to bitfield-test
-collect2: ld returned 1 exit status
-make[1]: *** [bitfield-test] Error 1
-make[1]: Leaving directory</code>/export/home/olaf/tools/transmission-2.77/libtransmission’<br>make: <em>*</em> [all-recursive] Error 1</p>
-</blockquote>
-<p><strong>详细方法</strong></p>
-<pre><code><span class="built_in">cd</span> transmission-<span class="number">2.77</span>/
-./configure --prefix=/usr CFLAGS=-liconv
-make <span class="operator">-s</span>
-make <span class="operator">-s</span> install
-</code></pre><p><strong>6.添加新用户来运行transmission</strong></p>
-<pre><code>useradd -mr transmission
-chmod g+rwx <span class="regexp">/home/</span>transmission<span class="regexp">/</span>
-</code></pre><p>7.创建init行脚本，用于运行Transmission(直接注册为服务，方便使用<strong><em>service xxxxx start|stop|restart</em></strong>)</p>
-<pre><code>wget -O <span class="regexp">/etc/i</span>nit.d<span class="regexp">/transmissiond http:/</span><span class="regexp">/pastie.org/</span>pastes<span class="regexp">/962731/</span>download
-chmod <span class="number">755</span> <span class="regexp">/etc/i</span>nit.d<span class="regexp">/transmissiond</span>
-</code></pre><p><strong>8.设置开机自启</strong></p>
-<pre><code>chkconfig --<span class="built_in">add</span> transmissiond
-chkconfig --level <span class="number">345</span> transmissiond <span class="keyword">on</span>
-</code></pre><p><strong>9.设置transmission</strong></p>
-<pre><code><span class="class"><span class="keyword">service</span> <span class="title">transmissiond</span> start</span>
-</code></pre><p>输入以上命令后会出现[<strong><em>OK</em></strong>]，并自动生成配置文件，此时输入以下命令停止transmission(transmission结束时会覆盖配置文件，不停止就编辑的话就是在做无用功…..)</p>
-<pre><code><span class="class"><span class="keyword">service</span> <span class="title">transmissiond</span> stop</span>
-</code></pre><p>同样也会出现[<strong><em>OK</em></strong>]，输入下面的命令编辑配置文件(settings.json)</p>
-<pre><code>vim <span class="regexp">/home/</span>transmission<span class="regexp">/.config/</span>transmission<span class="regexp">/settings.json</span>
-</code></pre><p>配置文件部分详解~(真的只是部分=w=</p>
-<pre><code><span class="string">"rpc-authentication-required"</span>: <span class="literal">true</span>,           <span class="comment">//开启web登录验证</span>
-<span class="string">"rpc-enabled"</span>: <span class="literal">true</span>,            <span class="comment">//开启web端操作</span>
-<span class="string">"rpc-password"</span>: <span class="string">"{e62f5ae3a1df1563049deeee1f2e4ebe4dc7106dSJFoVuEb"</span>,         <span class="comment">//web端登录密码(已加密),修改后自动加密，可以直接修改</span>
-<span class="string">"rpc-port"</span>: <span class="number">9091</span>,             <span class="comment">//web端登录端口</span>
-<span class="string">"rpc-username"</span>: <span class="string">"username"</span>,              <span class="comment">//web端登录用户名</span>
-<span class="string">"rpc-whitelist"</span>: <span class="string">"127.0.0.1"</span>,           <span class="comment">//登录IP白名单</span>
-<span class="string">"rpc-whitelist-enabled"</span>: <span class="literal">false</span>,         <span class="comment">//登录验证IP，安装后默认开启，记得关闭，或者设置IP白名单</span>
-</code></pre><p>其它配置web端就可以设置。。。。就不介绍了</p>
-<p>web端登录地址为： <a href="http://你的IP:你设置的端口，如http://127.0.0.1:9091，之后输入帐号密码即可" target="_blank" rel="external">http://你的IP:你设置的端口，如http://127.0.0.1:9091，之后输入帐号密码即可</a></p>
-<h3 id="附录：transmission命令行常用命令(无详细使用方法)">附录：transmission命令行常用命令(无详细使用方法)</h3>
-<blockquote>
-<p>transmission-create——-创建torrent文件<br>transmission-edit———编辑torrent文件<br>transmission-cli———-限速功能<br>transmission-remote———-上传种子<br>transmission-show—————查询服务器上的种子详情</p>
-</blockquote>
-<hr>
-<p>1）intltool下载地址<br><a href="http://ftp.gnome.org/pub/gnome/sources/intltool/" target="_blank" rel="external">http://ftp.gnome.org/pub/gnome/sources/intltool/</a><br>2）libevent<br><a href="http://libevent.org/" target="_blank" rel="external">http://libevent.org/</a><br>3）transmission-2.77.tar.bz2<br><a href="http://www.transmissionbt.com/download/" target="_blank" rel="external">http://www.transmissionbt.com/download/</a></p>
-<hr>
-<p><img src="http://ww1.sinaimg.cn/large/ce179fd8jw1e7oqcfkfb8j212u0ijn2a.jpg" alt="webui截图"></p>
+<p><a href="http://blog.kuroy.me/usr/uploads/2014/01/567191613.png" title="上传结果" target="_blank" rel="external"><img src="http://blog.kuroy.me/usr/uploads/2014/01/567191613.png" alt="上传结果"></a></p>
+<h2 id="Example">Example</h2>
+<p><a href="http://i.picpar.com/BI5.jpg" title="Example" target="_blank" rel="external"><img src="http://i.picpar.com/BI5.jpg" alt="Example"></a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="前言：">前言：</h3>
-<p>不推荐使用一键安装脚本进行安装，通常这类脚本容易出现问题，譬如脚本中的链接失效，就会造成安装失败&lt;(=✖╭╮✖=)&gt;<br>而且脚本安装的transmission多数都是旧版，很旧的那种= =   旧版的transmission没有transmission-create功能，无法在终端创建torrent，web端更不能<br>因此推荐有一定linux基础的同志们~自己进行安装</p>
+    <![CDATA[<p><a href="http://blog.kuroy.me/usr/uploads/2014/01/3405467735.png" title="Picpar首页" target="_blank" rel="external"><img src="http://blog.kuroy.me/usr/uploads/2014/01/3405467735.png" alt="Picpar首页"></a></p>
+<h2 id="介绍">介绍</h2>
+<p>Picpar是一个免费的图片上传分享网站，虽说是个国外站点，但在国内的速度也是非常不错；在上传图片之后可以获得图片的页面链接<a href="http://picpar.com/BI5" title="like this" target="_blank" rel="external">like this</a>,直链，以及bbcode代码，并且图片可以加密码；Picpar支持常用的图片格式，单文件限制不明，但是5M试过没有问题，更大的图请自测。(迷之声：似乎上传某些糟糕的图也没关系….)</p>
 ]]>
     
     </summary>
     
-      <category term="centos" scheme="http://blog.ainhaato.moe/tags/centos/"/>
+      <category term="图床" scheme="http://blog.ainhaato.moe/tags/%E5%9B%BE%E5%BA%8A/"/>
     
-      <category term="download" scheme="http://blog.ainhaato.moe/tags/download/"/>
+      <category term="Picpar" scheme="http://blog.ainhaato.moe/tags/Picpar/"/>
     
-      <category term="linux" scheme="http://blog.ainhaato.moe/tags/linux/"/>
+  </entry>
+  
+  <entry>
+    <title><![CDATA[2014年百合神番---樱Trick]]></title>
+    <link href="http://blog.ainhaato.moe/sakura-trick/"/>
+    <id>http://blog.ainhaato.moe/sakura-trick/</id>
+    <published>2014-01-14T17:04:39.000Z</published>
+    <updated>2015-01-13T05:51:31.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="http://ww2.sinaimg.cn/large/6abdaa9djw1ejmkofhgzaj20zk0k041u.jpg&quot;" target="_blank" rel="external"><img src="http://ww2.sinaimg.cn/large/6abdaa9djw1ejmkofhgzaj20zk0k041u.jpg" alt="Sakura_Trick_Logo"></a></p>
+<a id="more"></a>
+
+<h2 id="STORY">STORY</h2>
+<p>   高山春香与园田优两位好友，一起升学至3年后即将面临合并废校的美里西高中。喜欢优的春香，对于优很快就和其他同学混熟感到很不是滋味，而想成为优最特别的好友。察觉春香想法的优，提议两人一起进行“绝对不会和其他同学一起做的事情”，而对春香来说，绝对不会和其他同学一起做的“特别行动”便是“接吻”…。</p>
+<p>   樱Trick作为一部百合番，比起以前的百合番更为”露骨” (〃∀〃) ，刚播出第一话便高能不断；官方CP似乎是有三对，第一话中都有登场，但第一话的主场是<strong>春香X优酱</strong></p>
+<h2 id="OP">OP</h2>
+<iframe src="http://blog.kuroy.me/usr/plugins/XiaMiPlayer/jplayer/index.html#http://f2013.zgyey.com/AttachsFiles/2014/1/30/thelpdocattachs/706037/1/c6e8f5d3-e382-4857-b9f2-8994b1ef1312.mp3|V.A. - Won（*3*）Chu KissMe！" style="width:255px;height:35px;" frameborder="0" scrolling="no"></iframe>
+
+<h2 id="ED">ED</h2>
+<iframe src="http://blog.kuroy.me/usr/plugins/XiaMiPlayer/jplayer/index.html#http://blog.age06.com/Uploads/Blogs/9177/0/V.A.%20-%20Kiss(and)Love.mp3|V.A. - Kiss(and)Love" style="width:255px;height:35px;" frameborder="0" scrolling="no"></iframe>
+
+<h2 id="ScreenShots">ScreenShots</h2>
+<p><a href="http://ww4.sinaimg.cn/large/6abdaa9djw1ejmkpf9trwj20zk0k0tdp.jpg" title="Kiss场景1" target="_blank" rel="external"><img src="http://ww4.sinaimg.cn/large/6abdaa9djw1ejmkpf9trwj20zk0k0tdp.jpg" alt="Kiss场景1"></a><br><a href="http://ww1.sinaimg.cn/large/6abdaa9djw1ejmkrdn1avj20zk0k00xd.jpg" title="Kiss场景2" target="_blank" rel="external"><img src="http://ww1.sinaimg.cn/large/6abdaa9djw1ejmkrdn1avj20zk0k00xd.jpg" alt="Kiss场景2"></a><br><a href="http://ww4.sinaimg.cn/large/6abdaa9djw1ejmkvlgut1j20zk0k0af4.jpg" title="Kiss场景3" target="_blank" rel="external"><img src="http://ww4.sinaimg.cn/large/6abdaa9djw1ejmkvlgut1j20zk0k0af4.jpg" alt="Kiss场景3"></a><br><a href="http://ww1.sinaimg.cn/large/6abdaa9djw1ejmkwbgwbvj20zk0k0ag8.jpg" title="Kiss场景5" target="_blank" rel="external"><img src="http://ww1.sinaimg.cn/large/6abdaa9djw1ejmkwbgwbvj20zk0k0ag8.jpg" alt="Kiss场景4"></a><br>kiss都可以数hit了(〃∀〃) 你们为何这么屌！<br><br></p>
+<p><a href="http://ww4.sinaimg.cn/large/6abdaa9djw1ejml0dveg0j211y0lcdon.jpg" title="激将法" target="_blank" rel="external"><img src="http://ww4.sinaimg.cn/large/6abdaa9djw1ejml0dveg0j211y0lcdon.jpg" alt="激将法"></a><br>少女，敢问乃的激将法是从何处？！</p>
+<p><a href="http://ww4.sinaimg.cn/large/6abdaa9djw1ejml0s0te8j211y0lcdp1.jpg" title="不作死就不会死1" target="_blank" rel="external"><img src="http://ww4.sinaimg.cn/large/6abdaa9djw1ejml0s0te8j211y0lcdp1.jpg" alt="不作死就不会死1"></a><br><a href="http://ww3.sinaimg.cn/large/6abdaa9djw1ejml1y9ey7j211y0lcn4c.jpg" title="不作死就不会死2" target="_blank" rel="external"><img src="http://ww3.sinaimg.cn/large/6abdaa9djw1ejml1y9ey7j211y0lcn4c.jpg" alt="不作死就不会死2"></a><br>不作死就不会死，说了这么多次，你怎么就是不明白</p>
+<p><a href="http://ww2.sinaimg.cn/large/6abdaa9djw1ejml377w9mj211y0lc7bb.jpg" title="结婚?!" target="_blank" rel="external"><img src="http://ww2.sinaimg.cn/large/6abdaa9djw1ejml377w9mj211y0lc7bb.jpg" alt="结婚?!"></a><br>才第一话就想结婚….</p>
+<p><a href="http://ww1.sinaimg.cn/large/6abdaa9djw1ejml3h0h5kj211y0lcn6e.jpg" title="得寸进尺233" target="_blank" rel="external"><img src="http://ww1.sinaimg.cn/large/6abdaa9djw1ejml3h0h5kj211y0lcn6e.jpg" alt="得寸进尺233"></a><br>为啥没人这么对我说?! (ˊ_&gt;ˋ真是个悲伤的故事…)</p>
+<p><a href="http://ww2.sinaimg.cn/large/6abdaa9djw1ejml3rmxm2j211y0lcqdp.jpg" title="卖队友1" target="_blank" rel="external"><img src="http://ww2.sinaimg.cn/large/6abdaa9djw1ejml3rmxm2j211y0lcqdp.jpg" alt="卖队友1"></a><br><a href="http://ww3.sinaimg.cn/large/6abdaa9djw1ejml57iyhkj211y0lc7b0.jpg" title="卖队友2-1" target="_blank" rel="external"><img src="http://ww3.sinaimg.cn/large/6abdaa9djw1ejml57iyhkj211y0lc7b0.jpg" alt="卖队友2-1"></a><br><a href="http://ww1.sinaimg.cn/large/6abdaa9djw1ejml5jgqjgj211y0lcdpb.jpg" title="卖队友2-2" target="_blank" rel="external"><img src="http://ww1.sinaimg.cn/large/6abdaa9djw1ejml5jgqjgj211y0lcdpb.jpg" alt="卖队友2-2"></a><br>卖的一手好队友</p>
+<p><a href="http://ww3.sinaimg.cn/large/6abdaa9djw1ejml69jmyzj211y0lctf9.jpg" title="神技" target="_blank" rel="external"><img src="http://ww3.sinaimg.cn/large/6abdaa9djw1ejml69jmyzj211y0lctf9.jpg" alt="神技"></a><br>(((ﾟДﾟ;)))师傅！请务必教会我这招</p>
+<pre><code>附赠无水印版片尾图&amp;第一话高清下载：
+</code></pre><p><a href="http://blog.kuroy.me/usr/uploads/2014/01/3136450929.jpg" title="无水印版01" target="_blank" rel="external"><img src="http://blog.kuroy.me/usr/uploads/2014/01/3136450929.jpg" alt="无水印版01"></a><br><a href="http://ww1.sinaimg.cn/large/e57da4e9jw1eco1zwwxuvj20zk0k0dk6.jpg" title="无水印版02" target="_blank" rel="external"><img src="http://ww1.sinaimg.cn/large/e57da4e9jw1eco1zwwxuvj20zk0k0dk6.jpg" alt="无水印版02"></a><br><a href="http://ww1.sinaimg.cn/large/e414d3e9jw1ecug2fo9txj21hc0u0n47.jpg" title="无水印版03" target="_blank" rel="external"><img src="http://ww1.sinaimg.cn/large/e414d3e9jw1ecug2fo9txj21hc0u0n47.jpg" alt="无水印版03"></a><br><a href="http://ww2.sinaimg.cn/large/e57da4e9jw1ed35wki6jbj21400miwmv.jpg" title="无水印版04" target="_blank" rel="external"><img src="http://ww2.sinaimg.cn/large/e57da4e9jw1ed35wki6jbj21400miwmv.jpg" alt="无水印版04"></a></p>
+<h2 id="Download">Download</h2>
+<div id="download_btn"><br>    <a href="http://pan.baidu.com/s/1qWJIshA" target="_blank" rel="external">樱Trick 01 MKV</a><br>    <p class="top">字幕组：白月X动漫国</p><br>    <p class="bottom">335.6MB</p><br></div>
+
+
+<h2 id="End">End</h2>
+<pre><code>百合万岁！这种轻松愉快的番必追！期待下一话ing...
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="http://ww2.sinaimg.cn/large/6abdaa9djw1ejmkofhgzaj20zk0k041u.jpg&quot;" target="_blank" rel="external"><img src="http://ww2.sinaimg.cn/large/6abdaa9djw1ejmkofhgzaj20zk0k041u.jpg" alt="Sakura_Trick_Logo"></a></p>
+]]>
+    
+    </summary>
+    
+      <category term="新番" scheme="http://blog.ainhaato.moe/tags/%E6%96%B0%E7%95%AA/"/>
+    
+      <category term="2014" scheme="http://blog.ainhaato.moe/tags/2014/"/>
+    
+      <category term="百合" scheme="http://blog.ainhaato.moe/tags/%E7%99%BE%E5%90%88/"/>
+    
+      <category term="吐槽" scheme="http://blog.ainhaato.moe/tags/%E5%90%90%E6%A7%BD/"/>
+    
+      <category term="动漫" scheme="http://blog.ainhaato.moe/tags/%E5%8A%A8%E6%BC%AB/"/>
     
   </entry>
   
