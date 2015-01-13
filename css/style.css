@@ -369,12 +369,18 @@ body {
   color: #fff;
   font-family: cyjianxk168454;
   font-weight: 300;
+  -webkit-transition: all 0.3s ease-out;
   text-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 #logo {
   font-size: 65px;
   line-height: 65px;
   letter-spacing: 2px;
+}
+#logo:hover {
+  color: #39f;
+  text-shadow: -5px 3px 18px #39f;
+  -webkit-transition: all 0.3s ease-out;
 }
 #subtitle {
   font-size: 16px;
