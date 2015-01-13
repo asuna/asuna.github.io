@@ -4,17 +4,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015/1 | 幻想驿站</title>
+  <title>Centos 6.X 下编译安装deluge | 幻想驿站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个动漫爱好者建立的博客，欢迎与我进行各种交♂流">
-<meta property="og:type" content="website">
-<meta property="og:title" content="幻想驿站">
-<meta property="og:url" content="http://blog.ainhaato.moe/archives/2015/01/">
+  <meta name="description" content="简介
+Deluge 是一个通过PyGTK建立图形界面的BitTorrent客户端，后端使用libtorrent。Deluge可以在多个平台上使用，如Linux，*BSD，Mac OS和其他类UNIX操作系统。该项目的目标是要在GTK框架上建立一个原生和全功能的BitTorrent客户端。Deluge由ubuntuforum的两位成员建立，Zach Tibbitts 和 Alan Zakai。在过去">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Centos 6.X 下编译安装deluge">
+<meta property="og:url" content="http://blog.ainhaato.moe/2014/deluge-for-centos/">
 <meta property="og:site_name" content="幻想驿站">
-<meta property="og:description" content="一个动漫爱好者建立的博客，欢迎与我进行各种交♂流">
+<meta property="og:description" content="简介
+Deluge 是一个通过PyGTK建立图形界面的BitTorrent客户端，后端使用libtorrent。Deluge可以在多个平台上使用，如Linux，*BSD，Mac OS和其他类UNIX操作系统。该项目的目标是要在GTK框架上建立一个原生和全功能的BitTorrent客户端。Deluge由ubuntuforum的两位成员建立，Zach Tibbitts 和 Alan Zakai。在过去">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/6abdaa9dgw1ef71m13isfj211y0iutb9.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="幻想驿站">
-<meta name="twitter:description" content="一个动漫爱好者建立的博客，欢迎与我进行各种交♂流">
+<meta name="twitter:title" content="Centos 6.X 下编译安装deluge">
+<meta name="twitter:description" content="简介
+Deluge 是一个通过PyGTK建立图形界面的BitTorrent客户端，后端使用libtorrent。Deluge可以在多个平台上使用，如Linux，*BSD，Mac OS和其他类UNIX操作系统。该项目的目标是要在GTK框架上建立一个原生和全功能的BitTorrent客户端。Deluge由ubuntuforum的两位成员建立，Zach Tibbitts 和 Alan Zakai。在过去">
 
   
     <link rel="alternative" href="/atom.xml" title="幻想驿站" type="application/atom+xml">
@@ -70,12 +74,10 @@
   </div>
 </header>
     <div class="outer">
-      <section id="main">
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-deluge-for-centos" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/hello-world/" class="article-date">
-  <time datetime="2015-01-12T11:21:59.000Z" itemprop="datePublished">1月 12 2015</time>
+    <a href="/2014/deluge-for-centos/" class="article-date">
+  <time datetime="2014-09-12T11:36:00.000Z" itemprop="datePublished">9月 12 2014</time>
 </a>
     
   </div>
@@ -85,8 +87,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/hello-world/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      Centos 6.X 下编译安装deluge
     </h1>
   
 
@@ -94,45 +96,84 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br> <audio src="http://p1.music.126.net/w76K29BOfiRzHjvcmsrvMw==/6625657069276811.mp3" type="audio/mp3"></audio></p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+        <h3 id="简介">简介</h3>
+<p>Deluge 是一个通过PyGTK建立图形界面的BitTorrent客户端，后端使用libtorrent。Deluge可以在多个平台上使用，如Linux，*BSD，Mac OS和其他类UNIX操作系统。该项目的目标是要在GTK框架上建立一个原生和全功能的BitTorrent客户端。<br>Deluge由ubuntuforum的两位成员建立，Zach Tibbitts 和 Alan Zakai。在过去，它曾是Google Code的项目。<br>在过去的开发，Deluge曾经被命名为gTorrent，意思是 GNOME 下的BitTorrent客户端。当第一个版本在2006年9月25日释出的时候，被重新命名为Deluge，以避免别人误会gTorrent只能用于GNOME。<br>利用0.4.x代码重写的0.5穏定版在2007年3月18日释出。重写代码的目的是要令代码更加优良。而0.5.1.1版支持数据加密，peer exchange，Si prefixes和upnp。</p>
+<a id="more"></a>
 
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
 
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<h3 id="安装过程">安装过程</h3>
+<p>1.安装更新源.  </p>
+<pre><code>rpm -ivh http:<span class="comment">//pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.2-2.el6.rf.i686.rpm</span>
+rpm -ivh http:<span class="comment">//dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm</span>
+wget -c -O <span class="regexp">/etc/</span>yum.repos.d<span class="regexp">/linuxtech.repo http:/</span><span class="regexp">/pkgrepo.linuxtech.net/</span>el6<span class="regexp">/release/</span>linuxtech.repo
+</code></pre><p>2.安装依赖库  </p>
+<pre><code>yum install GeoIP PyXML SOAPpy boost-filesystem boost-<span class="keyword">python</span> boost-<span class="built_in">system</span> boost-thread pyOpenSSL <span class="keyword">python</span>-chardet <span class="keyword">python</span>-fpconst <span class="keyword">python</span>-setuptools <span class="keyword">python</span>-simplejson <span class="keyword">python</span>-twisted-core <span class="keyword">python</span>-twisted-web <span class="keyword">python</span>-zope-filesystem <span class="keyword">python</span>-zope-interface pyxdg rb_libtorrent rb_libtorrent-<span class="keyword">python</span> <span class="keyword">python</span>-beaker <span class="keyword">python</span>-mako <span class="keyword">python</span>-markupsafe <span class="keyword">python</span>-twisted <span class="keyword">python</span>-twisted-web
+</code></pre><p>3.编译安装deluge</p>
+<pre><code>wget http://download.deluge-torrent.org/<span class="built_in">source</span>/deluge-<span class="number">1.3</span>.<span class="number">6</span>.tar.gz
+tar zxvf deluge-<span class="number">1.3</span>.<span class="number">6</span>.tar.gz
+<span class="built_in">cd</span> deluge-<span class="number">1.3</span>.<span class="number">6</span>
+<span class="comment">#开始编译  </span>
+python setup.py build  
+python setup.py install  
+<span class="comment">#建立账户</span>
+/usr/sbin/groupadd deluge
+useradd deluge -g deluge <span class="operator">-s</span> /bin/<span class="literal">false</span>
+</code></pre><p>4.配置启动文件,把以下文件保存为<strong>/etc/init.d/deluge-daemon</strong></p>
+<blockquote>
+<p><a href="http://pan.baidu.com/s/1o60RrZ0" target="_blank" rel="external">http://pan.baidu.com/s/1o60RrZ0</a></p>
+</blockquote>
+<p>5.给启动脚本权限&amp;启动deluge</p>
+<pre><code>chmod +x /etc/init.d/deluge-daemon
+<span class="class"><span class="keyword">service</span> <span class="title">deluge</span>-daemon start</span>
+</code></pre><p><a href="http://ww1.sinaimg.cn/large/6abdaa9dgw1ef71m13isfj211y0iutb9.jpg" title="deluge界面" target="_blank" rel="external"><img src="http://ww1.sinaimg.cn/large/6abdaa9dgw1ef71m13isfj211y0iutb9.jpg" alt="deluge界面"></a></p>
+<p>本文转自：<a href="http://www.jzbk.org/2013/11/blog-187.html" target="_blank" rel="external">http://www.jzbk.org/2013/11/blog-187.html</a></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://blog.ainhaato.moe/2015/hello-world/" data-id="ajo1crup5mm73jtx" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://blog.ainhaato.moe/2014/deluge-for-centos/" data-id="8l76gv6e44i3h7vy" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
-        <a href="http://blog.ainhaato.moe/2015/hello-world/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://blog.ainhaato.moe/2014/deluge-for-centos/#disqus_thread" class="article-comment-link">Comments</a>
       
 
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos/">centos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deluge/">deluge</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pt/">pt</a></li></ul>
+
     </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/centos-xbt-tracker/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          centos6.x用xbt_tracker建立自己的tracker服务器
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/rtorrent-rutorrent-on-centos/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">centos安装rtorrent/rutorrent</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
-  
-  
+  <section id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
 </section>
       
       <aside id="sidebar">
@@ -250,11 +291,13 @@
 <script>
   var disqus_shortname = 'Ainhaato';
   
+  var disqus_url = 'http://blog.ainhaato.moe/2014/deluge-for-centos/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>

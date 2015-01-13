@@ -2,13 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.ainhaato.moe/2015/install-transmission-on-centos/</loc>
-    <lastmod>2015-01-12T14:14:57.000Z</lastmod>
+    <loc>http://blog.ainhaato.moe/2013/aria2-download-in-centos/</loc>
+    <lastmod>2015-01-12T14:29:49.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.ainhaato.moe/2013/install-transmission-on-centos/</loc>
+    <lastmod>2015-01-12T14:27:04.000Z</lastmod>
   </url>
   
   <url>
     <loc>http://blog.ainhaato.moe/2015/hello-world/</loc>
     <lastmod>2015-01-12T11:42:51.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.ainhaato.moe/2014/centos-xbt-tracker/</loc>
+    <lastmod>2014-09-12T10:39:47.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.ainhaato.moe/2014/deluge-for-centos/</loc>
+    <lastmod>2014-09-12T10:37:17.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.ainhaato.moe/2014/rtorrent-rutorrent-on-centos/</loc>
+    <lastmod>2014-09-12T10:33:20.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.ainhaato.moe/2014/gm-scripts-recommend/</loc>
+    <lastmod>2014-09-12T10:28:50.000Z</lastmod>
   </url>
   
 </urlset>

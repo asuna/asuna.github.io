@@ -4,20 +4,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | 幻想驿站</title>
+  <title>centos安装rtorrent/rutorrent | 幻想驿站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in trobuleshooting or you can ask me on GitHub. 
-Quic">
+  <meta name="description" content="rtorrent介绍
+rtorrent是利用libtorrent库创建的Ncurses客户端程序。使用C++语言编写   的rtorrent除了能够提供基于GUI界面的客户端所具备的功能之外，其速度和效率更为用户所推崇。
+rutorrent介绍
+rutorrent是rtorrent的一个webgui。但不支持rtorrent0.8.7版。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://blog.ainhaato.moe/2015/hello-world/">
+<meta property="og:title" content="centos安装rtorrent/rutorrent">
+<meta property="og:url" content="http://blog.ainhaato.moe/2014/rtorrent-rutorrent-on-centos/">
 <meta property="og:site_name" content="幻想驿站">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in trobuleshooting or you can ask me on GitHub. 
-Quic">
+<meta property="og:description" content="rtorrent介绍
+rtorrent是利用libtorrent库创建的Ncurses客户端程序。使用C++语言编写   的rtorrent除了能够提供基于GUI界面的客户端所具备的功能之外，其速度和效率更为用户所推崇。
+rutorrent介绍
+rutorrent是rtorrent的一个webgui。但不支持rtorrent0.8.7版。">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/dce4a41ejw1eculh5np0xj211x0iwagl.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in trobuleshooting or you can ask me on GitHub. 
-Quic">
+<meta name="twitter:title" content="centos安装rtorrent/rutorrent">
+<meta name="twitter:description" content="rtorrent介绍
+rtorrent是利用libtorrent库创建的Ncurses客户端程序。使用C++语言编写   的rtorrent除了能够提供基于GUI界面的客户端所具备的功能之外，其速度和效率更为用户所推崇。
+rutorrent介绍
+rutorrent是rtorrent的一个webgui。但不支持rtorrent0.8.7版。">
 
   
     <link rel="alternative" href="/atom.xml" title="幻想驿站" type="application/atom+xml">
@@ -73,10 +80,10 @@ Quic">
   </div>
 </header>
     <div class="outer">
-      <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-rtorrent-rutorrent-on-centos" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/hello-world/" class="article-date">
-  <time datetime="2015-01-12T11:21:59.000Z" itemprop="datePublished">1月 12 2015</time>
+    <a href="/2014/rtorrent-rutorrent-on-centos/" class="article-date">
+  <time datetime="2014-09-12T11:31:57.000Z" itemprop="datePublished">9月 12 2014</time>
 </a>
     
   </div>
@@ -87,7 +94,7 @@ Quic">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      centos安装rtorrent/rutorrent
     </h1>
   
 
@@ -95,47 +102,105 @@ Quic">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br> <audio src="http://p1.music.126.net/w76K29BOfiRzHjvcmsrvMw==/6625657069276811.mp3" type="audio/mp3"></audio></p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+        <h1 id="rtorrent介绍">rtorrent介绍</h1>
+<p>rtorrent是利用libtorrent库创建的Ncurses客户端程序。使用C++语言编写   的rtorrent除了能够提供基于GUI界面的客户端所具备的功能之外，其速度和效率更为用户所推崇。</p>
+<h1 id="rutorrent介绍">rutorrent介绍</h1>
+<p>rutorrent是rtorrent的一个webgui。但不支持rtorrent0.8.7版。</p>
+<a id="more"></a>
 
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<h2 id="rtorrent安装过程">rtorrent安装过程</h2>
+<h4 id="教程使用的是目前最新版libtorrent和rtorrent，日后要想安装最新版，请到这里下载：http://libtorrent-rakshasa-no/downloads/">教程使用的是目前最新版libtorrent和rtorrent，日后要想安装最新版，请到这里下载：<a href="http://libtorrent.rakshasa.no/downloads/" target="_blank" rel="external">http://libtorrent.rakshasa.no/downloads/</a></h4>
+<h3 id="一、安装libtorrent">一、安装libtorrent</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">yum</span> <span class="literal">-</span><span class="comment">y</span> <span class="comment">install</span> <span class="comment">gcc</span><span class="literal">-</span><span class="comment">c</span><span class="literal">+</span><span class="literal">+</span> <span class="comment">libtool</span> <span class="comment">libsigc</span><span class="literal">+</span><span class="literal">+</span><span class="comment">20</span> <span class="comment">libsigc</span><span class="literal">+</span><span class="literal">+</span><span class="comment">20</span><span class="literal">-</span><span class="comment">devel</span></div><div class="line"><span class="comment">wget</span> <span class="comment">http://libtorrent</span><span class="string">.</span><span class="comment">rakshasa</span><span class="string">.</span><span class="comment">no/downloads/libtorrent</span><span class="literal">-</span><span class="comment">0</span><span class="string">.</span><span class="comment">13</span><span class="string">.</span><span class="comment">3</span><span class="string">.</span><span class="comment">tar</span><span class="string">.</span><span class="comment">gz</span></div><div class="line"><span class="comment">tar</span> <span class="comment">zxvf</span> <span class="comment">libtorrent</span><span class="literal">-</span><span class="comment">0</span><span class="string">.</span><span class="comment">13</span><span class="string">.</span><span class="comment">3</span><span class="string">.</span><span class="comment">tar</span><span class="string">.</span><span class="comment">gz</span></div><div class="line"><span class="string">.</span><span class="comment">/configure</span></div><div class="line"><span class="comment">make</span> <span class="comment">&&</span> <span class="comment">make</span> <span class="comment">install</span></div></pre></td></tr></table></figure>
 
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<h3 id="二、安装rtorrent">二、安装rtorrent</h3>
+<p>在安装rtorrent之前需要先安装xmlrpc(如果想用webgui的话…  </p>
+<pre><code>yum -y <span class="operator"><span class="keyword">install</span> xmlrpc-c-devel  
+echo <span class="string">"/usr/local/lib/"</span> &gt;&gt; /etc/ld.so.conf
+wget http://libtorrent.rakshasa.<span class="keyword">no</span>/downloads/rtorrent-<span class="number">0.9</span><span class="number">.3</span>.tar.gz
+tar zxvf rtorrent-<span class="number">0.9</span><span class="number">.3</span>.tar.gz
+PKG_CONFIG_PATH=/usr/<span class="keyword">local</span>/lib/pkgconfig ./configure <span class="comment">--with-xmlrpc-c</span>
+make &amp;&amp; make <span class="keyword">install</span></span>
+</code></pre><h4 id="rtorrent启动脚本">rtorrent启动脚本</h4>
+<pre><code>wget -<span class="constant">O</span> /etc/init.d/rtorrent <span class="symbol">https:</span>/<span class="regexp">/github.com/asuna</span><span class="regexp">/personal-scripts/raw</span><span class="regexp">/master/init</span>.d/rtorrent
+chmod <span class="number">755</span> /etc/init.d/rtorrent
+</code></pre><p>使用方法：<strong>service rtorrent {start|stop|restart}</strong></p>
+<h4 id="rtorrent配置文件(sample)">rtorrent配置文件(sample)</h4>
+<pre><code>http<span class="variable">s:</span>//gist.github.<span class="keyword">com</span>/<span class="number">1325923</span>
+</code></pre><h4 id="rtorrent_xmlrpc-c配置">rtorrent xmlrpc-c配置</h4>
+<pre><code>cat &gt;&gt;~/.rtorrent.rc&lt;&lt;-<span class="constant">EOF</span>
+execute_nothrow=rm,/tmp/rpc.<span class="built_in">socket</span>
+scgi_local = /tmp/rpc.<span class="built_in">socket</span>
+schedule = chmod,<span class="number">0</span>,<span class="number">0</span>,<span class="string">"execute=chmod,777,/tmp/rpc.socket"</span>
+<span class="constant">EOF</span>
+</code></pre><h4 id="Nginx_xmlrpc_配置">Nginx xmlrpc 配置</h4>
+<p>修改nginx.conf，在server字段添加下列内容</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="title">location</span> /RPC2 {</div><div class="line"><span class="title">include</span> scgi_params; </div><div class="line"><span class="comment">#scgi_pass 127.0.0.1:5000; </span></div><div class="line"><span class="title">scgi_pass</span> <span class="url">unix:/tmp/rpc.socket</span>; </div><div class="line">}</div></pre></td></tr></table></figure>
 
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>不知道nginx.conf在哪的话可以用以下命令查找  </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">whereis</span> nginx</div></pre></td></tr></table></figure>
 
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<h2 id="rutorrent安装过程">rutorrent安装过程</h2>
+<pre><code>wget http://dl.bintray.com/novik65/<span class="keyword">generic</span>/rutorrent-<span class="number">3</span>.<span class="number">6</span>.tar.gz
+tar zxvf rutorrent-<span class="number">3</span>.<span class="number">6</span>.tar.gz
+mv rutorrent /home/wwwroot
+cp /home/wwwroot/rutorrent/conf/config.php /home/wwwroot/rutorrent/conf/config.php.bak
+sed -i 's/\/\/ $scgi/$scgi/g' /home/wwwroot/rutorrent/conf/config.php
+sed -i 's/$scgi_port = <span class="number">5000</span>/\/\/ $scgi_port = <span class="number">5000</span>/g' /home/wwwroot/rutorrent/conf/config.php
+sed -i 's/$scgi_host = <span class="string">"127/\/\/ $scgi_host = "</span><span class="number">127</span>/g' /home/wwwroot/rutorrent/conf/config.php
+sed -i <span class="string">"s/\"curl\"\t=&gt; ''/\"curl\"\t=&gt; '\/usr\/bin\/curl'/g"</span> /home/wwwroot/rutorrent/conf/config.php
+sed -i <span class="string">"s/\"gzip\"\t=&gt; ''/\"gzip\"\t=&gt; '\/usr\/bin\/gzip'/g"</span> /home/wwwroot/rutorrent/conf/config.php
+sed -i <span class="string">"s/\"id\"\t=&gt; ''/\"id\"\t=&gt; '\/usr\/bin\/id'/g"</span> /home/wwwroot/rutorrent/conf/config.php
+sed -i <span class="string">"s/\"stat\"\t=&gt; ''/\"stat\"\t=&gt; '\/usr\/bin\/stat'/g"</span> /home/wwwroot/rutorrent/conf/config.php
+</code></pre><p>此处的/home/wwwroot为网站根目录</p>
+<h3 id="创建访问密码">创建访问密码</h3>
+<pre><code> htpasswd -b -c <span class="regexp">/home/</span>wwwroot<span class="regexp">/rutorrent/</span>.htpasswds username passwd
+</code></pre><p>如果htpasswd: <strong>command not found</strong>,执行下面命令安装httpd-tool</p>
+<pre><code>yum <span class="operator"><span class="keyword">install</span> -y httpd-tools</span>
+</code></pre><p>修改nginx.conf，在server字段添加下面内容  </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="title">location</span> /rutorrent { </div><div class="line"><span class="title">auth_basic</span> <span class="string">"ruTorrent login"</span>; </div><div class="line"><span class="title">auth_basic_user_file</span> /home/wwwroot/rutorrent/.htpasswds; </div><div class="line">}</div></pre></td></tr></table></figure>
+
+<h2 id="rutorrent插件安装(可忽略)">rutorrent插件安装(可忽略)</h2>
+<pre><code>wget http:<span class="comment">//dl.bintray.com/novik65/generic/plugins-3.6.tar.gz</span>
+tar zxvf plugins-<span class="number">3.6</span>.tar.gz
+mv plugins <span class="regexp">/home/</span>wwwroot<span class="regexp">/rutorrent</span>
+</code></pre><p>刷新rutorrent页面就可看到效果</p>
+<h2 id="安装完成">安装完成</h2>
+<p>访问<a href="http://yourip(or" target="_blank" rel="external">http://yourip(or</a> domain)/rutorrent，输入设置的账号密码即可使用；rutorrent界面：<br><a href="http://ww2.sinaimg.cn/large/dce4a41ejw1eculh5np0xj211x0iwagl.jpg" title="rtorrent界面" target="_blank" rel="external"><img src="http://ww2.sinaimg.cn/large/dce4a41ejw1eculh5np0xj211x0iwagl.jpg" alt="rutorrent界面"></a></p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://blog.ainhaato.moe/2015/hello-world/" data-id="ajo1crup5mm73jtx" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://blog.ainhaato.moe/2014/rtorrent-rutorrent-on-centos/" data-id="9hodpenk6mdecedr" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
-        <a href="http://blog.ainhaato.moe/2015/hello-world/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://blog.ainhaato.moe/2014/rtorrent-rutorrent-on-centos/#disqus_thread" class="article-comment-link">Comments</a>
       
 
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos/">centos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/libtorrent/">libtorrent</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rtorrent/">rtorrent</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rutorrent/">rutorrent</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
+    <a href="/2014/deluge-for-centos/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Centos 6.X 下编译安装deluge
+        
+      </div>
+    </a>
   
-    <a href="/2014/centos-xbt-tracker/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2014/gm-scripts-recommend/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">centos6.x用xbt_tracker建立自己的tracker服务器</div>
+      <div class="article-nav-title">firefox - GM脚本推荐</div>
     </a>
   
 </nav>
@@ -266,7 +331,7 @@ Quic">
 <script>
   var disqus_shortname = 'Ainhaato';
   
-  var disqus_url = 'http://blog.ainhaato.moe/2015/hello-world/';
+  var disqus_url = 'http://blog.ainhaato.moe/2014/rtorrent-rutorrent-on-centos/';
   
   (function(){
     var dsq = document.createElement('script');

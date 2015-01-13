@@ -1,302 +1,101 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[幻想驿站]]></title>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
   
-  <link href="/atom.xml" rel="self"/>
-  <link href="http://blog.ainhaato.moe/"/>
-  <updated>2015-01-12T14:30:16.925Z</updated>
-  <id>http://blog.ainhaato.moe/</id>
+  <title>firefox - GM脚本推荐 | 幻想驿站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本文将推荐一些平时常用到的GM脚本，关于百度贴吧的脚本下次再整理
+firefox用户请先安装greasemonkey扩展，chrome用户请先安装Tampermonkey扩展">
+<meta property="og:type" content="article">
+<meta property="og:title" content="firefox - GM脚本推荐">
+<meta property="og:url" content="http://blog.ainhaato.moe/2014/gm-scripts-recommend/">
+<meta property="og:site_name" content="幻想驿站">
+<meta property="og:description" content="本文将推荐一些平时常用到的GM脚本，关于百度贴吧的脚本下次再整理
+firefox用户请先安装greasemonkey扩展，chrome用户请先安装Tampermonkey扩展">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="firefox - GM脚本推荐">
+<meta name="twitter:description" content="本文将推荐一些平时常用到的GM脚本，关于百度贴吧的脚本下次再整理
+firefox用户请先安装greasemonkey扩展，chrome用户请先安装Tampermonkey扩展">
+
   
-  <author>
-    <name><![CDATA[Ainhaato]]></name>
-    <email><![CDATA[yuji74127@vip.qq.com]]></email>
-  </author>
+    <link rel="alternative" href="/atom.xml" title="幻想驿站" type="application/atom+xml">
   
-  <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <link href="http://blog.ainhaato.moe/2015/hello-world/"/>
-    <id>http://blog.ainhaato.moe/2015/hello-world/</id>
-    <published>2015-01-12T11:21:59.000Z</published>
-    <updated>2015-01-12T11:42:51.000Z</updated>
-    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br> <audio src="http://p1.music.126.net/w76K29BOfiRzHjvcmsrvMw==/6625657069276811.mp3" type="audio/mp3"></audio></p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
-    </summary>
-    
-  </entry>
+    <link rel="icon" href="/favicon.png">
   
-  <entry>
-    <title><![CDATA[centos6.x用xbt_tracker建立自己的tracker服务器]]></title>
-    <link href="http://blog.ainhaato.moe/2014/centos-xbt-tracker/"/>
-    <id>http://blog.ainhaato.moe/2014/centos-xbt-tracker/</id>
-    <published>2014-09-12T11:38:57.000Z</published>
-    <updated>2014-09-12T10:39:47.000Z</updated>
-    <content type="html"><![CDATA[<p>昨天在由于极影抽风，只好把资源发在动漫花园，但是极影的tracker以及备用tracker都无法使用，最后又到nyaa发了个种，才让种子活过来；为了避免”历史总是惊人的相似”的情况….就自己建了个tracker</p>
-<blockquote>
-<p><a href="http://tracker.kuroy.me:5944/announce" target="_blank" rel="external">http://tracker.kuroy.me:5944/announce</a></p>
-</blockquote>
-<p>PS：我是不是应该用4399端口(笑)<br>以下是centos6.x下的搭建过程</p>
-<a id="more"></a>
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
 
-<h3 id="一、安装依赖环境">一、安装依赖环境</h3>
-<pre><code><span class="comment">yum</span> <span class="comment">install</span> <span class="comment">boost</span><span class="literal">-</span><span class="comment">devel</span> <span class="comment">gcc</span><span class="literal">-</span><span class="comment">c</span><span class="literal">+</span><span class="literal">+</span> <span class="comment">mysql</span><span class="literal">-</span><span class="comment">devel</span> <span class="comment">subversion</span>
-</code></pre><h3 id="二、用svn获得xbt_tracker">二、用svn获得xbt_tracker</h3>
-<pre><code><span class="keyword">cd</span> /home
-svn <span class="keyword">co</span> http<span class="variable">s:</span>//svn.code.<span class="keyword">sf</span>.net/<span class="keyword">p</span>/xbtt/code/trunk/xbt/misc xbt/misc
-svn <span class="keyword">co</span> http<span class="variable">s:</span>//svn.code.<span class="keyword">sf</span>.net/<span class="keyword">p</span>/xbtt/code/trunk/xbt/Tracker xbt/Tracker
-<span class="keyword">cd</span> xbt/Tracker
-./<span class="keyword">make</span>.<span class="keyword">sh</span>
-</code></pre><p>如果出现command not found使用<strong>yum install svn -y</strong>安装svn</p>
-<pre><code><span class="keyword">cp</span> xbt_tracker /home/xbt_tracker/
-<span class="keyword">cp</span> xbt_tracker.<span class="keyword">conf</span>.default /home/xbt_tracker/
-<span class="keyword">cp</span> xbt_tracker.sql /home/xbt_tracker/
-<span class="keyword">cd</span> /home/xbt_tracker/
-mv xbt_tracker.<span class="keyword">conf</span>.default xbt_tracker.<span class="keyword">conf</span>
-</code></pre><h3 id="三、建立数据库">三、建立数据库</h3>
-<pre><code>mysql -uroot -p密码
-<span class="operator"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">'xbt_tracker'</span>@<span class="string">'localhost'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'你的密码'</span>;</span>
-<span class="operator"><span class="keyword">GRANT</span> <span class="keyword">USAGE</span> <span class="keyword">ON</span> * . * <span class="keyword">TO</span> <span class="string">'xbt_tracker'</span>@<span class="string">'localhost'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'你的密码'</span>;</span>
-<span class="operator"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> <span class="string">`xbt_tracker`</span> ;</span>
-<span class="operator"><span class="keyword">GRANT</span> <span class="keyword">ALL</span> <span class="keyword">PRIVILEGES</span> <span class="keyword">ON</span> <span class="string">`xbt_tracker`</span> . * <span class="keyword">TO</span> <span class="string">'xbt_tracker'</span>@<span class="string">'localhost'</span>;</span>
-</code></pre><h3 id="四、导入数据库&amp;编辑conf文件">四、导入数据库&amp;编辑conf文件</h3>
-<pre><code><span class="keyword">cd</span> ../xbt/Tracker
-mysql -<span class="keyword">u</span>数据用户名 -<span class="keyword">p</span>数据库密码 xbt_tracker &lt; xbt_tracker.sql
-<span class="keyword">cd</span> ../xbt_tracker
-<span class="keyword">vim</span> xbt_tracker.<span class="keyword">conf</span>
-</code></pre><p>修改数据库连接设置</p>
-<pre><code><span class="variable">mysql_host =</span> localhost  <span class="comment">#数据库地址</span>
-<span class="variable">mysql_user =</span> xbt_tracker  <span class="comment">#数据库用户名</span>
-<span class="variable">mysql_password =</span> qazzaq123  <span class="comment">#数据库密码</span>
-<span class="variable">mysql_database =</span> xbt_tracker  数据库名
-</code></pre><h3 id="五、向数据库写入xbt_tracker的设置">五、向数据库写入xbt_tracker的设置</h3>
-<pre><code>mysql -u root -p 你的密码
-<span class="operator"><span class="keyword">use</span> xbt_tracker
-<span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'announce_interval'</span>,<span class="string">'1800'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'anonymous_connect'</span>,<span class="string">'1'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'anonymous_announce'</span>,<span class="string">'1'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'anonymous_scrape'</span>,<span class="string">'1'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'auto_register'</span>,<span class="string">'1'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'clean_up_interval'</span>,<span class="string">'60'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'daemon'</span>,<span class="string">'1'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'debug'</span>,<span class="string">'0'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'full_scrape'</span>,<span class="string">'0'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'gzip_debug'</span>,<span class="string">'1'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'gzip_scrape'</span>,<span class="string">'1'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'listen_ipa'</span>,<span class="string">'*'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'listen_port'</span>,<span class="string">'2710'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'log_access '</span>,<span class="string">'0'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'log_announce '</span>,<span class="string">'0'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'log_scrape '</span>,<span class="string">'0'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'offline_message'</span>,<span class="string">''</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'pid_file '</span>,<span class="string">'xbt_tracker.pid'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'read_config_interval'</span>,<span class="string">'60'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'read_db_interval'</span>,<span class="string">'60'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'redirect_url'</span>,<span class="string">''</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'table_announce_log'</span>,<span class="string">'xbt_announce_log'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'table_files'</span>,<span class="string">'xbt_files'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'table_files_users'</span>,<span class="string">'xbt_files_users'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'table_scrape_log'</span>,<span class="string">'xbt_scrape_log'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'table_users'</span>,<span class="string">''</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'write_db_interval'</span>,<span class="string">'15'</span>);</span>
-</code></pre><h3 id="启动xbt_tracker">启动xbt_tracker</h3>
-<pre><code>./xbt_tracker
-</code></pre><p>也可以用init.d启动，我就先不折腾了…</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>昨天在由于极影抽风，只好把资源发在动漫花园，但是极影的tracker以及备用tracker都无法使用，最后又到nyaa发了个种，才让种子活过来；为了避免”历史总是惊人的相似”的情况….就自己建了个tracker</p>
-<blockquote>
-<p><a href="http://tracker.kuroy.me:5944/announce" target="_blank" rel="external">http://tracker.kuroy.me:5944/announce</a></p>
-</blockquote>
-<p>PS：我是不是应该用4399端口(笑)<br>以下是centos6.x下的搭建过程</p>
-]]>
-    
-    </summary>
-    
-      <category term="centos" scheme="http://blog.ainhaato.moe/tags/centos/"/>
-    
-      <category term="xbt_tracker" scheme="http://blog.ainhaato.moe/tags/xbt-tracker/"/>
-    
-      <category term="tracker" scheme="http://blog.ainhaato.moe/tags/tracker/"/>
-    
-      <category term="bt" scheme="http://blog.ainhaato.moe/tags/bt/"/>
-    
-  </entry>
+  <link rel="stylesheet" href="/mediaelement/mediaelementplayer.css" type="text/css">
+
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
   
-  <entry>
-    <title><![CDATA[Centos 6.X 下编译安装deluge]]></title>
-    <link href="http://blog.ainhaato.moe/2014/deluge-for-centos/"/>
-    <id>http://blog.ainhaato.moe/2014/deluge-for-centos/</id>
-    <published>2014-09-12T11:36:00.000Z</published>
-    <updated>2014-09-12T10:37:17.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="简介">简介</h3>
-<p>Deluge 是一个通过PyGTK建立图形界面的BitTorrent客户端，后端使用libtorrent。Deluge可以在多个平台上使用，如Linux，*BSD，Mac OS和其他类UNIX操作系统。该项目的目标是要在GTK框架上建立一个原生和全功能的BitTorrent客户端。<br>Deluge由ubuntuforum的两位成员建立，Zach Tibbitts 和 Alan Zakai。在过去，它曾是Google Code的项目。<br>在过去的开发，Deluge曾经被命名为gTorrent，意思是 GNOME 下的BitTorrent客户端。当第一个版本在2006年9月25日释出的时候，被重新命名为Deluge，以避免别人误会gTorrent只能用于GNOME。<br>利用0.4.x代码重写的0.5穏定版在2007年3月18日释出。重写代码的目的是要令代码更加优良。而0.5.1.1版支持数据加密，peer exchange，Si prefixes和upnp。</p>
-<a id="more"></a>
-
-
-<h3 id="安装过程">安装过程</h3>
-<p>1.安装更新源.  </p>
-<pre><code>rpm -ivh http:<span class="comment">//pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.2-2.el6.rf.i686.rpm</span>
-rpm -ivh http:<span class="comment">//dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm</span>
-wget -c -O <span class="regexp">/etc/</span>yum.repos.d<span class="regexp">/linuxtech.repo http:/</span><span class="regexp">/pkgrepo.linuxtech.net/</span>el6<span class="regexp">/release/</span>linuxtech.repo
-</code></pre><p>2.安装依赖库  </p>
-<pre><code>yum install GeoIP PyXML SOAPpy boost-filesystem boost-<span class="keyword">python</span> boost-<span class="built_in">system</span> boost-thread pyOpenSSL <span class="keyword">python</span>-chardet <span class="keyword">python</span>-fpconst <span class="keyword">python</span>-setuptools <span class="keyword">python</span>-simplejson <span class="keyword">python</span>-twisted-core <span class="keyword">python</span>-twisted-web <span class="keyword">python</span>-zope-filesystem <span class="keyword">python</span>-zope-interface pyxdg rb_libtorrent rb_libtorrent-<span class="keyword">python</span> <span class="keyword">python</span>-beaker <span class="keyword">python</span>-mako <span class="keyword">python</span>-markupsafe <span class="keyword">python</span>-twisted <span class="keyword">python</span>-twisted-web
-</code></pre><p>3.编译安装deluge</p>
-<pre><code>wget http://download.deluge-torrent.org/<span class="built_in">source</span>/deluge-<span class="number">1.3</span>.<span class="number">6</span>.tar.gz
-tar zxvf deluge-<span class="number">1.3</span>.<span class="number">6</span>.tar.gz
-<span class="built_in">cd</span> deluge-<span class="number">1.3</span>.<span class="number">6</span>
-<span class="comment">#开始编译  </span>
-python setup.py build  
-python setup.py install  
-<span class="comment">#建立账户</span>
-/usr/sbin/groupadd deluge
-useradd deluge -g deluge <span class="operator">-s</span> /bin/<span class="literal">false</span>
-</code></pre><p>4.配置启动文件,把以下文件保存为<strong>/etc/init.d/deluge-daemon</strong></p>
-<blockquote>
-<p><a href="http://pan.baidu.com/s/1o60RrZ0" target="_blank" rel="external">http://pan.baidu.com/s/1o60RrZ0</a></p>
-</blockquote>
-<p>5.给启动脚本权限&amp;启动deluge</p>
-<pre><code>chmod +x /etc/init.d/deluge-daemon
-<span class="class"><span class="keyword">service</span> <span class="title">deluge</span>-daemon start</span>
-</code></pre><p><a href="http://ww1.sinaimg.cn/large/6abdaa9dgw1ef71m13isfj211y0iutb9.jpg" title="deluge界面" target="_blank" rel="external"><img src="http://ww1.sinaimg.cn/large/6abdaa9dgw1ef71m13isfj211y0iutb9.jpg" alt="deluge界面"></a></p>
-<p>本文转自：<a href="http://www.jzbk.org/2013/11/blog-187.html" target="_blank" rel="external">http://www.jzbk.org/2013/11/blog-187.html</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="简介">简介</h3>
-<p>Deluge 是一个通过PyGTK建立图形界面的BitTorrent客户端，后端使用libtorrent。Deluge可以在多个平台上使用，如Linux，*BSD，Mac OS和其他类UNIX操作系统。该项目的目标是要在GTK框架上建立一个原生和全功能的BitTorrent客户端。<br>Deluge由ubuntuforum的两位成员建立，Zach Tibbitts 和 Alan Zakai。在过去，它曾是Google Code的项目。<br>在过去的开发，Deluge曾经被命名为gTorrent，意思是 GNOME 下的BitTorrent客户端。当第一个版本在2006年9月25日释出的时候，被重新命名为Deluge，以避免别人误会gTorrent只能用于GNOME。<br>利用0.4.x代码重写的0.5穏定版在2007年3月18日释出。重写代码的目的是要令代码更加优良。而0.5.1.1版支持数据加密，peer exchange，Si prefixes和upnp。</p>
-]]>
+</head>
+<body>
+<div id="container">
+  <div id="wrap">
+    <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">幻想驿站</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+          <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+          <input type="submit" value="" class="search-form-submit">
+          <input name=tn type=hidden value="bds">
+          <input name=cl type=hidden value="3">
+          <input name=ct type=hidden value="2097152">
+          <input type="hidden" name="si" value="blog.ainhaato.moe">
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+    <div class="outer">
+      <section id="main"><article id="post-gm-scripts-recommend" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/gm-scripts-recommend/" class="article-date">
+  <time datetime="2014-09-12T11:20:57.000Z" itemprop="datePublished">9月 12 2014</time>
+</a>
     
-    </summary>
+  </div>
+  <div class="article-inner">
     
-      <category term="deluge" scheme="http://blog.ainhaato.moe/tags/deluge/"/>
     
-      <category term="centos" scheme="http://blog.ainhaato.moe/tags/centos/"/>
-    
-      <category term="pt" scheme="http://blog.ainhaato.moe/tags/pt/"/>
-    
-      <category term="linux" scheme="http://blog.ainhaato.moe/tags/linux/"/>
-    
-  </entry>
+      <header class="article-header">
+        
   
-  <entry>
-    <title><![CDATA[centos安装rtorrent/rutorrent]]></title>
-    <link href="http://blog.ainhaato.moe/2014/rtorrent-rutorrent-on-centos/"/>
-    <id>http://blog.ainhaato.moe/2014/rtorrent-rutorrent-on-centos/</id>
-    <published>2014-09-12T11:31:57.000Z</published>
-    <updated>2014-09-12T10:33:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="rtorrent介绍">rtorrent介绍</h1>
-<p>rtorrent是利用libtorrent库创建的Ncurses客户端程序。使用C++语言编写   的rtorrent除了能够提供基于GUI界面的客户端所具备的功能之外，其速度和效率更为用户所推崇。</p>
-<h1 id="rutorrent介绍">rutorrent介绍</h1>
-<p>rutorrent是rtorrent的一个webgui。但不支持rtorrent0.8.7版。</p>
-<a id="more"></a>
-
-<h2 id="rtorrent安装过程">rtorrent安装过程</h2>
-<h4 id="教程使用的是目前最新版libtorrent和rtorrent，日后要想安装最新版，请到这里下载：http://libtorrent-rakshasa-no/downloads/">教程使用的是目前最新版libtorrent和rtorrent，日后要想安装最新版，请到这里下载：<a href="http://libtorrent.rakshasa.no/downloads/" target="_blank" rel="external">http://libtorrent.rakshasa.no/downloads/</a></h4>
-<h3 id="一、安装libtorrent">一、安装libtorrent</h3>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">yum</span> <span class="literal">-</span><span class="comment">y</span> <span class="comment">install</span> <span class="comment">gcc</span><span class="literal">-</span><span class="comment">c</span><span class="literal">+</span><span class="literal">+</span> <span class="comment">libtool</span> <span class="comment">libsigc</span><span class="literal">+</span><span class="literal">+</span><span class="comment">20</span> <span class="comment">libsigc</span><span class="literal">+</span><span class="literal">+</span><span class="comment">20</span><span class="literal">-</span><span class="comment">devel</span></div><div class="line"><span class="comment">wget</span> <span class="comment">http://libtorrent</span><span class="string">.</span><span class="comment">rakshasa</span><span class="string">.</span><span class="comment">no/downloads/libtorrent</span><span class="literal">-</span><span class="comment">0</span><span class="string">.</span><span class="comment">13</span><span class="string">.</span><span class="comment">3</span><span class="string">.</span><span class="comment">tar</span><span class="string">.</span><span class="comment">gz</span></div><div class="line"><span class="comment">tar</span> <span class="comment">zxvf</span> <span class="comment">libtorrent</span><span class="literal">-</span><span class="comment">0</span><span class="string">.</span><span class="comment">13</span><span class="string">.</span><span class="comment">3</span><span class="string">.</span><span class="comment">tar</span><span class="string">.</span><span class="comment">gz</span></div><div class="line"><span class="string">.</span><span class="comment">/configure</span></div><div class="line"><span class="comment">make</span> <span class="comment">&&</span> <span class="comment">make</span> <span class="comment">install</span></div></pre></td></tr></table></figure>
-
-<h3 id="二、安装rtorrent">二、安装rtorrent</h3>
-<p>在安装rtorrent之前需要先安装xmlrpc(如果想用webgui的话…  </p>
-<pre><code>yum -y <span class="operator"><span class="keyword">install</span> xmlrpc-c-devel  
-echo <span class="string">"/usr/local/lib/"</span> &gt;&gt; /etc/ld.so.conf
-wget http://libtorrent.rakshasa.<span class="keyword">no</span>/downloads/rtorrent-<span class="number">0.9</span><span class="number">.3</span>.tar.gz
-tar zxvf rtorrent-<span class="number">0.9</span><span class="number">.3</span>.tar.gz
-PKG_CONFIG_PATH=/usr/<span class="keyword">local</span>/lib/pkgconfig ./configure <span class="comment">--with-xmlrpc-c</span>
-make &amp;&amp; make <span class="keyword">install</span></span>
-</code></pre><h4 id="rtorrent启动脚本">rtorrent启动脚本</h4>
-<pre><code>wget -<span class="constant">O</span> /etc/init.d/rtorrent <span class="symbol">https:</span>/<span class="regexp">/github.com/asuna</span><span class="regexp">/personal-scripts/raw</span><span class="regexp">/master/init</span>.d/rtorrent
-chmod <span class="number">755</span> /etc/init.d/rtorrent
-</code></pre><p>使用方法：<strong>service rtorrent {start|stop|restart}</strong></p>
-<h4 id="rtorrent配置文件(sample)">rtorrent配置文件(sample)</h4>
-<pre><code>http<span class="variable">s:</span>//gist.github.<span class="keyword">com</span>/<span class="number">1325923</span>
-</code></pre><h4 id="rtorrent_xmlrpc-c配置">rtorrent xmlrpc-c配置</h4>
-<pre><code>cat &gt;&gt;~/.rtorrent.rc&lt;&lt;-<span class="constant">EOF</span>
-execute_nothrow=rm,/tmp/rpc.<span class="built_in">socket</span>
-scgi_local = /tmp/rpc.<span class="built_in">socket</span>
-schedule = chmod,<span class="number">0</span>,<span class="number">0</span>,<span class="string">"execute=chmod,777,/tmp/rpc.socket"</span>
-<span class="constant">EOF</span>
-</code></pre><h4 id="Nginx_xmlrpc_配置">Nginx xmlrpc 配置</h4>
-<p>修改nginx.conf，在server字段添加下列内容</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="title">location</span> /RPC2 {</div><div class="line"><span class="title">include</span> scgi_params; </div><div class="line"><span class="comment">#scgi_pass 127.0.0.1:5000; </span></div><div class="line"><span class="title">scgi_pass</span> <span class="url">unix:/tmp/rpc.socket</span>; </div><div class="line">}</div></pre></td></tr></table></figure>
-
-<p>不知道nginx.conf在哪的话可以用以下命令查找  </p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">whereis</span> nginx</div></pre></td></tr></table></figure>
-
-<h2 id="rutorrent安装过程">rutorrent安装过程</h2>
-<pre><code>wget http://dl.bintray.com/novik65/<span class="keyword">generic</span>/rutorrent-<span class="number">3</span>.<span class="number">6</span>.tar.gz
-tar zxvf rutorrent-<span class="number">3</span>.<span class="number">6</span>.tar.gz
-mv rutorrent /home/wwwroot
-cp /home/wwwroot/rutorrent/conf/config.php /home/wwwroot/rutorrent/conf/config.php.bak
-sed -i 's/\/\/ $scgi/$scgi/g' /home/wwwroot/rutorrent/conf/config.php
-sed -i 's/$scgi_port = <span class="number">5000</span>/\/\/ $scgi_port = <span class="number">5000</span>/g' /home/wwwroot/rutorrent/conf/config.php
-sed -i 's/$scgi_host = <span class="string">"127/\/\/ $scgi_host = "</span><span class="number">127</span>/g' /home/wwwroot/rutorrent/conf/config.php
-sed -i <span class="string">"s/\"curl\"\t=&gt; ''/\"curl\"\t=&gt; '\/usr\/bin\/curl'/g"</span> /home/wwwroot/rutorrent/conf/config.php
-sed -i <span class="string">"s/\"gzip\"\t=&gt; ''/\"gzip\"\t=&gt; '\/usr\/bin\/gzip'/g"</span> /home/wwwroot/rutorrent/conf/config.php
-sed -i <span class="string">"s/\"id\"\t=&gt; ''/\"id\"\t=&gt; '\/usr\/bin\/id'/g"</span> /home/wwwroot/rutorrent/conf/config.php
-sed -i <span class="string">"s/\"stat\"\t=&gt; ''/\"stat\"\t=&gt; '\/usr\/bin\/stat'/g"</span> /home/wwwroot/rutorrent/conf/config.php
-</code></pre><p>此处的/home/wwwroot为网站根目录</p>
-<h3 id="创建访问密码">创建访问密码</h3>
-<pre><code> htpasswd -b -c <span class="regexp">/home/</span>wwwroot<span class="regexp">/rutorrent/</span>.htpasswds username passwd
-</code></pre><p>如果htpasswd: <strong>command not found</strong>,执行下面命令安装httpd-tool</p>
-<pre><code>yum <span class="operator"><span class="keyword">install</span> -y httpd-tools</span>
-</code></pre><p>修改nginx.conf，在server字段添加下面内容  </p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="title">location</span> /rutorrent { </div><div class="line"><span class="title">auth_basic</span> <span class="string">"ruTorrent login"</span>; </div><div class="line"><span class="title">auth_basic_user_file</span> /home/wwwroot/rutorrent/.htpasswds; </div><div class="line">}</div></pre></td></tr></table></figure>
-
-<h2 id="rutorrent插件安装(可忽略)">rutorrent插件安装(可忽略)</h2>
-<pre><code>wget http:<span class="comment">//dl.bintray.com/novik65/generic/plugins-3.6.tar.gz</span>
-tar zxvf plugins-<span class="number">3.6</span>.tar.gz
-mv plugins <span class="regexp">/home/</span>wwwroot<span class="regexp">/rutorrent</span>
-</code></pre><p>刷新rutorrent页面就可看到效果</p>
-<h2 id="安装完成">安装完成</h2>
-<p>访问<a href="http://yourip(or" target="_blank" rel="external">http://yourip(or</a> domain)/rutorrent，输入设置的账号密码即可使用；rutorrent界面：<br><a href="http://ww2.sinaimg.cn/large/dce4a41ejw1eculh5np0xj211x0iwagl.jpg" title="rtorrent界面" target="_blank" rel="external"><img src="http://ww2.sinaimg.cn/large/dce4a41ejw1eculh5np0xj211x0iwagl.jpg" alt="rutorrent界面"></a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="rtorrent介绍">rtorrent介绍</h1>
-<p>rtorrent是利用libtorrent库创建的Ncurses客户端程序。使用C++语言编写   的rtorrent除了能够提供基于GUI界面的客户端所具备的功能之外，其速度和效率更为用户所推崇。</p>
-<h1 id="rutorrent介绍">rutorrent介绍</h1>
-<p>rutorrent是rtorrent的一个webgui。但不支持rtorrent0.8.7版。</p>
-]]>
-    
-    </summary>
-    
-      <category term="centos" scheme="http://blog.ainhaato.moe/tags/centos/"/>
-    
-      <category term="linux" scheme="http://blog.ainhaato.moe/tags/linux/"/>
-    
-      <category term="rtorrent" scheme="http://blog.ainhaato.moe/tags/rtorrent/"/>
-    
-      <category term="rutorrent" scheme="http://blog.ainhaato.moe/tags/rutorrent/"/>
-    
-      <category term="libtorrent" scheme="http://blog.ainhaato.moe/tags/libtorrent/"/>
-    
-  </entry>
+    <h1 class="article-title" itemprop="name">
+      firefox - GM脚本推荐
+    </h1>
   
-  <entry>
-    <title><![CDATA[firefox - GM脚本推荐]]></title>
-    <link href="http://blog.ainhaato.moe/2014/gm-scripts-recommend/"/>
-    <id>http://blog.ainhaato.moe/2014/gm-scripts-recommend/</id>
-    <published>2014-09-12T11:20:57.000Z</published>
-    <updated>2014-09-12T10:28:50.000Z</updated>
-    <content type="html"><![CDATA[<p><strong>本文将推荐一些平时常用到的GM脚本，关于百度贴吧的脚本下次再整理</strong></p>
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>本文将推荐一些平时常用到的GM脚本，关于百度贴吧的脚本下次再整理</strong></p>
 <p>firefox用户请先安装greasemonkey扩展，chrome用户请先安装Tampermonkey扩展<a id="more"></a></p>
 <p>1.繁简转换</p>
 <figure class="highlight [javascript]"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line">==UserScript==</div><div class="line"><span class="comment">// @name        繁简转换</span></div><div class="line"><span class="comment">// @namespace   http://userscripts.org/scripts/show/0</span></div><div class="line"><span class="comment">// @description 网页上的繁体中文字转为简体。Traditional Chinese chars to Simplified Chinese.</span></div><div class="line"><span class="comment">// @include     *</span></div><div class="line"><span class="comment">// @updateURL   https://userscripts.org/scripts/source/0.meta.js</span></div><div class="line"><span class="comment">// @downloadURL https://userscripts.org/scripts/source/0.user.js</span></div><div class="line"><span class="comment">// @version     1.0</span></div><div class="line"><span class="comment">// @author      tomchen1989 &lt;tomchen1989[AT]yahoo.com.cn&gt;</span></div><div class="line"><span class="comment">// @license     MIT/Expat License</span></div><div class="line"><span class="comment">// ==/UserScript==</span></div><div class="line"></div><div class="line">(<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>{</div><div class="line"></div><div class="line"><span class="keyword">var</span> docLang = <span class="built_in">document</span>.documentElement.lang.toLowerCase(),</div><div class="line">	docCharset = ( <span class="built_in">document</span>.characterSet || <span class="built_in">document</span>.charset ).toLowerCase();</div><div class="line"></div><div class="line"><span class="keyword">if</span> (docLang === <span class="string">"zh-cn"</span> || docLang === <span class="string">"zh-hans"</span> || docLang === <span class="string">"zh-sg"</span> || docLang === <span class="string">"zh-my"</span></div><div class="line">	|| docCharset.substring(<span class="number">0</span>, <span class="number">2</span>) === <span class="string">"gb"</span>) {<span class="comment">//avoid converting pages that are already in Simplified Chinese for sure</span></div><div class="line">	<span class="keyword">return</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">//the lists are based on kSimplifiedVariant by Hongkong user "京典"</span></div><div class="line"></div><div class="line"><span class="comment">//Traditional Chinese chars</span></div><div class="line"><span class="keyword">var</span> chtList  = <span class="string">"“”‘’丢乱亚伫来仑侣俣伣侠伥俩仓个们伦伟侧侦伪伧伞备偬传伛债伤倾偻仅佥侨侥偾仪侬亿侩俭傧俦侪偿储俪㑩傩傥俨兑兖内两册幂净冻凛凯别删刭则刹刚剥剐剀创剧刘刽刿剑剂劲动务勋劳势勚劢励劝匀匦匮区协却厍厌厉厣参丛咤吴呐吕呙员呗吣问哑启唡㖞唤丧乔单哟呛啬唝吗呜唢哔叹喽呕啧尝唛哗唠啸叽哓呒啴嘘㖊哒哝哕嗳哙喷咛吓哜噜啮呖咙亸喾严嘤啭嗫嚣冁呓嘱囱囵国围园圆图团埯垭执坚垩埚尧报场块茔垲埘坞埙尘堑垫坠堕坟垦压垒圹垆垄坜坝壮壶壸寿够梦夹奂奥奁夺奋姹妆姗娱娄妇娅娲妫媪妈妪妩娴婳娆婵娇嫱嫒嬷嫔婴婶娈孙学孪宫寝实审写宽宠宝将专寻对导尴届屉屡层屦属冈岘岛峡崃岗峥岚嵝崭岖嵚崂峤峣峄崄岙嵘屿岿峦巅巯帅师帐带帧帏帼帻帜币帮帱库厕厢厩厦厨厮庙庑废广廪庐厅弑弪张强弹弥弯彦径从徕彻恒耻悦怅闷恶恼恽恻爱惬悫怆恺忾态愠惨惭恸惯怄怂虑悭庆忧惫凭愦惮愤悯怃宪忆恳应怿懔怼懑恹惩懒悬惧慑恋戆戋戗戬战戏户抛捝挟扪扫抡挜挣拣扬换挥损摇捣揾抢掴掼搂挚抠抟掺捞挦撑挠㧑挢掸拨抚揿挞挝捡拥掳择击挡担挤拟摈拧搁掷扩撷摆擞撸摅撵拢拦撄搀撺携摄攒挛摊搅揽败叙敌数敛毙斓斩断时晋昼晕晖旸畅暂晔昙晓暧旷昽书会胧东锨栅栀条枭棁弃枨枣栋栈梾桠杨枫桢业杩荣桤枪椠椁桨桩乐枞楼标枢样树桦桡桥椭横檩柽档桧槚检樯梼槟柠槛橹榈栉椟橼栎橱槠栌枥橥榇蘖栊榉樱栏权椤栾榄棂钦欧欤欢岁归殁残殒殇殚殓殡㱩歼杀壳毁殴毵牦毡氇氢氩氲决没况汹浃泾凉泪渌沦渊涞浅涣减涡测浑凑浈汤沩沟温沧灭涤荥沪滞渗浒浐滚满渔沤汉涟渍涨溆渐浆颍泼潜润浔溃滗涠涩浇涝涧渑泽滪泶浍浊浓湿济涛滥潍滨溅泺滤滢渎㲿泻浏濒泸沥潇潆潴泷濑潋澜沣滠滩灏漤湾滦灾为乌烃无炼炜烟茕焕烦炀煴荧炝热颎炽烨灯烧烫焖营灿烛烩烬焘烁炉烂争爷尔墙牍牵荦犊牺状狭狈狰犹狲狱狮奖独狯猃狝狞猎犷兽獭献猕猡现珐珲玮玚琐瑶莹玛玱琏玑瑷珰环玺琼珑璎瓒瓯产亩毕畴叠痉疴疯疡痪瘗疮疟疭瘘疗痨痫瘅疠瘪疖癞癣瘿瘾痈瘫癫皑疱皲皱盗盏监盘卢眦众睁睐䁖瞒瞆睑眬瞩矫硁硖砗砚硕砀码硙砖碜碛矶硗础碍矿砺砾矾砻禄祸祯祎祃禅礼祢祷秃籼税秆禀称稣积颖秾穑秽稳稆窝穷窑窎窭窥窜窍窦窃竞笔笋笕䇲笺筝节箧筼笃筛筚箦篓箪简篑箫筜签篮筹箓箨籁笼笾簖箩粤糁粪粮粝籴粜纠纪纣约红纡纥纨纫纹纳纽纾纯纰纼纱纮纸级纷纭纴纺䌷细绂绁绅纻绍绀绋绐绌终组䌹绊绗结绝绦绞络绚给绒绖统丝绛绢绑绡绠绨绤绥经综缍绿绸绻绶维绹绾纲缀䌽纶绺绮绽绰绫绵绲缁紧绯绪缃缄缂线缉缎缔缗缘缌编缓缅纬缑缈练缏缇萦缙缢缒绉缣缊缞缚缜缟缛县缝缡缩纵缧䌸缦絷缕缥总绩绷缫缪缯织缮缭绕绣缋绳绘缳缲缴䍁绎继缤缱缬纩续缠缨纤缵缆钵罂罚骂罢罗罴羁芈羟义习翘耧闻联聪声耸聩聂职聍聋肃胁脉胫脱胀肾脶脑肿脚肠腽肤胶腻胆脍脓脸脐膑胪脔臜临兴举旧舱舣舰舻艰艳刍苎兹荆茎荚苋华苌莱莴叶荭着苇荤莳莅苍荪盖莲苁莼荜蒌蒋葱茑荫荨蒇荞莸荛蒉芜萧蓣蕰荟蓟芗蔷荙莶萨䓕荠蓝荩艺薮苈蔼蔺蕲芦苏蕴藓蔹茏兰蓠萝处虚虏号亏虬蛱蜕蚬蚀猬虾蜗蛳蚂萤䗖蝼螀蛰蝈蝉蛲蛏蚁蝇虿蛴蝾蛎蟏蛊蛮术卫衮袅补装裈袆裤裢褛亵袯袄裣裆褴袜䙓衬袭见规觅视觇觋觎亲觊觏觐觑觉览觌观觞觯订讣计讯讧讨讦讱训讪讫讬记讹讶讼䜣诀讷访设许诉诃诊诂诋讵诈诒诏评诐诇诎诅词咏诩询诣试诗诧诟诡诠诘话该详诜诙诖诔诛诓认诳诶诞诱诮语诚诫诬误诰诵诲说谁课谇诽谊訚调谄谆谈诿请诤诹诼谅论谂谀谍谞谝诨谔谛谐谏谕谘讳谙谌讽诸谚谖诺谋谒谓誊诌谎谜谧谑谡谤谦谥讲谢谣谟谪谬讴谨谩䜧证谲讥谮识谯谭谱谵译议谴护诪誉谫读变雠谗让谰谶谠谳岂竖猪豮猫䝙贝贞负财贡贫货贩贪贯责贮贳赀贰贵贬买贷贶费贴贻贸贺贲赂赁贿赅资贾贼赈赊宾赇赒赉赐赏赔赓贤卖贱赋赕质账赌䞐赖赗赚赙购赛赜贽赘赟赠赞赡赢赆赃赑赎赝赣赪赵趋趱迹践跄跸蹒踪跷跶趸踌跻跃踯跞踬蹰跹蹑蹿躜躏躯车轧轨军轪轩轫轭软轸轴轵轺轲轶轼较辂辁辀载轾辄辅轻辆辎辉辋辍辊辇辈轮辌辑辏输辐辗舆辒毂辖辕辘转辙轿辚轰辔轹轳办辞辫辩农迳这连进运过达违遥逊递远迟迁选遗辽迈还迩边逻逦郏邮郓乡邹邬郧邓郑邻郸邺郐邝酂郦酝医酱酦酿衅酾酽释钆钇钌钊钉钋针钓钐钏钒钗钍钕钯钫钘钭钠钝钤钣钑钞钮钧钙钬钛钪铌铈钶铃钴钹铍钰钸铀钿钾钜铊铉铇铋铂钳铆铅钺钩钲钼钽铏铰铒铬铪银铳铜铚铣铨铢铭铫铦衔铑铷铱铟铵铥铕铯铐锐销锑锉铝锒锌钡铤铗锋铻锊锓锄锔锇铓铺铖锆锂铽锯钢锞录锖锩铔锥锕锟锱铮锛锬锭锜钱锦锚锠锡锢错锰铼钔锴锅镀锷铡钖锻锽锸锲锹锾键锶锗镁镑镕锁镉镈镃钨蓥镏铠铩锼镐镇镒镋镍镓镞镟链镆镙镠镝铿锵镗镘镛铲镜镖镂錾铧镤镪锈铙铴镣铹镦镡镫镨镄镌镰镯镭铁镮铎铛镱铸镬镔鉴锧镴铄镳镧钥镵镶镊锣钻銮凿镢长门闩闪闫闬闭开闶闳闰闲间闵闸阂阁阀闺闽阃阆闾阅阊阉阎阏阍阈阌阒闱阔阕阑阇阗阘闿阖阙闯关阚阓阐阛闼坂陉陕阵阴陈陆阳陧队阶陨际随险隐陇隶隽虽双雏杂鸡难电霡雾霁雳霭灵靓静靥鼗巩绱缰鞑鞯韦韧韨韩韪韬韫韵响页顶顷项顺顸顼颂颀颃预顽颁顿颇领颌颉颐颏头颊颋颔颈颓频颗题额颚颜颙颛颡颠类颟颢顾颤显颦颅颞颧风飐飑飒飓飔飏飖飕飗飘飙飞饤饦饨饪饫饬饭饮饴饲饱饰饺饼饷养饵饽馁饿馂饾馄饯馅馆糇饧馎饩馏馊馌馍馒馐馑馈馔饶飨餍馋马驭冯驮驰驯驲驳驻驽驹驵驾骀驸驶驼驷骈骇骃骆骎骏骋骍骓骒骑骐骛骗骙䯄骞骘骝腾驺骚骟骡蓦骜骖骠骢驱骅骕骁骣骄验驿骤驴骧骥骦骊骉髅髌髋鬓闹阋阄魉魇鱼鱽鲀鲁鲂鱿鲄鲐鲍鲋鲊鲒鲕鲖鲔鲛鲑鲜鲪鲧鲠鲩鲤鲨鲻鲯鲭鲞鲷鲱鲵鲲鲳鲸鲮鲰鳀鲫鲽鳇鳅鳆鳃鳒鲥鳏鳎鳐鳍鲢鳌鳓鲦鲣鳗鳛鳔鳕鳖鳟鳝鳜鳞鲟鲎鲙鳣鳢鲿鲚鳄鲈鲡鸟凫鸠鸤凤鸣鸢鸩鸨鸦鸰鸵鸳鸲鸮鸱鸪鸯鸭鸸鸹䴕鸿鸽䴔鸺鸼鹃鹆鹁鹈鹅鹄鹉鹌鹏鹎鹊鹓䴖鸫鹑鹒鹙鹕鹗鹖鹜䴗鸧莺鹟鹤鹠鹡鹘鹣鹚鹢鹞䴘鹝鹧鹥鸥鸷鹨鸶鹪鹔鹩鹫鹇鹬鹰鹭鸴䴙㶉鹯鹲鸬鹦鹳鹂鸾鹾盐丽麦麸黄黉点黪黡黩黾鼋鼍鼹齐斋赍齑齿龀龁龂龅龇龃龆龄龈龊龉龋腭龌龙庞龚龛龟汇坛历冲获当尽脏药荡锤须饥卤发药㟆㨫䌾䞍䯅鲃䲝鳚俫刬㓥㔉咝垱垅屃岽悮㧟枧榅滟㶽㶶犸㺍痖疬眍砜硷纟绔绬䍀耢胨荮荬螨裥觍讻贠轷轱钎钚钷铞铘锃锍锫锝锪锳锘锿镅镎镚锎锏镲镥镩鞒颒颕颥飚饣饹馃馇馓馕骔鲅鲆鲉鲏鲇鲴鲺鳊鲗鳑鳋鳘鲹鳙鲼鸻鹀鹐鹍鹋鹛鹱鹴厐䌺垴讠钅䌶戯梿㱮瘆䅉䌼觃饳饸饻馉鱾鲌鲘鲓鲝鲬鳈鳂鲾鳁鳉鳡鳠䴓杰佣仆价优儿划胜吨涂坏奸宁尸岭几厂后征怜怀忏舍挂扑据扰于晒杆栖极构朴机柜气洁淀泞洒炖异痒确御种洼范筑帘篱网茧圣听腊与庄万荐苹虮虫蜡蚕制触注夸丰赶踊挽适丑离云愿刮肴惊肮体松斗郁咸么党采并系干复只里渖画锺钟䩄馀鲶碱"</span>;</div><div class="line"></div><div class="line"><span class="comment">//Simplified Chinese chars</span></div><div class="line"><span class="keyword">var</span> chsList = <span class="string">"“”‘’丢乱亚伫来仑侣俣伣侠伥俩仓个们伦伟侧侦伪伧伞备偬传伛债伤倾偻仅佥侨侥偾仪侬亿侩俭傧俦侪偿储俪㑩傩傥俨兑兖内两册幂净冻凛凯别删刭则刹刚剥剐剀创剧刘刽刿剑剂劲动务勋劳势勚劢励劝匀匦匮区协却厍厌厉厣参丛咤吴呐吕呙员呗吣问哑启唡㖞唤丧乔单哟呛啬唝吗呜唢哔叹喽呕啧尝唛哗唠啸叽哓呒啴嘘㖊哒哝哕嗳哙喷咛吓哜噜啮呖咙亸喾严嘤啭嗫嚣冁呓嘱囱囵国围园圆图团埯垭执坚垩埚尧报场块茔垲埘坞埙尘堑垫坠堕坟垦压垒圹垆垄坜坝壮壶壸寿够梦夹奂奥奁夺奋姹妆姗娱娄妇娅娲妫媪妈妪妩娴婳娆婵娇嫱嫒嬷嫔婴婶娈孙学孪宫寝实审写宽宠宝将专寻对导尴届屉屡层屦属冈岘岛峡崃岗峥岚嵝崭岖嵚崂峤峣峄崄岙嵘屿岿峦巅巯帅师帐带帧帏帼帻帜币帮帱库厕厢厩厦厨厮庙庑废广廪庐厅弑弪张强弹弥弯彦径从徕彻恒耻悦怅闷恶恼恽恻爱惬悫怆恺忾态愠惨惭恸惯怄怂虑悭庆忧惫凭愦惮愤悯怃宪忆恳应怿懔怼懑恹惩懒悬惧慑恋戆戋戗戬战戏户抛捝挟扪扫抡挜挣拣扬换挥损摇捣揾抢掴掼搂挚抠抟掺捞挦撑挠㧑挢掸拨抚揿挞挝捡拥掳择击挡担挤拟摈拧搁掷扩撷摆擞撸摅撵拢拦撄搀撺携摄攒挛摊搅揽败叙敌数敛毙斓斩断时晋昼晕晖旸畅暂晔昙晓暧旷昽书会胧东锨栅栀条枭棁弃枨枣栋栈梾桠杨枫桢业杩荣桤枪椠椁桨桩乐枞楼标枢样树桦桡桥椭横檩柽档桧槚检樯梼槟柠槛橹榈栉椟橼栎橱槠栌枥橥榇蘖栊榉樱栏权椤栾榄棂钦欧欤欢岁归殁残殒殇殚殓殡㱩歼杀壳毁殴毵牦毡氇氢氩氲决没况汹浃泾凉泪渌沦渊涞浅涣减涡测浑凑浈汤沩沟温沧灭涤荥沪滞渗浒浐滚满渔沤汉涟渍涨溆渐浆颍泼潜润浔溃滗涠涩浇涝涧渑泽滪泶浍浊浓湿济涛滥潍滨溅泺滤滢渎㲿泻浏濒泸沥潇潆潴泷濑潋澜沣滠滩灏漤湾滦灾为乌烃无炼炜烟茕焕烦炀煴荧炝热颎炽烨灯烧烫焖营灿烛烩烬焘烁炉烂争爷尔墙牍牵荦犊牺状狭狈狰犹狲狱狮奖独狯猃狝狞猎犷兽獭献猕猡现珐珲玮玚琐瑶莹玛玱琏玑瑷珰环玺琼珑璎瓒瓯产亩毕畴叠痉疴疯疡痪瘗疮疟疭瘘疗痨痫瘅疠瘪疖癞癣瘿瘾痈瘫癫皑疱皲皱盗盏监盘卢眦众睁睐䁖瞒瞆睑眬瞩矫硁硖砗砚硕砀码硙砖碜碛矶硗础碍矿砺砾矾砻禄祸祯祎祃禅礼祢祷秃籼税秆禀称稣积颖秾穑秽稳稆窝穷窑窎窭窥窜窍窦窃竞笔笋笕䇲笺筝节箧筼笃筛筚箦篓箪简篑箫筜签篮筹箓箨籁笼笾簖箩粤糁粪粮粝籴粜纠纪纣约红纡纥纨纫纹纳纽纾纯纰纼纱纮纸级纷纭纴纺䌷细绂绁绅纻绍绀绋绐绌终组䌹绊绗结绝绦绞络绚给绒绖统丝绛绢绑绡绠绨绤绥经综缍绿绸绻绶维绹绾纲缀䌽纶绺绮绽绰绫绵绲缁紧绯绪缃缄缂线缉缎缔缗缘缌编缓缅纬缑缈练缏缇萦缙缢缒绉缣缊缞缚缜缟缛县缝缡缩纵缧䌸缦絷缕缥总绩绷缫缪缯织缮缭绕绣缋绳绘缳缲缴䍁绎继缤缱缬纩续缠缨纤缵缆钵罂罚骂罢罗罴羁芈羟义习翘耧闻联聪声耸聩聂职聍聋肃胁脉胫脱胀肾脶脑肿脚肠腽肤胶腻胆脍脓脸脐膑胪脔臜临兴举旧舱舣舰舻艰艳刍苎兹荆茎荚苋华苌莱莴叶荭着苇荤莳莅苍荪盖莲苁莼荜蒌蒋葱茑荫荨蒇荞莸荛蒉芜萧蓣蕰荟蓟芗蔷荙莶萨䓕荠蓝荩艺薮苈蔼蔺蕲芦苏蕴藓蔹茏兰蓠萝处虚虏号亏虬蛱蜕蚬蚀猬虾蜗蛳蚂萤䗖蝼螀蛰蝈蝉蛲蛏蚁蝇虿蛴蝾蛎蟏蛊蛮术卫衮袅补装裈袆裤裢褛亵袯袄裣裆褴袜䙓衬袭见规觅视觇觋觎亲觊觏觐觑觉览觌观觞觯订讣计讯讧讨讦讱训讪讫讬记讹讶讼䜣诀讷访设许诉诃诊诂诋讵诈诒诏评诐诇诎诅词咏诩询诣试诗诧诟诡诠诘话该详诜诙诖诔诛诓认诳诶诞诱诮语诚诫诬误诰诵诲说谁课谇诽谊訚调谄谆谈诿请诤诹诼谅论谂谀谍谞谝诨谔谛谐谏谕谘讳谙谌讽诸谚谖诺谋谒谓誊诌谎谜谧谑谡谤谦谥讲谢谣谟谪谬讴谨谩䜧证谲讥谮识谯谭谱谵译议谴护诪誉谫读变雠谗让谰谶谠谳岂竖猪豮猫䝙贝贞负财贡贫货贩贪贯责贮贳赀贰贵贬买贷贶费贴贻贸贺贲赂赁贿赅资贾贼赈赊宾赇赒赉赐赏赔赓贤卖贱赋赕质账赌䞐赖赗赚赙购赛赜贽赘赟赠赞赡赢赆赃赑赎赝赣赪赵趋趱迹践跄跸蹒踪跷跶趸踌跻跃踯跞踬蹰跹蹑蹿躜躏躯车轧轨军轪轩轫轭软轸轴轵轺轲轶轼较辂辁辀载轾辄辅轻辆辎辉辋辍辊辇辈轮辌辑辏输辐辗舆辒毂辖辕辘转辙轿辚轰辔轹轳办辞辫辩农迳这连进运过达违遥逊递远迟迁选遗辽迈还迩边逻逦郏邮郓乡邹邬郧邓郑邻郸邺郐邝酂郦酝医酱酦酿衅酾酽释钆钇钌钊钉钋针钓钐钏钒钗钍钕钯钫钘钭钠钝钤钣钑钞钮钧钙钬钛钪铌铈钶铃钴钹铍钰钸铀钿钾钜铊铉铇铋铂钳铆铅钺钩钲钼钽铏铰铒铬铪银铳铜铚铣铨铢铭铫铦衔铑铷铱铟铵铥铕铯铐锐销锑锉铝锒锌钡铤铗锋铻锊锓锄锔锇铓铺铖锆锂铽锯钢锞录锖锩铔锥锕锟锱铮锛锬锭锜钱锦锚锠锡锢错锰铼钔锴锅镀锷铡钖锻锽锸锲锹锾键锶锗镁镑镕锁镉镈镃钨蓥镏铠铩锼镐镇镒镋镍镓镞镟链镆镙镠镝铿锵镗镘镛铲镜镖镂錾铧镤镪锈铙铴镣铹镦镡镫镨镄镌镰镯镭铁镮铎铛镱铸镬镔鉴锧镴铄镳镧钥镵镶镊锣钻銮凿镢长门闩闪闫闬闭开闶闳闰闲间闵闸阂阁阀闺闽阃阆闾阅阊阉阎阏阍阈阌阒闱阔阕阑阇阗阘闿阖阙闯关阚阓阐阛闼坂陉陕阵阴陈陆阳陧队阶陨际随险隐陇隶隽虽双雏杂鸡难电霡雾霁雳霭灵靓静靥鼗巩绱缰鞑鞯韦韧韨韩韪韬韫韵响页顶顷项顺顸顼颂颀颃预顽颁顿颇领颌颉颐颏头颊颋颔颈颓频颗题额颚颜颙颛颡颠类颟颢顾颤显颦颅颞颧风飐飑飒飓飔飏飖飕飗飘飙飞饤饦饨饪饫饬饭饮饴饲饱饰饺饼饷养饵饽馁饿馂饾馄饯馅馆糇饧馎饩馏馊馌馍馒馐馑馈馔饶飨餍馋马驭冯驮驰驯驲驳驻驽驹驵驾骀驸驶驼驷骈骇骃骆骎骏骋骍骓骒骑骐骛骗骙䯄骞骘骝腾驺骚骟骡蓦骜骖骠骢驱骅骕骁骣骄验驿骤驴骧骥骦骊骉髅髌髋鬓闹阋阄魉魇鱼鱽鲀鲁鲂鱿鲄鲐鲍鲋鲊鲒鲕鲖鲔鲛鲑鲜鲪鲧鲠鲩鲤鲨鲻鲯鲭鲞鲷鲱鲵鲲鲳鲸鲮鲰鳀鲫鲽鳇鳅鳆鳃鳒鲥鳏鳎鳐鳍鲢鳌鳓鲦鲣鳗鳛鳔鳕鳖鳟鳝鳜鳞鲟鲎鲙鳣鳢鲿鲚鳄鲈鲡鸟凫鸠鸤凤鸣鸢鸩鸨鸦鸰鸵鸳鸲鸮鸱鸪鸯鸭鸸鸹䴕鸿鸽䴔鸺鸼鹃鹆鹁鹈鹅鹄鹉鹌鹏鹎鹊鹓䴖鸫鹑鹒鹙鹕鹗鹖鹜䴗鸧莺鹟鹤鹠鹡鹘鹣鹚鹢鹞䴘鹝鹧鹥鸥鸷鹨鸶鹪鹔鹩鹫鹇鹬鹰鹭鸴䴙㶉鹯鹲鸬鹦鹳鹂鸾鹾盐丽麦麸黄黉点黪黡黩黾鼋鼍鼹齐斋赍齑齿龀龁龂龅龇龃龆龄龈龊龉龋腭龌龙庞龚龛龟汇坛历冲获当尽脏药荡锤须饥卤发药㟆㨫䌾䞍䯅鲃䲝鳚俫刬㓥㔉咝垱垅屃岽悮㧟枧榅滟㶽㶶犸㺍痖疬眍砜硷纟绔绬䍀耢胨荮荬螨裥觍讻贠轷轱钎钚钷铞铘锃锍锫锝锪锳锘锿镅镎镚锎锏镲镥镩鞒颒颕颥飚饣饹馃馇馓馕骔鲅鲆鲉鲏鲇鲴鲺鳊鲗鳑鳋鳘鲹鳙鲼鸻鹀鹐鹍鹋鹛鹱鹴厐䌺垴讠钅䌶戯梿㱮瘆䅉䌼觃饳饸饻馉鱾鲌鲘鲓鲝鲬鳈鳂鲾鳁鳉鳡鳠䴓杰佣仆价优儿划胜吨涂坏奸宁尸岭几厂后征怜怀忏舍挂扑据扰于晒杆栖极构朴机柜气洁淀泞洒炖异痒确御种洼范筑帘篱网茧圣听腊与庄万荐苹虮虫蜡蚕制触注夸丰赶踊挽适丑离云愿刮肴惊肮体松斗郁咸么党采并系干复只里渖画锺钟䩄馀鲶碱"</span>;</div><div class="line"></div><div class="line"><span class="comment">//inspired by augor and phoenix from proxomitron.cn, and "繁简转换" script by yecao</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleTextNode</span><span class="params">(prtNode)</span> </span>{</div><div class="line">	<span class="keyword">var</span> nodes = prtNode.childNodes,</div><div class="line">		i = <span class="number">0</span>,</div><div class="line">		l = nodes.length;</div><div class="line">	<span class="keyword">for</span> (; i &lt; l; i++) {</div><div class="line">		<span class="keyword">if</span> (nodes[i].nodeType === <span class="number">3</span>) {</div><div class="line">			nodes[i].data = conv(nodes[i].data);</div><div class="line">		} <span class="keyword">else</span> <span class="keyword">if</span> (nodes[i].childNodes) {</div><div class="line">			handleTextNode(nodes[i]);</div><div class="line">		}</div><div class="line">	}</div><div class="line">}</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">conv</span><span class="params">(str)</span> </span>{</div><div class="line">	<span class="keyword">var</span> ret = <span class="string">""</span>,</div><div class="line">		find,</div><div class="line">		i = <span class="number">0</span>,</div><div class="line">		l = str.length;</div><div class="line">	<span class="keyword">for</span> (; i &lt; l; i++) {</div><div class="line">		<span class="keyword">var</span> cha = str.charAt(i);</div><div class="line">		<span class="keyword">if</span> (<span class="regexp">/[\u4E00-\u9FFF“”‘’“”‘’\u3400-\u4DBF]/</span>.test(cha) === <span class="literal">false</span>) {</div><div class="line">			find = -<span class="number">1</span>;</div><div class="line">		} <span class="keyword">else</span> {</div><div class="line">			find = chtList.indexOf(cha);</div><div class="line">		}</div><div class="line">		<span class="keyword">if</span> (find != -<span class="number">1</span>) {</div><div class="line">			ret += chsList.charAt(find);</div><div class="line">		} <span class="keyword">else</span> {</div><div class="line">			ret += cha;</div><div class="line">		}</div><div class="line">	}</div><div class="line">	<span class="keyword">return</span> ret;</div><div class="line">}</div><div class="line"></div><div class="line">handleTextNode(<span class="built_in">document</span>.documentElement);</div><div class="line"></div><div class="line">})();</div></pre></td></tr></table></figure>
@@ -321,278 +120,273 @@ mv plugins <span class="regexp">/home/</span>wwwroot<span class="regexp">/rutorr
 
 <p>14.osu无限制下载<br><a title="OSU AnotherDownload" href="https://userscripts.org/scripts/show/100778" target="_blank">https://userscripts.org/scripts/show/100778</a></p>
 <p>15.小说清爽阅读，支持各大小说网站<br><a title="My Novel Reader" href="https://userscripts.org/scripts/show/165951" target="_blank">https://userscripts.org/scripts/show/165951</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><strong>本文将推荐一些平时常用到的GM脚本，关于百度贴吧的脚本下次再整理</strong></p>
-<p>firefox用户请先安装greasemonkey扩展，chrome用户请先安装Tampermonkey扩展]]>
-    
-    </summary>
-    
-      <category term="firefox" scheme="http://blog.ainhaato.moe/tags/firefox/"/>
-    
-      <category term="GM脚本" scheme="http://blog.ainhaato.moe/tags/GM%E8%84%9A%E6%9C%AC/"/>
-    
-      <category term="greasemonkey" scheme="http://blog.ainhaato.moe/tags/greasemonkey/"/>
-    
-      <category term="繁简转换" scheme="http://blog.ainhaato.moe/tags/%E7%B9%81%E7%AE%80%E8%BD%AC%E6%8D%A2/"/>
-    
-      <category term="小说" scheme="http://blog.ainhaato.moe/tags/%E5%B0%8F%E8%AF%B4/"/>
-    
-      <category term="去广告" scheme="http://blog.ainhaato.moe/tags/%E5%8E%BB%E5%B9%BF%E5%91%8A/"/>
-    
-  </entry>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://blog.ainhaato.moe/2014/gm-scripts-recommend/" data-id="ywoj4pnqo4eplhvg" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="http://blog.ainhaato.moe/2014/gm-scripts-recommend/#disqus_thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GM脚本/">GM脚本</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/firefox/">firefox</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/greasemonkey/">greasemonkey</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/去广告/">去广告</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小说/">小说</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/繁简转换/">繁简转换</a></li></ul>
+
+    </footer>
+  </div>
   
-  <entry>
-    <title><![CDATA[CentOS使用aria2实现迅雷离线批量下载]]></title>
-    <link href="http://blog.ainhaato.moe/2013/aria2-download-in-centos/"/>
-    <id>http://blog.ainhaato.moe/2013/aria2-download-in-centos/</id>
-    <published>2013-06-22T15:07:16.000Z</published>
-    <updated>2015-01-12T14:29:49.000Z</updated>
-    <content type="html"><![CDATA[<p><img src="http://ww2.sinaimg.cn/large/ce0d98b2jw1e5s2pzo7hdj204z05i3yk.jpg" alt=""></p>
-<p>linux下虽然没有迅雷可用，但是有aria2这个下载利器；而且aria2还支持bt下载，如果改ua甚至可以用于pt</p>
-<p>  <strong>1.安装aria2,2种方法，2种版本。。。。</strong><br>   旧版（忘了啥版本了。。貌似1.3几？）直接使用以下命令安装：</p>
-<pre><code>yum <span class="operator"><span class="keyword">install</span> aria2</span>
-</code></pre><a id="more"></a>
-
-<p><strong>2.新版。。。目前最新版：1.17.1，使用以下命令安装|最新版下载地址(aria2项目主页)：</strong><a href="http://sourceforge.net/projects/aria2/" target="_blank" rel="external">http://sourceforge.net/projects/aria2/</a></p>
-<pre><code>cd /tmp                  //可跳过
-wget http:<span class="regexp">//downloads</span>.sourceforge.net/project/aria2/stable/aria2-<span class="number">1.17</span>.<span class="number">1</span>/aria2-<span class="number">1.17</span>.<span class="number">1</span>.tar.gz?r=http<span class="variable">%3A</span><span class="variable">%2F</span><span class="variable">%2Fsourceforge</span>.net<span class="variable">%2Fprojects</span><span class="variable">%2Faria2</span><span class="variable">%2Ffiles</span><span class="variable">%2Fstable</span><span class="variable">%2Faria2</span>-<span class="number">1.17</span>.<span class="number">1</span><span class="variable">%2F</span>&amp;ts=<span class="number">1371047609</span>&amp;use_mirror=iweb                //下载<span class="number">1.17</span>.<span class="number">1</span>版aria2
-tar zxvf aria2-<span class="number">1.17</span>.<span class="number">1</span>.tar.gz                       //解压源码包
-cd aria2-<span class="number">1.17</span>.<span class="number">1</span>                          //进入解压后目录
-./configure --prefix=<span class="regexp">/usr                     /</span>*编译
-make &amp;&amp; make install                            安装*<span class="regexp">/</span>
-</code></pre><p><strong>3.安装完后可以使用以下命令查询用法</strong></p>
-<pre><code><span class="title">aria2c</span> -h
-</code></pre><p><strong>4.进入你想要的下载目录，如/home/downloads ,并输入以下代码，配置完后下载的文件就会出现在这里</strong></p>
-<pre><code>screen -t aria2-web-remote          <span class="comment">//用于后台运行下面的参数</span>
-touch aria2.session             <span class="comment">//创建session用于保存未下载完的进度</span>
-aria2c --enable-<span class="function"><span class="keyword">rpc</span> --<span class="keyword">rpc</span>-listen-all --<span class="keyword">rpc</span>-allow-origin-all --file-allocation=none -x3 -s3 -j3 -c --save-session=aria2.session -i aria2.session         //aria2的<span class="keyword">rpc</span>参数按CTRL+A+D暂时脱离screen，此时关闭终端也可以，参数仍在运行</span>
-</code></pre><p>也可使用conf文件启动</p>
-<pre><code>touch aria2.session       //同样也要创建session文件
-aria2c --<span class="keyword">conf</span>-path=/home/Downloads/aria2.<span class="keyword">conf</span>    //path=<span class="keyword">conf</span>所在路径
-</code></pre><p>如果要设置开机自启，就在/etc/rc.local中添加</p>
-<pre><code><span class="keyword">vim</span> /etc/rc.local   //用<span class="keyword">vim</span>编辑
-aria2c --<span class="keyword">conf</span>-path=/home/Downloads/aria2.<span class="keyword">conf</span> -D //在最后添加aria2启动参数，-D表示后台运行
-</code></pre><p><strong>conf参数详解(<a href="http://pastebin.mozilla.org/5974015" title="备份" target="_blank" rel="external">备份</a>)</strong></p>
-<pre><code><span class="preprocessor">#This is a configuration of aria2</span>
-　
-<span class="preprocessor">#允许rpc</span>
-enable-rpc=<span class="literal">true</span>
-<span class="preprocessor">#允许所有来源, web界面跨域权限需要</span>
-rpc-allow-origin-all=<span class="literal">true</span>
-<span class="preprocessor">#允许非外部访问</span>
-rpc-listen-all=<span class="literal">true</span>
-<span class="preprocessor">#RPC端口, 仅当默认端口被占用时修改</span>
-<span class="preprocessor">#rpc-listen-port=6800</span>
-　
-<span class="preprocessor">#用户名</span>
-<span class="preprocessor">#rpc-user=username</span>
-<span class="preprocessor">#密码</span>
-<span class="preprocessor">#rpc-passwd=passwd</span>
-　
-<span class="preprocessor">#最大同时下载数(任务数), 路由建议值: 3</span>
-max-concurrent-downloads=<span class="number">3</span>
-<span class="preprocessor">#断点续传</span>
-continue=<span class="literal">true</span>
-<span class="preprocessor">#同服务器连接数</span>
-max-connection-per-server=<span class="number">3</span>
-<span class="preprocessor">#最小文件分片大小, 下载线程数上限取决于能分出多少片, 对于小文件重要</span>
-min-split-size=<span class="number">20</span>M
-<span class="preprocessor">#单文件最大线程数, 路由建议值: 5</span>
-split=<span class="number">5</span>
-<span class="preprocessor">#下载速度限制</span>
-max-overall-download-limit=<span class="number">0</span>
-<span class="preprocessor">#单文件速度限制</span>
-max-download-limit=<span class="number">0</span>
-<span class="preprocessor">#上传速度限制</span>
-max-overall-upload-limit=<span class="number">0</span>
-<span class="preprocessor">#单文件速度限制</span>
-max-upload-limit=<span class="number">0</span>
-<span class="preprocessor">#断开速度过慢的连接</span>
-<span class="preprocessor">#lowest-speed-limit=0</span>
-<span class="preprocessor">#运行覆盖已存在文件</span>
-allow-overwrite=<span class="literal">true</span>
-<span class="preprocessor">#验证用，需要1.16.1之后的release版本</span>
-<span class="preprocessor">#referer=*</span>
-　
-input-file=/home/wwwroot/<span class="keyword">default</span>/dl/aria2.session
-save-session=/home/wwwroot/<span class="keyword">default</span>/dl/aria2.session
-<span class="preprocessor">#定时保存会话，需要1.16.1之后的release版</span>
-<span class="preprocessor">#save-session-interval=60</span>
- 　
-<span class="preprocessor">#文件保存路径, 默认为当前启动位置</span>
-dir=/home/wwwroot/<span class="keyword">default</span>/dl
-<span class="preprocessor">#文件缓存, 使用内置的文件缓存, 如果你不相信Linux内核文件缓存和磁盘内置缓存时使用, 需要1.16及以上版本</span>
-<span class="preprocessor">#disk-cache=0</span>
-<span class="preprocessor">#另一种Linux文件缓存方式, 使用前确保您使用的内核支持此选项, 需要1.15及以上版本(?)</span>
-<span class="preprocessor">#enable-mmap=true</span>
-<span class="preprocessor">#文件预分配, 能有效降低文件碎片, 提高磁盘性能. 缺点是预分配时间较长</span>
-<span class="preprocessor">#所需时间 none &lt; falloc ? trunc &lt;&lt; prealloc, falloc和trunc需要文件系统和内核支持</span>
-file-allocation=none
-　
-<span class="preprocessor">#启用本地节点查找</span>
-bt-enable-lpd=<span class="literal">true</span>
-<span class="preprocessor">#添加额外的tracker</span>
-<span class="preprocessor">#bt-tracker=&lt;URI&gt;,…</span>
-<span class="preprocessor">#单种子最大连接数</span>
-<span class="preprocessor">#bt-max-peers=55</span>
-<span class="preprocessor">#强制加密, 防迅雷必备</span>
-<span class="preprocessor">#bt-require-crypto=true</span>
-<span class="preprocessor">#当下载的文件是一个种子(以.torrent结尾)时, 自动下载BT</span>
-follow-torrent=<span class="literal">true</span>
-<span class="preprocessor">#BT监听端口, 当端口屏蔽时使用</span>
-<span class="preprocessor">#listen-port=6881-6999</span>
-　
-<span class="preprocessor">#不确定是否需要，为保险起见，need more test</span>
-enable-dht=<span class="literal">true</span>
-bt-enable-lpd=<span class="literal">true</span>
-enable-peer-exchange=<span class="literal">true</span>
-<span class="preprocessor">#修改特征</span>
-user-agent=uTorrent/<span class="number">2210</span>(<span class="number">25130</span>)
-peer-id-prefix=-UT2210-
-<span class="preprocessor">#修改做种设置, 允许做种</span>
-seed-ratio=<span class="number">0</span>
-<span class="preprocessor">#保存会话</span>
-force-save=<span class="literal">true</span>
-bt-hash-check-seed=<span class="literal">true</span>
-bt-seed-unverified=<span class="literal">true</span>
-bt-save-metadata=<span class="literal">true</span>
-<span class="preprocessor">#定时保存会话，需要1.16.1之后的某个release版本（比如1.16.2）</span>
-<span class="preprocessor">#save-session-interval=60</span>
-</code></pre><p>至此aria2安装&amp;配置完毕，命令行用法不作介绍，下面是使用web端进行迅雷离线的批量下载</p>
-<hr>
-<p>web端不止一种。。。为了省事这里只介绍适合chrome使用的YAAW （全称Yet Another Aria2 Web Frontend）</p>
-<p><strong>1.在chrome应用商店中安装下面2个扩展、应用</strong><br>迅雷离线助手：<a href="https://chrome.google.com/webstore/detail/thunderlixianassistant/eehlmkfpnagoieibahhcghphdbjcdmen" target="_blank" rel="external">https://chrome.google.com/webstore/detail/thunderlixianassistant/eehlmkfpnagoieibahhcghphdbjcdmen</a><br>YAAW：<a href="https://chrome.google.com/webstore/detail/yaaw-for-chrome/hbjpfaalboebibgfmedmjijhbjapcnki" target="_blank" rel="external">https://chrome.google.com/webstore/detail/yaaw-for-chrome/hbjpfaalboebibgfmedmjijhbjapcnki</a></p>
-<p><strong>2.登录&amp;进入迅雷离线并设置Aria2 JSON-RPC Path(红色部分改为你的IP或者域名)</strong><br><a href="http://t1.qpic.cn/mblogpic/ffa2b748238ddc45c8d8/2000.jpg" title="登入迅雷离线进行设置" target="_blank" rel="external"><img src="http://t1.qpic.cn/mblogpic/ffa2b748238ddc45c8d8/2000.jpg" alt="登入迅雷离线进行设置"></a></p>
-<p>  <a href="http://t1.qpic.cn/mblogpic/646c4a3a565177c8d1a4/2000.jpg" title="迅雷离线设置JSON-RPC" target="_blank" rel="external"><img src="http://t1.qpic.cn/mblogpic/646c4a3a565177c8d1a4/2000.jpg" alt="迅雷离线设置JSON-RPC"></a></p>
-<p><strong>3.设置YAAW中的Aria2 JSON-RPC Path(红色部分改为你的IP或者域名)</strong></p>
-<p><a href="http://t1.qpic.cn/mblogpic/2dc0ca38ea3a0e653dba/2000.jpg" title="进入YAAW设置" target="_blank" rel="external"><img src="http://t1.qpic.cn/mblogpic/2dc0ca38ea3a0e653dba/2000.jpg" alt="进入YAAW设置"></a></p>
-<p><a href="http://t1.qpic.cn/mblogpic/58d30bef908a17b8c770/2000.jpg" title="YAAW设置JSON-RPC" target="_blank" rel="external"><img src="http://t1.qpic.cn/mblogpic/58d30bef908a17b8c770/2000.jpg" alt="YAAW设置JSON-RPC"></a></p>
-<p><strong>4.设置完毕，即可使用。。。</strong><br>  <a href="http://t1.qpic.cn/mblogpic/4d87f79d6bfc18646524/2000.jpg" title="导出至YAAW" target="_blank" rel="external"><img src="http://t1.qpic.cn/mblogpic/4d87f79d6bfc18646524/2000.jpg" alt="导出至YAAW"></a><br>选择要下载的任务，并使用YAAW；aria2就会开始下载，并且YAAW中可以看到进度，也可进行简单操作</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><img src="http://ww2.sinaimg.cn/large/ce0d98b2jw1e5s2pzo7hdj204z05i3yk.jpg" alt=""></p>
-<p>linux下虽然没有迅雷可用，但是有aria2这个下载利器；而且aria2还支持bt下载，如果改ua甚至可以用于pt</p>
-<p>  <strong>1.安装aria2,2种方法，2种版本。。。。</strong><br>   旧版（忘了啥版本了。。貌似1.3几？）直接使用以下命令安装：</p>
-<pre><code>yum <span class="operator"><span class="keyword">install</span> aria2</span>
-</code></pre>]]>
     
-    </summary>
-    
-      <category term="aria2" scheme="http://blog.ainhaato.moe/tags/aria2/"/>
-    
-      <category term="centos" scheme="http://blog.ainhaato.moe/tags/centos/"/>
-    
-      <category term="download" scheme="http://blog.ainhaato.moe/tags/download/"/>
-    
-      <category term="linux" scheme="http://blog.ainhaato.moe/tags/linux/"/>
-    
-  </entry>
+<nav id="article-nav">
   
-  <entry>
-    <title><![CDATA[CentOS安装transmission实现服务器BT下载]]></title>
-    <link href="http://blog.ainhaato.moe/2013/install-transmission-on-centos/"/>
-    <id>http://blog.ainhaato.moe/2013/install-transmission-on-centos/</id>
-    <published>2013-06-22T07:48:25.000Z</published>
-    <updated>2015-01-12T14:27:04.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="前言：">前言：</h3>
-<p>不推荐使用一键安装脚本进行安装，通常这类脚本容易出现问题，譬如脚本中的链接失效，就会造成安装失败&lt;(=✖╭╮✖=)&gt;<br>而且脚本安装的transmission多数都是旧版，很旧的那种= =   旧版的transmission没有transmission-create功能，无法在终端创建torrent，web端更不能<br>因此推荐有一定linux基础的同志们~自己进行安装</p>
-<a id="more"></a>
-
-
-<p><strong>1.登录终端(废话= =)<br>2.安装transmission web控制段的基层程序，输入以下命令：</strong></p>
-<pre><code>yum -<span class="keyword">y</span> install gcc gcc-<span class="keyword">c</span>++ m4 <span class="keyword">make</span> automake libtool gettext openssl-devel pkgconfig <span class="keyword">perl</span>-libwww-<span class="keyword">perl</span> <span class="keyword">perl</span>-XML-Parser curl curl-devel vsftpd libevent-devel libevent libidn-devel zlib-devel
-</code></pre><p>安装所用时间取决于服务器的配置。。。。</p>
-<p> <strong>3.安装intltool，此处安装的是0.40.6版本，若要使用新版，请从文末给出的链接寻找下载地址</strong></p>
-<pre><code>cd /tmp
-wget <span class="keyword">http</span>://<span class="keyword">ftp</span>.gnome.org/pub/gnome/sources/intltool/<span class="number">0.40</span>/intltool-<span class="number">0.40</span><span class="number">.6</span>.tar.gz
-tar zxvf intltool-*.tar.gz
-cd intltool-*
-./configure <span class="comment">--prefix=/usr</span>
-make
-make install
-</code></pre><p><strong>4.安装libevent，并配置pkg-config，此处使用目前最新stable版</strong></p>
-<pre><code>wget http<span class="variable">s:</span>//github.<span class="keyword">com</span>/downloads/libevent/libevent/libevent-<span class="number">2.0</span>.<span class="number">21</span>-stable.tar.gz
-tar -zxvf libevent-<span class="number">2.0</span>.<span class="number">21</span>-stable.tar.gz
-<span class="keyword">cd</span> libevent-<span class="number">2.0</span>.<span class="number">21</span>-stable
-./configure --prefix=/usr
-<span class="keyword">make</span>
-<span class="keyword">make</span> install
-
-<span class="keyword">vim</span> /etc/<span class="keyword">profile</span>     //使用<span class="keyword">vim</span>编辑该文件
-export PKG_CONFIG_PATH=<span class="string">"/usr/local/lib/pkgconfig"</span>     //在该文件最后加入这行代码
-</code></pre><p><strong>5.正题来了~安装transmission客户端</strong></p>
-<pre><code>wget <span class="keyword">http</span>://download-origin.transmissionbt.com/<span class="built_in">files</span>/transmission-<span class="number">2.77</span>.tar.bz2
-tar -xvf transmission-<span class="number">2.77</span>.tar.bz2
-cd transmission-<span class="number">2.77</span>/
-./configure <span class="comment">--prefix=/usr</span>
-make &amp;&amp; make install    <span class="comment"> //linux下使用&amp;&amp;可以运行多个命令</span>
-</code></pre><p><strong>补充内容：<br>如在安装过程中遇到以下问题，需要在./configure 的时候加上CFLAGS=-liconv</strong></p>
-<blockquote>
-<p>make<a href="http://ww1.sinaimg.cn/large/ce179fd8jw1e7oqcfkfb8j212u0ijn2a.jpg" target="_blank" rel="external">1</a>: Entering directory <code>/export/home/olaf/tools/transmission-2.77/libtransmission&#39;
-CCLD   bitfield-test
-Undefined                       first referenced
-symbol                             in file
-libiconv_close                      ./libtransmission.a(utils.o)
-libiconv_open                       ./libtransmission.a(utils.o)
-libiconv                            ./libtransmission.a(utils.o)
-ld: fatal: symbol referencing errors. No output written to bitfield-test
-collect2: ld returned 1 exit status
-make[1]: *** [bitfield-test] Error 1
-make[1]: Leaving directory</code>/export/home/olaf/tools/transmission-2.77/libtransmission’<br>make: <em>*</em> [all-recursive] Error 1</p>
-</blockquote>
-<p><strong>详细方法</strong></p>
-<pre><code><span class="built_in">cd</span> transmission-<span class="number">2.77</span>/
-./configure --prefix=/usr CFLAGS=-liconv
-make <span class="operator">-s</span>
-make <span class="operator">-s</span> install
-</code></pre><p><strong>6.添加新用户来运行transmission</strong></p>
-<pre><code>useradd -mr transmission
-chmod g+rwx <span class="regexp">/home/</span>transmission<span class="regexp">/</span>
-</code></pre><p>7.创建init行脚本，用于运行Transmission(直接注册为服务，方便使用<strong><em>service xxxxx start|stop|restart</em></strong>)</p>
-<pre><code>wget -O <span class="regexp">/etc/i</span>nit.d<span class="regexp">/transmissiond http:/</span><span class="regexp">/pastie.org/</span>pastes<span class="regexp">/962731/</span>download
-chmod <span class="number">755</span> <span class="regexp">/etc/i</span>nit.d<span class="regexp">/transmissiond</span>
-</code></pre><p><strong>8.设置开机自启</strong></p>
-<pre><code>chkconfig --<span class="built_in">add</span> transmissiond
-chkconfig --level <span class="number">345</span> transmissiond <span class="keyword">on</span>
-</code></pre><p><strong>9.设置transmission</strong></p>
-<pre><code><span class="class"><span class="keyword">service</span> <span class="title">transmissiond</span> start</span>
-</code></pre><p>输入以上命令后会出现[<strong><em>OK</em></strong>]，并自动生成配置文件，此时输入以下命令停止transmission(transmission结束时会覆盖配置文件，不停止就编辑的话就是在做无用功…..)</p>
-<pre><code><span class="class"><span class="keyword">service</span> <span class="title">transmissiond</span> stop</span>
-</code></pre><p>同样也会出现[<strong><em>OK</em></strong>]，输入下面的命令编辑配置文件(settings.json)</p>
-<pre><code>vim <span class="regexp">/home/</span>transmission<span class="regexp">/.config/</span>transmission<span class="regexp">/settings.json</span>
-</code></pre><p>配置文件部分详解~(真的只是部分=w=</p>
-<pre><code><span class="string">"rpc-authentication-required"</span>: <span class="literal">true</span>,           <span class="comment">//开启web登录验证</span>
-<span class="string">"rpc-enabled"</span>: <span class="literal">true</span>,            <span class="comment">//开启web端操作</span>
-<span class="string">"rpc-password"</span>: <span class="string">"{e62f5ae3a1df1563049deeee1f2e4ebe4dc7106dSJFoVuEb"</span>,         <span class="comment">//web端登录密码(已加密),修改后自动加密，可以直接修改</span>
-<span class="string">"rpc-port"</span>: <span class="number">9091</span>,             <span class="comment">//web端登录端口</span>
-<span class="string">"rpc-username"</span>: <span class="string">"username"</span>,              <span class="comment">//web端登录用户名</span>
-<span class="string">"rpc-whitelist"</span>: <span class="string">"127.0.0.1"</span>,           <span class="comment">//登录IP白名单</span>
-<span class="string">"rpc-whitelist-enabled"</span>: <span class="literal">false</span>,         <span class="comment">//登录验证IP，安装后默认开启，记得关闭，或者设置IP白名单</span>
-</code></pre><p>其它配置web端就可以设置。。。。就不介绍了</p>
-<p>web端登录地址为： <a href="http://你的IP:你设置的端口，如http://127.0.0.1:9091，之后输入帐号密码即可" target="_blank" rel="external">http://你的IP:你设置的端口，如http://127.0.0.1:9091，之后输入帐号密码即可</a></p>
-<h3 id="附录：transmission命令行常用命令(无详细使用方法)">附录：transmission命令行常用命令(无详细使用方法)</h3>
-<blockquote>
-<p>transmission-create——-创建torrent文件<br>transmission-edit———编辑torrent文件<br>transmission-cli———-限速功能<br>transmission-remote———-上传种子<br>transmission-show—————查询服务器上的种子详情</p>
-</blockquote>
-<hr>
-<p>1）intltool下载地址<br><a href="http://ftp.gnome.org/pub/gnome/sources/intltool/" target="_blank" rel="external">http://ftp.gnome.org/pub/gnome/sources/intltool/</a><br>2）libevent<br><a href="http://libevent.org/" target="_blank" rel="external">http://libevent.org/</a><br>3）transmission-2.77.tar.bz2<br><a href="http://www.transmissionbt.com/download/" target="_blank" rel="external">http://www.transmissionbt.com/download/</a></p>
-<hr>
-<p><img src="http://ww1.sinaimg.cn/large/ce179fd8jw1e7oqcfkfb8j212u0ijn2a.jpg" alt="webui截图"></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="前言：">前言：</h3>
-<p>不推荐使用一键安装脚本进行安装，通常这类脚本容易出现问题，譬如脚本中的链接失效，就会造成安装失败&lt;(=✖╭╮✖=)&gt;<br>而且脚本安装的transmission多数都是旧版，很旧的那种= =   旧版的transmission没有transmission-create功能，无法在终端创建torrent，web端更不能<br>因此推荐有一定linux基础的同志们~自己进行安装</p>
-]]>
-    
-    </summary>
-    
-      <category term="centos" scheme="http://blog.ainhaato.moe/tags/centos/"/>
-    
-      <category term="download" scheme="http://blog.ainhaato.moe/tags/download/"/>
-    
-      <category term="linux" scheme="http://blog.ainhaato.moe/tags/linux/"/>
-    
-  </entry>
+    <a href="/2014/rtorrent-rutorrent-on-centos/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          centos安装rtorrent/rutorrent
+        
+      </div>
+    </a>
   
-</feed>
+  
+    <a href="/2013/aria2-download-in-centos/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CentOS使用aria2实现迅雷离线批量下载</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  <section id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+</section>
+      
+      <aside id="sidebar">
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/GM脚本/">GM脚本</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aria2/">aria2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bt/">bt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/centos/">centos</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deluge/">deluge</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/download/">download</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firefox/">firefox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/greasemonkey/">greasemonkey</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/libtorrent/">libtorrent</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pt/">pt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rtorrent/">rtorrent</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rutorrent/">rutorrent</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tracker/">tracker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xbt-tracker/">xbt_tracker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/去广告/">去广告</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小说/">小说</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/繁简转换/">繁简转换</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/GM脚本/" style="font-size: 10.00px;">GM脚本</a><a href="/tags/aria2/" style="font-size: 10.00px;">aria2</a><a href="/tags/bt/" style="font-size: 10.00px;">bt</a><a href="/tags/centos/" style="font-size: 20.00px;">centos</a><a href="/tags/deluge/" style="font-size: 10.00px;">deluge</a><a href="/tags/download/" style="font-size: 13.33px;">download</a><a href="/tags/firefox/" style="font-size: 10.00px;">firefox</a><a href="/tags/greasemonkey/" style="font-size: 10.00px;">greasemonkey</a><a href="/tags/libtorrent/" style="font-size: 10.00px;">libtorrent</a><a href="/tags/linux/" style="font-size: 16.67px;">linux</a><a href="/tags/pt/" style="font-size: 10.00px;">pt</a><a href="/tags/rtorrent/" style="font-size: 10.00px;">rtorrent</a><a href="/tags/rutorrent/" style="font-size: 10.00px;">rutorrent</a><a href="/tags/tracker/" style="font-size: 10.00px;">tracker</a><a href="/tags/xbt-tracker/" style="font-size: 10.00px;">xbt_tracker</a><a href="/tags/去广告/" style="font-size: 10.00px;">去广告</a><a href="/tags/小说/" style="font-size: 10.00px;">小说</a><a href="/tags/繁简转换/" style="font-size: 10.00px;">繁简转换</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2014/centos-xbt-tracker/">centos6.x用xbt_tracker建立自己的tracker服务器</a>
+          </li>
+        
+          <li>
+            <a href="/2014/deluge-for-centos/">Centos 6.X 下编译安装deluge</a>
+          </li>
+        
+          <li>
+            <a href="/2014/rtorrent-rutorrent-on-centos/">centos安装rtorrent/rutorrent</a>
+          </li>
+        
+          <li>
+            <a href="/2014/gm-scripts-recommend/">firefox - GM脚本推荐</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://xiguabaobao.com" target="_blank">主题作者</a>
+          </li>
+        
+          <li>
+            <a href="http://reqianduan.com" target="_blank">热前端</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Ainhaato<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
+      .
+      Hosted on <a href="https://gitcafe.com/" target="_blank">GitHub & GitCafe</a>
+    </div>
+  </div>
+</footer>
+  </div>
+  <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+  <!-- totop start -->
+<div id="totop">
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+
+<!-- totop end -->
+
+<script>
+  var disqus_shortname = 'Ainhaato';
+  
+  var disqus_url = 'http://blog.ainhaato.moe/2014/gm-scripts-recommend/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<!-- 百度分享 start -->
+
+<div id="article-share-box" class="article-share-box">
+  <div id="bdshare" class="bdsharebuttonbox article-share-links">
+    <a class="article-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a class="article-share-weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a class="article-share-qq" data-cmd="sqq" title="分享到QQ"></a>
+    <a class="article-share-renren" data-cmd="renren" title="分享到人人网"></a>
+    <a class="article-share-more" data-cmd="more" title="更多"></a>
+  </div>
+</div>
+<script>window._bd_share_config={"common":{},"share":{"bdCustomStyle":"nocss.css"}};with(document)0[(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion="+~(-new Date()/36e5)];</script>
+
+<!-- 百度分享 end -->
+
+<script src="//libs.useso.com/js/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="/mediaelement/mediaelement-and-player.min.js"></script>
+<script>
+$('video,audio').mediaelementplayer({
+// if the <video width> is not specified, this is the default
+// 缺省视频宽度，如果没有指定则默认使用此处的值
+defaultVideoWidth: 480,
+// if the <video height> is not specified, this is the default
+// 缺省视频高度，如果没有指定则默认使用此处的值
+defaultVideoHeight: 270,
+// if set, overrides <video width>
+// 字面上理解应该是设置了这个值，
+// 就会覆盖 <video> 里设置的宽度而采用此处的值，
+// 但是 Hexo 里貌似无效，都会自动缩放到最适合比例
+videoWidth: -1,
+// if set, overrides <video height>
+// 同上
+videoHeight: -1,
+// width of audio player
+// 音频播放器宽度
+audioWidth: 400,
+// height of audio player
+// 音频播放器高度
+audioHeight: 30,
+// initial volume when the player starts
+// 初始化音量大小，0.8 就表示 80%
+startVolume: 0.8,
+// useful for <audio> player loops
+// 开启循环，通常在 <audio> 下较常用
+loop: false,
+// enables Flash and Silverlight to resize to content size
+// 允许 Flash 或者 SilverLight 重新调整播放器大小
+enableAutosize: true,
+// the order of controls you want on the control bar (and other plugins below)
+// 控制菜单选项
+features: ['playpause','progress','current','duration','tracks','volume','fullscreen'],
+// Hide controls when playing and mouse is not over the video
+// 是否总是显示控制菜单
+alwaysShowControls: false,
+// force iPad's native controls
+// 强制 iPad 使用内建控制器
+iPadUseNativeControls: false,
+// force iPhone's native controls
+// 强制 iPhone 使用内建控制器
+iPhoneUseNativeControls: false,
+// force Android's native controls
+// 强制 Android 使用内建控制器
+AndroidUseNativeControls: false,
+// forces the hour marker (##:00:00)
+// 强制显示小时数
+alwaysShowHours: false,
+// show framecount in timecode (##:00:00:00)
+// 显示帧数
+showTimecodeFrameCount: false,
+// used when showTimecodeFrameCount is set to true
+// 每秒帧数，仅当 showTimecodeFrameCount 为 True 时有效
+framesPerSecond: 25,
+// turns keyboard support on and off for this instance
+// 为当前窗口实例提供键盘支持
+enableKeyboard: true,
+// when this player starts, it will pause other players
+// 当前播放器开始播放后暂停所有其他的播放器
+pauseOtherPlayers: true,
+// array of keyboard commands
+// 按键动作？应该是绑定按键之类的
+keyActions: []
+});
+</script>
+
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+
+</div>
+</body>
+</html>
