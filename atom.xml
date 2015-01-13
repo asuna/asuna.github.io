@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.ainhaato.moe/"/>
-  <updated>2015-01-13T10:41:51.296Z</updated>
+  <updated>2015-01-13T14:09:18.384Z</updated>
   <id>http://blog.ainhaato.moe/</id>
   
   <author>
@@ -16,10 +16,10 @@
   
   <entry>
     <title><![CDATA[利用proxychains在终端使用socks5代理]]></title>
-    <link href="http://blog.ainhaato.moe/proxychains-socks5-shell/"/>
-    <id>http://blog.ainhaato.moe/proxychains-socks5-shell/</id>
+    <link href="http://blog.ainhaato.moe/proxychains-socks5-shell.html"/>
+    <id>http://blog.ainhaato.moe/proxychains-socks5-shell.html</id>
     <published>2014-11-22T07:46:52.000Z</published>
-    <updated>2015-01-13T05:55:32.000Z</updated>
+    <updated>2015-01-13T14:01:26.000Z</updated>
     <content type="html"><![CDATA[<p>最近用各种脚本下载东西的时候发现有的站点需要当地IP才能下，比如…..nico, youtube等；所以就找了下能在终端用socks5代理的工具，最后找到了proxychains，配合shadowsocks，从此再无压力=w=</p>
 <a id="more"></a>
 
@@ -56,14 +56,16 @@
     
       <category term="socks5" scheme="http://blog.ainhaato.moe/tags/socks5/"/>
     
+      <category term="教程" scheme="http://blog.ainhaato.moe/categories/tutorial/"/>
+    
   </entry>
   
   <entry>
     <title><![CDATA[换了个域名，我也要萌萌哒~]]></title>
-    <link href="http://blog.ainhaato.moe/moemoe/"/>
-    <id>http://blog.ainhaato.moe/moemoe/</id>
+    <link href="http://blog.ainhaato.moe/moemoe.html"/>
+    <id>http://blog.ainhaato.moe/moemoe.html</id>
     <published>2014-09-09T15:05:51.000Z</published>
-    <updated>2015-01-13T05:56:17.000Z</updated>
+    <updated>2015-01-13T14:02:33.000Z</updated>
     <content type="html"><![CDATA[<p>刚换了个新的域名：<strong>ainhaato.moe</strong><br>顿时感觉整个人都萌萌哒了<br>至于为什么是这个域名…其实只是我一时想不到，就采用了同学的建议(他喜欢的角色的名字)，其实我对这个角色也不讨厌，所以就注册了这个域名<br><a id="more"></a></p>
 <h3 id="角色介绍">角色介绍</h3>
 <p>日文名:アインハルト・ストラトス<br>罗马音:Ainhaato Suturattosu<br>英文名:Einhart Stratos<br>中文名:艾茵哈特·斯崔特斯<br>角色出处:《魔法少女奈叶ViVid》</p>
@@ -77,12 +79,14 @@
     
       <category term="moe" scheme="http://blog.ainhaato.moe/tags/moe/"/>
     
+      <category term="日常" scheme="http://blog.ainhaato.moe/categories/life/"/>
+    
   </entry>
   
   <entry>
     <title><![CDATA[青春之旅OP - 世界は恋に落ちている【附nice翻唱】]]></title>
-    <link href="http://blog.ainhaato.moe/Aoharaido-OP/"/>
-    <id>http://blog.ainhaato.moe/Aoharaido-OP/</id>
+    <link href="http://blog.ainhaato.moe/Aoharaido-OP.html"/>
+    <id>http://blog.ainhaato.moe/Aoharaido-OP.html</id>
     <published>2014-08-29T15:30:39.000Z</published>
     <updated>2015-01-13T09:11:51.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://ww2.sinaimg.cn/large/6abdaa9djw1ejtvtb48l3j20rs0s1doj.jpg" title="期间限定cover" target="_blank" rel="external"><img src="http://ww2.sinaimg.cn/large/6abdaa9djw1ejtvtb48l3j20rs0s1doj.jpg" alt="期间限定cover"></a></p>
@@ -135,10 +139,10 @@
   
   <entry>
     <title><![CDATA[python实用脚本集 - iScript]]></title>
-    <link href="http://blog.ainhaato.moe/iScript/"/>
-    <id>http://blog.ainhaato.moe/iScript/</id>
+    <link href="http://blog.ainhaato.moe/iScript.html"/>
+    <id>http://blog.ainhaato.moe/iScript.html</id>
     <published>2014-08-22T07:18:41.000Z</published>
-    <updated>2015-01-13T05:58:26.000Z</updated>
+    <updated>2015-01-13T14:03:56.000Z</updated>
     <content type="html"><![CDATA[<p><strong><a href="https://github.com/PeterDing/iScript" target="_blank" rel="external">iScript</a></strong>是Github上<a href="https://github.com/PeterDing" target="_blank" rel="external">PeterDing</a>大神写的一个脚本集，由多数的<a href="https://www.python.org/" target="_blank" rel="external">python</a>脚本和少数GM脚本组成。</p>
 <p>含有以下几个脚本：</p>
 <ul>
@@ -233,12 +237,16 @@
     
       <category term="下载" scheme="http://blog.ainhaato.moe/tags/%E4%B8%8B%E8%BD%BD/"/>
     
+      <category term="资源分享" scheme="http://blog.ainhaato.moe/categories/share/"/>
+    
+      <category term="工具" scheme="http://blog.ainhaato.moe/categories/share/tools/"/>
+    
   </entry>
   
   <entry>
     <title><![CDATA[补番进行时 - Noir]]></title>
-    <link href="http://blog.ainhaato.moe/noir/"/>
-    <id>http://blog.ainhaato.moe/noir/</id>
+    <link href="http://blog.ainhaato.moe/noir.html"/>
+    <id>http://blog.ainhaato.moe/noir.html</id>
     <published>2014-08-14T11:09:44.000Z</published>
     <updated>2015-01-13T10:40:09.000Z</updated>
     <content type="html"><![CDATA[<p>Noir —— 《黑街二人组》，本番讲述的是失去了过去的主人公夕雾香气与欧洲的黑社会舞台“杀手”米雷优一起合作杀手工作，组成了NOIR。为了找寻各自的记忆与真相，她们偷偷靠近迷一样的组织“索尔达”的影子。</p>
@@ -290,10 +298,10 @@
   
   <entry>
     <title><![CDATA[centos6.x用xbt_tracker建立自己的tracker服务器]]></title>
-    <link href="http://blog.ainhaato.moe/centos-xbt-tracker/"/>
-    <id>http://blog.ainhaato.moe/centos-xbt-tracker/</id>
+    <link href="http://blog.ainhaato.moe/centos-xbt-tracker.html"/>
+    <id>http://blog.ainhaato.moe/centos-xbt-tracker.html</id>
     <published>2014-07-31T05:34:57.000Z</published>
-    <updated>2015-01-13T05:21:26.000Z</updated>
+    <updated>2015-01-13T14:06:50.000Z</updated>
     <content type="html"><![CDATA[<p>昨天在由于极影抽风，只好把资源发在动漫花园，但是极影的tracker以及备用tracker都无法使用，最后又到nyaa发了个种，才让种子活过来；为了避免”历史总是惊人的相似”的情况….就自己建了个tracker</p>
 <blockquote>
 <p><a href="http://tracker.kuroy.me:5944/announce" target="_blank" rel="external">http://tracker.kuroy.me:5944/announce</a></p>
@@ -383,14 +391,16 @@ mysql -<span class="keyword">u</span>数据用户名 -<span class="keyword">p</s
     
       <category term="p2p" scheme="http://blog.ainhaato.moe/tags/p2p/"/>
     
+      <category term="教程" scheme="http://blog.ainhaato.moe/categories/tutorial/"/>
+    
   </entry>
   
   <entry>
     <title><![CDATA[Centos6.x升级Python至2.7]]></title>
-    <link href="http://blog.ainhaato.moe/centos-update-python27/"/>
-    <id>http://blog.ainhaato.moe/centos-update-python27/</id>
+    <link href="http://blog.ainhaato.moe/centos-update-python27.html"/>
+    <id>http://blog.ainhaato.moe/centos-update-python27.html</id>
     <published>2014-07-22T03:10:40.000Z</published>
-    <updated>2015-01-13T06:01:35.000Z</updated>
+    <updated>2015-01-13T14:07:01.000Z</updated>
     <content type="html"><![CDATA[<p>默认安装的Python2.6已经无法满足大多数脚本的需求….因此需要升级到2.7(3暂时不打算用)，但是升级后yum, pip和easy_install无法正常使用，虽然后来搞定了，但还是记录下来(其实是好久没更新博客….来一篇凑个数233)</p>
 <a id="more"></a>
 
@@ -442,14 +452,16 @@ easy_install pip
     
       <category term="upgrade" scheme="http://blog.ainhaato.moe/tags/upgrade/"/>
     
+      <category term="教程" scheme="http://blog.ainhaato.moe/categories/tutorial/"/>
+    
   </entry>
   
   <entry>
     <title><![CDATA[dropbox-uploader 一个操作dropbox的bash脚本]]></title>
-    <link href="http://blog.ainhaato.moe/dropbox-uploader/"/>
-    <id>http://blog.ainhaato.moe/dropbox-uploader/</id>
+    <link href="http://blog.ainhaato.moe/dropbox-uploader.html"/>
+    <id>http://blog.ainhaato.moe/dropbox-uploader.html</id>
     <published>2014-04-16T15:33:00.000Z</published>
-    <updated>2015-01-13T06:02:51.000Z</updated>
+    <updated>2015-01-13T14:06:09.000Z</updated>
     <content type="html"><![CDATA[<ul>
 <li>Dropbox首先是一个网络存储服务（类似百度网盘），一个网络备份工具，也是一个文件同步工具。Dropbox提供网络存储空间，新注册的用户拥有2G免费空间（或者2.5G免费空间）。你可以安装Dropbox客户端，然后通过客户端同步上传文件到Dropbox的云空间上。</li>
 <li>Dropbox Uploader 是一个bash script，可以用它在dropbox上上传，下载，删除文件</li>
@@ -505,14 +517,18 @@ git clone http<span class="variable">s:</span>//github.<span class="keyword">com
     
       <category term="bash" scheme="http://blog.ainhaato.moe/tags/bash/"/>
     
+      <category term="资源分享" scheme="http://blog.ainhaato.moe/categories/share/"/>
+    
+      <category term="工具" scheme="http://blog.ainhaato.moe/categories/share/tools/"/>
+    
   </entry>
   
   <entry>
     <title><![CDATA[megacmd - 一个mega.co.nz的命令行工具]]></title>
-    <link href="http://blog.ainhaato.moe/megacmd/"/>
-    <id>http://blog.ainhaato.moe/megacmd/</id>
+    <link href="http://blog.ainhaato.moe/megacmd.html"/>
+    <id>http://blog.ainhaato.moe/megacmd.html</id>
     <published>2014-04-16T13:21:07.000Z</published>
-    <updated>2015-01-13T06:03:33.000Z</updated>
+    <updated>2015-01-13T14:03:21.000Z</updated>
     <content type="html"><![CDATA[<ul>
 <li>mega.co.nz是一个提供50G免费存储空间的国外网盘，前身为megaupload</li>
 <li>megacmd是一个可以用命令行操作mega网盘的工具，可以进行上传，下载，建立文件夹，删除等操作，基本网页上能做的它都能做到</li>
@@ -567,14 +583,20 @@ GOPATH=/tmp/ <span class="keyword">make</span>
     
     </summary>
     
+      <category term="cli" scheme="http://blog.ainhaato.moe/tags/cli/"/>
+    
+      <category term="资源分享" scheme="http://blog.ainhaato.moe/categories/share/"/>
+    
+      <category term="工具" scheme="http://blog.ainhaato.moe/categories/share/tools/"/>
+    
   </entry>
   
   <entry>
     <title><![CDATA[libev/nodejs版shadowsocks安装(Centos)]]></title>
-    <link href="http://blog.ainhaato.moe/two-method-ss-centos/"/>
-    <id>http://blog.ainhaato.moe/two-method-ss-centos/</id>
+    <link href="http://blog.ainhaato.moe/two-method-ss-centos.html"/>
+    <id>http://blog.ainhaato.moe/two-method-ss-centos.html</id>
     <published>2014-04-13T12:01:45.000Z</published>
-    <updated>2015-01-13T06:05:25.000Z</updated>
+    <updated>2015-01-13T13:57:22.000Z</updated>
     <content type="html"><![CDATA[<h2 id="简介">简介</h2>
 <p>shadowsocks是一个轻量级的隧道代理，用于突破功夫net的，让使用者自由的畅游因特网。<br>第一个版本由clowwindy用Python编写、后续有很多其他的移植版本。如nodejs，libev，shadowsocks-go等….</p>
 <a id="more"></a>
@@ -642,10 +664,10 @@ nohup node server.js &gt;</span> log &amp;</span>
   
   <entry>
     <title><![CDATA[换个主机换个主题]]></title>
-    <link href="http://blog.ainhaato.moe/storage-change/"/>
-    <id>http://blog.ainhaato.moe/storage-change/</id>
+    <link href="http://blog.ainhaato.moe/storage-change.html"/>
+    <id>http://blog.ainhaato.moe/storage-change.html</id>
     <published>2014-04-09T17:22:32.000Z</published>
-    <updated>2015-01-13T06:07:22.000Z</updated>
+    <updated>2015-01-13T13:58:38.000Z</updated>
     <content type="html"><![CDATA[<p>感觉之前用的vps最近越来越慢，于是就换了个主机：hostker<br>自带CDN，在线文件管理，编辑代码等方便实用的功能，并且客服服务态度很好，可搞基(大雾<br>速度比起之前用的主机和vps好得多<br>目前为止很满意，估计短时间内不会再换了_(:3 」∠ )_</p>
 <h2><a id="more"></a></h2>
 <h3 id="hostker宣传视频">hostker宣传视频</h3>
@@ -660,10 +682,10 @@ nohup node server.js &gt;</span> log &amp;</span>
   
   <entry>
     <title><![CDATA[Centos 6.X 下编译安装deluge]]></title>
-    <link href="http://blog.ainhaato.moe/deluge-for-centos/"/>
-    <id>http://blog.ainhaato.moe/deluge-for-centos/</id>
+    <link href="http://blog.ainhaato.moe/deluge-for-centos.html"/>
+    <id>http://blog.ainhaato.moe/deluge-for-centos.html</id>
     <published>2014-04-05T14:06:00.000Z</published>
-    <updated>2015-01-13T05:22:15.000Z</updated>
+    <updated>2015-01-13T14:06:39.000Z</updated>
     <content type="html"><![CDATA[<h3 id="简介">简介</h3>
 <p>Deluge 是一个通过PyGTK建立图形界面的BitTorrent客户端，后端使用libtorrent。Deluge可以在多个平台上使用，如Linux，*BSD，Mac OS和其他类UNIX操作系统。该项目的目标是要在GTK框架上建立一个原生和全功能的BitTorrent客户端。<br>Deluge由ubuntuforum的两位成员建立，Zach Tibbitts 和 Alan Zakai。在过去，它曾是Google Code的项目。<br>在过去的开发，Deluge曾经被命名为gTorrent，意思是 GNOME 下的BitTorrent客户端。当第一个版本在2006年9月25日释出的时候，被重新命名为Deluge，以避免别人误会gTorrent只能用于GNOME。<br>利用0.4.x代码重写的0.5穏定版在2007年3月18日释出。重写代码的目的是要令代码更加优良。而0.5.1.1版支持数据加密，peer exchange，Si prefixes和upnp。</p>
 <a id="more"></a>
@@ -711,14 +733,16 @@ useradd deluge -g deluge <span class="operator">-s</span> /bin/<span class="lite
     
       <category term="p2p" scheme="http://blog.ainhaato.moe/tags/p2p/"/>
     
+      <category term="教程" scheme="http://blog.ainhaato.moe/categories/tutorial/"/>
+    
   </entry>
   
   <entry>
     <title><![CDATA[停止出售代理服务]]></title>
-    <link href="http://blog.ainhaato.moe/ss-proxy-closed/"/>
-    <id>http://blog.ainhaato.moe/ss-proxy-closed/</id>
+    <link href="http://blog.ainhaato.moe/ss-proxy-closed.html"/>
+    <id>http://blog.ainhaato.moe/ss-proxy-closed.html</id>
     <published>2014-03-19T16:30:58.000Z</published>
-    <updated>2015-01-13T06:08:28.000Z</updated>
+    <updated>2015-01-13T13:59:14.000Z</updated>
     <content type="html"><![CDATA[<h3 id="现状&amp;原因">现状&amp;原因</h3>
 <p>自从几天前开始出售shadowsocks代理到现在，已经有几位联系我购买，目前为止不赚也不亏…..这也是我最初的目标：不亏即可</p>
 <p>至于停止出售的原因。。。有点奇葩0.0 | 那就是：累感不爱<br>不知道为啥最近感觉累感不爱，没有动力去解答客户的问题，思前想后还是决定停止出售代理服务</p>
@@ -735,10 +759,10 @@ useradd deluge -g deluge <span class="operator">-s</span> /bin/<span class="lite
   
   <entry>
     <title><![CDATA[出售新加坡，美国shadowsocks代理]]></title>
-    <link href="http://blog.ainhaato.moe/ss-sales/"/>
-    <id>http://blog.ainhaato.moe/ss-sales/</id>
+    <link href="http://blog.ainhaato.moe/ss-sales.html"/>
+    <id>http://blog.ainhaato.moe/ss-sales.html</id>
     <published>2014-03-13T09:31:57.000Z</published>
-    <updated>2015-01-13T06:09:40.000Z</updated>
+    <updated>2015-01-13T13:58:56.000Z</updated>
     <content type="html"><![CDATA[<h4 id="出售新加坡和美国的shadowsocks，日本线路待资金充足后添加………-(如果有人能资助的话应该很快就能开日本线路了吧orz…">出售新加坡和美国的shadowsocks，日本线路待资金充足后添加……….(如果有人能资助的话应该很快就能开日本线路了吧orz…</h4>
 <h3 id="Update">Update</h3>
 <p>2014.03.15 —— 美国线路添加vpn支持</p>
@@ -772,10 +796,10 @@ useradd deluge -g deluge <span class="operator">-s</span> /bin/<span class="lite
   
   <entry>
     <title><![CDATA[分享一枚shadowsocks代理]]></title>
-    <link href="http://blog.ainhaato.moe/public-shadowsocks/"/>
-    <id>http://blog.ainhaato.moe/public-shadowsocks/</id>
+    <link href="http://blog.ainhaato.moe/public-shadowsocks.html"/>
+    <id>http://blog.ainhaato.moe/public-shadowsocks.html</id>
     <published>2014-03-09T18:56:01.000Z</published>
-    <updated>2015-01-13T06:10:25.000Z</updated>
+    <updated>2015-01-13T14:01:14.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>server:ss.kuroy.me<br>port:8388<br>passwd:Base64(“a2lyYWtpcmE=”)<br>encryption method：aes-256-cfb</p>
 </blockquote>
@@ -790,14 +814,16 @@ useradd deluge -g deluge <span class="operator">-s</span> /bin/<span class="lite
     
       <category term="shadowsocks" scheme="http://blog.ainhaato.moe/tags/shadowsocks/"/>
     
+      <category term="教程" scheme="http://blog.ainhaato.moe/categories/tutorial/"/>
+    
   </entry>
   
   <entry>
     <title><![CDATA[2014春季预定追番计划]]></title>
-    <link href="http://blog.ainhaato.moe/2014sp/"/>
-    <id>http://blog.ainhaato.moe/2014sp/</id>
+    <link href="http://blog.ainhaato.moe/2014sp.html"/>
+    <id>http://blog.ainhaato.moe/2014sp.html</id>
     <published>2014-02-02T16:38:49.000Z</published>
-    <updated>2015-01-13T06:11:25.000Z</updated>
+    <updated>2015-01-13T14:07:56.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://ww1.sinaimg.cn/large/e57da4e9jw1ed5hbfq012j20uo274b29.jpg" target="_blank" rel="external">新番列表</a></p>
 <h2 id="预定计划">预定计划</h2>
 <p>1.妖尾<br>之前由于漫画进度的问题停更了,既然恢复了那就继续追下去吧0w0<br>2.GJ部@<br>轻松的日常番是必须~<br>3.约会大作战<br>继续看妹妹<br>4.No game, No life<br>记得同学说看了小说感觉不错<br>5.噬魂师NOT！<br>刚又看一遍噬魂师，还是觉得女主CV很好啊，不知为何很多人觉得不好= =<br>6.破刃之剑<br>像空之境界一样剧场版剧情TV化？<br>7.极黑的布伦希尔特<br>漫画nice<br>8.Love Live! 第二季<br>既然前作看完了，那就继续追吧<br>9.星刻的龙骑士<br>小说刚看到第二卷<br>10.恶魔之谜<br>听说是百合？！大爱！！<br>11.棺姬嘉依卡<br>骨头社～<br>12.虫师<br>不解释…</p>
@@ -823,14 +849,16 @@ useradd deluge -g deluge <span class="operator">-s</span> /bin/<span class="lite
     
       <category term="2014春" scheme="http://blog.ainhaato.moe/tags/2014%E6%98%A5/"/>
     
+      <category term="日常" scheme="http://blog.ainhaato.moe/categories/life/"/>
+    
   </entry>
   
   <entry>
     <title><![CDATA[2014 - 新年快乐！]]></title>
-    <link href="http://blog.ainhaato.moe/happy-new-year-2014/"/>
-    <id>http://blog.ainhaato.moe/happy-new-year-2014/</id>
+    <link href="http://blog.ainhaato.moe/happy-new-year-2014.html"/>
+    <id>http://blog.ainhaato.moe/happy-new-year-2014.html</id>
     <published>2014-01-29T16:00:00.000Z</published>
-    <updated>2015-01-13T06:12:03.000Z</updated>
+    <updated>2015-01-13T14:05:02.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://ww3.sinaimg.cn/large/e57da4e9jw1eczkuqdzblj20rs0t5tjo.jpg" title="恭贺新年" target="_blank" rel="external"><img src="http://ww3.sinaimg.cn/large/e57da4e9jw1eczkuqdzblj20rs0t5tjo.jpg" alt="恭贺新年"></a><br><a id="more"></a></p>
 <p>新的一年又来了，忘却所有不开心的事，在家和家人共度新年。<br>祝没能回家的人……..自己玩的愉快；或者…和基(姬)友玩♂♀的愉快。<br>祝所有人新年快乐，心想事成！<br><a href="http://ww2.sinaimg.cn/large/dce4a41ejw1eczl4y1p37j20vw0mt11f.jpg" title="新年快乐" target="_blank" rel="external"><img src="http://ww2.sinaimg.cn/large/dce4a41ejw1eczl4y1p37j20vw0mt11f.jpg" alt="新年快乐"></a></p>
 <p><a href="http://ww3.sinaimg.cn/large/dce48faejw1eczl82w3boj21kw156e1e.jpg" title="新春快乐" target="_blank" rel="external"><img src="http://ww3.sinaimg.cn/large/dce48faejw1eczl82w3boj21kw156e1e.jpg" alt="新春快乐"></a><br>PS：其实对我来说新年似乎并不值得开心呢orz……..</p>
@@ -840,14 +868,16 @@ useradd deluge -g deluge <span class="operator">-s</span> /bin/<span class="lite
     
     </summary>
     
+      <category term="日常" scheme="http://blog.ainhaato.moe/categories/life/"/>
+    
   </entry>
   
   <entry>
     <title><![CDATA[centos安装rtorrent/rutorrent]]></title>
-    <link href="http://blog.ainhaato.moe/rtorrent-rutorrent-on-centos/"/>
-    <id>http://blog.ainhaato.moe/rtorrent-rutorrent-on-centos/</id>
+    <link href="http://blog.ainhaato.moe/rtorrent-rutorrent-on-centos.html"/>
+    <id>http://blog.ainhaato.moe/rtorrent-rutorrent-on-centos.html</id>
     <published>2014-01-19T10:12:57.000Z</published>
-    <updated>2015-01-13T05:52:56.000Z</updated>
+    <updated>2015-01-13T14:01:02.000Z</updated>
     <content type="html"><![CDATA[<h1 id="rtorrent介绍">rtorrent介绍</h1>
 <p>rtorrent是利用libtorrent库创建的Ncurses客户端程序。使用C++语言编写   的rtorrent除了能够提供基于GUI界面的客户端所具备的功能之外，其速度和效率更为用户所推崇。</p>
 <h1 id="rutorrent介绍">rutorrent介绍</h1>
@@ -935,14 +965,16 @@ mv plugins <span class="regexp">/home/</span>wwwroot<span class="regexp">/rutorr
     
       <category term="p2p" scheme="http://blog.ainhaato.moe/tags/p2p/"/>
     
+      <category term="教程" scheme="http://blog.ainhaato.moe/categories/tutorial/"/>
+    
   </entry>
   
   <entry>
     <title><![CDATA[图床推荐 - Picpar]]></title>
-    <link href="http://blog.ainhaato.moe/picpar/"/>
-    <id>http://blog.ainhaato.moe/picpar/</id>
+    <link href="http://blog.ainhaato.moe/picpar.html"/>
+    <id>http://blog.ainhaato.moe/picpar.html</id>
     <published>2014-01-17T15:10:52.000Z</published>
-    <updated>2015-01-13T05:52:31.000Z</updated>
+    <updated>2015-01-13T14:01:55.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://blog.kuroy.me/usr/uploads/2014/01/3405467735.png" title="Picpar首页" target="_blank" rel="external"><img src="http://blog.kuroy.me/usr/uploads/2014/01/3405467735.png" alt="Picpar首页"></a></p>
 <h2 id="介绍">介绍</h2>
 <p>Picpar是一个免费的图片上传分享网站，虽说是个国外站点，但在国内的速度也是非常不错；在上传图片之后可以获得图片的页面链接<a href="http://picpar.com/BI5" title="like this" target="_blank" rel="external">like this</a>,直链，以及bbcode代码，并且图片可以加密码；Picpar支持常用的图片格式，单文件限制不明，但是5M试过没有问题，更大的图请自测。(迷之声：似乎上传某些糟糕的图也没关系….)</p>
@@ -968,14 +1000,16 @@ mv plugins <span class="regexp">/home/</span>wwwroot<span class="regexp">/rutorr
     
       <category term="Picpar" scheme="http://blog.ainhaato.moe/tags/Picpar/"/>
     
+      <category term="推荐" scheme="http://blog.ainhaato.moe/categories/recommend/"/>
+    
   </entry>
   
   <entry>
     <title><![CDATA[2014年百合神番---樱Trick]]></title>
-    <link href="http://blog.ainhaato.moe/sakura-trick/"/>
-    <id>http://blog.ainhaato.moe/sakura-trick/</id>
+    <link href="http://blog.ainhaato.moe/sakura-trick.html"/>
+    <id>http://blog.ainhaato.moe/sakura-trick.html</id>
     <published>2014-01-14T17:04:39.000Z</published>
-    <updated>2015-01-13T05:51:31.000Z</updated>
+    <updated>2015-01-13T14:00:42.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://ww2.sinaimg.cn/large/6abdaa9djw1ejmkofhgzaj20zk0k041u.jpg&quot;" target="_blank" rel="external"><img src="http://ww2.sinaimg.cn/large/6abdaa9djw1ejmkofhgzaj20zk0k041u.jpg" alt="Sakura_Trick_Logo"></a></p>
 <a id="more"></a>
 
@@ -1020,6 +1054,8 @@ mv plugins <span class="regexp">/home/</span>wwwroot<span class="regexp">/rutorr
       <category term="吐槽" scheme="http://blog.ainhaato.moe/tags/%E5%90%90%E6%A7%BD/"/>
     
       <category term="动漫" scheme="http://blog.ainhaato.moe/tags/%E5%8A%A8%E6%BC%AB/"/>
+    
+      <category term="动漫相关" scheme="http://blog.ainhaato.moe/categories/acg/"/>
     
   </entry>
   
