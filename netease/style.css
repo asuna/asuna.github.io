@@ -1,0 +1,28 @@
+/*html5mp3*/
+.audiojsqq audio{position:absolute;left:-1px;}
+.audiojsqq{overflow:hidden;width:420px;height:60px;background:#fff;margin:20px auto;-webkit-box-shadow:1px 1px 8px rgba(0,0,0,0.3);-moz-box-shadow:1px 1px 8px rgba(0,0,0,0.3);box-shadow:1px 1px 8px rgba(0,0,0,0.3);font-size:12px;font-family:monospace;-o-box-shadow:1px 1px 8px rgba(0,0,0,0.3);}
+.playerimg {float: left;width: 60px;height: 60px;}
+.audiojsqq .play-pauseqq{float:left;overflow:hidden;margin:0;width:25px;}
+.audiojsqq p{display:none;margin:0;cursor:pointer;}
+.audiojsqq p i {color: #ffffff;}
+.audiojsqq .playqq{display:block;width:36px;height:36px;position:absolute;margin-left:-48px;margin-top:13px;}
+.audiojsqq .playqq i{width:36px;height:36px;display:block;background: url(images/play.png);}
+.audiojsqq .playername{margin: 10px 10px 0;float: left;}
+.audiojsqq .playername .player-icon{float: left;width: 20px;margin-right: 5px;display: block;}
+.audiojsqq .scrubberqq{position:relative;float:left;overflow:hidden;margin:15px 10px 0;width:260px;height:2px;border-bottom:0;border-left:0;background:#ddd;}
+.audiojsqq .progressqq{position:absolute;top:0;left:0;z-index:1;width:0;height:2px;background:#d50000;}
+.audiojsqq .loadedqq{position:absolute;top:0;left:0;width:0;height:2px;background:#ddd;}
+.audiojsqq .timeqq{float:left;margin-top: 8px;color:#999;}
+.audiojsqq .timeqq em{padding:0 2px 0 0;color:#999;font-style:normal;}
+.audiojsqq .timeqq strong{padding:0 0 0 2px;font-weight:normal;}
+.audiojsqq .error-messageqq{float:left;display:none;overflow:hidden;margin:5px 10px;color:#fff;text-overflow:ellipsis;white-space:nowrap;-o-text-overflow:ellipsis;-icab-text-overflow:ellipsis;-khtml-text-overflow:ellipsis;-moz-text-overflow:ellipsis;-webkit-text-overflow:ellipsis;}
+.audiojsqq .error-messageqq a{padding-bottom:1px;border-bottom:1px solid #999;color:#eee;text-decoration:none;white-space:wrap;}
+.playingqq .playqq,.playingqq .loadingqq,.playingqq .errorqq{display:none;}
+.playingqq .pauseqq{display:block;position:absolute;margin-left:-30px;margin-top:30px;width:25px;height:25px;}
+.playingqq .pauseqq i{background: url(images/pause.png);display:block;width:25px;height:25px;background-size:25px 25px;}
+.loadingqq .playqq,.loadingqq .pauseqq,.loadingqq .errorqq{display:none;}
+.loadingqq .loadingqq{display:block;}
+.errorqq .timeqq,.errorqq .playqq,.errorqq .pauseqq,.errorqq .scrubberqq,.errorqq .loadingqq{display:none;}
+.errorqq .errorqq{display:block;}
+.errorqq .play-pauseqq p{cursor:auto;}
+.errorqq .error-messageqq{display:block;}
