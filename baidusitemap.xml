@@ -3,6 +3,59 @@
 
     
   <url>
+    <loc>http://blog.ainhaato.moe/bpcs-uploader/</loc>
+    <lastmod>2015-01-15T12:22:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>百度网盘上传脚本bpcs_uploader</title>
+        <pubTime>2013-07-29T14:04:37.000Z</pubTime>
+        
+        <tag>百度 </tag>
+         
+        <tag>网盘 </tag>
+         
+        <tag>upload </tag>
+         
+        <tag>上传 </tag>
+         
+         <content><![CDATA[<p>昨天在github上找到一个叫bpcs_uploader的项目，可以使Linux在终端向百度网盘上传文件….下面介绍如何使用这个上传脚本<br><strong>脚本主要有3个限制:</strong></p>
+<p><ul><br>    <li>1.授权只能用一个月（有PCS API和app secret的话可以获得10年的授权期限）</li><br>    <li>单文件1G（百度网盘的单文件限制）</li><br>    <li>基于PHP因此需要先搭建好PHP环境</li><br></ul><br><a id="more"></a></p>
+<p>首先需要安装git，安装方法如下:</p>
+<p><pre class="lang:default decode:true">yum install curl curl-devel zlib-devel openssl-devel perl perl-devel cpio expat-devel gettext-devel    //安装依赖包<br>wget <a href="http://www.codemonkey.org.uk/projects/git-snapshots/git/git-latest.tar.gz" target="_blank" rel="external">http://www.codemonkey.org.uk/projects/git-snapshots/git/git-latest.tar.gz</a><br>tar xzvf git-latest.tar.gz<br>cd git-*<br>autoconf<br>./configure<br>make &amp;&amp; make install</pre><br>安装完毕后可以用<strong><span style="color: #ff0000;">git -version</span></strong>查看git版本</p>
+<hr>
+
+<p>bpcs_uploader项目主页:<a title="bpcs_uploader" href="https://github.com/oott123/bpcs_uploader" target="_blank" rel="nofollow">https://github.com/oott123/bpcs_uploader</a></p>
+<p>安装完git后，用git把文件下到本地…</p>
+<p><pre class="lang:default decode:true">git clone <a href="https://github.com/oott123/bpcs_uploader.git" target="_blank" rel="external">https://github.com/oott123/bpcs_uploader.git</a></pre><br><a title="clone项目" href="http://ww4.sinaimg.cn/large/cdd3e390jw1e72fvb0k1ej20fn03p0t6.jpg" rel="external" target="_blank"><img alt="" src="http://ww4.sinaimg.cn/large/cdd3e390jw1e72fvb0k1ej20fn03p0t6.jpg"></a></p>
+<p><pre class="lang:default decode:true">mv bpcs_uploader bd  //重命名文件夹。。(个人习惯…名字简单点好=w=)<br>cd bd<br>chmod +x bpcs_uploader.php     //给予执行权限…<br>./*.php init   //脚本初始化</pre><br><a title="初始化脚本" href="http://ww2.sinaimg.cn/large/cdd3e390jw1e72g037wz8j20ht04jq3s.jpg" rel="external" target="_blank"><img alt="" src="http://ww2.sinaimg.cn/large/cdd3e390jw1e72g037wz8j20ht04jq3s.jpg"></a><br>这里直接Y (翻译君:开始初始化脚本，如果之前已经配置过，原配置将被覆盖)</p>
+<p><a title="输入App Key" href="http://ww4.sinaimg.cn/large/cdfc40eajw1e72g2dioeij20ht03oq3o.jpg" rel="external" target="_blank"><img alt="" src="http://ww4.sinaimg.cn/large/cdfc40eajw1e72g2dioeij20ht03oq3o.jpg"></a><br>这里的App Key可以按回车直接使用作者提供的，也可以到BAE（<a title="BAE" href="http://developer.baidu.com" rel="external" target="_blank">http://developer.baidu.com</a>）新建应用获取</p>
+<p><a href="http://ww3.sinaimg.cn/large/ce0d98b2jw1e72g41us0zj20fa03u3ym.jpg" rel="external" target="_blank"><img alt="" src="http://ww3.sinaimg.cn/large/ce0d98b2jw1e72g41us0zj20fa03u3ym.jpg"></a><br><a title="输入App Folder Name" href="http://ww3.sinaimg.cn/large/ce179fd8jw1e72g7qq9tej20hu0470t7.jpg" rel="external" target="_blank"><img alt="" src="http://ww3.sinaimg.cn/large/ce179fd8jw1e72g7qq9tej20hu0470t7.jpg"></a><br>如果使用的是默认的App Key，那么这里只要回车即可…..</p>
+<p>如果用的是自己的App Key….就先去BAE创建个PCS API<br><a title="开启PCS API" href="http://ww2.sinaimg.cn/large/ce0d98b2jw1e72g99v1ajj20qu0dxgnd.jpg" rel="external" target="_blank"><img alt="" src="http://ww2.sinaimg.cn/large/ce0d98b2jw1e72g99v1ajj20qu0dxgnd.jpg" width="70%" height="70%"></a></p>
+<p>PCS API的文件目录设置就是要填的App Floder Name（必须一致）</p>
+<p><a title="输入access_token" href="http://ww1.sinaimg.cn/large/cdfc40eajw1e72gbo5p9dj20hs037wf1.jpg" rel="external" target="_blank"><img alt="" src="http://ww1.sinaimg.cn/large/cdfc40eajw1e72gbo5p9dj20hs037wf1.jpg"></a></p>
+<p>如果用的是默认的api，那就到这个地址获取access token并填入：<a href="https://openapi.baidu.com/oauth/2.0/authorize?response_type=token&amp;client_id=L6g70tBRRIXLsY0Z3HwKqlRE&amp;redirect_uri=oob&amp;scope=netdisk" target="_blank" rel="nofollow">https://openapi.baidu.com/oauth/ … i=oob&amp;scope=netdisk</a></p>
+<p>如果用的是自己的那就把上面那个地址种的client_id换成自己的App Key，用自己的百度账号登录并授权后地址栏里会有access_token这段，把它输入到终端<br><a title="获取access_token" href="http://ww2.sinaimg.cn/large/cdfc40eajw1e72gefhnp8j20wp01mdgc.jpg" rel="external" target="_blank"><img alt="" src="http://ww2.sinaimg.cn/large/cdfc40eajw1e72gefhnp8j20wp01mdgc.jpg" width="70%" height="70%"></a><br>如果结果如下，就说明配置成功了，可以看到脚本读取到了你百度网盘的容量信息<br><a title="配置完成" href="http://ww1.sinaimg.cn/large/ce0d98b2jw1e72gi1qyfrj20hu02eglz.jpg" rel="external" target="_blank"><img alt="" src="http://ww1.sinaimg.cn/large/ce0d98b2jw1e72gi1qyfrj20hu02eglz.jpg"></a></p>
+<hr>
+
+<p><span style="font-size: large;"><strong>脚本详细使用方法：</strong></span></p>
+<p><pre class="lang:default decode:true">./bpcs_uploader.php quota    //查看容量（配额）<br>./bpcs_uploader.php upload [path_local] [path_remote]   //上传文件<br>./bpcs_uploader.php download [path_local] [path_remote]     //下载文件<br>./bpcs_uploader.php delete [path_remote]     //删除文件<br>./bpcs_uploader.php fetch [path_remote] [path_to_fetch]     //离线下载</pre><br><span style="font-size: large;"><strong> 上传实例：</strong></span><br><a title="上传实例" href="http://ww2.sinaimg.cn/large/ce0d98b2jw1e72glx5283j20hv074mz2.jpg" rel="external" target="_blank"><img alt="" src="http://ww2.sinaimg.cn/large/ce0d98b2jw1e72glx5283j20hv074mz2.jpg"></a><br><a title="上传实例2" href="http://ww4.sinaimg.cn/large/ce179fd8jw1e72gmufy4vj20u5019748.jpg" rel="external" target="_blank"><img alt="" src="http://ww4.sinaimg.cn/large/ce179fd8jw1e72gmufy4vj20u5019748.jpg" width="70%" height="70%"></a><br>上传速度取决于你和百度的连接性= = 目测这台服务器速度不怎样</p>
+<p><span id="pv-float-bar-container" style="top: 2596px; right: 230px; display: block;"></span></p>
+]]></content>
+         
+         
+           
+             
+              <breadCrumb title="资源分享" url="http://blog.ainhaato.moe/categories/share/"/>
+          
+             
+              <breadCrumb title="工具" url="http://blog.ainhaato.moe/categories/share/tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.ainhaato.moe/Aoharaido-OP/</loc>
     <lastmod>2015-01-15T11:45:54.000Z</lastmod>
     <data>
@@ -334,59 +387,6 @@ bt-save-metadata=<span class="literal">true</span>
          <content><![CDATA[<p><a title="BEncode Editor" href="http://ww2.sinaimg.cn/large/ce179fd8jw1e7or49si7wj20e90bhjsn.jpg" target="_blank" rel="external"><img src="http://ww2.sinaimg.cn/large/ce179fd8jw1e7or49si7wj20e90bhjsn.jpg" alt="BEncode Editor" width="513" height="413" class="alignnone size-full wp-image-69"></a><br>BEncode Editor是一款可以查看、编辑种子文件和utorrent的dat文件的小工具，虽然本身体积连1M都不到但却非常实用。<a id="more"></a></p>
 <p>BEncode Editor可以查找种子、dat里的内容并进行(批量)替换；如果用utorrent下了很多东西，然后文件全部进行了转移那么就可以查找原路径，并替换为新路径；最后重启utorrent就可以正常做种………如果要换tracker也是同理，对于熟练使用这个工具的童鞋们，要直接添加、删除tracker也是十分便利</p>
 <div id="download_btn"><br><a href="http://pan.baidu.com/share/link?shareid=3280511457&uk=2466846431" class="current" target="_blank" rel="external">Download</a><br>        <p class="top">BEncode Editor.rar</p><br>  <p class="bottom">370.87KB</p><br></div>]]></content>
-         
-         
-           
-             
-              <breadCrumb title="资源分享" url="http://blog.ainhaato.moe/categories/share/"/>
-          
-             
-              <breadCrumb title="工具" url="http://blog.ainhaato.moe/categories/share/tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.ainhaato.moe/bpcs-uploader/</loc>
-    <lastmod>2015-01-13T14:07:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>百度网盘上传脚本bpcs_uploader</title>
-        <pubTime>2013-07-29T14:04:37.000Z</pubTime>
-        
-        <tag>百度 </tag>
-         
-        <tag>网盘 </tag>
-         
-        <tag>upload </tag>
-         
-        <tag>上传 </tag>
-         
-         <content><![CDATA[<p>昨天在github上找到一个叫bpcs_uploader的项目，可以使Linux在终端向百度网盘上传文件….下面介绍如何使用这个上传脚本<br><strong>脚本主要有3个限制:</strong></p>
-<p><ul><br>    <li>1.授权只能用一个月（有PCS API和app secret的话可以获得10年的授权期限）</li><br>    <li>单文件1G（百度网盘的单文件限制）</li><br>    <li>基于PHP因此需要先搭建好PHP环境</li><br></ul><br><a id="more"></a></p>
-<p>首先需要安装git，安装方法如下:</p>
-<p><pre class="lang:default decode:true">yum install curl curl-devel zlib-devel openssl-devel perl perl-devel cpio expat-devel gettext-devel    //安装依赖包<br>wget <a href="http://www.codemonkey.org.uk/projects/git-snapshots/git/git-latest.tar.gz" target="_blank" rel="external">http://www.codemonkey.org.uk/projects/git-snapshots/git/git-latest.tar.gz</a><br>tar xzvf git-latest.tar.gz<br>cd git-*<br>autoconf<br>./configure<br>make &amp;&amp; make install</pre><br>安装完毕后可以用<strong><span style="color: #ff0000;">git -version</span></strong>查看git版本</p>
-<hr>
-
-<p>bpcs_uploader项目主页:<a title="bpcs_uploader" href="https://github.com/oott123/bpcs_uploader" target="_blank" rel="nofollow">https://github.com/oott123/bpcs_uploader</a></p>
-<p>安装完git后，用git把文件下到本地…</p>
-<p><pre class="lang:default decode:true">git clone <a href="https://github.com/oott123/bpcs_uploader.git" target="_blank" rel="external">https://github.com/oott123/bpcs_uploader.git</a></pre><br><a title="clone项目" href="http://ww4.sinaimg.cn/large/cdd3e390jw1e72fvb0k1ej20fn03p0t6.jpg" rel="external" target="_blank"><img alt="" src="http://ww4.sinaimg.cn/large/cdd3e390jw1e72fvb0k1ej20fn03p0t6.jpg"></a></p>
-<p><pre class="lang:default decode:true">mv bpcs_uploader bd  //重命名文件夹。。(个人习惯…名字简单点好=w=)<br>cd bd<br>chmod +x bpcs_uploader.php     //给予执行权限…<br>./*.php init   //脚本初始化</pre><br><a title="初始化脚本" href="http://ww2.sinaimg.cn/large/cdd3e390jw1e72g037wz8j20ht04jq3s.jpg" rel="external" target="_blank"><img alt="" src="http://ww2.sinaimg.cn/large/cdd3e390jw1e72g037wz8j20ht04jq3s.jpg"></a><br>这里直接Y (翻译君:开始初始化脚本，如果之前已经配置过，原配置将被覆盖)</p>
-<p><a title="输入App Key" href="http://ww4.sinaimg.cn/large/cdfc40eajw1e72g2dioeij20ht03oq3o.jpg" rel="external" target="_blank"><img alt="" src="http://ww4.sinaimg.cn/large/cdfc40eajw1e72g2dioeij20ht03oq3o.jpg"></a><br>这里的App Key可以按回车直接使用作者提供的，也可以到BAE（<a title="BAE" href="http://developer.baidu.com" rel="external" target="_blank">http://developer.baidu.com</a>）新建应用获取</p>
-<p><a href="http://ww3.sinaimg.cn/large/ce0d98b2jw1e72g41us0zj20fa03u3ym.jpg" rel="external" target="_blank"><img alt="" src="http://ww3.sinaimg.cn/large/ce0d98b2jw1e72g41us0zj20fa03u3ym.jpg"></a><br><a title="输入App Folder Name" href="http://ww3.sinaimg.cn/large/ce179fd8jw1e72g7qq9tej20hu0470t7.jpg" rel="external" target="_blank"><img alt="" src="http://ww3.sinaimg.cn/large/ce179fd8jw1e72g7qq9tej20hu0470t7.jpg"></a><br>如果使用的是默认的App Key，那么这里只要回车即可…..</p>
-<p>如果用的是自己的App Key….就先去BAE创建个PCS API<br><a title="开启PCS API" href="http://ww2.sinaimg.cn/large/ce0d98b2jw1e72g99v1ajj20qu0dxgnd.jpg" rel="external" target="_blank"><img alt="" src="http://ww2.sinaimg.cn/large/ce0d98b2jw1e72g99v1ajj20qu0dxgnd.jpg" width="70%" height="70%"></a></p>
-<p>PCS API的文件目录设置就是要填的App Floder Name（必须一致）</p>
-<p><a title="输入access_token" href="http://ww1.sinaimg.cn/large/cdfc40eajw1e72gbo5p9dj20hs037wf1.jpg" rel="external" target="_blank"><img alt="" src="http://ww1.sinaimg.cn/large/cdfc40eajw1e72gbo5p9dj20hs037wf1.jpg"></a></p>
-<p>如果用的是默认的api，那就到这个地址获取access token并填入：<a href="https://openapi.baidu.com/oauth/2.0/authorize?response_type=token&amp;client_id=L6g70tBRRIXLsY0Z3HwKqlRE&amp;redirect_uri=oob&amp;scope=netdisk" target="_blank" rel="nofollow">https://openapi.baidu.com/oauth/ … i=oob&amp;scope=netdisk</a></p>
-<p>如果用的是自己的那就把上面那个地址种的client_id换成自己的App Key，用自己的百度账号登录并授权后地址栏里会有access_token这段，把它输入到终端<br><a title="获取access_token" href="http://ww2.sinaimg.cn/large/cdfc40eajw1e72gefhnp8j20wp01mdgc.jpg" rel="external" target="_blank"><img alt="" src="http://ww2.sinaimg.cn/large/cdfc40eajw1e72gefhnp8j20wp01mdgc.jpg" width="70%" height="70%"></a><br>如果结果如下，就说明配置成功了，可以看到脚本读取到了你百度网盘的容量信息<br><a title="配置完成" href="http://ww1.sinaimg.cn/large/ce0d98b2jw1e72gi1qyfrj20hu02eglz.jpg" rel="external" target="_blank"><img alt="" src="http://ww1.sinaimg.cn/large/ce0d98b2jw1e72gi1qyfrj20hu02eglz.jpg"></a></p>
-<hr>
-
-<p><span style="font-size: large;"><strong>脚本详细使用方法：</strong></span></p>
-<p><pre class="lang:default decode:true">./bpcs_uploader.php quota    //查看容量（配额）<br>./bpcs_uploader.php upload [path_local] [path_remote]   //上传文件<br>./bpcs_uploader.php download [path_local] [path_remote]     //下载文件<br>./bpcs_uploader.php delete [path_remote]     //删除文件<br>./bpcs_uploader.php fetch [path_remote] [path_to_fetch]     //离线下载</pre><br><span style="font-size: large;"><strong> 上传实例：</strong></span><br><a title="上传实例" href="http://ww2.sinaimg.cn/large/ce0d98b2jw1e72glx5283j20hv074mz2.jpg" rel="external" target="_blank"><img alt="" src="http://ww2.sinaimg.cn/large/ce0d98b2jw1e72glx5283j20hv074mz2.jpg"></a><br><a title="上传实例2" href="http://ww4.sinaimg.cn/large/ce179fd8jw1e72gmufy4vj20u5019748.jpg" rel="external" target="_blank"><img alt="" src="http://ww4.sinaimg.cn/large/ce179fd8jw1e72gmufy4vj20u5019748.jpg" width="70%" height="70%"></a><br>上传速度取决于你和百度的连接性= = 目测这台服务器速度不怎样</p>
-<p><span id="pv-float-bar-container" style="top: 2596px; right: 230px; display: block;"></span></p>
-]]></content>
          
          
            
