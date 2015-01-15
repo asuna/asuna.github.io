@@ -1121,6 +1121,13 @@ a.article-title:hover {
   line-height: 1.35em;
   font-size: 0.85em;
 }
+.hitokoto a {
+  color: #989898 !important;
+  text-decoration: none !important;
+}
+.hitokoto a:hover {
+  text-decoration: none !important;
+}
 .article-entry pre,
 .article-entry .highlight {
   background: #2d2d2d;
