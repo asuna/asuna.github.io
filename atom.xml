@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.ainhaato.moe/"/>
-  <updated>2015-01-15T12:38:46.035Z</updated>
+  <updated>2015-01-15T13:28:05.418Z</updated>
   <id>http://blog.ainhaato.moe/</id>
   
   <author>
@@ -296,8 +296,8 @@
   
   <entry>
     <title><![CDATA[centos6.x用xbt_tracker建立自己的tracker服务器]]></title>
-    <link href="http://blog.ainhaato.moe/centos-xbt-tracker/"/>
-    <id>http://blog.ainhaato.moe/centos-xbt-tracker/</id>
+    <link href="http://blog.ainhaato.moe/centos_xbt_tracker/"/>
+    <id>http://blog.ainhaato.moe/centos_xbt_tracker/</id>
     <published>2014-07-31T05:34:57.000Z</published>
     <updated>2015-01-13T14:06:50.000Z</updated>
     <content type="html"><![CDATA[<p>昨天在由于极影抽风，只好把资源发在动漫花园，但是极影的tracker以及备用tracker都无法使用，最后又到nyaa发了个种，才让种子活过来；为了避免”历史总是惊人的相似”的情况….就自己建了个tracker</p>
@@ -395,8 +395,8 @@ mysql -<span class="keyword">u</span>数据用户名 -<span class="keyword">p</s
   
   <entry>
     <title><![CDATA[Centos6.x升级Python至2.7]]></title>
-    <link href="http://blog.ainhaato.moe/centos-update-python27/"/>
-    <id>http://blog.ainhaato.moe/centos-update-python27/</id>
+    <link href="http://blog.ainhaato.moe/centos_update_python27/"/>
+    <id>http://blog.ainhaato.moe/centos_update_python27/</id>
     <published>2014-07-22T03:10:40.000Z</published>
     <updated>2015-01-13T14:07:01.000Z</updated>
     <content type="html"><![CDATA[<p>默认安装的Python2.6已经无法满足大多数脚本的需求….因此需要升级到2.7(3暂时不打算用)，但是升级后yum, pip和easy_install无法正常使用，虽然后来搞定了，但还是记录下来(其实是好久没更新博客….来一篇凑个数233)</p>
@@ -662,8 +662,8 @@ nohup node server.js &gt;</span> log &amp;</span>
   
   <entry>
     <title><![CDATA[换个主机换个主题]]></title>
-    <link href="http://blog.ainhaato.moe/storage-change/"/>
-    <id>http://blog.ainhaato.moe/storage-change/</id>
+    <link href="http://blog.ainhaato.moe/storage_change/"/>
+    <id>http://blog.ainhaato.moe/storage_change/</id>
     <published>2014-04-09T17:22:32.000Z</published>
     <updated>2015-01-13T13:58:38.000Z</updated>
     <content type="html"><![CDATA[<p>感觉之前用的vps最近越来越慢，于是就换了个主机：hostker<br>自带CDN，在线文件管理，编辑代码等方便实用的功能，并且客服服务态度很好，可搞基(大雾<br>速度比起之前用的主机和vps好得多<br>目前为止很满意，估计短时间内不会再换了_(:3 」∠ )_</p>
@@ -680,8 +680,8 @@ nohup node server.js &gt;</span> log &amp;</span>
   
   <entry>
     <title><![CDATA[Centos 6.X 下编译安装deluge]]></title>
-    <link href="http://blog.ainhaato.moe/deluge-for-centos/"/>
-    <id>http://blog.ainhaato.moe/deluge-for-centos/</id>
+    <link href="http://blog.ainhaato.moe/deluge_for_centos/"/>
+    <id>http://blog.ainhaato.moe/deluge_for_centos/</id>
     <published>2014-04-05T14:06:00.000Z</published>
     <updated>2015-01-13T14:06:39.000Z</updated>
     <content type="html"><![CDATA[<h3 id="简介">简介</h3>
@@ -737,8 +737,8 @@ useradd deluge -g deluge <span class="operator">-s</span> /bin/<span class="lite
   
   <entry>
     <title><![CDATA[停止出售代理服务]]></title>
-    <link href="http://blog.ainhaato.moe/ss-proxy-closed/"/>
-    <id>http://blog.ainhaato.moe/ss-proxy-closed/</id>
+    <link href="http://blog.ainhaato.moe/ss_proxy_closed/"/>
+    <id>http://blog.ainhaato.moe/ss_proxy_closed/</id>
     <published>2014-03-19T16:30:58.000Z</published>
     <updated>2015-01-13T13:59:14.000Z</updated>
     <content type="html"><![CDATA[<h3 id="现状&amp;原因">现状&amp;原因</h3>
@@ -757,8 +757,8 @@ useradd deluge -g deluge <span class="operator">-s</span> /bin/<span class="lite
   
   <entry>
     <title><![CDATA[出售新加坡，美国shadowsocks代理]]></title>
-    <link href="http://blog.ainhaato.moe/ss-sales/"/>
-    <id>http://blog.ainhaato.moe/ss-sales/</id>
+    <link href="http://blog.ainhaato.moe/ss_sales/"/>
+    <id>http://blog.ainhaato.moe/ss_sales/</id>
     <published>2014-03-13T09:31:57.000Z</published>
     <updated>2015-01-13T13:58:56.000Z</updated>
     <content type="html"><![CDATA[<h4 id="出售新加坡和美国的shadowsocks，日本线路待资金充足后添加………-(如果有人能资助的话应该很快就能开日本线路了吧orz…">出售新加坡和美国的shadowsocks，日本线路待资金充足后添加……….(如果有人能资助的话应该很快就能开日本线路了吧orz…</h4>
@@ -794,8 +794,8 @@ useradd deluge -g deluge <span class="operator">-s</span> /bin/<span class="lite
   
   <entry>
     <title><![CDATA[分享一枚shadowsocks代理]]></title>
-    <link href="http://blog.ainhaato.moe/public-shadowsocks/"/>
-    <id>http://blog.ainhaato.moe/public-shadowsocks/</id>
+    <link href="http://blog.ainhaato.moe/public_shadowsocks/"/>
+    <id>http://blog.ainhaato.moe/public_shadowsocks/</id>
     <published>2014-03-09T18:56:01.000Z</published>
     <updated>2015-01-13T14:01:14.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -853,8 +853,8 @@ useradd deluge -g deluge <span class="operator">-s</span> /bin/<span class="lite
   
   <entry>
     <title><![CDATA[2014 - 新年快乐！]]></title>
-    <link href="http://blog.ainhaato.moe/happy-new-year-2014/"/>
-    <id>http://blog.ainhaato.moe/happy-new-year-2014/</id>
+    <link href="http://blog.ainhaato.moe/happy_new_year_2014/"/>
+    <id>http://blog.ainhaato.moe/happy_new_year_2014/</id>
     <published>2014-01-29T16:00:00.000Z</published>
     <updated>2015-01-13T14:05:02.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://ww3.sinaimg.cn/large/e57da4e9jw1eczkuqdzblj20rs0t5tjo.jpg" title="恭贺新年" target="_blank" rel="external"><img src="http://ww3.sinaimg.cn/large/e57da4e9jw1eczkuqdzblj20rs0t5tjo.jpg" alt="恭贺新年"></a><br><a id="more"></a></p>
@@ -1004,8 +1004,8 @@ mv plugins <span class="regexp">/home/</span>wwwroot<span class="regexp">/rutorr
   
   <entry>
     <title><![CDATA[2014年百合神番---樱Trick]]></title>
-    <link href="http://blog.ainhaato.moe/sakura-trick/"/>
-    <id>http://blog.ainhaato.moe/sakura-trick/</id>
+    <link href="http://blog.ainhaato.moe/sakura_trick/"/>
+    <id>http://blog.ainhaato.moe/sakura_trick/</id>
     <published>2014-01-14T17:04:39.000Z</published>
     <updated>2015-01-13T14:00:42.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://ww2.sinaimg.cn/large/6abdaa9djw1ejmkofhgzaj20zk0k041u.jpg&quot;" target="_blank" rel="external"><img src="http://ww2.sinaimg.cn/large/6abdaa9djw1ejmkofhgzaj20zk0k041u.jpg" alt="Sakura_Trick_Logo"></a></p>

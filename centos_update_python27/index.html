@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>换个主机换个主题 | 幻想驿站</title>
+  <title>Centos6.x升级Python至2.7 | 幻想驿站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="感觉之前用的vps最近越来越慢，于是就换了个主机：hostker自带CDN，在线文件管理，编辑代码等方便实用的功能，并且客服服务态度很好，可搞基(大雾速度比起之前用的主机和vps好得多目前为止很满意，估计短时间内不会再换了_(:3 」∠ )_">
+  <meta name="description" content="默认安装的Python2.6已经无法满足大多数脚本的需求….因此需要升级到2.7(3暂时不打算用)，但是升级后yum, pip和easy_install无法正常使用，虽然后来搞定了，但还是记录下来(其实是好久没更新博客….来一篇凑个数233)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="换个主机换个主题">
-<meta property="og:url" content="http://blog.ainhaato.moe/storage-change/">
+<meta property="og:title" content="Centos6.x升级Python至2.7">
+<meta property="og:url" content="http://blog.ainhaato.moe/centos_update_python27/">
 <meta property="og:site_name" content="幻想驿站">
-<meta property="og:description" content="感觉之前用的vps最近越来越慢，于是就换了个主机：hostker自带CDN，在线文件管理，编辑代码等方便实用的功能，并且客服服务态度很好，可搞基(大雾速度比起之前用的主机和vps好得多目前为止很满意，估计短时间内不会再换了_(:3 」∠ )_">
+<meta property="og:description" content="默认安装的Python2.6已经无法满足大多数脚本的需求….因此需要升级到2.7(3暂时不打算用)，但是升级后yum, pip和easy_install无法正常使用，虽然后来搞定了，但还是记录下来(其实是好久没更新博客….来一篇凑个数233)">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="换个主机换个主题">
-<meta name="twitter:description" content="感觉之前用的vps最近越来越慢，于是就换了个主机：hostker自带CDN，在线文件管理，编辑代码等方便实用的功能，并且客服服务态度很好，可搞基(大雾速度比起之前用的主机和vps好得多目前为止很满意，估计短时间内不会再换了_(:3 」∠ )_">
+<meta name="twitter:title" content="Centos6.x升级Python至2.7">
+<meta name="twitter:description" content="默认安装的Python2.6已经无法满足大多数脚本的需求….因此需要升级到2.7(3暂时不打算用)，但是升级后yum, pip和easy_install无法正常使用，虽然后来搞定了，但还是记录下来(其实是好久没更新博客….来一篇凑个数233)">
 <meta name="twitter:creator" content="@shmozi">
 
   
@@ -74,12 +74,16 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-storage-change" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-centos_update_python27" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/storage-change/" class="article-date">
-  <time datetime="2014-04-09T17:22:32.000Z" itemprop="datePublished">4月 10 2014</time>
+    <a href="/centos_update_python27/" class="article-date">
+  <time datetime="2014-07-22T03:10:40.000Z" itemprop="datePublished">7月 22 2014</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/tutorial/">教程</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -88,7 +92,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      换个主机换个主题
+      Centos6.x升级Python至2.7
     </h1>
   
 
@@ -96,37 +100,74 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>感觉之前用的vps最近越来越慢，于是就换了个主机：hostker<br>自带CDN，在线文件管理，编辑代码等方便实用的功能，并且客服服务态度很好，可搞基(大雾<br>速度比起之前用的主机和vps好得多<br>目前为止很满意，估计短时间内不会再换了_(:3 」∠ )_</p>
-<h2><a id="more"></a></h2>
-<h3 id="hostker宣传视频">hostker宣传视频</h3>
-  <video id="hostker" class="video-js vjs-default-skin" controls preload="none" width="848" height="480" poster="http://blog-attachment.qiniudn.com/video/hostker/mad.png" data-setup="{}"><br>    <source src="http://blog-attachment.qiniudn.com/video/hostker/mad.mp4" type="video/mp4"><br>    <source src="http://blog-attachment.qiniudn.com/video/hostker/mad.webm" type="video/webm"><br>    <source src="http://blog-attachment.qiniudn.com/video/hostker/mad.ogv" type="video/ogg"><br>  </video>
+        <p>默认安装的Python2.6已经无法满足大多数脚本的需求….因此需要升级到2.7(3暂时不打算用)，但是升级后yum, pip和easy_install无法正常使用，虽然后来搞定了，但还是记录下来(其实是好久没更新博客….来一篇凑个数233)</p>
+<a id="more"></a>
+
+
+<h3 id="一、下载Python2-7&amp;编译安装">一、下载Python2.7&amp;编译安装</h3>
+<pre><code>wget http<span class="variable">s:</span>//www.<span class="keyword">python</span>.org/ftp/<span class="keyword">python</span>/<span class="number">2.7</span>.<span class="number">8</span>/Python-<span class="number">2.7</span>.<span class="number">8</span>.tgz
+tar zxvf Python-*.tgz
+<span class="keyword">cd</span> Python-*
+./configure --prefix=/usr/local/python2.<span class="number">7</span>
+<span class="keyword">make</span> &amp;&amp; <span class="keyword">make</span> install
+
+/usr/local/python2.<span class="number">7</span>/bin/python2.<span class="number">7</span> -V
+</code></pre><p>如果显示Python版本为2.7，说明安装成功</p>
+<h3 id="二、更改系统默认的Python">二、更改系统默认的Python</h3>
+<pre><code>ln -fs <span class="regexp">/usr/</span>local<span class="regexp">/python2.7/</span>bin<span class="regexp">/python2.7 /</span>usr<span class="regexp">/bin/</span>python
+</code></pre><p>然后运行下面命令再次查看Python版本</p>
+<pre><code><span class="keyword">python</span> -V
+</code></pre><p>显示版本为2.7说明一切正常，但是此时运行yum就会出错，需要修改/usr/bin/yum</p>
+<pre><code><span class="keyword">vim</span> /usr/bin/yum
+</code></pre><p>将第一行改为</p>
+<blockquote>
+<h1 id="!/usr/bin/python2-6">!/usr/bin/python2.6</h1>
+</blockquote>
+<p>再次运行yum，问题解决</p>
+<h3 id="三、升级pip，easy_install">三、升级pip，easy_install</h3>
+<pre><code>wget http<span class="variable">s:</span>//pypi.<span class="keyword">python</span>.org/packages/<span class="keyword">source</span>/<span class="keyword">s</span>/setuptools/setuptools-<span class="number">5.4</span>.<span class="number">1</span>.tar.gz
+tar zxvf setuptools-*.tar.gz
+<span class="keyword">cd</span> setuptools-*
+<span class="keyword">python</span> setup.<span class="keyword">py</span> build
+<span class="keyword">python</span> setup.<span class="keyword">py</span> install
+<span class="keyword">vim</span> /etc/<span class="keyword">profile</span>
+</code></pre><p>添加以下内容到/etc/profile</p>
+<blockquote>
+<p>PY_HOME=/usr/local/python2.7<br>export PATH=$PY_HOME/bin:$PATH</p>
+</blockquote>
+<pre><code><span class="built_in">source</span> /etc/profile  <span class="comment"># 当前终端生效，reboot后完全生效</span>
+easy_install pip
+</code></pre><p>安装完毕</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.ainhaato.moe/storage-change/" data-id="r9nce7vcbpq6bi5b" class="article-share-link">Share</a>
+      <a data-url="http://blog.ainhaato.moe/centos_update_python27/" data-id="zeokypr3q8dbw2s0" class="article-share-link">Share</a>
       
-        <a href="http://blog.ainhaato.moe/storage-change/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://blog.ainhaato.moe/centos_update_python27/#disqus_thread" class="article-comment-link">Comments</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos/">centos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/upgrade/">upgrade</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/two-method-ss-centos/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/centos_xbt_tracker/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          libev/nodejs版shadowsocks安装(Centos)
+          centos6.x用xbt_tracker建立自己的tracker服务器
         
       </div>
     </a>
   
   
-    <a href="/deluge-for-centos/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/dropbox-uploader/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Centos 6.X 下编译安装deluge</div>
+      <div class="article-nav-title">dropbox-uploader 一个操作dropbox的bash脚本</div>
     </a>
   
 </nav>
@@ -276,7 +317,7 @@
 <script>
   var disqus_shortname = 'Ainhaato';
   
-  var disqus_url = 'http://blog.ainhaato.moe/storage-change/';
+  var disqus_url = 'http://blog.ainhaato.moe/centos_update_python27/';
   
   (function(){
     var dsq = document.createElement('script');

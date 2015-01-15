@@ -3,29 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>centos6.x用xbt_tracker建立自己的tracker服务器 | 幻想驿站</title>
+  <title>2014 - 新年快乐！ | 幻想驿站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="昨天在由于极影抽风，只好把资源发在动漫花园，但是极影的tracker以及备用tracker都无法使用，最后又到nyaa发了个种，才让种子活过来；为了避免”历史总是惊人的相似”的情况….就自己建了个tracker
-
-http://tracker.kuroy.me:5944/announce
-
-PS：我是不是应该用4399端口(笑)以下是centos6.x下的搭建过程">
+  <meta name="description">
 <meta property="og:type" content="article">
-<meta property="og:title" content="centos6.x用xbt_tracker建立自己的tracker服务器">
-<meta property="og:url" content="http://blog.ainhaato.moe/centos-xbt-tracker/">
+<meta property="og:title" content="2014 - 新年快乐！">
+<meta property="og:url" content="http://blog.ainhaato.moe/happy_new_year_2014/">
 <meta property="og:site_name" content="幻想驿站">
-<meta property="og:description" content="昨天在由于极影抽风，只好把资源发在动漫花园，但是极影的tracker以及备用tracker都无法使用，最后又到nyaa发了个种，才让种子活过来；为了避免”历史总是惊人的相似”的情况….就自己建了个tracker
-
-http://tracker.kuroy.me:5944/announce
-
-PS：我是不是应该用4399端口(笑)以下是centos6.x下的搭建过程">
+<meta property="og:description">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/e57da4e9jw1eczkuqdzblj20rs0t5tjo.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/dce4a41ejw1eczl4y1p37j20vw0mt11f.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/dce48faejw1eczl82w3boj21kw156e1e.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="centos6.x用xbt_tracker建立自己的tracker服务器">
-<meta name="twitter:description" content="昨天在由于极影抽风，只好把资源发在动漫花园，但是极影的tracker以及备用tracker都无法使用，最后又到nyaa发了个种，才让种子活过来；为了避免”历史总是惊人的相似”的情况….就自己建了个tracker
-
-http://tracker.kuroy.me:5944/announce
-
-PS：我是不是应该用4399端口(笑)以下是centos6.x下的搭建过程">
+<meta name="twitter:title" content="2014 - 新年快乐！">
+<meta name="twitter:description">
 <meta name="twitter:creator" content="@shmozi">
 
   
@@ -86,14 +77,14 @@ PS：我是不是应该用4399端口(笑)以下是centos6.x下的搭建过程">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-centos-xbt-tracker" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-happy_new_year_2014" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/centos-xbt-tracker/" class="article-date">
-  <time datetime="2014-07-31T05:34:57.000Z" itemprop="datePublished">7月 31 2014</time>
+    <a href="/happy_new_year_2014/" class="article-date">
+  <time datetime="2014-01-29T16:00:00.000Z" itemprop="datePublished">1月 30 2014</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/tutorial/">教程</a>
+    <a class="article-category-link" href="/categories/life/">日常</a>
   </div>
 
   </div>
@@ -104,7 +95,7 @@ PS：我是不是应该用4399端口(笑)以下是centos6.x下的搭建过程">
         
   
     <h1 class="article-title" itemprop="name">
-      centos6.x用xbt_tracker建立自己的tracker服务器
+      2014 - 新年快乐！
     </h1>
   
 
@@ -112,106 +103,37 @@ PS：我是不是应该用4399端口(笑)以下是centos6.x下的搭建过程">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>昨天在由于极影抽风，只好把资源发在动漫花园，但是极影的tracker以及备用tracker都无法使用，最后又到nyaa发了个种，才让种子活过来；为了避免”历史总是惊人的相似”的情况….就自己建了个tracker</p>
-<blockquote>
-<p><a href="http://tracker.kuroy.me:5944/announce" target="_blank" rel="external">http://tracker.kuroy.me:5944/announce</a></p>
-</blockquote>
-<p>PS：我是不是应该用4399端口(笑)<br>以下是centos6.x下的搭建过程</p>
-<a id="more"></a>
-
-<h3 id="一、安装依赖环境">一、安装依赖环境</h3>
-<pre><code><span class="comment">yum</span> <span class="comment">install</span> <span class="comment">boost</span><span class="literal">-</span><span class="comment">devel</span> <span class="comment">gcc</span><span class="literal">-</span><span class="comment">c</span><span class="literal">+</span><span class="literal">+</span> <span class="comment">mysql</span><span class="literal">-</span><span class="comment">devel</span> <span class="comment">subversion</span>
-</code></pre><h3 id="二、用svn获得xbt_tracker">二、用svn获得xbt_tracker</h3>
-<pre><code><span class="keyword">cd</span> /home
-svn <span class="keyword">co</span> http<span class="variable">s:</span>//svn.code.<span class="keyword">sf</span>.net/<span class="keyword">p</span>/xbtt/code/trunk/xbt/misc xbt/misc
-svn <span class="keyword">co</span> http<span class="variable">s:</span>//svn.code.<span class="keyword">sf</span>.net/<span class="keyword">p</span>/xbtt/code/trunk/xbt/Tracker xbt/Tracker
-<span class="keyword">cd</span> xbt/Tracker
-./<span class="keyword">make</span>.<span class="keyword">sh</span>
-</code></pre><p>如果出现command not found使用<strong>yum install svn -y</strong>安装svn</p>
-<pre><code><span class="keyword">cp</span> xbt_tracker /home/xbt_tracker/
-<span class="keyword">cp</span> xbt_tracker.<span class="keyword">conf</span>.default /home/xbt_tracker/
-<span class="keyword">cp</span> xbt_tracker.sql /home/xbt_tracker/
-<span class="keyword">cd</span> /home/xbt_tracker/
-mv xbt_tracker.<span class="keyword">conf</span>.default xbt_tracker.<span class="keyword">conf</span>
-</code></pre><h3 id="三、建立数据库">三、建立数据库</h3>
-<pre><code>mysql -uroot -p密码
-<span class="operator"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">'xbt_tracker'</span>@<span class="string">'localhost'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'你的密码'</span>;</span>
-<span class="operator"><span class="keyword">GRANT</span> <span class="keyword">USAGE</span> <span class="keyword">ON</span> * . * <span class="keyword">TO</span> <span class="string">'xbt_tracker'</span>@<span class="string">'localhost'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'你的密码'</span>;</span>
-<span class="operator"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> <span class="string">`xbt_tracker`</span> ;</span>
-<span class="operator"><span class="keyword">GRANT</span> <span class="keyword">ALL</span> <span class="keyword">PRIVILEGES</span> <span class="keyword">ON</span> <span class="string">`xbt_tracker`</span> . * <span class="keyword">TO</span> <span class="string">'xbt_tracker'</span>@<span class="string">'localhost'</span>;</span>
-</code></pre><h3 id="四、导入数据库&amp;编辑conf文件">四、导入数据库&amp;编辑conf文件</h3>
-<pre><code><span class="keyword">cd</span> ../xbt/Tracker
-mysql -<span class="keyword">u</span>数据用户名 -<span class="keyword">p</span>数据库密码 xbt_tracker &lt; xbt_tracker.sql
-<span class="keyword">cd</span> ../xbt_tracker
-<span class="keyword">vim</span> xbt_tracker.<span class="keyword">conf</span>
-</code></pre><p>修改数据库连接设置</p>
-<pre><code><span class="variable">mysql_host =</span> localhost  <span class="comment">#数据库地址</span>
-<span class="variable">mysql_user =</span> xbt_tracker  <span class="comment">#数据库用户名</span>
-<span class="variable">mysql_password =</span> qazzaq123  <span class="comment">#数据库密码</span>
-<span class="variable">mysql_database =</span> xbt_tracker  数据库名
-</code></pre><h3 id="五、向数据库写入xbt_tracker的设置">五、向数据库写入xbt_tracker的设置</h3>
-<pre><code>mysql -u root -p 你的密码
-<span class="operator"><span class="keyword">use</span> xbt_tracker
-<span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'announce_interval'</span>,<span class="string">'1800'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'anonymous_connect'</span>,<span class="string">'1'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'anonymous_announce'</span>,<span class="string">'1'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'anonymous_scrape'</span>,<span class="string">'1'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'auto_register'</span>,<span class="string">'1'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'clean_up_interval'</span>,<span class="string">'60'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'daemon'</span>,<span class="string">'1'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'debug'</span>,<span class="string">'0'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'full_scrape'</span>,<span class="string">'0'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'gzip_debug'</span>,<span class="string">'1'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'gzip_scrape'</span>,<span class="string">'1'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'listen_ipa'</span>,<span class="string">'*'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'listen_port'</span>,<span class="string">'2710'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'log_access '</span>,<span class="string">'0'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'log_announce '</span>,<span class="string">'0'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'log_scrape '</span>,<span class="string">'0'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'offline_message'</span>,<span class="string">''</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'pid_file '</span>,<span class="string">'xbt_tracker.pid'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'read_config_interval'</span>,<span class="string">'60'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'read_db_interval'</span>,<span class="string">'60'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'redirect_url'</span>,<span class="string">''</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'table_announce_log'</span>,<span class="string">'xbt_announce_log'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'table_files'</span>,<span class="string">'xbt_files'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'table_files_users'</span>,<span class="string">'xbt_files_users'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'table_scrape_log'</span>,<span class="string">'xbt_scrape_log'</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'table_users'</span>,<span class="string">''</span>);</span>
-<span class="operator"><span class="keyword">insert</span> <span class="keyword">into</span> xbt_config <span class="keyword">values</span> (<span class="string">'write_db_interval'</span>,<span class="string">'15'</span>);</span>
-</code></pre><h3 id="启动xbt_tracker">启动xbt_tracker</h3>
-<pre><code>./xbt_tracker
-</code></pre><p>也可以用init.d启动，我就先不折腾了…</p>
+        <p><a href="http://ww3.sinaimg.cn/large/e57da4e9jw1eczkuqdzblj20rs0t5tjo.jpg" title="恭贺新年" target="_blank" rel="external"><img src="http://ww3.sinaimg.cn/large/e57da4e9jw1eczkuqdzblj20rs0t5tjo.jpg" alt="恭贺新年"></a><br><a id="more"></a></p>
+<p>新的一年又来了，忘却所有不开心的事，在家和家人共度新年。<br>祝没能回家的人……..自己玩的愉快；或者…和基(姬)友玩♂♀的愉快。<br>祝所有人新年快乐，心想事成！<br><a href="http://ww2.sinaimg.cn/large/dce4a41ejw1eczl4y1p37j20vw0mt11f.jpg" title="新年快乐" target="_blank" rel="external"><img src="http://ww2.sinaimg.cn/large/dce4a41ejw1eczl4y1p37j20vw0mt11f.jpg" alt="新年快乐"></a></p>
+<p><a href="http://ww3.sinaimg.cn/large/dce48faejw1eczl82w3boj21kw156e1e.jpg" title="新春快乐" target="_blank" rel="external"><img src="http://ww3.sinaimg.cn/large/dce48faejw1eczl82w3boj21kw156e1e.jpg" alt="新春快乐"></a><br>PS：其实对我来说新年似乎并不值得开心呢orz……..</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.ainhaato.moe/centos-xbt-tracker/" data-id="7tj0q0oidggupfa6" class="article-share-link">Share</a>
+      <a data-url="http://blog.ainhaato.moe/happy_new_year_2014/" data-id="h7ess386m586ksth" class="article-share-link">Share</a>
       
-        <a href="http://blog.ainhaato.moe/centos-xbt-tracker/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://blog.ainhaato.moe/happy_new_year_2014/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos/">centos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/p2p/">p2p</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tracker/">tracker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xbt-tracker/">xbt_tracker</a></li></ul>
-
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/noir/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2014sp/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          补番进行时 - Noir
+          2014春季预定追番计划
         
       </div>
     </a>
   
   
-    <a href="/centos-update-python27/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/rtorrent-rutorrent-on-centos/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Centos6.x升级Python至2.7</div>
+      <div class="article-nav-title">centos安装rtorrent/rutorrent</div>
     </a>
   
 </nav>
@@ -361,7 +283,7 @@ mysql -<span class="keyword">u</span>数据用户名 -<span class="keyword">p</s
 <script>
   var disqus_shortname = 'Ainhaato';
   
-  var disqus_url = 'http://blog.ainhaato.moe/centos-xbt-tracker/';
+  var disqus_url = 'http://blog.ainhaato.moe/happy_new_year_2014/';
   
   (function(){
     var dsq = document.createElement('script');
