@@ -956,6 +956,7 @@ a.article-title:hover {
 }
 .dllink span {
   color: #fff;
+  font-size: 16px;
   font-weight: bold;
   background: #5ba556;
   padding: 3px 5px 3px 5px;
