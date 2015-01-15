@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.ainhaato.moe/two-method-ss-centos/</loc>
+    <lastmod>2015-01-15T13:59:50.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://blog.ainhaato.moe/bpcs-uploader/</loc>
     <lastmod>2015-01-15T12:22:20.000Z</lastmod>
   </url>
@@ -179,11 +184,6 @@
   <url>
     <loc>http://blog.ainhaato.moe/transmission-solved-permission-denied/</loc>
     <lastmod>2015-01-13T13:57:53.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://blog.ainhaato.moe/two-method-ss-centos/</loc>
-    <lastmod>2015-01-13T13:57:22.000Z</lastmod>
   </url>
   
   <url>

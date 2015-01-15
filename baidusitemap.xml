@@ -3,6 +3,84 @@
 
     
   <url>
+    <loc>http://blog.ainhaato.moe/two-method-ss-centos/</loc>
+    <lastmod>2015-01-15T13:59:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>libev/nodejs版shadowsocks安装(Centos)</title>
+        <pubTime>2014-04-13T12:01:45.000Z</pubTime>
+        
+        <tag>libev </tag>
+         
+        <tag>nodejs </tag>
+         
+        <tag>shadowsocks </tag>
+         
+        <tag>proxy </tag>
+         
+        <tag>centos </tag>
+         
+         <content><![CDATA[<h2 id="简介">简介</h2>
+<p>shadowsocks是一个轻量级的隧道代理，用于突破功夫net的，让使用者自由的畅游因特网。<br>第一个版本由clowwindy用Python编写、后续有很多其他的移植版本。如nodejs，libev，shadowsocks-go等….</p>
+<a id="more"></a>
+
+
+<h2 id="一、libev版">一、libev版</h2>
+<p><strong>1.安装必要组件</strong></p>
+<pre><code>yum <span class="operator"><span class="keyword">install</span> git build-essential autoconf libtool openssl-devel gcc -y</span>
+</code></pre><p><strong>2.下载shadowsocks-libev源码包并编译</strong></p>
+<pre><code>git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/madeye/shadowsocks-libev.git
+<span class="keyword">cd</span> shadowsocks-libev
+./configure
+<span class="keyword">make</span> &amp;&amp; <span class="keyword">make</span> install
+</code></pre><p><strong>3.运行shadowsocks</strong></p>
+<pre><code>nohup /usr/local/bin/<span class="literal">ss</span>-server -s <span class="literal">IP</span>地址 -p 服务器端口 -k 密码 -m 加密方式 &amp;
+</code></pre><p>例如：</p>
+<blockquote>
+<p>nohup /usr/local/bin/ss-server -s 220.181.112.143 -p 8388 -k sstest -m aes-256-cfb &amp;</p>
+</blockquote>
+<p><strong>4.加入开机启动</strong></p>
+<pre><code><span class="input"><span class="prompt">echo "nohup /usr/local/bin/ss-server -s IP地址 -p 服务器端口 -k 密码 -m 加密方式 &amp;" &gt;&gt;</span> /etc/rc.local</span>
+</code></pre><p><strong>5.结束任务方法</strong></p>
+<pre><code>killall <span class="literal">ss</span>-server
+</code></pre><hr>
+<h2 id="二、nodejs版">二、nodejs版</h2>
+<p><strong>1.下载nodejs源码并编译安装</strong></p>
+<pre><code>wget http:<span class="comment">//nodejs.org/dist/v0.8.22/node-v0.8.22.tar.gz</span>
+tar xf node-v0<span class="number">.8.22</span>.tar.gz
+cd node-v0<span class="number">.8.22</span>/
+./configure
+<span class="built_in">make</span> &amp;&amp; <span class="built_in">make</span> install
+</code></pre><p><strong>2.从github把shadowsocks-nodejs clone下来</strong></p>
+<pre><code>git clone gi<span class="variable">t:</span>//github.<span class="keyword">com</span>/clowwindy/shadowsocks-nodejs.git
+<span class="keyword">cd</span> shadowsocks-nodejs
+</code></pre><p><strong>3.修改config.json文件</strong></p>
+<pre><code><span class="built_in">cd</span> shadowsocks-nodejs
+vim config.json
+
+{
+<span class="string">"server"</span>: <span class="string">"0.0.0.0"</span>,
+<span class="string">"server_port"</span>: <span class="number">8388</span>,        //服务器端口，最好修改成自己的，防止扫描
+<span class="string">"local_port"</span>: <span class="number">1080</span>,
+<span class="string">"password"</span>: <span class="string">"barfoo!"</span>,      // 默认密码，自行更换
+<span class="string">"timeout"</span>: <span class="number">600</span>,
+<span class="string">"method"</span>: null              // 支持<span class="string">"bf-cfb"</span>, <span class="string">"aes-256-cfb"</span>, <span class="string">"des-cfb"</span>, <span class="string">"rc4"</span>等加密方式。默认是不加密
+}
+</code></pre><p><strong>4.运行shadowsocks</strong></p>
+<pre><code><span class="input"><span class="prompt">cd lib/shadowsocks
+nohup node server.js &gt;</span> log &amp;</span>
+</code></pre><h2 id="三、python版">三、python版</h2>
+<p>教程请看火狐吧吧友写的：<a href="http://tieba.baidu.com/p/2824694884" target="_blank" rel="external">http://tieba.baidu.com/p/2824694884</a></p>
+]]></content>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.ainhaato.moe/bpcs-uploader/</loc>
     <lastmod>2015-01-15T12:22:20.000Z</lastmod>
     <data>
@@ -1705,78 +1783,6 @@ mv plugins <span class="regexp">/home/</span>wwwroot<span class="regexp">/rutorr
 <pre class="toolbar:1 lang:default decode:true ">find /home/transmission/Downloads -type d -exec chmod 777 {} \;</pre>
 
 <p>即可解决此问题……….</p>
-]]></content>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.ainhaato.moe/two-method-ss-centos/</loc>
-    <lastmod>2015-01-13T13:57:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>libev/nodejs版shadowsocks安装(Centos)</title>
-        <pubTime>2014-04-13T12:01:45.000Z</pubTime>
-        
-        <tag>libev </tag>
-         
-        <tag>nodejs </tag>
-         
-        <tag>shadowsocks </tag>
-         
-        <tag>proxy </tag>
-         
-        <tag>centos </tag>
-         
-         <content><![CDATA[<h2 id="简介">简介</h2>
-<p>shadowsocks是一个轻量级的隧道代理，用于突破功夫net的，让使用者自由的畅游因特网。<br>第一个版本由clowwindy用Python编写、后续有很多其他的移植版本。如nodejs，libev，shadowsocks-go等….</p>
-<a id="more"></a>
-
-
-<h2 id="一、libev版">一、libev版</h2>
-<p><strong>1.安装必要组件</strong></p>
-<pre><code>yum <span class="operator"><span class="keyword">install</span> git build-essential autoconf libtool openssl-devel gcc -y</span>
-</code></pre><p><strong>2.下载shadowsocks-libev源码包并编译</strong></p>
-<pre><code>git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/madeye/shadowsocks-libev.git
-<span class="keyword">cd</span> shadowsocks-libev
-./configure
-<span class="keyword">make</span> &amp;&amp; <span class="keyword">make</span> install
-</code></pre><p><strong>3.运行shadowsocks</strong></p>
-<pre><code>nohup /usr/local/bin/<span class="literal">ss</span>-server -s <span class="literal">IP</span>地址 -p 服务器端口 -k 密码 -m 加密方式 &amp;
-</code></pre><p>例如：</p>
-<blockquote>
-<p>nohup /usr/local/bin/ss-server -s 220.181.112.143 -p 8388 -k sstest -m aes-256-cfb &amp;</p>
-</blockquote>
-<p><strong>4.加入开机启动</strong></p>
-<pre><code><span class="input"><span class="prompt">echo "nohup /usr/local/bin/ss-server -s IP地址 -p 服务器端口 -k 密码 -m 加密方式 &amp;" &gt;&gt;</span> /etc/rc.local</span>
-</code></pre><p><strong>5.结束任务方法</strong></p>
-<pre><code>killall <span class="literal">ss</span>-server
-</code></pre><hr>
-<h2 id="二、nodejs版">二、nodejs版</h2>
-<p><strong>1.下载nodejs源码并编译安装</strong></p>
-<pre><code>wget http:<span class="comment">//nodejs.org/dist/v0.8.22/node-v0.8.22.tar.gz</span>
-tar xf node-v0<span class="number">.8.22</span>.tar.gz
-cd node-v0<span class="number">.8.22</span>/
-./configure
-<span class="built_in">make</span> &amp;&amp; <span class="built_in">make</span> install
-</code></pre><p><strong>2.从github把shadowsocks-nodejs clone下来</strong></p>
-<pre><code>git clone gi<span class="variable">t:</span>//github.<span class="keyword">com</span>/clowwindy/shadowsocks-nodejs.git
-<span class="keyword">cd</span> shadowsocks-nodejs
-</code></pre><p><strong>3.修改config.json文件</strong></p>
-<pre><code><span class="keyword">cd</span> shadowsocks-nodejs
-<span class="keyword">vim</span> config.json
-</code></pre><blockquote>
-<p>{<br>“server”: “0.0.0.0”,<br>“server_port”: 8388,        //服务器端口，最好修改成自己的，防止扫描<br>“local_port”: 1080,<br>“password”: “barfoo!”,      // 默认密码，自行更换<br>“timeout”: 600,<br>“method”: null              // 支持”bf-cfb”, “aes-256-cfb”, “des-cfb”, “rc4”等加密方式。默认是不加密<br>}</p>
-</blockquote>
-<p><strong>4.运行shadowsocks</strong></p>
-<pre><code><span class="input"><span class="prompt">cd lib/shadowsocks
-nohup node server.js &gt;</span> log &amp;</span>
-</code></pre><h2 id="三、python版">三、python版</h2>
-<p>教程请看火狐吧吧友写的：<a href="http://tieba.baidu.com/p/2824694884" target="_blank" rel="external">http://tieba.baidu.com/p/2824694884</a></p>
 ]]></content>
          
          

@@ -134,12 +134,18 @@ cd node-v0<span class="number">.8.22</span>/
 <pre><code>git clone gi<span class="variable">t:</span>//github.<span class="keyword">com</span>/clowwindy/shadowsocks-nodejs.git
 <span class="keyword">cd</span> shadowsocks-nodejs
 </code></pre><p><strong>3.修改config.json文件</strong></p>
-<pre><code><span class="keyword">cd</span> shadowsocks-nodejs
-<span class="keyword">vim</span> config.json
-</code></pre><blockquote>
-<p>{<br>“server”: “0.0.0.0”,<br>“server_port”: 8388,        //服务器端口，最好修改成自己的，防止扫描<br>“local_port”: 1080,<br>“password”: “barfoo!”,      // 默认密码，自行更换<br>“timeout”: 600,<br>“method”: null              // 支持”bf-cfb”, “aes-256-cfb”, “des-cfb”, “rc4”等加密方式。默认是不加密<br>}</p>
-</blockquote>
-<p><strong>4.运行shadowsocks</strong></p>
+<pre><code><span class="built_in">cd</span> shadowsocks-nodejs
+vim config.json
+
+{
+<span class="string">"server"</span>: <span class="string">"0.0.0.0"</span>,
+<span class="string">"server_port"</span>: <span class="number">8388</span>,        //服务器端口，最好修改成自己的，防止扫描
+<span class="string">"local_port"</span>: <span class="number">1080</span>,
+<span class="string">"password"</span>: <span class="string">"barfoo!"</span>,      // 默认密码，自行更换
+<span class="string">"timeout"</span>: <span class="number">600</span>,
+<span class="string">"method"</span>: null              // 支持<span class="string">"bf-cfb"</span>, <span class="string">"aes-256-cfb"</span>, <span class="string">"des-cfb"</span>, <span class="string">"rc4"</span>等加密方式。默认是不加密
+}
+</code></pre><p><strong>4.运行shadowsocks</strong></p>
 <pre><code><span class="input"><span class="prompt">cd lib/shadowsocks
 nohup node server.js &gt;</span> log &amp;</span>
 </code></pre><h2 id="三、python版">三、python版</h2>
