@@ -954,6 +954,20 @@ a.article-title:hover {
   max-width: 100%;
   margin: 0 auto;
 }
+.dllink span {
+  color: #fff;
+  font-weight: bold;
+  background: #5ba556;
+  padding: 3px 5px 3px 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.dllink a,
+.dllink a:hover {
+  text-decoration: none;
+}
 #comments {
   background: #fff;
   -webkit-box-shadow: 1px 2px 3px #ddd;
