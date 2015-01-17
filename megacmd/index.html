@@ -132,31 +132,28 @@ GOPATH=/tmp/ <span class="keyword">make</span>
 </blockquote>
 <h3 id="使用方式">使用方式</h3>
 <p><strong>1.列出文件</strong></p>
-<blockquote>
-<p>megacmd list mega:/Test/<br>mega:/Test/11.png                                  24110      2013-12-31T16:47:49+05:30<br>mega:/Test/Firefox_wallpaper.png                   81920      2013-12-31T16:49:27+05:30</p>
-</blockquote>
-<p><strong>2.下载文件</strong></p>
-<blockquote>
-<p>megacmd get mega:/Test/11.png ./<br>Successfully downloaded file mega:/Test/11.png to ./ in 0</p>
-</blockquote>
-<p><strong>3.上传文件</strong></p>
-<blockquote>
-<p>megacmd put ./practice/helloworld mega:/Test/<br>Copying ./practice/helloworld -&gt; mega:/Test/ # 100.00 % of 8.6KB at 2.5K/s 3s<br>Successfully uploaded file ./practice/helloworld to mega:/Test/ in 3s</p>
-</blockquote>
-<p><strong>4.删除文件</strong></p>
-<blockquote>
-<p>megacmd delete mega:/Test/helloworld<br>Successfully deleted  mega:/Test/helloworld</p>
-</blockquote>
-<p><strong>5.建立新文件夹</strong></p>
-<blockquote>
-<p>megacmd  mkdir mega:/Test/subdir<br>Successfully created directory at mega:/Test/subdir</p>
-</blockquote>
-<p><strong>更多使用方法请看<a href="https://github.com/t3rm1n4l/megacmd" target="_blank" rel="external">项目主页</a></strong></p>
+<pre><code><span class="title">megacmd</span> list <span class="url">mega:/Test/</span>
+<span class="url">mega:/Test/11.png</span>                                  <span class="number">24110</span>      <span class="number">2013</span>-<span class="number">12</span>-31T16:<span class="number">47</span>:<span class="number">49</span>+<span class="number">05</span>:<span class="number">30</span>
+<span class="url">mega:/Test/Firefox_wallpaper.png</span>                   <span class="number">81920</span>      <span class="number">2013</span>-<span class="number">12</span>-31T16:<span class="number">49</span>:<span class="number">27</span>+<span class="number">05</span>:<span class="number">30</span>
+</code></pre><p><strong>2.下载文件</strong></p>
+<pre><code>megacmd <span class="built_in">get</span> meg<span class="variable">a:</span>/Test/<span class="number">11</span>.png ./
+Successfully downloaded <span class="keyword">file</span> meg<span class="variable">a:</span>/Test/<span class="number">11</span>.png <span class="keyword">to</span> ./ in <span class="number">0</span>
+</code></pre><p><strong>3.上传文件</strong></p>
+<pre><code>megacmd <span class="keyword">put</span> ./practice/helloworld meg<span class="variable">a:</span>/Test/
+Copying ./practice/helloworld -&gt; meg<span class="variable">a:</span>/Test/ # <span class="number">100.00</span> % of <span class="number">8.6</span>KB at <span class="number">2.5</span>K/<span class="keyword">s</span> <span class="number">3</span><span class="keyword">s</span>
+Successfully uploaded <span class="keyword">file</span> ./practice/helloworld <span class="keyword">to</span> meg<span class="variable">a:</span>/Test/ in <span class="number">3</span><span class="keyword">s</span>
+</code></pre><p><strong>4.删除文件</strong></p>
+<pre><code>megacmd <span class="built_in">delete</span> meg<span class="variable">a:</span>/Test/helloworld
+Successfully deleted  meg<span class="variable">a:</span>/Test/helloworld
+</code></pre><p><strong>5.建立新文件夹</strong></p>
+<pre><code>megacmd  <span class="built_in">mkdir</span> meg<span class="variable">a:</span>/Test/subdir
+Successfully created directory at meg<span class="variable">a:</span>/Test/subdir
+</code></pre><p><strong>更多使用方法请看<a href="https://github.com/t3rm1n4l/megacmd" target="_blank" rel="external">项目主页</a></strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.ainhaato.moe/megacmd/" data-id="d9lklk1i2g7rjhru" class="article-share-link">Share</a>
+      <a data-url="http://blog.ainhaato.moe/megacmd/" data-id="ziwgormonzg1t6v2" class="article-share-link">Share</a>
       
         <a href="http://blog.ainhaato.moe/megacmd/#disqus_thread" class="article-comment-link">Comments</a>
       
