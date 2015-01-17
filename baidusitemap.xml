@@ -4,7 +4,7 @@
     
   <url>
     <loc>http://blog.ainhaato.moe/megacmd/</loc>
-    <lastmod>2015-01-17T15:01:48.000Z</lastmod>
+    <lastmod>2015-01-17T15:05:37.000Z</lastmod>
     <data>
         <display>
         <title>megacmd - 一个mega.co.nz的命令行工具</title>
@@ -29,9 +29,8 @@ GOPATH=/tmp/ <span class="keyword">make</span>
 <span class="keyword">cp</span> megacmd /usr/local/bin
 </code></pre><h3 id="建立配置文件">建立配置文件</h3>
 <pre><code> <span class="keyword">vim</span> ~/.megacmd.json
-</code></pre><blockquote>
-<p>{<br>    “User” : “MEGA_USERNAME”,<br>    “Password” : “MEGA_PASSWORD”,<br>    “DownloadWorkers” : 4,<br>    “UploadWorkers” : 4,<br>    “SkipSameSize” : true,<br>    “Verbose” : 1<br>}</p>
-</blockquote>
+</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">    <span class="string">"User"</span> : <span class="string">"MEGA_USERNAME"</span>,</div><div class="line">    <span class="string">"Password"</span> : <span class="string">"MEGA_PASSWORD"</span>,</div><div class="line">    <span class="string">"DownloadWorkers"</span> : <span class="number">4</span>,</div><div class="line">    <span class="string">"UploadWorkers"</span> : <span class="number">4</span>,</div><div class="line">    <span class="string">"SkipSameSize"</span> : <span class="literal">true</span>,</div><div class="line">    <span class="string">"Verbose"</span> : <span class="number">1</span></div><div class="line">}</div></pre></td></tr></table></figure>
+
 <h3 id="使用方式">使用方式</h3>
 <p><strong>1.列出文件</strong></p>
 <pre><code><span class="title">megacmd</span> list <span class="url">mega:/Test/</span>
