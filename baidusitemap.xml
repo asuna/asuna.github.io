@@ -3,6 +3,51 @@
 
     
   <url>
+    <loc>http://blog.ainhaato.moe/megadown/</loc>
+    <lastmod>2015-01-17T15:19:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>megadown</title>
+        <pubTime>2015-01-17T15:08:05.000Z</pubTime>
+        
+        <tag>网盘 </tag>
+         
+        <tag>下载 </tag>
+         
+        <tag>download </tag>
+         
+        <tag>bash </tag>
+         
+        <tag>php </tag>
+         
+         <content><![CDATA[<p>megadown是一个mega.co.nz的下载脚本支持加密链接并且可以断点续传</p>
+<h3 id="依赖：">依赖：</h3>
+<ul>
+<li>OpenSSL(with support for AES 128 CTR and AES 128 CBC)</li>
+<li>PHP-cli</li>
+<li>pv</li>
+</ul>
+<h3 id="使用过程">使用过程</h3>
+<pre><code>git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/tonikelope/megadown.git
+<span class="keyword">cd</span> megadown
+./megadown.<span class="keyword">sh</span> <span class="string">'https://mega.co.nz/#!qVtyGLDY!QdZXL4ke4V8rl77-cYuvvCKSnkZZMAijFcaUYvb05OE'</span>
+</code></pre><p>PS:福利注意</p>
+]]></content>
+         
+         
+           
+             
+              <breadCrumb title="资源分享" url="http://blog.ainhaato.moe/categories/share/"/>
+          
+             
+              <breadCrumb title="工具" url="http://blog.ainhaato.moe/categories/share/tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.ainhaato.moe/megacmd/</loc>
     <lastmod>2015-01-17T15:05:37.000Z</lastmod>
     <data>

@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.ainhaato.moe/"/>
-  <updated>2015-01-17T15:05:41.770Z</updated>
+  <updated>2015-01-17T15:19:41.204Z</updated>
   <id>http://blog.ainhaato.moe/</id>
   
   <author>
@@ -13,6 +13,49 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[megadown]]></title>
+    <link href="http://blog.ainhaato.moe/megadown/"/>
+    <id>http://blog.ainhaato.moe/megadown/</id>
+    <published>2015-01-17T15:08:05.000Z</published>
+    <updated>2015-01-17T15:19:30.000Z</updated>
+    <content type="html"><![CDATA[<p>megadown是一个mega.co.nz的下载脚本支持加密链接并且可以断点续传</p>
+<h3 id="依赖：">依赖：</h3>
+<ul>
+<li>OpenSSL(with support for AES 128 CTR and AES 128 CBC)</li>
+<li>PHP-cli</li>
+<li>pv</li>
+</ul>
+<h3 id="使用过程">使用过程</h3>
+<pre><code>git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/tonikelope/megadown.git
+<span class="keyword">cd</span> megadown
+./megadown.<span class="keyword">sh</span> <span class="string">'https://mega.co.nz/#!qVtyGLDY!QdZXL4ke4V8rl77-cYuvvCKSnkZZMAijFcaUYvb05OE'</span>
+</code></pre><p>PS:福利注意</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>megadown是一个mega.co.nz的下载脚本支持加密链接并且可以断点续传</p>
+<h3 id="依赖：">依赖：</h3>
+<ul>
+<li>OpenSSL(with support for AES 128 CTR and AES 128 CBC)</li>
+<l]]>
+    </summary>
+    
+      <category term="网盘" scheme="http://blog.ainhaato.moe/tags/%E7%BD%91%E7%9B%98/"/>
+    
+      <category term="下载" scheme="http://blog.ainhaato.moe/tags/%E4%B8%8B%E8%BD%BD/"/>
+    
+      <category term="download" scheme="http://blog.ainhaato.moe/tags/download/"/>
+    
+      <category term="bash" scheme="http://blog.ainhaato.moe/tags/bash/"/>
+    
+      <category term="php" scheme="http://blog.ainhaato.moe/tags/php/"/>
+    
+      <category term="资源分享" scheme="http://blog.ainhaato.moe/categories/share/"/>
+    
+      <category term="工具" scheme="http://blog.ainhaato.moe/categories/share/tools/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[利用proxychains在终端使用socks5代理]]></title>
@@ -1001,61 +1044,6 @@ mv plugins <span class="regexp">/home/</span>wwwroot<span class="regexp">/rutorr
       <category term="Picpar" scheme="http://blog.ainhaato.moe/tags/Picpar/"/>
     
       <category term="推荐" scheme="http://blog.ainhaato.moe/categories/recommend/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[2014年百合神番---樱Trick]]></title>
-    <link href="http://blog.ainhaato.moe/sakura_trick/"/>
-    <id>http://blog.ainhaato.moe/sakura_trick/</id>
-    <published>2014-01-14T17:04:39.000Z</published>
-    <updated>2015-01-13T14:00:42.000Z</updated>
-    <content type="html"><![CDATA[<p><a href="http://ww2.sinaimg.cn/large/6abdaa9djw1ejmkofhgzaj20zk0k041u.jpg&quot;" target="_blank" rel="external"><img src="http://ww2.sinaimg.cn/large/6abdaa9djw1ejmkofhgzaj20zk0k041u.jpg" alt="Sakura_Trick_Logo"></a></p>
-<a id="more"></a>
-
-<h2 id="STORY">STORY</h2>
-<p>   高山春香与园田优两位好友，一起升学至3年后即将面临合并废校的美里西高中。喜欢优的春香，对于优很快就和其他同学混熟感到很不是滋味，而想成为优最特别的好友。察觉春香想法的优，提议两人一起进行“绝对不会和其他同学一起做的事情”，而对春香来说，绝对不会和其他同学一起做的“特别行动”便是“接吻”…。</p>
-<p>   樱Trick作为一部百合番，比起以前的百合番更为”露骨” (〃∀〃) ，刚播出第一话便高能不断；官方CP似乎是有三对，第一话中都有登场，但第一话的主场是<strong>春香X优酱</strong></p>
-<h2 id="OP">OP</h2>
-<iframe src="http://blog.kuroy.me/usr/plugins/XiaMiPlayer/jplayer/index.html#http://f2013.zgyey.com/AttachsFiles/2014/1/30/thelpdocattachs/706037/1/c6e8f5d3-e382-4857-b9f2-8994b1ef1312.mp3|V.A. - Won（*3*）Chu KissMe！" style="width:255px;height:35px;" frameborder="0" scrolling="no"></iframe>
-
-<h2 id="ED">ED</h2>
-<iframe src="http://blog.kuroy.me/usr/plugins/XiaMiPlayer/jplayer/index.html#http://blog.age06.com/Uploads/Blogs/9177/0/V.A.%20-%20Kiss(and)Love.mp3|V.A. - Kiss(and)Love" style="width:255px;height:35px;" frameborder="0" scrolling="no"></iframe>
-
-<h2 id="ScreenShots">ScreenShots</h2>
-<p><a href="http://ww4.sinaimg.cn/large/6abdaa9djw1ejmkpf9trwj20zk0k0tdp.jpg" title="Kiss场景1" target="_blank" rel="external"><img src="http://ww4.sinaimg.cn/large/6abdaa9djw1ejmkpf9trwj20zk0k0tdp.jpg" alt="Kiss场景1"></a><br><a href="http://ww1.sinaimg.cn/large/6abdaa9djw1ejmkrdn1avj20zk0k00xd.jpg" title="Kiss场景2" target="_blank" rel="external"><img src="http://ww1.sinaimg.cn/large/6abdaa9djw1ejmkrdn1avj20zk0k00xd.jpg" alt="Kiss场景2"></a><br><a href="http://ww4.sinaimg.cn/large/6abdaa9djw1ejmkvlgut1j20zk0k0af4.jpg" title="Kiss场景3" target="_blank" rel="external"><img src="http://ww4.sinaimg.cn/large/6abdaa9djw1ejmkvlgut1j20zk0k0af4.jpg" alt="Kiss场景3"></a><br><a href="http://ww1.sinaimg.cn/large/6abdaa9djw1ejmkwbgwbvj20zk0k0ag8.jpg" title="Kiss场景5" target="_blank" rel="external"><img src="http://ww1.sinaimg.cn/large/6abdaa9djw1ejmkwbgwbvj20zk0k0ag8.jpg" alt="Kiss场景4"></a><br>kiss都可以数hit了(〃∀〃) 你们为何这么屌！<br><br></p>
-<p><a href="http://ww4.sinaimg.cn/large/6abdaa9djw1ejml0dveg0j211y0lcdon.jpg" title="激将法" target="_blank" rel="external"><img src="http://ww4.sinaimg.cn/large/6abdaa9djw1ejml0dveg0j211y0lcdon.jpg" alt="激将法"></a><br>少女，敢问乃的激将法是从何处？！</p>
-<p><a href="http://ww4.sinaimg.cn/large/6abdaa9djw1ejml0s0te8j211y0lcdp1.jpg" title="不作死就不会死1" target="_blank" rel="external"><img src="http://ww4.sinaimg.cn/large/6abdaa9djw1ejml0s0te8j211y0lcdp1.jpg" alt="不作死就不会死1"></a><br><a href="http://ww3.sinaimg.cn/large/6abdaa9djw1ejml1y9ey7j211y0lcn4c.jpg" title="不作死就不会死2" target="_blank" rel="external"><img src="http://ww3.sinaimg.cn/large/6abdaa9djw1ejml1y9ey7j211y0lcn4c.jpg" alt="不作死就不会死2"></a><br>不作死就不会死，说了这么多次，你怎么就是不明白</p>
-<p><a href="http://ww2.sinaimg.cn/large/6abdaa9djw1ejml377w9mj211y0lc7bb.jpg" title="结婚?!" target="_blank" rel="external"><img src="http://ww2.sinaimg.cn/large/6abdaa9djw1ejml377w9mj211y0lc7bb.jpg" alt="结婚?!"></a><br>才第一话就想结婚….</p>
-<p><a href="http://ww1.sinaimg.cn/large/6abdaa9djw1ejml3h0h5kj211y0lcn6e.jpg" title="得寸进尺233" target="_blank" rel="external"><img src="http://ww1.sinaimg.cn/large/6abdaa9djw1ejml3h0h5kj211y0lcn6e.jpg" alt="得寸进尺233"></a><br>为啥没人这么对我说?! (ˊ_&gt;ˋ真是个悲伤的故事…)</p>
-<p><a href="http://ww2.sinaimg.cn/large/6abdaa9djw1ejml3rmxm2j211y0lcqdp.jpg" title="卖队友1" target="_blank" rel="external"><img src="http://ww2.sinaimg.cn/large/6abdaa9djw1ejml3rmxm2j211y0lcqdp.jpg" alt="卖队友1"></a><br><a href="http://ww3.sinaimg.cn/large/6abdaa9djw1ejml57iyhkj211y0lc7b0.jpg" title="卖队友2-1" target="_blank" rel="external"><img src="http://ww3.sinaimg.cn/large/6abdaa9djw1ejml57iyhkj211y0lc7b0.jpg" alt="卖队友2-1"></a><br><a href="http://ww1.sinaimg.cn/large/6abdaa9djw1ejml5jgqjgj211y0lcdpb.jpg" title="卖队友2-2" target="_blank" rel="external"><img src="http://ww1.sinaimg.cn/large/6abdaa9djw1ejml5jgqjgj211y0lcdpb.jpg" alt="卖队友2-2"></a><br>卖的一手好队友</p>
-<p><a href="http://ww3.sinaimg.cn/large/6abdaa9djw1ejml69jmyzj211y0lctf9.jpg" title="神技" target="_blank" rel="external"><img src="http://ww3.sinaimg.cn/large/6abdaa9djw1ejml69jmyzj211y0lctf9.jpg" alt="神技"></a><br>(((ﾟДﾟ;)))师傅！请务必教会我这招</p>
-<pre><code>附赠无水印版片尾图&amp;第一话高清下载：
-</code></pre><p><a href="http://blog.kuroy.me/usr/uploads/2014/01/3136450929.jpg" title="无水印版01" target="_blank" rel="external"><img src="http://blog.kuroy.me/usr/uploads/2014/01/3136450929.jpg" alt="无水印版01"></a><br><a href="http://ww1.sinaimg.cn/large/e57da4e9jw1eco1zwwxuvj20zk0k0dk6.jpg" title="无水印版02" target="_blank" rel="external"><img src="http://ww1.sinaimg.cn/large/e57da4e9jw1eco1zwwxuvj20zk0k0dk6.jpg" alt="无水印版02"></a><br><a href="http://ww1.sinaimg.cn/large/e414d3e9jw1ecug2fo9txj21hc0u0n47.jpg" title="无水印版03" target="_blank" rel="external"><img src="http://ww1.sinaimg.cn/large/e414d3e9jw1ecug2fo9txj21hc0u0n47.jpg" alt="无水印版03"></a><br><a href="http://ww2.sinaimg.cn/large/e57da4e9jw1ed35wki6jbj21400miwmv.jpg" title="无水印版04" target="_blank" rel="external"><img src="http://ww2.sinaimg.cn/large/e57da4e9jw1ed35wki6jbj21400miwmv.jpg" alt="无水印版04"></a></p>
-<h2 id="Download">Download</h2>
-<div id="download_btn"><br>    <a href="http://pan.baidu.com/s/1qWJIshA" target="_blank" rel="external">樱Trick 01 MKV</a><br>    <p class="top">字幕组：白月X动漫国</p><br>    <p class="bottom">335.6MB</p><br></div>
-
-
-<h2 id="End">End</h2>
-<pre><code>百合万岁！这种轻松愉快的番必追！期待下一话ing...
-</code></pre>]]></content>
-    <summary type="html">
-    <![CDATA[<p><a href="http://ww2.sinaimg.cn/large/6abdaa9djw1ejmkofhgzaj20zk0k041u.jpg&quot;" target="_blank" rel="external"><img src="http://ww2.sinaimg.cn/large/6abdaa9djw1ejmkofhgzaj20zk0k041u.jpg" alt="Sakura_Trick_Logo"></a></p>
-]]>
-    
-    </summary>
-    
-      <category term="新番" scheme="http://blog.ainhaato.moe/tags/%E6%96%B0%E7%95%AA/"/>
-    
-      <category term="2014" scheme="http://blog.ainhaato.moe/tags/2014/"/>
-    
-      <category term="百合" scheme="http://blog.ainhaato.moe/tags/%E7%99%BE%E5%90%88/"/>
-    
-      <category term="吐槽" scheme="http://blog.ainhaato.moe/tags/%E5%90%90%E6%A7%BD/"/>
-    
-      <category term="动漫" scheme="http://blog.ainhaato.moe/tags/%E5%8A%A8%E6%BC%AB/"/>
-    
-      <category term="动漫相关" scheme="http://blog.ainhaato.moe/categories/acg/"/>
     
   </entry>
   
