@@ -7,6 +7,7 @@
 .audiojsqq p i {color: #ffffff;}
 .audiojsqq .playqq{display:block;width:36px;height:36px;position:absolute;margin-left:-48px;margin-top:13px;}
 .audiojsqq .playqq i{width:36px;height:36px;display:block;background: url(images/play.png);}
+.audiojsqq .playqq i:hover{width:36px;height:36px;display:block;background: url(images/play2.png);}
 .audiojsqq .playername{margin: 10px 10px 0;float: left;}
 .audiojsqq .playername .player-icon{float: left;width: 20px;margin-right: 5px;display: block;}
 .audiojsqq .scrubberqq{position:relative;float:left;overflow:hidden;margin:15px 10px 0;width:260px;height:2px;border-bottom:0;border-left:0;background:#ddd;}
@@ -20,6 +21,7 @@
 .playingqq .playqq,.playingqq .loadingqq,.playingqq .errorqq{display:none;}
 .playingqq .pauseqq{display:block;position:absolute;margin-left:-30px;margin-top:30px;width:25px;height:25px;}
 .playingqq .pauseqq i{background: url(images/pause.png);display:block;width:25px;height:25px;background-size:25px 25px;}
+.playingqq .pauseqq i:hover{background: url(images/pause2.png);display:block;width:25px;height:25px;background-size:25px 25px;}
 .loadingqq .playqq,.loadingqq .pauseqq,.loadingqq .errorqq{display:none;}
 .loadingqq .loadingqq{display:block;}
 .errorqq .timeqq,.errorqq .playqq,.errorqq .pauseqq,.errorqq .scrubberqq,.errorqq .loadingqq{display:none;}
