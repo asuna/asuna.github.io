@@ -969,6 +969,31 @@ a.article-title:hover {
 .dllink a:hover {
   text-decoration: none;
 }
+.lk_categor {
+  border-width: 1px 1px 1px 5px;
+  border-style: solid;
+  border-color: #eee #eee #eee #d9534f;
+}
+.lk_category h4 {
+  margin-left: 15px;
+}
+.links {
+  margin-top: -35px;
+}
+.links ul {
+  width: 600px;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.links ul .lk_detail {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  line-height: 1;
+}
 #comments {
   background: #fff;
   -webkit-box-shadow: 1px 2px 3px #ddd;
